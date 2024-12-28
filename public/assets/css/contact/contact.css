@@ -1,0 +1,76 @@
+.showcase_container{
+  width:100%;
+  position: relative;
+}
+
+.banners{
+  margin-top:45%;
+}
+
+.slidein{
+  position: relative;
+  animation: slidein 1 .5s ease-in;
+}
+
+.footer_contact{
+  position:relative;
+  padding-top:0%;
+  margin-top:15%;
+  border-top:1px solid white;
+}
+
+/*Ipad Landscape */
+
+
+@media screen and (max-width:880px) and (orientation:landscape){
+
+  .cfs-heading-container{
+    width: 150% !important;
+  }
+
+  .cfs-heading{
+    font-size: 4rem !important;
+  }
+
+  .showcase_banner--2{
+    margin-top:5%;
+  }
+
+}
+
+/* Ipad Portrait */
+@media screen and (max-width:1100px) and (min-width:600px) and (orientation:portrait){
+
+  .banners{
+     margin-top: 17% !important;
+   }
+
+  .cfs-heading{
+    font-size: 4.5rem !important;
+   }
+
+}
+
+@media screen and (orientation:portrait) and  (max-width:590px){
+
+  .desktop_only{
+    visibility: hidden;
+  }
+
+  .showcase_background {
+    height:70vh !important;
+  }
+
+}
+
+@media screen and (max-width:900px) and (min-width:600px) and (orientation:portrait){
+
+  .banners{
+    top: 145% !important;
+  }
+
+  .cfs-heading{
+    font-size:4.5rem !important;
+  }
+
+}

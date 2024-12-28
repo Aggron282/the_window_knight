@@ -1,0 +1,30 @@
+<%- include("./layout/head.ejs") %>
+
+
+  <div class="modal_container_toggle"></div>
+
+    <div class="container-fluid home_page" >
+
+      <div class="row navbar_wrapper">
+          <div class="col-12 navbar_container showcase_navbar"></div>
+      </div>
+
+      <%- include("./layout/home/landing.ejs") %>
+      <%- include("./layout/home/why_us.ejs") %>
+      <%- include("./layout/home/values.ejs") %>
+      <%- include("./layout/home/client_slideshow.ejs") %>
+
+      <%- include("./layout/home/services.ejs") %>
+      <%- include("./layout/home/subscribe.ejs") %>
+
+      <div class="relative max-z">
+        <%- include("./layout/footer.ejs") %>
+      </div>
+
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src = "/assets/js/our_clients.js"></script>
+
+<%- include("./layout/end.ejs") %>

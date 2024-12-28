@@ -1,0 +1,37 @@
+<div class="row padding-2_5">
+
+    <div class="col-2 add_labor_button--g">
+
+        <div class="width-100 add_box add_box_schedule add_labor_button--g "  id="addUser" >
+            <img class="width-50 margin-left-25 margin-top-15 filter-black" src = "./../assets/images/add.png" />
+            <p class="akrobat text-center font-20 add_labor_name" > Add New Laborer </p>
+       </div>
+
+    </div>
+
+    <% if(laborers) {%>
+
+      <% for(var i = 0; i < laborers.length; i++){ %>
+
+        <% if(laborers[i].background_info){%>
+          <% var image = laborers[i].background_info.profile_img ? laborers[i].background_info.profile_img : "./../assets/images/profile.png" %>
+        <%}else{%>
+          <% image =  "./../assets/images/profile.png" %>
+        <%}%>
+        <% var name = laborers[i].name ? laborers[i].name : "N/A" %>
+
+            <div class="col-2">
+
+                  <div class="labor_box" >
+                    <img class="width-100 " src = "<%= image %>" />
+                    <p class="title"><%= name %> </p>
+                    <p class="subtitle"> Window Cleaner </p>
+                  </div>
+
+            </div>
+
+      <%}%>
+
+    <%}%>
+
+  </div>
