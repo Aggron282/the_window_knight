@@ -19,7 +19,6 @@ a:hover p{
   padding:1%;
   z-index: 99229;
   position: relative;
-  background:  #0069a4;
 }
 
 .showcase_navbar{
@@ -40,8 +39,11 @@ a:hover p{
 
 .link_nav{
   color:white;
-  font-family: "Roboto";
-  font-size: 18px;
+  font-weight: 400;
+  text-shadow: 0px 0px 30px black;
+  font-family: "Teko";
+  font-size: 25px;
+  text-align: center;
 }
 
 .link_nav:hover{
@@ -106,4 +108,14 @@ a:hover p{
     max-width:0%;
   }
 
+}
+
+
+.link_nav--title{
+  font-size: 30px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-family: "Teko";
+  transform: translateY(15px);
+  text-shadow: 0px 0px 10px black;
 }

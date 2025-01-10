@@ -1,5 +1,5 @@
 @keyframes dropdown_nav{
-  
+
   0%{
     height:0px;
   }
@@ -19,6 +19,237 @@
   }
 
 }
+
+@keyframes squeegeeEffect {
+  0% {
+    /* background:linear-gradient(to right bottom , rgba(75, 25, 64,1),rgba(75, 25, 64,.8),rgba(75, 25, 64,.2),rgba(75, 25, 64,.2),rgba(66,57,101,.1)),url("./../../images/knight_background.png") no-repeat center center; */
+    background-size: cover;
+    filter: blur(10px) brightness(0.7);
+    clip-path: inset(0 100% 0 0); /* Starts fully covered from the right */
+  }
+   50% {
+    clip-path: inset(0 50% 0 0); /* Halfway cleared */
+    filter: blur(0px) brightness(0.9);
+    /* background:linear-gradient(to right bottom , rgba(75, 25, 64,1),rgba(75, 25, 64,.8),rgba(75, 25, 64,.2),rgba(75, 25, 64,.2),rgba(66,57,101,.1)),url("./../../images/knight_background.png") no-repeat center center; */
+    background-size: cover;
+
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Fully cleared */
+    filter: blur(0px) brightness(1);
+  }
+}
+
+@keyframes cleanWindowEffect {
+  0% {
+    filter: blur(0px) brightness(0.6) contrast(0.8);
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    filter: blur(0px) brightness(0.8) contrast(1);
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  50% {
+    filter: blur(0px) brightness(1) contrast(1.2);
+    transform: scale(1);
+    opacity: 1;
+  }
+  /* 75% {
+    filter: blur(2px) brightness(1.2) contrast(1.1);
+    transform: scale(1.03);
+    opacity: 1;
+  } */
+  100% {
+    filter: blur(0px) brightness(1) contrast(1);
+    transform: scale(1);
+
+    opacity: 1;
+  }
+}
+
+@keyframes cleanWindow {
+  0% {
+    background: linear-gradient(135deg, rgba(238, 130, 58, 1), rgba(44, 73, 119, 1), rgba(0, 105, 164, 1));
+    background-size: 200% 200%;
+    filter: blur(0px) brightness(0.9);
+    transform: scale(1);
+  }
+  25% {
+    background-position: 50% 50%;
+    filter: blur(0px) brightness(1.2);
+    transform: scale(1.02);
+  }
+  50% {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(0, 105, 164, 1), rgba(44, 73, 119, 0.8));
+    background-size: 100% 100%;
+    filter: blur(0px) brightness(1.5);
+    transform: scale(1.05);
+  }
+  75% {
+    background-position: 80% 20%;
+    filter: blur(0px) brightness(1.3);
+    transform: scale(1.02);
+  }
+  100% {
+    background:linear-gradient(to right bottom , rgba(75, 25, 64,1),rgba(75, 25, 64,.8),rgba(75, 25, 64,.2),rgba(75, 25, 64,.2),rgba(66,57,101,.1)),url("./../../images/knight_background.png");
+    background-size: 100% 100%;
+    filter: blur(0px) brightness(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes sparkle {
+    0%{
+      opacity:1;
+          transform: rotateZ(0deg) scale(1);
+    }50%{
+      transform: rotateZ(360deg) scale(2);
+    }
+    100%{
+      opacity:0;
+      transform:rotateZ(400deg) scale(2);
+    }
+
+}
+
+@keyframes glowing{
+  0%{
+    opacity:0;
+    background: lightblue;
+  }
+  20%{
+    opacity:.2;
+    background: lightblue;
+    transform: scale(1);
+
+  }
+  40%{
+    opacity:.05;
+    transform: scale(1.5);
+    background: yellow;
+  }
+  50%{
+    opacity:0;
+  }
+  100%{
+    opacity:0;
+    background: lightblue;
+    transform: scale(1);
+
+  }
+}
+.logo_new{
+  margin-top:-10px;
+  width:80px;height:80px;
+  float:left;
+}
+@keyframes textboxEntrance {
+  0% {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+    filter: blur(0px) brightness(0.5);
+  }
+  50% {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+    filter: blur(0px) brightness(0.5);
+  }
+  70% {
+    transform: translateX(-10%) scale(1);
+    opacity: 0.7;
+    filter: blur(0px) brightness(0.8);
+  }
+  80% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+    filter: blur(0px) brightness(1);
+  }
+  100% {
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes knight_appear {
+  0%{
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+    filter: blur(10px) brightness(0.5);
+  }
+  40% {
+    transform: translateX(100%) scale(0.5);
+    opacity: 0;
+    filter: blur(10px) brightness(0);
+  }
+  50% {
+    transform: translateX(10%) scale(0.8) translateY(100px);
+    opacity: 0.7;
+    filter: blur(5px) brightness(0);
+  }
+  70% {
+    transform: translateX(0%) scale(1) translateY(100px);
+    opacity: 1;
+    filter: blur(2px) brightness(1);
+  }
+  90% {
+    transform: translateX(0%) scale(1)  translateY(100px);;
+    opacity: 1;
+    filter: blur(0px) brightness(1.2);
+  }
+  100% {
+    transform: translateX(0%) scale(1)  translateY(100px);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+/* @keyframes knight_appear{
+  0%{
+    transform: scale(.5) translateX(400px) translateY(400px);
+    opacity:.3;
+    filter: brightness(0);
+  }
+  45%{
+    transform: scale(.5) translateX(400px) translateY(400px);
+    opacity:.3;
+    filter: brightness(0);
+  }
+  60%{
+    transform: scale(1.2) translateX(100px) translateY(100px);
+  }
+  80%{
+      transform: scale(1.2) translateX(100px) translateY(100px);
+  }
+  100%{
+    transform: scale(1) translateX(50px) translateY(100px);
+    opacity:1;
+    filter: brightness(1);
+  }
+
+} */
+
+
+@keyframes before_and_after_effect {
+  0% {
+    /* background:linear-gradient(to right bottom , rgba(75, 25, 64,1),rgba(75, 25, 64,.8),rgba(75, 25, 64,.2),rgba(75, 25, 64,.2),rgba(66,57,101,.1)),url("./../../images/knight_background.png") no-repeat center center; */
+    background-size: cover;
+    filter: blur(10px) brightness(0.7);
+    clip-path: inset(0 100% 0 0); /* Starts fully covered from the right */
+  }
+   50% {
+    clip-path: inset(0 50% 0 0); /* Halfway cleared */
+    filter: blur(0px) brightness(0.9);
+    /* background:linear-gradient(to right bottom , rgba(75, 25, 64,1),rgba(75, 25, 64,.8),rgba(75, 25, 64,.2),rgba(75, 25, 64,.2),rgba(66,57,101,.1)),url("./../../images/knight_background.png") no-repeat center center; */
+    background-size: cover;
+
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* Fully cleared */
+    filter: blur(0px) brightness(1);
+  }
+}
+
 
 @keyframes slidein{
 

@@ -1,10 +1,12 @@
 
 var desktop_nav = `
 
-  <div class="row navbar_custom">
+  <div class="navbar_custom">
 
+  <div class="nav_row row">
     <div class="col-3">
-      <p class="link_nav link_nav--title"> Custom Facility Services</p>
+      <img class = "logo_new" src = "./assets/images/new_logo.png" />
+       <p class="link_nav link_nav--title"> The Window Knight</p>
     </div>
 
     <div class="col-1 no_col"></div>
@@ -26,7 +28,7 @@ var desktop_nav = `
     </a>
 
   </div>
-
+  </div>
 `;
 
 var mobile_nav = `

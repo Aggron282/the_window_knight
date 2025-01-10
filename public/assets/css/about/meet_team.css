@@ -2,98 +2,141 @@
   width:100%;
   position: relative;
   height:100%;
-  padding-bottom: 5%;
+  z-index: 99999999999999999;
+  margin-top:-5px;
+  overflow: hidden;
+  background:rgba(0, 35, 50, 1);
+    /* background: linear-g1adient(to left, rgba(61, 144, 217, 1),rgba(112, 47, 128,1)), url("./../../images/pannn.png"); */
+
+
 }
 
 .meet_team_container--overlay{
   filter: blur(2px);
   position: absolute;
-  background: linear-gradient(to right, rgba(3, 77, 118, .5),rgba(3, 77, 118, 1),rgba(3, 77, 118, 1),rgba(3, 77, 118, 1)), url("./../../images/ceo_b.png");
+  object-fit: cover !important;
+  /* background: linear-gradient(to right, rgba(3, 77, 118, .5),rgba(112, 47, 128, .8),rgba(112, 47, 128, .7),rgba(112, 47, 128, .5)), url("./../../images/pannn.png"); */
   top:0%;
+  background-size: cover;
   left:0%;
   width:100%;
   height:100%;
   z-index:29;
 }
 
+#wave{
+  transform:rotate(90deg);
+  z-index: 999;
+  width:1000px !important;
+  height:300% !important;
+  right:0%;
+  top:-100%;
+  /* box-shadow: 0px 0px 9px rgba(0,0,0,.5); */
+
+  position: absolute;
+}
+
+.meet_team_container--body{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+
 .meet_team_container--banner{
   width:100%;
   padding:30px;
-  background:#004167;
+  /* background:linear-gradient(to top, rgba(112, 47, 128, 1),rgba(100, 100, 180, 1),  rgba(103, 120, 185, 1), rgba(61, 144, 217, 1)); */
   color:#e6e6e6;
-  z-index: 99;
+  /* z-index: 9000000000009; */
   position: relative;
+  box-shadow: 0px 0px 10px rgba(0,0,0,.5);
 }
 
+.me-b{
+  background:linear-gradient(to bottom, rgba(112, 47, 128, 1),  rgba(103, 120, 185, 1), rgba(61, 144, 217, 1));
+  z-index: 9000000099999999999999900009;
+  position: absolute;
+  width:100%;height:100%;
+  background: rgba(61, 144, 217, 1);
+  left:0;
+  top:0;
+}
 .meet_team_text--headline{
-  font-size:30px !important;
+  font-size:40px !important;
   font-weight:700;
   text-align: center;
-  z-index: 99999;
+  z-index: 999999999999999999999999999999;
   position: relative;
   z-index: 99;
+
   font-family:"Teko";
+  text-shadow: 0px 0px 20px rgba(0,0,0,1);
+  color:white !important;
 }
 
 .meet_team_text{
   font-size: 20px;
   font-family:"Montserrat";
-  z-index: 909;
+  z-index: 909999999999999999999999999;
   color:white;
+
   position: relative;
 }
 
 .arrow_graphic--team{
   clip-path: polygon(0 0, 50% 100%, 100% 0);
   position: absolute;
-  width: 15%;
-  bottom: -10%;
+  width: 10%;
+  bottom: -40px;
   left: 42.5%;
   z-index: 999;
-  height: 200px;
-  background:#004167;
-  z-index: 99;
+
+  height: 50px;
+  background:rgba(61, 144, 217, 1);
+  z-index: 99999999999999999999;
+  /* box-shadow: 0px 0px 9px rgba(0,0,0,.5); */
+
 }
 
 .meet_team_container--body{
-  padding:30px;
-  overflow: hidden;
   z-index: 99;
   position: relative;
   padding-bottom: 0px;
-  padding-top:5%;
 }
 
 .img_wrapper{
-  float:left;
-  width:40%;
+  position: relative;
 }
 
 .img_wrapper img {
-  width:80%;
+  width:100%;
+  position: absolute;
+  height:100%;
+  top:0;left:5%;
+  object-fit: cover;
 }
 
 .text_wrapper{
-  padding:20px;
-  float:left;
-  width:50%;
+  padding:60px;
+  padding-right:100px
 }
 
 .meet_team_text--title{
   font-weight:500;
   font-family:"Teko";
-  font-size:30px;
+  font-size:50px;
 }
 
 .meet_team_text--subtitle{
   font-weight:300;
-  font-family:"Teko";
-  font-size:25px;
+  font-family:"Lato";
+  font-size:35px;
 }
 
 .meet_team_text--paragraph{
   font-weight:300;
-  font-size:16px;
+  font-size:20px;
+  font-family:"Lato";
 }
 
 @media screen and (min-width:700px) and (max-width:900px) and (orientation:portrait){

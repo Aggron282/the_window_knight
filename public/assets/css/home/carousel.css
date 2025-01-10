@@ -1,0 +1,154 @@
+.client_carousel {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: white;
+  padding: 30px;
+  margin-top:50%;
+}
+
+.client_carousel .title {
+  font-size: 55px;
+  font-family: "Teko";
+  text-shadow: 0px 0px 2px black;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.client_slide_box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background: white;
+  padding:10%;
+  padding-left:10%;
+  padding-top:2.5%;
+
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.content{
+  position: relative;
+  z-index:999999999999999999;
+  color:white;
+}
+
+.client_background{
+  position:  absolute;
+  z-index: 99999;
+  width:100%;
+  height:100%;left:0;top:0;
+  filter:blur(6px) brightness(.6);
+  background-size:cover;
+}
+
+.client_slide_box .client--logo {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+
+.photo-grid img{
+  width:100%;
+  object-fit: cover;
+  height:70%;
+}
+
+.slide-grid{
+  display: grid;
+  width:100vw;
+  grid-template-columns: 70% 10%;
+}
+
+.client_slide_box .title {
+  font-size: 70px;
+  text-align: left;
+  padding-left:20px;
+  font-weight: bold;
+  margin-top: 10px;
+  text-shadow: none;
+}
+
+.client_slide_box .review {
+  font-size: 16px;
+  padding-left:20px;
+
+  width: 60%;
+}
+
+.photo-grid{
+  display: grid;
+  grid-template-columns:repeat(1,100%);
+  grid-gap: 30px;
+  height:50%;
+}
+
+.photo-grid img{
+  box-shadow: 0px 0px 10px rgba(0,0,0,.5)
+}
+
+.review-grid{
+  display: grid;
+  margin-top:30px;
+  grid-template-columns: 60% 40%;
+
+}
+
+
+.client_slide_box.center-slide {
+  z-index: 10;
+  transform: scale(1.1);
+}
+
+.arrow_container--carousel {
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: auto;
+  padding:20px
+
+}
+
+.arrow--c {
+  width: 70px;
+  height: 70px;
+  font-size: 40px;
+  border-radius: 50%;
+
+  opacity:.4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: all 0.5s;
+  z-index: 9999;
+}
+
+.arrow--c:hover {
+  background: #38b6ff;
+  color: white;
+  opacity:1;
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  transform: translateY(-5px);
+}
+
+.right--arrow--c {
+  right: 50px;
+}
+
+.left--arrow--c {
+  left: 50px;
+}

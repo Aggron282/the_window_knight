@@ -2,7 +2,14 @@
   position: relative;
   text-align: justify !important;
   z-index: 9999;
-  background: #0069a4
+  background-size: cover;
+  padding-bottom:5%;
+  margin-top:-5%;
+  background:linear-gradient(to bottom, rgba(112, 47, 128, .9),rgba(112, 47, 128, .95),rgba(112, 47, 128, .95),rgba(61, 144, 217, .9)),  url("./../../images/miss.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-blend-mode: multiply; /* or overlay, screen, etc. */ */
 }
 
 .mission_col{
@@ -11,14 +18,19 @@
 
 .mission_text{
   color:white;
+  text-shadow: 0px 0px 5px black;
+  font-weight:500;
+  letter-spacing: 1px;
   text-align: center;
-  font-size:30px;
-  font-family: "Montserrat"
+  font-size:40px;
+  font-family: "Lato"
 }
 
 .mission_text--title{
   font-family: 'Teko';
-  font-size: 60px;
+  font-size: 80px;
+  text-shadow: 0px 0px 10px black;
+
   font-weight: 900;
 }
 
