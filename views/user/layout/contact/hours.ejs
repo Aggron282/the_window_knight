@@ -1,0 +1,24 @@
+<section class="gates-section-unique">
+    <h1 class="title">Our Business Hours</h1>
+    <!-- <p class="subtitle">Opening the gates of operation to brighten your world.</p> -->
+    <div class="gates-unique" id="gates-unique">
+        <div class="gate-left-unique">Gate</div>
+        <div class="gate-right-unique">Gate</div>
+        <div class="hours-unique">
+            <h1 class="title">Business Hours:</h1><br>
+            <p class="subtitle">
+            Monday - Friday: 8 AM - 6 PM<br>
+            Saturday: 9 AM - 3 PM<br>
+            Sunday: Closed
+          </p>
+        </div>
+    </div>
+    <button class="button-unique" onclick="toggleGates()">Open Gates</button>
+</section>
+
+<script>
+    function toggleGates() {
+        const gates = document.getElementById('gates-unique');
+        gates.classList.toggle('open');
+    }
+</script>
