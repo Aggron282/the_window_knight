@@ -3,8 +3,8 @@
 .rain_check_container{
   background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
   overflow: hidden !important;
-  height:120vh;
-  margin-top: -7.5%;
+  /* height:120vh; */
+  /* margin-top: -7.5%; */
   position: relative;
   z-index: 9;
 }
@@ -15,6 +15,10 @@
   position: relative;
   height:100%;
   width:100%;
+  padding-top:5%;
+
+  padding-bottom:10%;
+
   overflow: hidden;
 
 }
@@ -55,7 +59,7 @@
   position: absolute;
   left:-65%;
   transform: rotate(90deg);
-  top:-5%;
+  top:0%;
   z-index: 999;
   /* filter:brightness(200); */
 }
@@ -67,11 +71,9 @@
 }
 
 .rain-grid .image-container .background{
-  width:60% !important;
   position: absolute;
   left:40px;
   top:30px;
-  height:55%;
   object-fit: cover;
   border-radius:50%;
 box-shadow:10px 10px 10px black;
