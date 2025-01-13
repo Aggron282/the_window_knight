@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gates of Operation</title>
-    <style>
-        /* body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to bottom, #f0f8ff, #dbe9f4);
-            color: #333;
-        } */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vision Board</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+  }
 
+  .vision-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 10px;
+    padding: 10px;
+  }
 
-    </style>
+  /* Grid item styling */
+  .grid-item {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Default square shape */
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Variations for spans */
+  .span-col-2 {
+    grid-column: span 2; /* Spans 2 columns */
+  }
+
+  .span-row-2 {
+    grid-row: span 2; /* Spans 2 rows */
+  }
+
+  </style>
 </head>
 <body>
-
+  <div class="vision-board">
+    <div class="grid-item" style="background-image: url('images/paris.jpg');"></div>
+    <div class="grid-item" style="background-image: url('images/modern-house.jpg');"></div>
+    <div class="grid-item" style="background-image: url('images/garden.jpg');"></div>
+    <div class="grid-item" style="background-image: url('images/money.jpg');"></div>
+    <div class="grid-item" style="background-image: url('images/beach-model.jpg');"></div>
+    <div class="grid-item" style="background-image: url('images/sunset.jpg');"></div>
+    <div class="grid-item" style="background-image: url('images/meditation.jpg');"></div>
+    <div class="grid-item" style="background-image: url('images/bathtub.jpg');"></div>
+    <div class="grid-item" style="background-image: url('images/bedroom.jpg');"></div>
+    <div class="grid-item" style="background-image: url('images/coins.jpg');"></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>

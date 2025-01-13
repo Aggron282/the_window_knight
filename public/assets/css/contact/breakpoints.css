@@ -1,0 +1,538 @@
+body{
+  background-image: linear-gradient(rgba(75, 25, 64,.6), rgba(75, 25, 64,.5)),url("./../../images/wet_new.png") !important;
+
+}
+@media screen and (max-width:1000px) and (min-width:801px) {
+
+  .glow{
+    width:500px;
+    left:25%;
+    top:10%;
+    height:500px;
+  }
+
+  .hero-container{
+    width:95%;
+    bottom:-5%;
+    left:35%;
+    transform: translateY(20px) scale(1);
+  }
+
+  .hero-container img{
+    object-fit: contain;
+    z-index: 99;
+    position: relative;
+    width:100%;
+  }
+
+  .landing_background--about .text-container{
+    left:2.5%;
+    top:15%;
+    width:70%;
+    transform: translateX(0%) scale(1);
+    font-size: 30px;
+    padding:20px;
+  }
+
+  .landing_background--about{
+    height:120vh;
+  }
+
+  .rain_check_container {
+    margin-top:2.5% !important;
+  }
+
+  .box-f {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .contact-section {
+    margin-top:0%
+  }
+
+  .landing_background--about .text-container .title{
+    font-size:80px;
+  }
+
+  .rain-grid{
+    display:  grid;
+    grid-template-columns: 65% 40%;
+  }
+
+  .landing_background--about .text-container .subtitle{
+    font-size:50px;
+  }
+
+  .landing_background--about .text-container .subtitle--button{
+    font-size:40px;
+    margin-top:40px;
+    margin-left: 10px;
+  }
+
+  .landing_background--about .landing_img{
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+  }
+
+  .rain_check_container{
+    height:110vh;
+    margin-top: -7.5%;
+  }
+
+  .rain-grid .text-container{
+    padding:50px;
+    margin-left:20%;
+    bottom:0px;
+
+  }
+
+  .rain-grid .text-container .title{
+    font-family: "Teko";
+    font-size: 45px;
+    margin-top:20px;
+
+  }
+
+  .rain-grid .text-container .subtitle{
+    font-size: 25px;
+  }
+
+  #wave--hero{
+    width:190%;
+    height:150%;
+    left:-105%;
+    top:-40%;
+  }
+
+  .rain-grid .image-container{
+    top:100px;
+  }
+
+
+  .rain-grid .image-container .background{
+    width:300px !important;
+    left:-40px;
+    top:30px;
+    height:300px !important
+  }
+
+  .rain-grid .image-container .foreground{
+    width:20%;
+    top:7.5%;
+    left:20%;
+  }
+
+}
+
+@media screen and (max-width:1200px) and (min-width:1001px) {
+
+  .hero-container{
+    width:90%;
+    bottom:-5%;
+    left:30%;
+    transform: translateY(20px) scale(1);
+  }
+
+  .landing_background--about{
+    height:120vh;
+  }
+
+  .rain_check_container {
+    margin-top:2.5% !important;
+  }
+
+  .box-f {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .contact-section {
+    margin-top:0%
+  }
+
+  .landing_background--about .text-container .title{
+    font-size:80px;
+  }
+
+  .rain-grid{
+    display:  grid;
+    grid-template-columns: 65% 40%;
+  }
+
+  .landing_background--about .text-container .subtitle{
+    font-size:50px;
+  }
+
+  .landing_background--about .text-container .subtitle--button{
+    font-size:40px;
+    margin-top:40px;
+    margin-left: 10px;
+  }
+
+  .landing_background--about .landing_img{
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+  }
+
+  .rain_check_container{
+    height:110vh;
+    margin-top: -7.5%;
+  }
+
+  .rain-grid .text-container{
+    padding:50px;
+    margin-left:20%;
+    margin-top:40px;
+    bottom:0px;
+
+  }
+
+  .rain-grid .text-container .title{
+    font-family: "Teko";
+    font-size: 45px;
+    margin-top:20px;
+
+  }
+
+  .rain-grid .text-container .subtitle{
+    font-size: 25px;
+  }
+
+  #wave--hero{
+    width:190%;
+    height:150%;
+    left:-105%;
+    top:-40%;
+  }
+
+  .rain-grid .image-container{
+    top:100px;
+    left:40px;
+  }
+
+
+  .rain-grid .image-container .background{
+    width:400px !important;
+    left:-100px;
+    top:30px;
+    height:400px !important
+  }
+
+  .rain-grid .image-container .foreground{
+    width:20%;
+    top:7.5%;
+    left:10%;
+  }
+
+}
+
+@media screen and (max-width:1600px) and (min-width:1401px) {
+
+  .hero-container{
+    width:90%;
+    bottom:-5%;
+    left:30%;
+    transform: translateY(20px) scale(1);
+  }
+
+  .landing_background--about{
+    height:120vh;
+  }
+
+  .rain_check_container {
+    margin-top:2.5% !important;
+  }
+
+  .box-f {
+    width: 80%;
+    margin-left: 10%;
+  }
+
+  .box-f a{
+    font-family: "Lato";
+    font-weight:300;
+    font-size:30px;
+  }
+
+  .contact_section .subtitle {
+    font-size: 25px;
+    font-family: "Lato";
+    font-weight: 300;
+  }
+
+  .contact-form input, .contact-form textarea{
+    width:100%;
+  }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    max-width: 800px;
+    margin: 30px auto;
+  }
+
+  .contact-section {
+    margin-top:0%
+  }
+
+  .landing_background--about .text-container .title{
+    font-size:80px;
+  }
+
+  .rain-grid{
+    display:  grid;
+    grid-template-columns: 65% 40%;
+  }
+
+  .landing_background--about .text-container .subtitle{
+    font-size:60px;
+  }
+
+  .landing_background--about .text-container .subtitle--button{
+    font-size:50px;
+    margin-top:40px;
+    margin-left: 10px;
+  }
+
+  .landing_background--about .landing_img{
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+  }
+
+  .rain_check_container{
+    height:110vh;
+    margin-top: -7.5%;
+  }
+
+  .rain-grid .text-container{
+    padding:50px;
+    margin-left:20%;
+    bottom:0px;
+    margin-top:40px;
+  }
+
+  .rain-grid .text-container .title{
+    font-family: "Teko";
+    font-size: 70px;
+    margin-top:20px;
+  }
+
+  .rain-grid .text-container .subtitle{
+    font-size: 30px;
+  }
+
+  #wave--hero{
+    width:190%;
+    height:150%;
+    left:-105%;
+    top:-40%;
+  }
+
+  .rain-grid .image-container{
+    top:100px;
+    left:40px;
+  }
+
+  .rain-grid .image-container .background{
+    width:500px !important;
+    left:-100px;
+    top:30px;
+    height:500px !important
+  }
+
+  .rain-grid .image-container .foreground{
+    width:20%;
+    top:7.5%;
+    left:12.5%;
+  }
+
+}
+
+@media screen and (min-width:800px) and (max-width:999px) {
+
+  .landing_background--about .text-container .title{
+      font-size:70px;
+  }
+  .landing_background--about .text-container .subtitle{
+      font-size:25px;
+      width:80%;
+  }
+
+  .landing_background--about .text-container{
+    top:30%;
+  }
+
+  .landing_background--about .text-container .subtitle--button{
+    font-size:25px;
+    margin-top:40px;
+    margin-left: 10px;
+    padding:20px;
+  }
+
+  .rain_check_container {
+      height: 130vh;
+      margin-top: -7.5%;
+  }
+
+  .rain-grid .image-container .foreground{
+    width:20%;
+    top:10%;
+    left:22.5%;
+  }
+
+}
+
+@media screen and (min-width:500px) and (max-width:799px) {
+
+  .landing_background--about{
+    height:130vh;
+        margin-top: 10%;
+  }
+
+  .rain-grid{
+    display:  grid;
+    grid-template-columns: 100% ;
+    position: relative;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+
+  }
+
+  .box-f {
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 35, 50, 1), rgba(0, 35, 50, 1));
+    margin-left: 0%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    padding: 50px;
+  }
+
+  .foreground{
+    filter: brightness(.03) !important;
+    opacity: 0 !important;
+    width: 100% !important;
+    top: -500px;
+    left: 22.5% !important;
+  }
+
+  .background{
+    opacity: 0 !important;
+  }
+
+  .landing_background--about .text-container .title{
+      font-size:70px;
+  }
+
+  .landing_background--about .text-container .subtitle{
+      font-size:25px;
+      width:80%;
+  }
+
+  .landing_background--about .text-container{
+    top:20%;
+    width: 80%;
+    bottom:0px;
+
+  }
+
+  #wave--hero {
+    width: 190%;
+    height: 180%;
+    left: -105%;
+    top: -40%;
+  }
+
+  .landing_background--about .text-container .subtitle--button{
+    font-size:25px;
+    margin-top:40px;
+    margin-left: 10px;
+    padding:20px;
+  }
+  .contact-section{
+    margin-top:0%
+  }
+  .rain_check_container {
+    height: 130vh;
+    margin-top: 10%;
+  }
+  .hero-container {
+    position: absolute;
+    width: 100%;
+    bottom: -5%;
+    left: 30%;
+    animation: 2s ease-in hero 1;
+    animation-delay: 1s;
+    z-index: 99;
+    transform: translateY(20px) scale(1);
+    filter: opacity(1);
+  }
+
+  .rain-grid .image-container .foreground{
+    width:20%;
+    top:10%;
+    left:22.5%;
+  }
+
+
+}
+
+
+@media screen and () and () {
+
+}
+
+
+
+@media screen and () and () {
+
+}
+
+
+
+@media screen and () and () {
+
+}
+
+
+
+
+@media screen and () and () {
+
+}
+
+
+
+
+@media screen and () and () {
+
+}
+
+
+
+
+@media screen and () and () {
+
+}
+
+
+
+
+
+@media screen and () and () {
+
+}
+
+
+
+
+@media screen and () and () {
+
+}

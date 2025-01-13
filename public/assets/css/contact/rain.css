@@ -1,7 +1,9 @@
+
+
 .rain_check_container{
   background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
   overflow: hidden !important;
-  height:110vh;
+  height:120vh;
   margin-top: -7.5%;
   position: relative;
   z-index: 9;
@@ -24,6 +26,9 @@
   padding:50px;
   margin-left:20%;
   z-index:9999;
+  bottom:0px;
+
+
 }
 
 .rain-grid .text-container .title{
@@ -58,14 +63,15 @@
 .rain-grid .image-container{
   position: relative;
   border-radius:50%;
+  top:20px;
 }
 
 .rain-grid .image-container .background{
-  width:70% !important;
+  width:60% !important;
   position: absolute;
   left:40px;
   top:30px;
-  height:70%;
+  height:55%;
   object-fit: cover;
   border-radius:50%;
 box-shadow:10px 10px 10px black;
@@ -75,8 +81,8 @@ box-shadow:10px 10px 10px black;
 .rain-grid .image-container .foreground{
   filter: brightness(.2);
   position: absolute;
-  width:30%;
-  top:5%;
+  width:20%;
+  top:7.5%;
   left:25%;
 
 }

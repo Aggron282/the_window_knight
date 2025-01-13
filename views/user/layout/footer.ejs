@@ -1,75 +1,58 @@
-<!-- Footer -->
-<footer class="text-center text-lg-start  white  relative">
+<footer class="text-center text-lg-start footer">
   <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between ">
+  <section class="d-flex justify-content-center justify-content-lg-between">
     <!-- Left -->
-    <span class="me-5 d-none d-lg-block absolute"style="top:10%;left:2.5%">
-
+    <span class="me-5 d-none d-lg-block" style="position: absolute; top:10%; left:2.5%; z-index: 3;">
         <div class="row">
-
           <div class="col-3">
-
               <span>
-                <img src = "./assets/images/logo.png"class="width-100" />
+                <img src="./assets/images/new_logo.png" class="width-100"style="width:100px" alt="Logo" />
               </span>
-
           </div>
-
-      </div>
-
+        </div>
     </span>
     <!-- Left -->
 
     <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
+    <div style="z-index: 3;">
+      <a href="#" class="me-4 text-reset">
         <i class="fab fa-facebook-f"></i>
       </a>
-
-      <a href="" class="me-4 text-reset">
+      <a href="#" class="me-4 text-reset">
         <i class="fab fa-twitter"></i>
       </a>
-
-      <a href="" class="me-4 text-reset">
+      <a href="#" class="me-4 text-reset">
         <i class="fab fa-google"></i>
       </a>
-
-      <a href="" class="me-4 text-reset">
+      <a href="#" class="me-4 text-reset">
         <i class="fab fa-instagram"></i>
       </a>
-
-      <a href="" class="me-4 text-reset">
+      <a href="#" class="me-4 text-reset">
         <i class="fab fa-linkedin"></i>
       </a>
-
-      <a href="" class="me-4 text-reset">
+      <a href="#" class="me-4 text-reset">
         <i class="fab fa-github"></i>
       </a>
-
     </div>
     <!-- Right -->
   </section>
   <!-- Section: Social media -->
 
   <!-- Section: Links  -->
-  <section class="">
-
-    <div class="container text-center text-md-start mt-5">
+  <section>
+    <div class="container text-center text-md-start mt-5" style="z-index: 3; position: relative;">
       <!-- Grid row -->
       <div class="row mt-3">
         <!-- Grid column -->
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Custom Facility Services
+            <i class="fas fa-gem me-3"></i>The Window Knight
           </h6>
-
           <p>
             Contact us and schedule a window cleaning today and brighten your house or business today!
           </p>
-
         </div>
-
         <!-- Grid column -->
 
         <!-- Grid column -->
@@ -78,23 +61,18 @@
           <h6 class="text-uppercase fw-bold mb-4">
             Useful links
           </h6>
-
           <p>
             <a href="/" class="text-reset">Home</a>
           </p>
-
           <p>
             <a href="/about" class="text-reset">About Us</a>
           </p>
-
           <p>
             <a href="/contact_us" class="text-reset">Contact Us</a>
           </p>
-
           <p>
             <a href="/schedule" class="text-reset">Schedule</a>
           </p>
-
         </div>
         <!-- Grid column -->
 
@@ -102,27 +80,45 @@
         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-
-          <p><i class="fas fa-home me-3"></i> Phoenix, Arizona, 85260 <br/></p>
-
+          <p><i class="fas fa-home me-3"></i> Phoenix, Arizona, 85260</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
             info@customfacilityservices.com
           </p>
-
           <p><i class="fas fa-phone me-3"></i> + 480-822-0511</p>
-
         </div>
         <!-- Grid column -->
       </div>
       <!-- Grid row -->
     </div>
-
   </section>
   <!-- Section: Links  -->
 
-  <!-- Copyright -->
-
-  <!-- Copyright -->
 </footer>
-<!-- Footer -->
+
+  <div class="clouds">
+      <!-- Clouds will be dynamically created -->
+  </div>
+
+  <script>
+      // Create clouds dynamically for animation
+      const cloudsContainer = document.querySelector('.clouds');
+
+      function createCloud() {
+          const cloud = document.createElement('div');
+          cloud.classList.add('cloud');
+          const size = Math.random() * 100 + 50;
+          cloud.style.width = `${size}px`;
+          cloud.style.height = `${size / 2}px`;
+          cloud.style.top = `${Math.random() * 100}px`;
+          cloud.style.left = `-${size}px`;
+          cloud.style.animationDuration = `${Math.random() * 20 + 15}s`;
+
+          cloudsContainer.appendChild(cloud);
+      }
+
+      // Generate a few clouds
+      for (let i = 0; i < 7; i++) {
+          createCloud();
+      }
+  </script>

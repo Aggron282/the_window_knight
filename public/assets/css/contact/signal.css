@@ -1,0 +1,83 @@
+.signal_container{
+  background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
+  overflow: hidden !important;
+  height:130vh;
+  position: relative;
+  z-index: 9;
+}
+
+.signal_container .text-container{
+  padding:50px;
+  color:white;
+  width:60%;
+}
+.signal_container .text-container .title{
+  font-family: "Teko";
+  font-size: 60px;
+  position: relative;
+  z-index:9999;
+}
+
+.signal_container .text-container .subtitle{
+  font-family: "Teko";
+  line-height: 1;
+  font-weight:200;
+  font-size: 40px;
+  position: relative;
+  z-index:9999;
+}
+
+.signal_container .text-container .description{
+  font-family: "Lato";
+  font-size: 30px;
+  position: relative;
+  /* width:50%; */
+  font-weight:300;
+  z-index:9999;
+}
+.circle-light{
+  right:15%;
+  top:-40%;
+  position: absolute;
+}
+.light{
+  border-radius:50%;
+  width:300px;
+  height:300px;
+  background:white;
+  opacity:.8;
+  transform: rotateY(10deg);
+  filter:blur(3px);
+
+}
+.cityscape{
+  width:100%;
+  position: absolute;
+  bottom:-0%;
+  left:0%;
+  height:100%;
+}
+.her{
+  position: absolute;
+  width:80%;
+  bottom:10%;left:10%;
+  opacity:.7;
+  filter:brightness(.2);
+}
+.spotlight{
+  bottom:20%;
+  left:10%;
+  transform: rotateZ(-150deg);
+  width:100%;
+  opacity:.9;
+  position: absolute;
+}
+
+.city{
+  position: absolute;
+  width:100%;
+  bottom:30%;
+  opacity:1;
+  height:100%;
+  left:0%;
+}
