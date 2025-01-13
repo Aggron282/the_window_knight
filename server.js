@@ -1,3 +1,13 @@
+const days_constant = 7;
+const seconds = 1000;
+const minutes = 60 * seconds;
+const hour = minutes * 60;
+const days_unit = hour * 24;
+const days_to_email = days_unit * days_constant
+var countdown = days_constant;
+const throttle_email = 2 * hour;
+
+
 var fs  = require("fs");
 var path = require("path");
 var express = require("express");
@@ -15,16 +25,6 @@ var Owner = require("./models/owner.js");
 var session = require("express-session");
 var MongoDBStore = require('connect-mongodb-session')(session);
 var admin_controller = require("./controllers/admin/admin_controller.js");
-
-const days_constant = 7;
-const seconds = 1000;
-const minutes = 60 * seconds;
-const hour = minutes * 60;
-const days_unit = hour * 24;
-const days_to_email = days_unit * days_constant
-var countdown = days_constant;
-const throttle_email = 2 * hour;
-
 
 app.use(bodyParser.json());
 app.set("view engine","ejs");
@@ -55,14 +55,16 @@ app.use((req,res,next)=>{
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
-
 app.use(user_routes);
 
 app.use((req, res, next) => {
+
   if (req.hostname.endsWith('herokuapp.com')) {
     return res.redirect(`https://www.thewindowknight.com${req.url}`);
   }
+
   next();
+
 });
 
 mongoose.connect(connection_name.connection_name).then((s)=>{
@@ -74,23 +76,21 @@ mongoose.connect(connection_name.connection_name).then((s)=>{
       console.log("App is Running");
     });
 
-  });
-
-
-
-
+});
 
 function CheckIfCanEmail(manual){
+
   if(!manual){
     return true;
   }
+
   if(countdown <= 0){
     countdown = throttle_email;
     return true;
   }else{
     return false;
   }
-}
 
+}
 
 module.exports.CheckIfCanEmail = CheckIfCanEmail;

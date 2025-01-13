@@ -1,96 +1,29 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+<%- include("./layout/about/head.ejs") %>
 
-    <head>
+    <div id="wrapper" class="<%=lock %> ">
 
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <div class="container-fluid">
 
-      <link rel="icon" type="image/x-icon" href="./assets/images/logo_ico.png">
-      <link rel="icon" type="image/png" href="./assets/logo_ico.png">
+        <div class="row">
+            <div class="col-12 navbar_container" >  </div>
+        </div>
 
-      <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+        <div class="showcase_container">
+          <%- include("./layout/about/landing.ejs") %>
+        </div>
 
+        <%- include("./layout/about/mission.ejs") %>
+        <%- include("./layout/about/what_we_do.ejs") %>
+        <%- include("./layout/about/meet_owner.ejs") %>
+        <%- include("./layout/about/who_we_serve.ejs") %>
 
-      <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/header.min.css"
-      rel="stylesheet">
+        <div class="gallery-container" id="gallery"></div>
+      </div>
 
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <div class="margin-top-small-neg" >
+        <%- include("./layout/footer.ejs") %>
+      </div>
 
-      <link
-      href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Archivo+Black&family=Exo+2:wght@600&family=Exo:wght@800;900&family=Heebo:wght@800&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,900;1,600&family=Noto+Sans:wght@300&family=Poppins:wght@600&family=Roboto+Condensed:wght@300;400&family=Roboto:ital,wght@0,300;1,100&family=Rubik+Distressed&family=Rubik+Moonrocks&family=Teko:wght@300;500&family=Vast+Shadow&family=Work+Sans:wght@200;300;400&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&family=Geist+Mono:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Sixtyfour+Convergence&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" type="text/css" href="./assets/css/util/animations.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/util/icon-font.css" />
-
-      <link rel="stylesheet" type="text/css" href="./assets/css/home/home.css" />
-
-      <link rel="stylesheet" type="text/css" href="./assets/css/footer.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/navbar.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/mobile_navbar.css" />
-
-      <link rel="stylesheet" type="text/css" href= <%= showcase.css_file %> />
-
-      <link rel="stylesheet" type="text/css" href="./assets/css/showcase.css" />
-
-      <link rel="stylesheet" type="text/css" href=  "./assets/css/about/about.css" />
-      <link rel="stylesheet" type="text/css" href=  "./assets/css/about/about_landing.css" />
-
-      <link rel="stylesheet" type="text/css" href=  "./assets/css/about/mission.css" />
-      <link rel="stylesheet" type="text/css" href=  "./assets/css/about/values.css" />
-      <link rel="stylesheet" type="text/css" href=  "./assets/css/about/what_we_do.css" />
-      <link rel="stylesheet" type="text/css" href=  "./assets/css/about/promise.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/about/meet_team.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/about/who_we_serve_2.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/about/gallery.css" />
-
-      <link rel="stylesheet" type="text/css" href="./assets/css/util/text.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/util/size.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/util/positions.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/util/colors.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/util/margin_padding.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/util/util.css" />
-      <link rel="stylesheet" type="text/css" href="./assets/css/util/util_mobile.css" />
-
-      <title><%= pageTitle %></title>
-
-    </head>
-
-  <body id="root">
-
-<div id="wrapper" class="<%=lock %> ">
-
-  <div class="container-fluid">
-
-    <div class="row">
-        <div class="col-12 navbar_container" >  </div>
     </div>
 
-    <div class="showcase_container">
-      <%- include("./layout/about/landing.ejs") %>
-    </div>
-
-    <%- include("./layout/about/mission.ejs") %>
-    <%- include("./layout/about/what_we_do.ejs") %>
-
-    <%- include("./layout/about/meet_owner.ejs") %>
-
-    <%- include("./layout/about/new_who_we_serve.ejs") %>
-    <div class="gallery-container" id="gallery"></div>
-  </div>
-
-  <div class="margin-top-small-neg" >
-    <%- include("./layout/footer.ejs") %>
-  </div>
-
-</div>
-
-<%- include("./layout/end.ejs") %>
+<%- include("./layout/about/end.ejs") %>
