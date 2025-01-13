@@ -8,6 +8,11 @@
   /* box-shadow: 0px 0px 10px rgba(0,0,0,.5); */
 }
 
+.c2ontent{
+  position: relative;
+  z-index: 9;
+}
+
 
 .nav_background{
   position: absolute;

@@ -1,12 +1,14 @@
 <%- include("./layout/home/head.ejs") %>
 
-  <div class="modal_container_toggle"></div>
 
     <div class="container-fluid home_page" >
 
       <div class="row navbar_wrapper">
           <div class="col-12 navbar_container showcase_navbar"></div>
       </div>
+
+      <%- include("./layout/modal.ejs") %>
+      <div class="relative c2ontent">
 
       <%- include("./layout/home/landing.ejs") %>
       <%- include("./layout/home/why_us.ejs") %>
@@ -20,6 +22,8 @@
       <div class="relative max-z">
         <%- include("./layout/footer.ejs") %>
       </div>
+
+    </div>
 
     </div>
 
