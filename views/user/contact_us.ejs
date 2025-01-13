@@ -40,7 +40,7 @@
       <link rel="stylesheet" type="text/css" href= <%= showcase.css_file %> />
 
 
-      <link rel="stylesheet" type="text/css" href=  "./assets/css/contact/contact.css" />
+      <!-- <link rel="stylesheet" type="text/css" href=  "./assets/css/contact/contact.css" /> -->
       <link rel="stylesheet" type="text/css" href=  "./assets/css/contact/landing.css" />
       <link rel="stylesheet" type="text/css" href=  "./assets/css/contact/business.css" />
       <link rel="stylesheet" type="text/css" href=  "./assets/css/contact/hours.css" />
@@ -79,8 +79,9 @@
       <div class="relative">
         <%- include("./layout/contact/rain_check.ejs") %>
         <%- include("./layout/contact/hours.ejs") %>
-        <%- include("./layout/contact/business.ejs") %>
         <%- include("./layout/contact/signal.ejs") %>
+
+        <%- include("./layout/contact/business.ejs") %>
 
       </div>
 
@@ -106,6 +107,7 @@
     <script src = "/assets/js/user/steps.js"></script>
     <script src = "/assets/js/data/navbar.js"></script>
     <script src = "/assets/js/user/navbar_render.js"></script>
+    <script src = "/assets/js/user/raining.js"></script>
 
   </body>
 
