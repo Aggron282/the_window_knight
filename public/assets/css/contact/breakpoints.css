@@ -57,7 +57,9 @@ body {
   width: 20%;
   position: absolute;
 }
-
+#showcase_number{
+  font-weight: 600 !important;
+}
 /* Media Queries */
 @media screen and (max-width: 1600px) {
   .hero-container {
@@ -177,6 +179,12 @@ body {
 
   .text-container .subtitle {
     font-size: 22px;
+  }
+  #wave--hero{
+    height:112%;
+  }
+  .cityscape {
+    left:-5%;
   }
 }
 
