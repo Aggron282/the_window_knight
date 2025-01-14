@@ -141,9 +141,6 @@
   margin-top:7.5%;
 }
 
-/* End of Section 2 */
-/*Section 3 showcase_banner_row */
-
 .showcase_banner_row{
   margin-top:5%;
   position: absolute !important;
@@ -164,11 +161,11 @@
   position: relative;
   bottom:5rem;
 }
+
 *{
   box-sizing: border-box;
 }
-/* End of Section 3 */
-/* Section 4: Phone Number */
+
 .showcase_number{
   position: absolute;
   right:0%;
@@ -186,9 +183,7 @@
 }
 
 
-/* IPad Portrait */
 @media screen and (max-width:900px) and (orientation:portrait) and (min-width:700px){
-
 
   .showcase_background{
     height:90vh;
@@ -243,17 +238,18 @@
     bottom: 2rem;
   }
 
-/* Move */
-.our_work_section{
-  background:none !important;
-}
-.about_description{
-  font-size: 3rem;
-}
-.button_img{
-  height: 2rem !important;
-  width: 2rem !important;
-}
+  .our_work_section{
+    background:none !important;
+  }
+
+  .about_description{
+    font-size: 3rem;
+  }
+
+  .button_img{
+    height: 2rem !important;
+    width: 2rem !important;
+  }
 
 }
 

@@ -10,7 +10,6 @@ a:hover p{
   cursor: pointer !important
 }
 
-
 .link_nav--title{
   margin-left:10%;position:relative
 }
@@ -61,8 +60,6 @@ a:hover p{
 
 @media screen and (max-width:900px) and (orientation:portrait) and (min-width:700px){
 
-
-
   .navbar_wrapper{
     padding:0 5%;
   }
@@ -102,6 +99,7 @@ a:hover p{
     font-family:"Teko";
     font-weight:200;
   }
+
   .no_col{
     width:0%;
     flex:0%;

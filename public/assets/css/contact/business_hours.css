@@ -1,10 +1,6 @@
-
-
 .rain_check_container{
   background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
   overflow: hidden !important;
-  /* height:120vh; */
-  /* margin-top: -7.5%; */
   position: relative;
   z-index: 9;
 }
@@ -16,11 +12,8 @@
   height:100%;
   width:100%;
   padding-top:5%;
-
   padding-bottom:10%;
-
   overflow: hidden;
-
 }
 
 .rain-grid .text-container{
@@ -31,17 +24,13 @@
   margin-left:20%;
   z-index:9999;
   bottom:0px;
-
-
 }
 
 .rain-grid .text-container .title{
   font-family: "Teko";
   font-size: 50px;
   position: relative;
-
   z-index:9999;
-
 }
 
 .rain-grid .text-container .subtitle{
@@ -50,7 +39,6 @@
   position: relative;
   font-weight:300;
   z-index:9999;
-
 }
 
 #wave--hero{
@@ -61,7 +49,6 @@
   transform: rotate(90deg);
   top:0%;
   z-index: 999;
-  /* filter:brightness(200); */
 }
 
 .rain-grid .image-container{
@@ -76,8 +63,7 @@
   top:30px;
   object-fit: cover;
   border-radius:50%;
-box-shadow:10px 10px 10px black;
-
+  box-shadow:10px 10px 10px black;
 }
 
 .rain-grid .image-container .foreground{
@@ -86,5 +72,4 @@ box-shadow:10px 10px 10px black;
   width:20%;
   top:7.5%;
   left:25%;
-
 }

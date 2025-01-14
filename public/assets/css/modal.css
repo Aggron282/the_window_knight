@@ -17,12 +17,13 @@
 }
 
 .twk-title{
-    font-family: "Teko";
-    font-size: 30px;
-}.twk-text-container{
+  font-family: "Teko";
+  font-size: 30px;
+}
+
+.twk-text-container{
   font-size: 18px;font-weight: 200;
   padding: 20px;
-
 }
 
 #fireworkCanvas{
@@ -70,6 +71,7 @@
   cursor: pointer;
   color: #555;
 }
+
 .twk-close-btn:hover {
   color: #000;
 }
@@ -79,6 +81,7 @@
   opacity: 1;
   visibility: visible;
 }
+
 .twk-modal-wrapper.active .twk-modal {
   transform: scale(1); /* Scale up to full size */
 }
@@ -98,6 +101,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .twk-open-modal-btn:hover {
   background-color: #0056b3;
 }
@@ -112,6 +116,7 @@
 .twk-modal-body ul {
   padding: 0;
 }
+
 .twk-modal-body li {
   list-style-type: none;
   margin: 5px 0;
@@ -130,6 +135,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .twk-cta-btn:hover {
   background-color: #218838;
 }

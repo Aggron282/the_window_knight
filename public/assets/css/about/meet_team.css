@@ -6,16 +6,12 @@
   margin-top:-5px;
   overflow: hidden;
   background:rgba(0, 35, 50, 1);
-    /* background: linear-g1adient(to left, rgba(61, 144, 217, 1),rgba(112, 47, 128,1)), url("./../../images/pannn.png"); */
-
-
 }
 
 .meet_team_container--overlay{
   filter: blur(2px);
   position: absolute;
   object-fit: cover !important;
-  /* background: linear-gradient(to right, rgba(3, 77, 118, .5),rgba(112, 47, 128, .8),rgba(112, 47, 128, .7),rgba(112, 47, 128, .5)), url("./../../images/pannn.png"); */
   top:0%;
   background-size: cover;
   left:0%;
@@ -31,8 +27,6 @@
   height:300% !important;
   right:0%;
   top:-100%;
-  /* box-shadow: 0px 0px 9px rgba(0,0,0,.5); */
-
   position: absolute;
 }
 
@@ -45,9 +39,7 @@
 .meet_team_container--banner{
   width:100%;
   padding:30px;
-  /* background:linear-gradient(to top, rgba(112, 47, 128, 1),rgba(100, 100, 180, 1),  rgba(103, 120, 185, 1), rgba(61, 144, 217, 1)); */
   color:#e6e6e6;
-  /* z-index: 9000000000009; */
   position: relative;
   box-shadow: 0px 0px 10px rgba(0,0,0,.5);
 }
@@ -61,6 +53,7 @@
   left:0;
   top:0;
 }
+
 .meet_team_text--headline{
   font-size:40px !important;
   font-weight:700;
@@ -68,7 +61,6 @@
   z-index: 999999999999999999999999999999;
   position: relative;
   z-index: 99;
-
   font-family:"Teko";
   text-shadow: 0px 0px 20px rgba(0,0,0,1);
   color:white !important;
@@ -79,7 +71,6 @@
   font-family:"Montserrat";
   z-index: 909999999999999999999999999;
   color:white;
-
   position: relative;
 }
 
@@ -90,12 +81,9 @@
   bottom: -40px;
   left: 42.5%;
   z-index: 999;
-
   height: 50px;
   background:rgba(61, 144, 217, 1);
   z-index: 99999999999999999999;
-  /* box-shadow: 0px 0px 9px rgba(0,0,0,.5); */
-
 }
 
 .meet_team_container--body{

@@ -8,15 +8,17 @@
 
 #rainCanvas{
   position: absolute;
-width:100%;
-left:0;top:0;
-height:100%;
+  width:100%;
+  left:0;top:0;
+  height:100%;
 }
+
 .signal_container .text-container{
   padding:70px;
   color:white;
   width:60%;
 }
+
 .signal_container .text-container .title{
   font-family: "Teko";
   font-size: 60px;
@@ -37,15 +39,16 @@ height:100%;
   font-family: "Lato";
   font-size: 30px;
   position: relative;
-  /* width:50%; */
   font-weight:300;
   z-index:9999;
 }
+
 .circle-light{
   right:10%;
   top:-40%;
   position: absolute;
 }
+
 .light{
   border-radius:50%;
   width:300px;
@@ -54,8 +57,8 @@ height:100%;
   opacity:.8;
   transform: rotateY(10deg);
   filter:blur(3px);
-
 }
+
 .cityscape{
   width:100%;
   position: absolute;
@@ -63,6 +66,7 @@ height:100%;
   left:0%;
   height:100%;
 }
+
 .her{
   position: absolute;
   width:80%;
@@ -71,6 +75,7 @@ height:100%;
   z-index: 999;
   filter:brightness(.2);
 }
+
 .spotlight{
   bottom:55%;
   z-index: 9;

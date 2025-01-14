@@ -1,0 +1,221 @@
+/* Global Styles */
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* General Media Query for Landscape Orientation */
+/* @media screen and (orientation: landscape) {
+  .landing_background--about .text-container .title {
+    font-size: 100px;
+  }
+} */
+
+/* 1501px - 1600px Screen Width */
+@media screen and (max-width: 1600px) and (min-width: 1501px) {
+  .what_we_do_link {
+    font-size: 25px;
+  }
+
+  .what_we_do_col{
+    width:150%;
+  }
+
+
+
+  form * {
+    margin-top: 5% !important;
+  }
+
+  .landing_background--about .text-container .title {
+    font-size: 120px;
+  }
+
+  .landing_background--about .text-container .subtitle {
+    font-size: 50px;
+    font-weight: 400;
+  }
+
+  .icon h3,
+  .right p {
+    font-size: 30px;
+  }
+
+  .header_banner h1 {
+    font-size: 60px;
+  }
+
+  .window-knight-section {
+    padding-top: 150px;
+  }
+
+  .meet_team_text--paragraph {
+    font-size: 25px;
+  }
+
+  #wave {
+    transform: rotate(90deg);
+    width: 1200px !important;
+    height: 300% !important;
+    position: absolute;
+    right: 0%;
+    top: -100%;
+  }
+}
+
+/* 1401px - 1500px Screen Width */
+@media screen and (max-width: 1500px) and (min-width: 1401px) {
+  .what_we_do_link {
+    font-size: 20px;
+  }
+
+  .what_we_do_col{
+    width:150%;
+  }
+  .landing_background--about {
+    height: 115vh;
+    background-position: bottom;
+  }
+
+  .icon h3,
+  .right p {
+    font-size: 28px;
+  }
+
+  .window-knight-section {
+    padding-top: 100px;
+  }
+
+  .meet_team_text--paragraph {
+    font-size: 24px;
+  }
+
+  #wave {
+    width: 1200px !important;
+    height: 300% !important;
+    right: -2.5%;
+    top: -100%;
+  }
+
+  .about_link_row {
+    width: 130%;
+  }
+}
+
+/* 1300px - 1400px Screen Width */
+@media screen and (max-width: 1400px) and (min-width: 1201px) {
+  .landing_background--about {
+    height: 110vh;
+    background-position: bottom;
+  }
+
+  .what_we_do_col{
+    width:150%;
+  }
+  .icon h3,
+  .right p {
+    font-size: 26px;
+  }
+
+  .window-knight-section {
+    padding-top: 100px;
+  }
+
+  .meet_team_text--paragraph {
+    font-size: 22px;
+  }
+
+  #wave {
+    width: 1200px !important;
+    height: 300% !important;
+    right: -5%;
+    top: -100%;
+  }
+}
+
+/* Tablet and Small Laptops */
+@media screen and (max-width: 1200px) {
+  .landing_background--about .text-container .title {
+    font-size: 90px;
+  }
+  .what_we_do_col{
+    width:150%;
+  }
+
+  .window-knight-section {
+    padding-top: 80px;
+  }
+
+  .icon h3,
+  .what_we_do_link {
+    font-size: 20px;
+  }
+
+  .meet_team_text--paragraph {
+    font-size: 20px;
+  }
+
+  .right p {
+    font-size: 24px;
+  }
+}
+
+/* Mobile Devices (768px and Below) */
+@media screen and (max-width: 768px) {
+  .landing_background--about {
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .landing_background--about .text-container .title {
+    font-size: 60px;
+  }
+
+  .landing_background--about .text-container .subtitle {
+    font-size: 24px;
+  }
+
+  .icon h3 {
+    font-size: 18px;
+  }
+
+  .what_we_do_description,
+  .meet_team_text--paragraph {
+    font-size: 18px;
+  }
+
+  .about_link_row {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #wave {
+    width: 100%;
+    height: 200%;
+    top: -50%;
+  }
+}
+
+/* Small Mobile Devices (320px - 480px) */
+@media screen and (max-width: 480px) {
+  .landing_background--about .text-container .title {
+    font-size: 50px;
+  }
+
+  .landing_background--about .text-container .subtitle {
+    font-size: 18px;
+  }
+
+  .what_we_do_description,
+  .right p {
+    font-size: 16px;
+  }
+
+  .what_we_do_link {
+    font-size: 16px;
+  }
+}

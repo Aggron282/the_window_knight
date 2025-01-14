@@ -21,9 +21,6 @@
   border-top:1px solid white;
 }
 
-/*Ipad Landscape */
-
-
 @media screen and (max-width:880px) and (orientation:landscape){
 
   .cfs-heading-container{
@@ -40,7 +37,6 @@
 
 }
 
-/* Ipad Portrait */
 @media screen and (max-width:1100px) and (min-width:600px) and (orientation:portrait){
 
   .banners{

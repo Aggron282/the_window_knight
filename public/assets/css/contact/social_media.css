@@ -21,7 +21,6 @@
     margin-bottom: 20px;
 }
 
-
 .gates-section-unique .hours-unique .subtitle {
     font-size: 20px;
     margin-bottom: 30px;
@@ -90,9 +89,6 @@
 .gate-left-unique {
     left: 0;
     transform: translateX(0);
-
-    /* background: url("./../../images/az2.png"); */
-
 }
 
 .hours-unique{
@@ -101,24 +97,24 @@
   padding:50px;
   padding-top:5%;
 }
+
 .hours-unique .grid-container-hours{
   grid-template-columns: repeat(4, 25%);
   display: grid;
-
-
 }
+
 .gate-left-unique img{
   top:-10px;
 }
+
 .hours-unique .icon{
   width:100px;
   height:100px;
 }
+
 .gate-right-unique {
     right: 0;
     background: url("./../../images/az3.png");
-
-    /* transform: translateX(0); */
 }
 
 .gates-unique.open .gate-left-unique {
@@ -143,21 +139,11 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     color:white !important;
-
 }
 
 .gates-unique.open .hours-unique {
     display: block;
     animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .button-unique {

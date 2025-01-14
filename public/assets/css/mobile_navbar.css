@@ -18,7 +18,7 @@
   }
 
   .active_n{
-      height:1080px;
+    height:1080px;
   }
 
   .link_nav{
@@ -30,6 +30,5 @@
   .active-navbar{
     animation:dropdown_nav .5s 1 ease-in !important;
   }
-
 
 }

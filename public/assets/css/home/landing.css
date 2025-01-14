@@ -10,8 +10,7 @@
   transform: scale(1);
   background-size: cover;
   animation: squeegeeEffect 3s ease-out forwards;
-  clip-path: inset(0 0 0 0); /* Fully cleared */
-
+  clip-path: inset(0 0 0 0);
 }
 
 
@@ -21,7 +20,6 @@
   opacity:.2;
   filter:blur(30px);
   height: 100vh;
-  /* background: url('./../../images/knight_background.png') no-repeat center center; */
   background-size: cover;
   animation: squeegeeEffect 4s ease-out forwards;
 }
@@ -39,10 +37,8 @@
   font-family: "Teko";
   color:white;
   animation: 1 ease-in 2.5s textboxEntrance;
-
   padding:20px;
   perspective: 1000px;
-  /* box-shadow: 0px 0px 10px rgba(0,0,0,.5); */
   z-index: 999999;
 }
 
@@ -62,7 +58,6 @@
   background:linear-gradient(rgba(75, 25, 64,.6),rgba(75, 25, 64,.7));
   line-height: 1;
   display: inline;
-  /* text-shadow: 0px 10px 20px black; */
 }
 
 .landing_img{
@@ -93,12 +88,12 @@
   filter: invert(52%) sepia(85%) saturate(893%) hue-rotate(177deg) brightness(104%) contrast(100%);
   animation: 1 ease-in 1s sparkle;
 }
+
 .knight_container{
   width:55%;
   position: absolute;
   z-index: 999;
   right:5%;
-
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
@@ -113,10 +108,8 @@
   filter:blur(5px);
   opacity:.1;
   animation: infinite ease-in 5s glowing;
-
   border-radius:50%;
 }
-
 
 .knight_main{
   width:100%;

@@ -1,11 +1,9 @@
-/* Global Styles */
 body {
   background-image: linear-gradient(rgba(75, 25, 64, 0.6), rgba(75, 25, 64, 0.5)), url("./../../images/wet_new.png") !important;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* General Styles for Common Components */
 .hero-container {
   width: 90%;
   bottom: -5%;
@@ -57,11 +55,13 @@ body {
   width: 20%;
   position: absolute;
 }
+
 #showcase_number{
   font-weight: 600 !important;
 }
 
 @media screen and (orientation: landscape) {
+
   .hero-container {
     left: 30%;
   }
@@ -73,20 +73,39 @@ body {
   .image-container .foreground {
     width: 25%;
   }
+
 }
 
-/* Media Queries */
 @media screen and (max-width: 1600px) {
-  .hero-container {
-    left: 30%;
-  }
 
-  .text-container .title {
-    font-size: 60px;
-  }
+    .hero-container {
+      left: 30%;
+    }
+
+    .text-container .title {
+      font-size: 60px;
+    }
+
+    .spotlight{
+      bottom: 65%;
+      z-index: 9;
+      left: 25%;
+      transform: rotateZ(-160deg);
+      width: 100%;
+      opacity: .9;
+      position: absolute;
+    }
+
+    .circle-light{
+      right: 10%;
+      top: -20%;
+      position: absolute;
+    }
+
 }
 
 @media screen and (max-width: 1200px) {
+
   .text-container {
     font-size: 25px;
   }
@@ -94,9 +113,11 @@ body {
   .text-container .title {
     font-size: 50px;
   }
+
 }
 
 @media screen and (max-width: 1000px) {
+
   .hero-container {
     left: 20%;
     transform: translateY(20px) scale(0.9);
@@ -128,10 +149,11 @@ body {
     top: 10%;
     left: 25%;
   }
+
 }
 
-/* Phones (Popular Viewports) */
 @media screen and (max-width: 768px) {
+
   .hero-container {
     left: 10%;
     transform: translateY(20px) scale(0.8);
@@ -150,9 +172,11 @@ body {
     top: 15%;
     left: 20%;
   }
+
 }
 
 @media screen and (max-width: 600px) {
+
   .hero-container {
     width: 100%;
     left: 0;
@@ -176,63 +200,62 @@ body {
     top: 20%;
     left: 15%;
   }
+
 }
 
-/* Tablets (Portrait and Landscape) */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .hero-container {
-    transform: translateY(20px) scale(0.85);
+
+    .hero-container {
+      transform: translateY(20px) scale(0.85);
+    }
+
+    .text-container {
+      font-size: 20px;
+    }
+
+    .text-container .title {
+      font-size: 45px;
+    }
+
+    .text-container .subtitle {
+      font-size: 22px;
+    }
+    #wave--hero{
+      height:112%;
+    }
+    .cityscape {
+      left:-5%;
+    }
+
+    .circle-light{
+      right:10%;
+      top:-40%;
+      position: absolute;
+    }
+    .light{
+      border-radius:50%;
+      width:300px;
+      height:300px;
+      background:white;
+      opacity:.8;
+      transform: rotateY(10deg);
+      filter:blur(3px);
+
+    }
+    .spotlight{
+      bottom:55%;
+      z-index: 9;
+      left:25%;
+      transform: rotateZ(-160deg);
+      width:80%;
+      opacity:.9;
+      position:absolute;
   }
 
-  .text-container {
-    font-size: 20px;
-  }
-
-  .text-container .title {
-    font-size: 45px;
-  }
-
-  .text-container .subtitle {
-    font-size: 22px;
-  }
-  #wave--hero{
-    height:112%;
-  }
-  .cityscape {
-    left:-5%;
-  }
-
-  .circle-light{
-    right:10%;
-    top:-40%;
-    position: absolute;
-  }
-  .light{
-    border-radius:50%;
-    width:300px;
-    height:300px;
-    background:white;
-    opacity:.8;
-    transform: rotateY(10deg);
-    filter:blur(3px);
-
-  }
-  .spotlight{
-    bottom:55%;
-    z-index: 9;
-    left:25%;
-    transform: rotateZ(-160deg);
-    width:80%;
-    opacity:.9;
-    position:absolute;
 }
 
-}
-
-/* Landscape Viewports */
-
-/* Ultra-Wide Screens */
 @media screen and (min-width: 1800px) {
+
   .hero-container {
     left: 35%;
     transform: translateY(20px) scale(1.1);
@@ -245,10 +268,11 @@ body {
   .text-container .title {
     font-size: 90px;
   }
+
 }
 
-/* Popular Phone Viewports */
 @media screen and (min-width: 320px) and (max-width: 480px) {
+
   .hero-container {
     width: 100%;
     left: 0;
@@ -266,4 +290,5 @@ body {
   .text-container .subtitle {
     font-size: 18px;
   }
+
 }
