@@ -165,7 +165,7 @@ body {
 /* Mobile Devices (768px and Below) */
 @media screen and (max-width: 768px) {
   .landing_background--about {
-    height: auto;
+    height: 100%;
     padding: 20px;
     text-align: center;
   }
@@ -281,17 +281,18 @@ body {
     height:90vh !important;
   }
 
-  .landing_background .text-container{
+  .landing_background--about .text-container{
     width:100% !important;
     top:15% !important;
     left:2.5% !important;
+    text-align: left !important;
   }
 
-  .landing_background .text-container .title{
+  .landing_background--about .text-container .title{
     font-size:90px !important;
   }
 
-  .landing_background .text-container .subtitle{
+  .landing_background--about .text-container .subtitle{
     font-size:28px !important;
   }
 
