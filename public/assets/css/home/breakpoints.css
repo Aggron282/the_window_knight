@@ -1,0 +1,67 @@
+@media screen and (max-width:690px){
+
+  .landing_background{
+    background-position-x:left !important
+  }
+  .landing_background .text-container{
+    left:0 !important;
+    top:20% !important;
+    width:100% !important;
+  }
+  .landing_background .text-container .title{
+    font-size:70px !important;
+  }
+  .why_us_col{
+    max-width:100% !important;
+    flex: 0 0 100% !important;
+  }
+  .content_value_container--title{
+    width:90% !important;
+    padding-left:0 !important
+  }
+  .value_banner{
+    top:75% !important;
+  }
+  .subscribe_container--form{
+    width:90% !important;
+  }
+  .content .text_container .title{
+    font-size:50px;line-height:1.1;
+  }
+  .content .text_container .subtitle{
+    font-size:40px;line-height:1.1;
+    margin-top:10px;
+  }
+  .subscribe_container--form{
+    width:100% !important;
+    padding-bottom:70px !important;
+  }
+  .knight_container {
+    top:45%;
+    width:85%;
+  }
+  .work-grid{
+    grid-template-columns: 100%;
+    padding:30px;
+    padding-top:60px;
+    padding-bottom: 80px;
+  }
+  .talent_container .title{
+    padding-bottom:50px
+  }
+  .subscribe_container--form label{
+    margin-top:15%;
+  }
+  .client_carousel{
+    margin-top:250% !important;
+  }
+  .content_value_container--value{
+    width:80% !important;
+    left:10% !important;
+    top:400px !important;
+  }
+  .value_detail_col{
+    margin-top:20px !important;
+  }
+
+}
