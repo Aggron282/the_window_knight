@@ -271,24 +271,121 @@ body {
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 680px) {
+
+  .landing_background--about .text-container{
+    left:0% !important;
+    width:100% !important;
+  }
+
+  .landing_background--about .text-container .title{
+    font-size:70px !important;
+  }
+
+  .landing_background--about .text-container .subtitle{
+    font-size:30px !important;
+  }
+
+  .landing_background--about .text-container .subtitle--button{
+    font-size:30px !important;
+  }
 
   .hero-container {
-    width: 100%;
-    left: 0;
-    transform: translateY(10px) scale(0.7);
+  transform: translateY(-50px) scale(2) !important;
+  animation:grow-mobile 1s ease-in 1;
+  }
+  .glow{
+    top:0% !important;
+  }
+  .rain_check_container{
+    padding-top:15%;
+    padding-bottom:15%;
+    margin-top:100% !important;
+  }
+  .rain-grid .text-container .subtitle{
+      font-size:20px;
+  }
+  .rain-grid .text-container .title{
+      font-size:30px;
+  }
+  .gate-title{
+    font-size:50px;
+  }
+  .hours-unique .grid-container-hours{
+    grid-template-columns: repeat(2,50%);
+    width:90%;
+    margin-left:2.5%;
+  }
+    .hours-unique .grid-container-hours div{
+      margin-top:30px;
+    }
+    .social_title{
+      font-size:13px;
+    }
+  .gates-unique{
+    height:700px;
+  }
+  .hours-unique{
+    padding-top:25% !important;
+  }
+  .rain-grid .text-container{
+    margin-left:0% !important;
   }
 
-  .text-container {
-    font-size: 14px;
+  .box-f{
+    margin-left:0% !important;
+    width:100%;
+    margin-top:20%;
+  }
+  .box-f .title{
+    font-size:50px;
+    line-height: 1.2;
+  }
+  .box-f .subtitle{
+    font-size:20px;
+    text-align: left;
+  }
+  .signal_container .text-container .title{
+    font-size:50px;
+  }
+  .signal_container .text-container .subtitle{
+    font-size:30px;
+  }
+  .signal_container .text-container .description{
+    font-size:20px;
+  }
+  .circle-light{
+    top:5%;
+  }
+  .her{
+    width:40%;
+  }
+  .spotlight{
+    bottom:75%;
+    left:5%;
+  }
+  .city{
+    left:-50%;
+    width:300%;
+  }
+  .light{
+
+    width:100px;height:100px
+  }
+  .signal_container .text-container {
+    width:100%;
   }
 
-  .text-container .title {
-    font-size: 28px;
-  }
+}
 
-  .text-container .subtitle {
-    font-size: 18px;
-  }
+@keyframes grow-mobile{
+  0%{
+    transform: translateY(0px) scale(0) !important;
 
+  }
+  100%{
+
+    transform: translateY(-50px) scale(2) !important;
+
+  }
 }
