@@ -105,14 +105,7 @@
   .subscribe_container{
     margin-top:0px !important;
   }
-  .gate-left-unique img{
-    height:100% !important;
-    object-fit: contain;
-  }
-  .gate-right-unique img{
-    height:100% !important;
-    object-fit: contain;
-  }
+
   .client--logo{
     margin-left:25% !important;
     width:30% !important;

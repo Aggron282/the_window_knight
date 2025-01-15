@@ -261,6 +261,14 @@ body {
     padding:40px !important;
   }
 
+  .gate-left-unique img{
+    height:100% !important;
+    object-fit: contain;
+  }
+  .gate-right-unique img{
+    height:100% !important;
+    object-fit: contain;
+  }
   .header-banner h1{
     font-size:30px !important;
   }
