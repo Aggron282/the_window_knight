@@ -2,8 +2,12 @@ a{
  text-decoration: none !important;
 }
 
-
+.navbar_home_mobile{
+  font-family: "Lato";
+  
+}
 a:hover p{
+
   font-weight: normal !important;
 }
 
