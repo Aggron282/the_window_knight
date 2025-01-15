@@ -3,51 +3,53 @@ function RenderCarouselNew() {
   {
     name: "Pita Jungle",
     logo: "pj.png",
-    review: "Great service and fantastic support!",
+    review: `
+    Window Knight exceeded our expectations! From the initial consultation to the flawless installation, their team was professional, punctual, and detail-oriented. Our restaurant’s new windows look stunning and enhance the ambiance perfectly. They truly bring in more natural light, creating a warm, inviting atmosphere for our guests. We couldn’t be happier with the results. Highly recommend Window Knight for top-notch service and craftsmanship.
+    `,
     background: "pitaa.jpg", // Light gray background color
     photo: "pita_photo.jpg", // Associated photo
   },
   {
     name: "Rachel's Art Studio",
     logo: "art.png",
-    review: "Beautiful designs, highly recommend!",
+    review: `Window Knight transformed my art studio with their amazing windows! The natural light now floods the space beautifully, enhancing every detail of my work and creating a bright, inspiring environment. Their team was professional, efficient, and truly understood the aesthetic I wanted to achieve. The quality of their craftsmanship is unmatched. I’m beyond thrilled with the results and highly recommend them to anyone`,
     background: "art__.jpeg", // Light pink background color
-    photo: "what_we_do_4.jpg", // Associated photo
+    photo: "what_we_do_4.png", // Associated photo
   },
   {
     name: "U.S Egg",
     logo: "f45.png",
-    review: "Delicious and wholesome breakfasts.",
+    review: `Window Knight did an incredible job upgrading our windows! The improved natural light has made our restaurant feel brighter and more welcoming, and the quality of their work is outstanding. Their team was professional, efficient, and made the entire process seamless. We’ve received so many compliments from our guests already. Highly recommend Window Knight for exceptional service and results!`,
     background: "egg.jpg", // Light yellow background color
-    photo: "what_we_do_1.png", // Associated photo
+    photo: "slant.png", // Associated photo
   },
   {
     name: "Breakfast & Bar",
     logo: "bkb.png",
-    review: "Amazing ambiance and food!",
-    background: "bkb1.png", // Light blue background color
-    photo: "what_we_do_2.png", // Associated photo
+    review: `Window Knight exceeded all expectations! Their team installed stunning, high-quality windows that completely transformed our space. The natural light now creates a fresh, inviting atmosphere that our customers love. From start to finish, their professionalism and attention to detail were remarkable. We couldn’t be happier with their work and would recommend them to anyone looking for top-tier window services.`,
+    background: "bkb1.jpg", // Light blue background color
+    photo: "photo_6.png", // Associated photo
   },
   {
     name: "Sims Business Systems",
     logo: "sims.png",
-    review: "Efficient systems, very reliable!",
+    review: `Window Knight delivered outstanding service! Their high-quality windows have enhanced our office space, bringing in more natural light and creating a modern, professional look. The installation process was smooth, and their team was punctual, efficient, and meticulous. We’ve noticed a significant improvement in energy efficiency, too. Highly recommend Window Knight for their expertise and exceptional craftsmanship`,
     background: "simss.jpg", // Light green background color
-    photo: "what_we_do_4.jpg", // Associated photo
+    photo: "/promises/2.png", // Associated photo
   },
   {
     name: "F45",
     logo: "f45.png",
-    review: "Highly effective workouts and great trainers!",
+    review: `Window Knight completely transformed our gym! The new windows let in an abundance of natural light, creating an energetic and motivating atmosphere for our members. Their team was professional, quick, and ensured every detail was perfect. The quality of their work is second to none, and we couldn’t be happier with the results. Thank you, Window Knight, for an incredible job!`,
     background: "wiwi.jpg", // Light purple background color
-    photo: "frrr.jpg", // Associated photo
+    photo: "what_we_do_3.png", // Associated photo
   },
   {
     name: "Residential Homes",
-    logo: "homes.png",
-    review: "Beautiful designs and great service!",
+    logo: "pop.png",
+    review: `Window Knight did an amazing job replacing the windows in our home! The new windows look stunning and have made a huge difference in energy efficiency and curb appeal. The team was professional, friendly, and completed the work quickly with great attention to detail. From start to finish, the entire process was smooth and stress-free. We’re thrilled with the results and highly recommend them to anyone!`,
     background: "silver.png", // Beige background color
-    photo: "what_we_do_3.jpg", // Associated photo
+    photo: "what_we_do_new.png", // Associated photo
   },
 ];
 
@@ -78,12 +80,12 @@ function RenderCarouselNew() {
           <div class="review-grid">
           <div>
         <p class="review">
-        I cannot recommend [Business Name] enough! Their attention to detail, exceptional customer service, and commitment to quality are unmatched. From the initial consultation to the final delivery, every step was smooth and professional. The team went above and beyond to ensure my needs were met and exceeded my expectations. The quality of their work is outstanding, and the results speak for themselves. It's rare to find a business that truly cares about its clients, but [Business Name] does just that. I will definitely be using their services again and recommending them to everyone I know. Truly a 5-star experience!
+        ${slide.review}
         </p>
         </div>
         <div class="photo-grid">
 
-          <img src="./assets/images/${slide.photo}" class="width-100" />
+          <img src="./assets/images/${slide.photo}" />
 
 
         </div>

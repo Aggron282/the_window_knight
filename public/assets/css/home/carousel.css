@@ -8,8 +8,9 @@
   overflow: hidden;
   background: white;
   padding: 30px;
-  margin-top:50%;
+  margin-top:40%;
 }
+
 
 .client_carousel .title {
   font-size: 55px;
@@ -51,8 +52,12 @@
 }
 
 .client_slide_box .client--logo {
-  width: 70%;
+  width: 100px;
+  height:100px;
   margin: 0 auto;
+  background: white;
+  border-radius:50%;
+  padding:10px;
   display: block;
 }
 
@@ -78,10 +83,11 @@
 }
 
 .client_slide_box .review {
-  font-size: 16px;
-  padding-left:20px;
+  font-size: 18px;
+  padding-left:10px;
+  font-family: "Lato"
 
-  width: 60%;
+  width: 80%;
 }
 
 .photo-grid{
@@ -144,7 +150,12 @@
 .right--arrow--c {
   right: 50px;
 }
-
+p{
+}
 .left--arrow--c {
   left: 50px;
+}
+.photo-grid img{
+  width:300px;
+  height:300px;
 }

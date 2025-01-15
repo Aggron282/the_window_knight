@@ -13,11 +13,11 @@ function ReturnSparkleHTML(x,y){
   return `<img src = "./assets/images/sparkle.png" class="sparkle" style="left:${x}%;top:${y}px;animation-duration:${Math.random() * 2 + .5}s"/>`
 }
 
-setInterval(async ()=>{
-
-  sparkle_container.innerHTML = ""
-
-  sparkle_container.innerHTML += ReturnSparkleHTML(Math.random() * 50 + 20, Math.random() * 40 + 20);
-  counter ++;
-
-},7000);
+// setInterval(async ()=>{
+//
+//   sparkle_container.innerHTML = ""
+//
+//   sparkle_container.innerHTML += ReturnSparkleHTML(Math.random() * 50 + 20, Math.random() * 40 + 20);
+//   counter ++;
+//
+// },7000);
