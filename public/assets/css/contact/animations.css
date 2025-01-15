@@ -1,0 +1,229 @@
+
+    @keyframes ripple-effect {
+      to {
+        transform: scale(10);
+        opacity: 0;
+      }
+    }
+
+
+    @keyframes shine {
+      0%{
+        transform: translateX(50%);
+        filter: brightness(0);
+
+
+      }
+      50%{
+        filter: brightness(1.02);
+      }
+      100% {
+        transform: translateX(0%);
+        filter: brightness(1);
+      }
+    }
+
+    @keyframes pane-break {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0) rotate(180deg);
+      opacity: 0;
+    }
+  }
+
+    @keyframes reflection {
+      from {
+        transform: translateX(-50%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
+
+    .hours-container{
+      transform: translateX(-100px);
+      filter: brightness(0);
+      opacity: 0;
+      transition: all .5s;
+    }
+
+    .social_title{
+      font-size:14px;
+      font-family: "Lato";
+      color:white;
+      text-align: center;
+      padding:10px;
+      margin-top: 20px;
+      opacity:0;
+      transition: all .5s;
+    }
+
+    .social_title1{
+      opacity:0;transform:translateY(20px);
+    }
+    .social_title2{
+      opacity:0;transform:translateX(20px);
+    }.social_title3{
+      opacity:0;transform:translateY(-20px);
+    }.social_title4{
+      opacity:0;transform:translateX(-20px);
+    }.social_title5{
+      opacity:0;transform:translateY(20px);
+    }
+
+
+    .social_title1--active{
+      opacity:1;transform:translateY(0px);
+    }
+    .social_title2--active{
+      opacity:1;transform:translateX(0px);
+    }.social_title3--active{
+      opacity:1;transform:translateY(0px);
+    }.social_title4--active{
+      opacity:1;transform:translateX(0px);
+    }.social_title5--active{
+      opacity:1;transform:translateY(0px);
+    }
+
+    .reach-container{
+      transform: translateX(-50%);
+      filter: brightness(1);
+      opacity: 0;
+    }
+
+    .hero-hours img{
+      filter:  brightness(0);
+      opacity:0;
+      transform:rotateY(180deg);
+      transition:  1s all;
+    }
+
+    .hero-hours--active img{
+      transform: rotateY(0deg);
+      filter: brightness(1);
+      opacity: 1 !important;
+    }
+
+    .reach-container--active{
+      animation: reflection .5s 1 ease-in;
+      opacity: 1;
+      filter: brightness(1);
+      transform: translateX(0%);
+    }
+
+    .hours-container--active{
+      transform: translateX(0%) !important;
+      filter: brightness(1);
+      opacity: 1 !important;
+      transition: all .5s;
+      animation: reflection .5s 1 ease-in;
+
+    }
+
+    .icon-s-1{
+      transition: all .5s;
+      opacity:0;
+      filter:brightness(0)
+    }
+
+    .icon-s-2{
+      transition: all .5s;
+      opacity:0;
+      filter:brightness(0)
+    }
+
+    .icon-s-3{
+      transition: all .5s;
+      opacity:0;
+      filter:brightness(0)
+    }
+
+    .icon-s-4{
+      transition: all .5s;
+      opacity:0;
+      filter:brightness(0)
+    }
+
+    .icon-s-1--active{
+      opacity:1;
+      transition: all .5s;
+      filter:brightness(1)
+    }
+
+    .icon-s-2--active{
+      opacity:1;
+      transition: all .5s;
+      filter:brightness(1)
+    }
+
+    .icon-s-3--active{
+      opacity:1;
+      transition: all .5s;
+      filter:brightness(1)
+    }
+    .icon-s-4--active{
+      opacity:1;
+      transition: all .5s;
+      filter:brightness(1)
+    }
+
+    .circle-light {
+      filter:brightness(0);
+      transform:translateY(300px) rotateY(180deg);
+      opacity:0;
+      transition: all .5s;
+    }
+
+    .circle-light--active {
+      filter:brightness(1);
+      transform:translateY(-100px) rotateY(0deg);
+      opacity:1;
+      transition: all 2s;
+    }
+    .rain-text-container{
+      opacity: 0;
+      filter: brightness(0);
+      transform: translateX(50%);
+    }
+    .rain-text-container--active{
+      animation:reflection .5s ease-in 1;
+      opacity: 1;
+      filter: brightness(1);
+      transform: translateX(0%);
+    }
+    .city{
+      transform:translateY(400px);
+    }
+    .city--active{
+      transition: all .5s;
+      transform:translateY(0px);
+    }
+    .spotlight{
+      opacity:0 !important;
+      transform: scaleY(0);
+      filter:brightness(0) blur(5px);
+    }
+
+    .spotlight--active{
+      opacity:1 !important;
+      transition: all .5s;
+      transform: scaleY(1);
+      filter:brightness(1) blur(0px);
+    }
+
+
+    .box-f{
+      opacity:0;
+      transform:translateY(50px);
+
+    }
+
+    .box-f--active{
+      transition: all .5s;
+      opacity:1;
+      transform:translateY(0px);
+    }

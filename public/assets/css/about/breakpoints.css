@@ -76,7 +76,7 @@ body {
   }
   .landing_background--about {
     height: 115vh;
-    background-position: bottom;
+    background-position: top;
   }
 
   .icon h3,
@@ -108,7 +108,7 @@ body {
 @media screen and (max-width: 1400px) and (min-width: 1201px) {
   .landing_background--about {
     height: 110vh;
-    background-position: bottom;
+    background-position: top;
   }
 
   .what_we_do_col{

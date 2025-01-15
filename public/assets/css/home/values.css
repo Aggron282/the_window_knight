@@ -55,7 +55,7 @@
 }
 
 .value_detail_box .title{
-  font-size:32px;
+  font-size:25px;
   font-family: "Teko";
   letter-spacing: 2px;
   text-align: center;
@@ -63,13 +63,21 @@
 
 .value_banner{
   background: linear-gradient(to right bottom, rgba(238, 130, 58, 1), rgba(44, 73, 119, 1),rgba(44, 73, 119, 1));
-  height:55px;
+  height:5px;
   position:absolute;
+  background:#38b6ff;
+  right:0;
+  opacity:0;
   width:60%;
-  right:0%;
   top:10%;
 }
 
+.value_banner--active{
+  opacity:1;
+  transition: all .5s;
+  right:0% !important;
+  height:50px;
+}
 .content_value_text--subtitle{
   color:white;
   font-size:25px;
