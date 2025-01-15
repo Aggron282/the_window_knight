@@ -359,6 +359,10 @@ body {
     padding:0px !important;
     margin-top:-20%;
   }
+  .navbar_custom{
+    margin-left:10px !important;
+    margin-top:10px !important;
+  }
   .showcase_container{
     margin-top:0 !important;
   }

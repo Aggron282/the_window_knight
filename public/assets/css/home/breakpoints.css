@@ -2,6 +2,14 @@
   padding:30px
 }
 @media screen and (max-width:690px){
+  .navbar_custom{
+    margin-left:10px !important;
+    margin-top:10px !important;
+  }
+  #showcase_number{
+    z-index: 9;
+    position: relative;
+  }
 
   .landing_background{
     background-position-x:left !important

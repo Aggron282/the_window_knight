@@ -226,6 +226,10 @@ body {
 
 
 @media screen and (max-width:690px){
+  .navbar_custom{
+    margin-left:10px !important;
+    margin-top:10px !important;
+  }
   .landing_background--about{
     background-position: center center;
   }
