@@ -294,6 +294,10 @@ body {
   transform: translateY(-50px) scale(2) !important;
   animation:grow-mobile 1s ease-in 1;
   }
+  #showcase_number{
+    z-index: 9;
+    position: relative;
+  }
   .glow{
     top:0% !important;
   }
