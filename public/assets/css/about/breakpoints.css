@@ -222,7 +222,9 @@ body {
 
 
 @media screen and (max-width:690px){
-
+  .landing_background--about{
+    background-position: center center;
+  }
   .mission_col{
     width:100% !important;
     max-width:100% !important;
