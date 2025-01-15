@@ -114,6 +114,9 @@
   .subscribe_container--form label{
     margin-top:15%;
   }
+  .showcase_container{
+    margin-top:0% !important;
+  }
   .client_carousel{
     margin-top:250% !important;
   }
