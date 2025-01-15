@@ -296,7 +296,6 @@ body {
   }
   #showcase_number{
     z-index: 9;
-    position: relative;
   }
   .glow{
     top:0% !important;
@@ -372,7 +371,7 @@ body {
     transition: all .5s;
     opacity:1;
     height:350px;
-
+    animation:  none !important;
     background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
   }
   .navbar_custom{
