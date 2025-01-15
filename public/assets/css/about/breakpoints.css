@@ -165,9 +165,13 @@ body {
 /* Mobile Devices (768px and Below) */
 @media screen and (max-width: 768px) {
   .landing_background--about {
-    height: 100%;
+    height: 140%;
     padding: 20px;
     text-align: center;
+  }
+  .landing_background--about{
+    background:linear-gradient(140deg , rgba(75, 25, 64,1),rgba(75, 25, 64,.9),rgba(75, 25, 64,.8),rgba(75, 25, 64,.5),rgba(66,57,101,0)),url("./../../images/pann.png") no-repeat center center;
+
   }
 
   .landing_background--about .text-container .title {
@@ -224,6 +228,9 @@ body {
 @media screen and (max-width:690px){
   .landing_background--about{
     background-position: center center;
+  }
+  .showcase_container{
+    margin-top:0% !important;
   }
   .mission_col{
     width:100% !important;
