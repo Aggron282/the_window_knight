@@ -292,6 +292,14 @@ body {
     font-size:90px !important;
   }
 
+  .right p{
+    font-size:18px !important;
+  }
+
+  .input-control{
+    margin-top:30px !important;
+  }
+
   .landing_background--about .text-container .subtitle{
     font-size:28px !important;
   }
