@@ -334,12 +334,16 @@ body {
 
   .box-f{
     margin-left:0% !important;
-    width:100%;
-    margin-top:20%;
+    width:100% !important;
+    margin-top:20% !important;
   }
   .box-f .title{
-    font-size:50px;
-    line-height: 1.2;
+    font-size:50px !important;
+    line-height: 1.2 !important;
+  }
+  .contact-section{
+    padding:0px !important;
+    margin-top:-5%;
   }
   .box-f .subtitle{
     font-size:20px;
