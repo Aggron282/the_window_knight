@@ -105,6 +105,11 @@
   .subscribe_container{
     margin-top:0px !important;
   }
+  .gate-left-unique img , .gate-right-unique{
+    height:100% !important;
+    background-size: contain;
+    
+  }
   .client--logo{
     margin-left:25% !important;
     width:30% !important;
