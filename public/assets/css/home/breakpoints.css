@@ -49,6 +49,34 @@
   .talent_container .title{
     padding-bottom:50px
   }
+  .photo-grid img {
+    opacity:0 !important;
+  }
+  .review-grid{
+    text-align: center !important;
+    grid-template-columns: 100%;
+  }
+  .client_slide_box .title{
+    padding-left:0 !important;
+  }
+  .slide-grid{
+    grid-template-columns: 100%;
+  }
+  .arrow_container--carousel {
+    color: white !important;
+    top:80% !important;
+  }
+  .client_slide_box .title {
+    padding:0;
+    padding-top:20px;
+
+    font-size:35px;
+  }
+  .client--logo{
+    margin-left:25% !important;
+    width:30% !important;
+    height:100% !important;
+  }
   .subscribe_container--form label{
     margin-top:15%;
   }
