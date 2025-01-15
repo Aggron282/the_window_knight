@@ -341,12 +341,15 @@ body {
     margin-top:20% !important;
   }
   .gate-left-unique img{
-    height:100% !important;
+    height:50% !important;
     object-fit: contain;
+    width:100% !important;
   }
   .gate-right-unique img{
-    height:100% !important;
+    height:50% !important;
     object-fit: contain;
+    width:100% !important;
+
   }
   .box-f .title{
     font-size:50px !important;
