@@ -1,7 +1,18 @@
+.pd{
+  padding:30px
+}
 @media screen and (max-width:690px){
 
   .landing_background{
     background-position-x:left !important
+  }
+  .pd{
+    padding:10px !important;
+  }
+  .why_choose_us_container{
+    margin-top:65% !important;
+    padding:30px;
+    line-height: 1.1;
   }
   .landing_background .text-container{
     left:0 !important;
@@ -34,6 +45,7 @@
   }
   .subscribe_container--form{
     width:100% !important;
+    margin-left:0% !important;
     padding-bottom:70px !important;
   }
   .knight_container {
@@ -45,6 +57,14 @@
     padding:30px;
     padding-top:60px;
     padding-bottom: 80px;
+  }
+  .subscribe_button{
+    margin-top:25%;
+    width:90%;
+    margin-left:5%;
+  }
+  .subscribe_container--form .content .subtitle{
+    font-size:30px;
   }
   .talent_container .title{
     padding-bottom:50px
@@ -72,8 +92,9 @@
 
     font-size:35px;
   }
+
   .client--logo{
-    margin-left:25% !important;
+    margin-left:20% !important;
     width:30% !important;
     height:100% !important;
   }
@@ -84,8 +105,8 @@
     margin-top:250% !important;
   }
   .content_value_container--value{
-    width:80% !important;
-    left:10% !important;
+    width:100% !important;
+    left:0% !important;
     top:400px !important;
   }
   .value_detail_col{
