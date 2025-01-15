@@ -325,6 +325,9 @@ body {
   .gates-unique{
     height:700px;
   }
+  .gate-section-unique .title{
+    font-size:50px !important;
+  }
   .hours-unique{
     padding-top:25% !important;
   }
