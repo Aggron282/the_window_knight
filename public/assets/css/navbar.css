@@ -4,7 +4,7 @@ a{
 
 .navbar_home_mobile{
   font-family: "Lato";
-  
+
 }
 a:hover p{
 
@@ -56,6 +56,9 @@ a:hover p{
 
 .button_img{
   filter: invert(100) !important;
+  z-index: 999999999999999999999999999999999999999999999999999999;
+
+  position: relative;
 }
 
 .collapse-it:not(.show) {
