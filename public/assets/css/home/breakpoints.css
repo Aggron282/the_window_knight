@@ -12,6 +12,8 @@
   .why_choose_us_container{
     margin-top:65% !important;
     padding:30px;
+    padding-top:15%;
+    padding-bottom:20%;
     line-height: 1.1;
   }
   html,body{
@@ -96,9 +98,15 @@
 
     font-size:35px;
   }
-
+  .the_work_container{
+    padding-left:0 !important;
+    padding-right:0 !important;
+  }
+  .subscribe_container{
+    margin-top:0px !important;
+  }
   .client--logo{
-    margin-left:20% !important;
+    margin-left:25% !important;
     width:30% !important;
     height:100% !important;
   }
