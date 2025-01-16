@@ -226,42 +226,29 @@ body {
 
 
 @media screen and (max-width:1000px) and (min-width:590px) and (orientation:landscape){
-    .landing_background .text-container{
-      width:60%;
-    }
-    .company_values_container{
-      margin-top:10%;
-    }
-    .value_banner{
-      width:30%;
-    }
-    .value_detail_box .title{
-      font-size:20px;
-    }
-    .client_carousel{
-      margin-top:50%;
-      height:160vh;
-    }
-
-    .arrow_container--carousel{
-      top:20%;
-      color:white;
-    }
-    .client_slide_box .review{
-      width:80%;
-      padding-left:0px;
-      font-size:16.5px;
-    }
-    .slide-grid{
-      grid-template-columns: 65% 10%;
-      padding-top:30px;
-    }
-    .work-grid{
-      grid-template-columns: 100%;
-    }
-    .name-box .title{
-      font-size:50px;
-    }
+  .landing_background--about .text_container{
+    width:80%  !important;
+    left:0  !important;
+    text-align: left  !important
+  }
+  .landing_background--about .text_container .title{
+    font-size:80px  !important
+  }
+  .landing_background--about .text_container .subtitle{
+    font-size:34px  !important
+  }
+  .flex-direction{
+    align-items: none !important;
+  }
+  .what_we_do_link {
+    font-size:15px !important
+  }
+  .meet_team_container--body{
+    grid-template-columns: 100% !important;
+  }
+  .right p {
+    font-size:16px !important;
+  }
 }
 
 @media screen and (max-width:690px){
