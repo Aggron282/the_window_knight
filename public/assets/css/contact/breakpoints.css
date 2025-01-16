@@ -295,7 +295,7 @@ body {
   animation:grow-mobile 1s ease-in 1;
   }
   #showcase_number{
-    z-index: 9;
+    z-index: 999;
   }
   .glow{
     top:0% !important;
