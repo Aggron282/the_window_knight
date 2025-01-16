@@ -152,3 +152,41 @@
   }
 
 }
+@media screen and (max-width:1000px) and (min-width:590px) and (orientation:landscape){
+    .landing_background .text-container{
+      width:60% !important;
+    }
+    .company_values_container{
+      margin-top:10% !important;
+    }
+    .value_banner{
+      width:30% !important;
+    }
+    .value_detail_box .title{
+      font-size:20px !important;
+    }
+    .client_carousel{
+      margin-top:50% !important;
+      height:160vh !important;
+    }
+
+    .arrow_container--carousel{
+      top:20% !important;
+      color:white !important;
+    }
+    .client_slide_box .review{
+      width:80% !important;
+      padding-left:0px !important;
+      font-size:16.5px !important;
+    }
+    .slide-grid{
+      grid-template-columns: 65% 10% !important;
+      padding-top:30px !important;
+    }
+    .work-grid{
+      grid-template-columns: 100% !important;
+    }
+    .name-box .title{
+      font-size:50px !important;
+    }
+}
