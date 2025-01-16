@@ -271,6 +271,52 @@ body {
 
 }
 
+@media screen and (min-width:500px) and (max-width:900px) and (orientation:landscape){
+  .button_img{
+    height:20px !important;
+    width:20px !important;
+    margin:20px !important;
+  }
+  .landing_background--about .text-container{
+    width:70% !important;
+  }
+  .landing_background--about .text-container .subtitle{
+    width:70% !important;
+    font-size:40px !important;
+  }
+  .hero-container{
+    left:40% !important;
+  }
+  .box-f{
+    width:95% !important; margin-left:2.5% !important;
+  }
+  .box-f .subtitle{
+    font-size:20px !important;
+  }
+  .signal_container .text-container{
+    width:90% !important;
+  }
+  .signal_container .text-container .description{
+    font-size:20px !important;
+  }
+  .light{
+    background:rgba(255,255,255,.2) !important;
+    height:100px !important;
+    width:100px !important;
+  }
+  .circle-light{
+    top:-40% !important;
+    right:5% !important;
+  }
+  .spotlight{
+    opacity:.3 !important;
+  }
+  .city{
+    bottom:45% !important;
+  }
+
+}
+
 @media screen and (max-width: 680px) {
 
   .landing_background--about .text-container{
