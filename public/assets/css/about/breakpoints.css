@@ -363,6 +363,47 @@ body {
 }
 
 @media screen and (max-width:1100px) and (min-width:700px) and (orientation:portrait){
+  .landing_background--about .text-container{
+    top:10% !important;
+    width:80% !important;
+  }
+  .landing_background--about .text-container .title{
+    font-size:100px !important;
+  }
+  .landing_background--about .text-container .subtitle{
+    font-size:50px !important;
+  }
+  .landing_background--about{
+    background-position: bottom right !important;
+  }
+  .what_we_do_container .what_we_do_title{
+  font-size:100px
+  }
+  .what_we_do_container {
+    padding-top:2.5% !important;
+  }
+  .meet_team_container--body{
+    grid-template-columns: 100% !important;
+  }
+  .text_wrapper{
+    padding:70px !important;
+  }
+  .left h2{
+    font-size:60px !important;
+  }
+  .right p {
+    font-size:18px !important
+  }
+  #wave{
+    opacity: 0 !important;
+
+  }
+  #quote{
+    margin-top:40px;
+  }
+  .mission_text--description{
+    font-size:30px !important;
+  }
 
 
 }

@@ -130,4 +130,12 @@ a:hover p{
   .link_nav--title{
     font-size:20px !important;
   }
+  
+  #showcase_number a{
+    font-size:45px;
+    font-family: "Teko";
+  }
+  #showcase_number{
+    top:10%;
+  }
 }
