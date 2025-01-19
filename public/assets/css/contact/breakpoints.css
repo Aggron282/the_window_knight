@@ -477,14 +477,14 @@ body {
 }
 
 @media screen and (max-width:1100px) and (min-width:700px) and (orientation:portrait){
-  .landing_background--about .text_container {
+  .landing_background--about .text-container {
     width:75% !important;
     top:10% !important;
   }
-  .landing_background--about .text_container .title {
+  .landing_background--about .text-container .title {
     font-size:120px!important;
   }
-  .landing_background--about .text_container .subtitle {
+  .landing_background--about .text-container .subtitle {
     font-size:70px !important;
   }
   .hero-container{
