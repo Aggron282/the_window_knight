@@ -2,3 +2,4 @@
 /util/nodemailer.js
 /util/connection_name.js
 /util/sensitive.js
+.env
