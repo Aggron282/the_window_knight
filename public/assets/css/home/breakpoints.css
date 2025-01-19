@@ -192,6 +192,28 @@
 }
 
 @media screen and (max-width:1100px) and (min-width:700px) and (orientation:portrait){
-
+  .landing_background .text_container{
+    width:70% !important;
+  }
+  .landing_background .text_container .subtitle{
+    font-size:55px !important;
+    margin-top:50px !important;
+  }
+  .landing_background .text-container .title {
+    font-size:120px!important;
+    margin-bottom:60px !important;
+  }
+  .client_carousel{
+    margin-top:70% !important;
+    height:60vh !important
+  }
+  .talent_container .title{
+    padding:30px !important;
+    font-size:80px !important;
+    text-align: center !important
+  }
+.name-box .title{
+    font-size:70px !important;
+  }
 
 }

@@ -481,25 +481,12 @@ body {
     width:75% !important;
     top:10% !important;
   }
-  .landing_background .text_container{
-    width:70% !important;
-  }
-  .landing_background .text_container .subtitle{
-    font-size:55px !important;
-    margin-top:50px !important;
-  }
-  .landing_background .text-container .title {
-    font-size:120px!important;
-    margin-bottom:60px !important;
-  }
+
   .knight_container{
     top:45% !important;
     width:55% !important;
   }
-  .client_carousel{
-    margin-top:70% !important;
-    height:60vh !important
-  }
+
   .landing_background--about .text-container .subtitle {
     font-size:70px !important;
   }
@@ -512,11 +499,7 @@ body {
     background-size:cover !important;
     padding:60px !important;
   }
-  .talent_container .title{
-    padding:30px !important;
-    font-size:80px !important;
-    text-align: center !important
-  }
+
   .rain_check_container {
     margin-top:50% !important;
   }
@@ -524,9 +507,7 @@ body {
   .signal_container .text-container{
     width:80% !important;
   }
-  .name-box .title{
-    font-size:70px !important;
-  }
+  
   .signal_container{
     height:70vh !important;
   }
