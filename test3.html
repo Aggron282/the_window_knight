@@ -1,64 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vision Board</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-  }
-
-  .vision-board {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    gap: 10px;
-    padding: 10px;
-  }
-
-  /* Grid item styling */
-  .grid-item {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Default square shape */
-    background-size: cover;
-    background-position: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .grid-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  /* Variations for spans */
-  .span-col-2 {
-    grid-column: span 2; /* Spans 2 columns */
-  }
-
-  .span-row-2 {
-    grid-row: span 2; /* Spans 2 rows */
-  }
-
-  </style>
-</head>
+  <html>
+    <head>
+      <style>
+        body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+      .email-container {
+        background-color: #ffffff;
+        margin: 20px auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+      }
+      .header {
+        background-color: #007BFF;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px 8px 0 0;
+      }
+      .header h1 {
+        margin: 0;
+      }
+      .content {
+        padding: 20px;
+        color: #333333;
+      }
+      .content h2 {
+        color: #007BFF;
+      }
+      .footer {
+        background-color: #f1f1f1;
+        color: #666666;
+        padding: 10px;
+        text-align: center;
+        border-radius: 0 0 8px 8px;
+      }
+    </style>
+  </head>
 <body>
-  <div class="vision-board">
-    <div class="grid-item" style="background-image: url('images/paris.jpg');"></div>
-    <div class="grid-item" style="background-image: url('images/modern-house.jpg');"></div>
-    <div class="grid-item" style="background-image: url('images/garden.jpg');"></div>
-    <div class="grid-item" style="background-image: url('images/money.jpg');"></div>
-    <div class="grid-item" style="background-image: url('images/beach-model.jpg');"></div>
-    <div class="grid-item" style="background-image: url('images/sunset.jpg');"></div>
-    <div class="grid-item" style="background-image: url('images/meditation.jpg');"></div>
-    <div class="grid-item" style="background-image: url('images/bathtub.jpg');"></div>
-    <div class="grid-item" style="background-image: url('images/bedroom.jpg');"></div>
-    <div class="grid-item" style="background-image: url('images/coins.jpg');"></div>
+  <div class="email-container">
+    <div class="header">
+      <h1>Your Cool Email Header</h1>
+    </div>
+
+    <div class="content">
+      <h2>Hello, ${contact_name}!</h2>
+      <p>
+      Are your windows in need of a little TLC? Look no further! At The Window Knight, we specialize in making every pane sparkle, whether it's in your cozy home or your bustling office.
+      </p>
+      <p>
+      Residential Window Cleaning: Enjoy spotless windows that brighten up your home.
+      Commercial Window Cleaning: Impress your clients with gleaming windows in your office space.
+      </p>
+      <p>
+      Specialized Services: From skylights to stained glass, we handle delicate jobs with expertise.
+      Let us help you enjoy the view through crystal-clear windows!
+      </p>
+      <p>
+      We look forward to helping you see the world more clearly!
+      contact us at 480-822-0511 or email us at marco@thewindowknight.com
+      </p>
+      <p>
+
+      Best regards,
+      Marco Khodr
+      Founder
+      </p>
+
   </div>
-  <script src="script.js"></script>
+  <div class="footer">
+    <p>© 2025 The Window Knight | The Window Cleaning Experts</p>
+  </div>
+</div>
 </body>
 </html>

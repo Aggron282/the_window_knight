@@ -33,6 +33,10 @@ const Prospects = new Schema (
     schedule:{
       type:Date,
       required:false
+    },
+    message:{
+      type:String,
+      required:false
     }
   }
 )

@@ -4,6 +4,8 @@ var path = require("path");
 const {check,body} = require("express-validator");
 
 var userController = require("./../../controllers/user/userController.js")
+var adminController = require("./../../controllers/admin/admin_controller.js")
+
 var userToOwnerController = require("./../../controllers/admin/user_to_owner_controller.js")
 var rootDir = require("./../../util/path.js")
 
@@ -24,6 +26,11 @@ router.get("/data/steps",userController.GetSteps);
 
 // User Posts to Admin
 router.post("/admin/subscribe",check("email").isEmail().normalizeEmail(),userToOwnerController.Subscribe)
+router.post("/admin/subscribe_user",
+check("name").isLength({min:1}),
+check("phone").isLength({min:4}),
+check("email").isEmail().normalizeEmail()
+,adminController.SubscribeUser)
 
 // Exit Modals
 router.post("/exit",userController.ExitOutOfModal);

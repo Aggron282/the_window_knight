@@ -73,6 +73,9 @@ mongoose.connect(connection_name.connection_name).then((s)=>{
     setInterval(()=>{countdown - 1, 1000});
 
     app.listen(port,async()=>{
+      require("dotenv").config();
+
+      console.log(process.env.SENDGRID_API_KEY)
       console.log("App is Running");
     });
 

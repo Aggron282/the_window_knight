@@ -10,6 +10,10 @@
   padding-top:10%;
 }
 
+.subscribe_input{
+  margin-top:10px;
+}
+
 .sub-b{
   background-size: cover !important;
   background-position: right top;
@@ -97,10 +101,17 @@
 .subscribe_container .text_container .subtitle{
   font-size: 30px;
 }
+#subscribe{
+  width:80%;
+  margin-left:10%;
+}
 
+ #subscribe textarea{
+   font-size:18px;
+ }
  #subscribe input{
-  padding:25px;
-  font-size:20px;
+  padding:15px;
+  font-size:17px;
   width:100%;
   font-family: "Montserrat"
 }

@@ -44,9 +44,10 @@ function CreateCanvas(query) {
   canvas.height = window.innerHeight;
 
   // Configuration variables
-  const particles = [];
+  var particles = [];
   const gravity = 0.02;
   const friction = 0.98;
+
   function cancel(){
     particles = [];
     c.clearRect(0, 0, canvas.width, canvas.height);
@@ -122,8 +123,11 @@ function InitFireworks(){
       t = 0;
       fireworks.cancel();
     }
-
-    fireworks.createParticles(Math.random() *1000 + 5 , Math.random() * 505+ 5);
+    if(fireworks){
+      if(fireworks.createParticles){
+        fireworks.createParticles(Math.random() *1000 + 5 , Math.random() * 505+ 5);
+      }
+    }
   },1000);
 
 }
