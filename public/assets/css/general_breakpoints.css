@@ -42,6 +42,8 @@
   }
 
   .active-navbar{
+    right:18px !important;
+    width:101% !important
     animation:dropdown_nav .5s 1 ease-in !important;
   }
 
