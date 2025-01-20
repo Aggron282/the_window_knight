@@ -42,19 +42,19 @@ const Init_Navbar = () => {
       <div class="col-1 no_col"></div>
       <div class="col-5">
       <div class="row">
-        <a class="col-2 nav_col nav_col--home" href="/">
+        <a class="col-3 nav_col nav_col--home" href="/">
           <p class="link_nav margin-left-5">Home</p>
         </a>
 
-        <a class="col-2 nav_col  nav_col--about" href="/about">
+        <a class="col-3 nav_col  nav_col--about" href="/about">
           <p class="link_nav">About Us</p>
         </a>
 
-        <a class="col-2 nav_col nav_col--contact" href="/contact_us">
+        <a class="col-3 nav_col nav_col--contact" href="/contact_us">
           <p class="link_nav">Contact Us</p>
         </a>
 
-        <a class="col-2  nav_col sc_col nav_col--schedule" href="/#subhere">
+        <a class="col-3  nav_col sc_col nav_col--schedule" href="/#subhere">
           <p class="link_nav">Free Quote</p>
         </a>
 
