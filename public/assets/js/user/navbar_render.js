@@ -111,34 +111,7 @@ const Init_Navbar = () => {
 
     `;
 
-    var contact = document.querySelectorAll(".nav_col--contact");
-    var schedule = document.querySelectorAll(".nav_col--schedule");
-    var about = document.querySelectorAll(".nav_col--about");
-
-    for(var i = 0;i  < contacts.length; i++){
-
-      contacts[i].addEventListener("click",()=>{
-        window.location.assign("/contact_us");
-      })
-
-    }
-
-  for(var i = 0;i  < about.length; i++){
-
-    about[i].addEventListener("click",()=>{
-      window.location.assign("/about");
-    })
-
-  }
-
-  for(var i = 0;i  < schedule.length; i++){
-
-    schedule[i].addEventListener("click",()=>{
-      window.location.assign("/#hq");
-    });
-
-  }
-
+    
   nav_button = document.getElementById("button_navbar");
 
   if(nav_button){
