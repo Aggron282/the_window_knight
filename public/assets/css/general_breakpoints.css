@@ -1,16 +1,16 @@
 @media screen and (max-width:700px){
   .n-mobile{
-    position: relative !important;
+    position: absolute !important;
     visibility: visible !important;
-    z-index: 99;
+    z-index: 99999 !important;
   }
   .n-mobile *{
     pointer-events: all !important;
   }
   .n-desktop{
     position: fixed !important;
-    visibility: hidden;
-    z-index: -2;
+    visibility: hidden !important;
+    z-index: -2 !important;
   }
   .n-desktop * {
     pointer-events: none !important;
@@ -18,9 +18,8 @@
 
   .pos-f-t{
     position: absolute;
-    top:0%;
-    width:100%;
-    z-index:9999;
+    top:5%;
+    left:5%;
   }
 
   .navbar-dark .navbar-toggler{
