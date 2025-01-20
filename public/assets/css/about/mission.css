@@ -89,7 +89,9 @@
     padding-top: 2.5%;
     text-align: justify ;
   }
-
+  .right p, form, button {
+    margin-top:20px;
+  }
   .mission_col--divider{
     width:0% ;
     max-width:0%
