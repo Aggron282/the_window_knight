@@ -1,0 +1,36 @@
+@media screen and (max-width:700px){
+  .n-mobile{
+    position: relative !important;
+    visibility: visible !important;
+    z-index: 99;
+  }
+  .n-mobile *{
+    pointer-events: all !important;
+  }
+  .n-desktop{
+    position: fixed !important;
+    visibility: hidden;
+    z-index: -2;
+  }
+  .n-desktop * {
+    pointer-events: none !important;
+  }
+
+}
+
+.n-desktop{
+  position: relative ;
+  visibility: visible ;
+  z-index: 99;
+}
+.n-desktop *{
+  pointer-events: all ;
+}
+.n-mobile{
+  position: fixed ;
+  visibility: hidden;
+  z-index: -2;
+}
+.n-mobile * {
+  pointer-events: none ;
+}
