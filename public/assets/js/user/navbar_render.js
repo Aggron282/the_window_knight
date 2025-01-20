@@ -34,30 +34,33 @@ const Init_Navbar = () => {
     <div class="navbar_custom n-desktop">
 
     <div class="nav_row row">
-      <div class="col-3">
+      <div class="col-4">
         <img class = "logo_new" src = "./assets/images/new_logo.png" />
          <p class="link_nav link_nav--title"> The Window Knight</p>
       </div>
 
       <div class="col-1 no_col"></div>
+      <div class="col-5">
+      <div class="row">
+        <a class="col-2 nav_col nav_col--home" href="/">
+          <p class="link_nav margin-left-5">Home</p>
+        </a>
 
-      <a class="col-2 nav_col nav_col--home" href="/">
-        <p class="link_nav margin-left-5">Home</p>
-      </a>
+        <a class="col-2 nav_col  nav_col--about" href="/about">
+          <p class="link_nav">About Us</p>
+        </a>
 
-      <a class="col-2 nav_col  nav_col--about" href="/about">
-        <p class="link_nav">About Us</p>
-      </a>
+        <a class="col-2 nav_col nav_col--contact" href="/contact_us">
+          <p class="link_nav">Contact Us</p>
+        </a>
 
-      <a class="col-2 nav_col nav_col--contact" href="/contact_us">
-        <p class="link_nav">Contact Us</p>
-      </a>
+        <a class="col-2  nav_col sc_col nav_col--schedule" href="/#subhere">
+          <p class="link_nav">Free Quote</p>
+        </a>
 
-      <a class="col-2  nav_col sc_col nav_col--schedule" href="/#subhere">
-        <p class="link_nav">Free Quote</p>
-      </a>
-
-      </div>
+        </div>
+        </div>
+        </div>
 
     </div>
 
