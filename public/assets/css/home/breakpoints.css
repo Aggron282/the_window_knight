@@ -196,14 +196,16 @@
   .landing_background .text-container{
     width:70% !important;
 
+
   }
 
   .landing_background{
-    height:70vh !important;
+    height:100vh !important;
   }
 
   .knight_container{
-    top:10% !important;
+    top:30% !important;
+    right:5% !important;
   }
 
   .landing_background .text-container .subtitle{
@@ -226,7 +228,16 @@
     font-size:80px !important;
     text-align: center !important
   }
-
+  .arrow_container--carousel{
+    color:white;top:80% !important;
+  }
+  .work-grid{
+    grid-template-columns:100% !important;
+  }
+  .talent_container .title{
+    font-size:50px !important;
+    padding:10px !important;
+  }
   .work-grid{
     background-size:cover !important;
     padding:60px !important;
