@@ -479,11 +479,12 @@ body {
 @media screen and (max-width:1100px) and (min-width:700px) and (orientation:portrait){
   .landing_background--about .text-container {
     width:75% !important;
-    top:10% !important;
+    top:17.5% !important;
   }
 
   .knight_container{
     top:45% !important;
+    z-index: 999;
     width:55% !important;
   }
 
@@ -527,7 +528,7 @@ body {
   .her{
     opacity:0 !important;
   }
-  
+
   .circle-light{
     right:20% !important;
     top:10% !important;
