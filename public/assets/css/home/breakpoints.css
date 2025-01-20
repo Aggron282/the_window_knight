@@ -238,7 +238,7 @@
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1200px) and (orientation: landscape) {
+@media screen and (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
     .knight_container{
       top:10% !important;
     }
