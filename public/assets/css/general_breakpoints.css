@@ -16,6 +16,37 @@
     pointer-events: none !important;
   }
 
+  .pos-f-t{
+    position: absolute;
+    top:0%;
+    width:100%;
+    z-index:9999;
+  }
+
+  .navbar-dark .navbar-toggler{
+    border-color:none !important;
+    border-width:0px !important;
+  }
+
+  .nav_collapse{
+    height:0px !important;
+  }
+
+  .active_n{
+    height:1080px;
+  }
+
+  .link_nav{
+    font-family: "Akrobat";
+    font-size:25px;
+    margin-top:5%;
+  }
+
+  .active-navbar{
+    animation:dropdown_nav .5s 1 ease-in !important;
+  }
+
+
 }
 
 .n-desktop{
@@ -23,14 +54,17 @@
   visibility: visible ;
   z-index: 99;
 }
+
 .n-desktop *{
   pointer-events: all ;
 }
+
 .n-mobile{
   position: fixed ;
   visibility: hidden;
   z-index: -2;
 }
+
 .n-mobile * {
   pointer-events: none ;
 }
