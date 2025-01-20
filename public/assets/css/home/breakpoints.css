@@ -196,7 +196,7 @@
   .landing_background .text-container{
     width:70% !important;
   }
-  
+
   .landing_background{
     height:70vh !important;
   }
@@ -231,4 +231,19 @@
     font-size:70px !important;
   }
 
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .knight_container{
+      top:10%;
+    }
+    .why_choose_us_container{
+      margin-top:-5%;
+    }
+    .value_detail_box .title{
+      font-size:19px;
+    }
+    .client_carousel{
+      height: 80vh;
+    }
 }
