@@ -130,7 +130,7 @@ a:hover p{
   .link_nav--title{
     font-size:20px !important;
   }
-  
+
   #showcase_number a{
     font-size:45px;
     font-family: "Teko";
@@ -138,4 +138,37 @@ a:hover p{
   #showcase_number{
     top:10%;
   }
+  .n-mobile{
+    position: relative !important;
+    visibility: visible !important;
+    z-index: 99;
+  }
+  .n-mobile *{
+    pointer-events: all !important;
+  }
+  .n-desktop{
+    position: fixed !important;
+    visibility: hidden;
+    z-index: -2;
+  }
+  .n-desktop * {
+    pointer-events: none !important;
+  }
+}
+
+.n-desktop{
+  position: relative ;
+  visibility: visible ;
+  z-index: 99;
+}
+.n-desktop *{
+  pointer-events: all ;
+}
+.n-mobile{
+  position: fixed ;
+  visibility: hidden;
+  z-index: -2;
+}
+.n-mobile * {
+  pointer-events: none ;
 }
