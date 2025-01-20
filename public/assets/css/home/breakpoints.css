@@ -195,10 +195,15 @@
 
   .landing_background .text-container{
     width:70% !important;
+
   }
 
   .landing_background{
     height:70vh !important;
+  }
+
+  .knight_container{
+    top:10% !important;
   }
 
   .landing_background .text-container .subtitle{
@@ -235,15 +240,15 @@
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .knight_container{
-      top:10%;
+      top:10% !important;
     }
     .why_choose_us_container{
-      margin-top:-5%;
+      margin-top:-5% !important;
     }
     .value_detail_box .title{
-      font-size:19px;
+      font-size:19px !important  ;
     }
     .client_carousel{
-      height: 80vh;
+      height: 80vh !important;
     }
 }
