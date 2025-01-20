@@ -136,8 +136,6 @@ const Init_Navbar = () => {
 
   }
 
-  }
-
   nav_button = document.getElementById("button_navbar");
 
   if(nav_button){
@@ -147,7 +145,5 @@ const Init_Navbar = () => {
     });
 
   }
-
 }
-
 Init_Navbar();
