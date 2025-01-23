@@ -83,12 +83,7 @@ function RenderCarouselNew() {
         ${slide.review}
         </p>
         </div>
-        <div class="photo-grid">
-
-          <img src="./assets/images/${slide.photo}" />
-
-
-        </div>
+      
 
         </div>
         </div>

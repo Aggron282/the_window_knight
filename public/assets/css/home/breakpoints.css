@@ -1,14 +1,17 @@
 .pd{
-  padding:30px
+  padding:0px
 }
+
 @media screen and (max-width:690px){
   .navbar_custom{
     margin-left:10px !important;
     margin-top:10px !important;
   }
+
   #showcase_number{
     z-index: 9;
   }
+
   .active-navbar{
     padding-top:40px;
     margin-top:-70px;
@@ -260,7 +263,7 @@
       margin-top:-7.5% !important;
     }
     .value_detail_box .title{
-      font-size:32px !important  ;
+      font-size:40px !important  ;
     }
     .client_carousel{
       margin-top:50% !important;
