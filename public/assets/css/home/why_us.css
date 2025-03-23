@@ -29,7 +29,7 @@
   z-index:99;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to right bottom, rgba(238, 130, 58, .9), rgba(44, 73, 119, .9), rgba(0, 105, 164, .7));
+  background: linear-gradient(to right bottom,rgba(0, 35, 50, 1),rgba(0, 35, 50, 1));
 
 }
 

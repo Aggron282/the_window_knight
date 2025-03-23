@@ -42,20 +42,17 @@
   top:0;
   background:rgba(66,57,101,1);
   opacity: 1;
-  background: linear-gradient(
-    to bottom right,
-    rgba(82, 173, 216, 1) 0%,
-      rgba(66, 57, 101, 1) 90%,
-      rgba(66, 57, 101, 1) 100%
-  );
+  background: linear-gradient(to right bottom,rgba(0, 35, 50, 1),rgba(0, 35, 50, 1));
+
 
 }
 .subscribe_container--form{
-  padding:40px;
+  padding:80px;
   padding-bottom:5%;
   width:80%;
   margin-left:10%;
   z-index:999;
+  align-items: center;
   box-shadow: 0px 0px 10px rgba(0,0,0,.5);
   position: relative;
 
@@ -110,8 +107,10 @@
    font-size:18px;
  }
  #subscribe input{
-  padding:15px;
-  font-size:17px;
-  width:100%;
-  font-family: "Montserrat"
+   padding: 20px;
+   font-family: "Lato";
+   font-size: 15px;
+   border: 2px solid #ddd;
+   border-radius: 5px;
+   transition: border 0.3s ease;
 }

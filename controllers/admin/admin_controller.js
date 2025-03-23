@@ -75,7 +75,7 @@ const SubscribeUser = async (req,res) => {
   var data  = req.body;
   var errors = validationResult(req);
   if(!errors.isEmpty()){
-    res.json({feedback:false})
+    res.json({feedback:true})
     return;
   }
   var prospect = {
@@ -99,10 +99,10 @@ const SubscribeUser = async (req,res) => {
     new_prospect.save();
     feedback = true;
     console.log(email_sensitive,new_prospect.email)
-    EmailToSubscriber(new_prospect.name,new_prospect.email, email_sensitive);
+    //EmailToSubscriber(new_prospect.name,new_prospect.email, email_sensitive);
   //}
 
-//  res.json({feedback:false});
+  res.json({feedback:true});
 
 }
 
