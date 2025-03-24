@@ -11,10 +11,10 @@ var wt1 = document.querySelector(".wt-1")
 var wt2 = document.querySelector(".wt-2")
 var wt3 = document.querySelector(".wt-3")
 
-var before1 = document.querySelector(".before-1")
-var before2 = document.querySelector(".before-2")
-var before3 = document.querySelector(".before-3")
-var before4 = document.querySelector(".before-4")
+// var before1 = document.querySelector(".before-1")
+// var before2 = document.querySelector(".before-2")
+// var before3 = document.querySelector(".before-3")
+// var before4 = document.querySelector(".before-4")
 var value_banner = document.querySelector(".value_banner")
 var subscribe_home = document.querySelector(".subscribe_container--home")
 
@@ -32,9 +32,9 @@ animate_elements(wt1, "wt--active",300);
 animate_elements(wt2, "wt--active",500);
 animate_elements(wt3, "wt--active",700);
 
-animate_elements(before1, "after--1",400);
-animate_elements(before2, "after--2",400);
-animate_elements(before3, "after--3",400);
-animate_elements(before4, "after--4",400);
+// animate_elements(before1, "after--1",400);
+// animate_elements(before2, "after--2",400);
+// animate_elements(before3, "after--3",400);
+// animate_elements(before4, "after--4",400);
 
 animate_elements(subscribe_home, "subscribe_container--active",500);
