@@ -1,0 +1,68 @@
+.learn_about_me_section{
+  padding:3rem;
+  background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
+  color:white;
+  padding-right:0px;
+  font-family: "Lato";
+}
+
+.learn_about_me_section .btn-container button{
+  outline:none;
+  padding:10px;
+  font-size:20px;
+  border:none;
+  border-radius:3px;
+  justify-self:start;
+  margin-right:10px;
+}
+
+.learn-grid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.heading-container{
+  padding:3rem;
+
+}
+.picture-container{
+  display:grid;
+  padding:3rem;
+  padding-right:0;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-rows: repeat(6,minmax(200px,1fr));
+}
+.picture--big{
+  z-index:0;
+  grid-column:1 / -1;
+  grid-row: 1 / span 2;
+}
+.picture--normal{
+  z-index:1;
+  padding:20px;
+  background:white;
+  transform:translateY(-150px);
+
+  grid-column: 3 / span 3;
+  grid-row: 2 / span 2;
+}
+.picture img {
+  background-size: cover;
+  width:100%;
+  height:100%;
+}
+.heading-container h2{
+  font-size:40px;
+  font-weight:700;
+}
+
+.heading-container p{
+  font-size:20px;
+  font-weight:400;
+  font-style: italic;
+}
+
+
+.heading-container strong{
+  color: #38b6ff;
+}
