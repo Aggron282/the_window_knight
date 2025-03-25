@@ -44,8 +44,8 @@
 }
 
 .circle-light{
-  right:10%;
-  top:-40%;
+  right:15% !important;
+  top:-20% !important;
   position: absolute;
 }
 
