@@ -11,6 +11,11 @@ const images = [
   'what_we_do_1.png',
   'after_1.png',
   'what_we_do_new.png',
+  'photo_3.png',
+  'photo_4.png',
+  'photo_3.png',
+  'photo_4.png',
+
   'knight_clean--1.png',
 ];
 
