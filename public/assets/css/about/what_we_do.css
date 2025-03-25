@@ -1,8 +1,7 @@
 .what_we_do_container{
   position:relative;
   background-image:linear-gradient(to right,rgba(0, 35, 50, 1),
-  rgba(0, 35, 50, 1),
-  rgba(0, 35, 50, .7),rgba(0, 35, 50, .4)),
+  rgba(0, 35, 50, .7),rgba(0, 35, 50, .7)),
   url('./../../images/what_we_do_new.png');
   background-size:cover;
   padding:10% 0;
@@ -27,18 +26,21 @@
 }
 
 .what_we_do_link{
-   border-bottom:orangered 1px solid;
+   border-bottom:#38b6ff 1px solid;
    padding-top:5%;
    font-family:"Montserrat";
    width:80%;
-   font-size:1.6rem;
+   font-weight: 500;
+   font-size:2rem;
    color:white;
+   transition: all .5s;
    text-align:center;
    transition: all .3s;
 }
 
 .what_we_do_link:hover{
-  border-color:#38b6ff;
+  border-color:orangered;
+  color:orangered;
 }
 
 .what_we_do_description{
