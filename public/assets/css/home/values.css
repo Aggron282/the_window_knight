@@ -29,6 +29,10 @@
   z-index:2;
 }
 
+.value_detail_box .title{
+  color:black !important;
+}
+
 .company_values_container--content{
   height:90vh;
   z-index: 99;
