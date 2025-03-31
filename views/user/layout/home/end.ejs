@@ -13,7 +13,7 @@
 <script src ="/assets/js/data/navbar.js"></script>
 <script src ="/assets/js/user/navbar_render.js"></script>
 <script src = "/assets/js/user/home/our_clients.js"></script>
-<script src ="/assets/js/user/home/carousel.js"></script>
+<!-- <script src ="/assets/js/user/home/carousel.js"></script> -->
 <script src = "/assets/js/user/showcase.js"></script>
 <script src = "./assets/js/user/home/landing.js"></script>
 <script src = "./assets/js/user/home/subscribe.js"></script>
@@ -21,6 +21,73 @@
 <script src = "./assets/js/user/fireworks.js"></script>
 <script src = "./assets/js/user/animate_on_scroll.js"></script>
 <script src = "./assets/js/user/home/home_scroll_animation.js"></script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    autoplay: {
+      delay: 10000,
+      disableOnInteraction: false,
+    },
+    effect: "slide",
+    speed: 1000,
+  });
+</script>
+
+<script>
+  const reviews = [
+    {
+      name: "The Window Knight",
+      logo: "/images/logo-knight.png",
+      text: "Absolutely the best experience. My home shines.",
+      author: "— Emily R."
+    },
+    {
+      name: "The Window Knight",
+      logo: "/images/logo-knight.png",
+      text: "Professional, punctual, and powerful cleaning.",
+      author: "— George K."
+    },
+    {
+      name: "The Window Knight",
+      logo: "/images/logo-knight.png",
+      text: "Like a knight’s code — honorably spotless results!",
+      author: "— Naomi L."
+    },
+    {
+      name: "The Window Knight",
+      logo: "/images/logo-knight.png",
+      text: "Even the neighbors noticed how clean the windows were!",
+      author: "— Zach T."
+    },
+    {
+      name: "The Window Knight",
+      logo: "./images/logo.png",
+      text: "Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.",
+      author: "— Claire H."
+    },{
+      name: "The Window Knight",
+      logo: "./images/logo.png",
+      text: "Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.",
+      author: "— Claire H."
+    }
+  ];
+
+  const grid = document.getElementById('twkReviewGrid');
+
+  reviews.forEach(review => {
+    const card = document.createElement('div');
+    card.className = 'twk-review-card';
+    card.innerHTML = `
+      <img class="twk-review-logo" src="${review.logo}" alt="${review.name} logo" />
+      <div class="twk-review-name">${review.name}</div>
+      <div class="twk-review-text">"${review.text}"</div>
+      <div class="twk-review-author">${review.author}</div>
+    `;
+    grid.appendChild(card);
+  });
+</script>
 
 </body>
 
