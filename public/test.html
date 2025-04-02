@@ -1,13 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head class="header-price">
-
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Price List - The Window Knight</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap">
   <style>
-
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #0b0b0b;
+      color: #f3f4f6;
+      text-align: center;
+    }
+    header {
+      padding: 4rem 1rem 2rem;
+      color: #facc15;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      margin: 0;
+    }
+    header h2 {
+      font-weight: 400;
+      color: #f3f4f6;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      margin-top: 0.5rem;
+    }
+    .price-section {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 1rem 2rem 3rem;
+    }
+    .price-group {
+      margin-bottom: 2.5rem;
+    }
+    .line {
+      height: 1px;
+      background: #facc15;
+      margin: 2rem auto;
+      width: 60%;
+      position: relative;
+    }
+    .line::before, .line::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #0b0b0b;
+      border: 1px solid #facc15;
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .line::before {
+      left: -15px;
+    }
+    .line::after {
+      right: -15px;
+    }
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #1f2937;
+      font-size: 1.1rem;
+    }
+    .map-section {
+      margin-top: 3rem;
+    }
+    #map {
+      width: 100%;
+      max-width: 800px;
+      height: 400px;
+      margin: 0 auto;
+      border-radius: 12px;
+      border: 2px solid #facc15;
+    }
+    .calculator-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    .calculator-section h3 {
+      color: #facc15;
+      margin-bottom: 1rem;
+    }
+    .calculator-section label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+    .calculator-section input {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 4px;
+      border: none;
+      margin-bottom: 1rem;
+    }
+    .estimate-box {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid #facc15;
+    }
+    .estimate-box h4 {
+      margin-top: 0;
+      color: #facc15;
+    }
+    .estimate-box p {
+      font-size: 1.1rem;
+      margin: 0.5rem 0;
+    }
+    footer {
+      margin-top: 3rem;
+      padding-bottom: 2rem;
+      color: #9ca3af;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Price List</h1>
+    <h2>Premium Window Cleaning Services</h2>
+  </header>
+  <div class="price-section">
+    <div class="price-group">
+      <div class="price-item"><span>Standard Screen Cleaning</span><span>$3 / screen</span></div>
+      <div class="price-item"><span>Standard Windows</span><span>$12 / pane</span></div>
+      <div class="price-item"><span>Large Windows & Sliding Glass</span><span>$18 / pane</span></div>
+      <div class="price-item"><span>Hard-to-Reach / 2nd Story</span><span>+ $5 / pane</span></div>
+      <div class="price-item"><span>Premium Detail Finish</span><span>+ $4 / window</span></div>
+    </div>
+    <div class="line"></div>
+    <div class="price-group">
+      <p style="margin-bottom: 1rem; color: #facc15; font-weight: 600;">Service Area Map</p>
+      <p>We serve the Greater Phoenix Area.<br>Outside our radius? No problem — just $9/mile extra.</p>
+      <div class="map-section">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
 
+  <div class="calculator-section">
+    <div>
+      <h3>Get Your Estimate</h3>
+      <label for="standard">Standard Windows</label>
+      <input type="number" id="standard" min="0" placeholder="0" />
+
+      <label for="large">Large Windows</label>
+      <input type="number" id="large" min="0" placeholder="0" />
+
+      <label for="screens">Screens</label>
+      <input type="number" id="screens" min="0" placeholder="0" />
+
+      <label for="hard">Hard-to-Reach Windows</label>
+      <input type="number" id="hard" min="0" placeholder="0" />
+
+      <label for="detail">Add Detail Finish?</label>
+      <input type="checkbox" id="detail" />
+    </div>
+    <div class="estimate-box">
+      <h4>Estimated Total</h4>
+      <p id="interiorTotal">Interior Only: $0.00</p>
+      <p id="fullTotal">Interior + Exterior: $0.00</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© The Window Knight | www.thewindowknight.com</p>
+  </footer>
+
+  <script>
+    function initMap() {
+      const center = { lat: 33.4484, lng: -112.0740 }; // Phoenix, AZ
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        center: center,
+        mapId: "DEMO_MAP_ID"
+      });
+
+      new google.maps.Marker({
+        position: center,
+        map,
+        title: "Window Knight HQ"
+      });
+
+      new google.maps.Circle({
+        strokeColor: "#facc15",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#facc15",
+        fillOpacity: 0.1,
+        map,
+        center: center,
+        radius: 40233 // 25 miles in meters
+      });
+    }
+
+    function calculateEstimate() {
+      const standard = parseInt(document.getElementById("standard").value) || 0;
+      const large = parseInt(document.getElementById("large").value) || 0;
+      const screens = parseInt(document.getElementById("screens").value) || 0;
+      const hard = parseInt(document.getElementById("hard").value) || 0;
+      const detail = document.getElementById("detail").checked;
+
+      const standardPrice = 8;
+      const largePrice = 16;
+      const screenPrice = 4;
+      const hardFee = 4;
+      const detailFee = 2.5;
+
+      const interior = (standard * standardPrice + large * largePrice + screens * screenPrice + hard * hardFee);
+      const detailCost = detail ? (standard + large + hard) * detailFee : 0;
+      const exterior = (standard + large + hard) * (standardPrice / 2);
+
+      document.getElementById("interiorTotal").textContent = `Interior Only: $${(interior + detailCost).toFixed(2)}`;
+      document.getElementById("fullTotal").textContent = `Interior + Exterior: $${(interior + exterior + detailCost).toFixed(2)}`;
+    }
+
+    document.querySelectorAll('input').forEach(input => {
+      input.addEventListener('input', calculateEstimate);
+      input.addEventListener('change', calculateEstimate);
+    });
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 </html>
