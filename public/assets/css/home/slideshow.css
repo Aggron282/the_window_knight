@@ -10,6 +10,16 @@
   position: relative;
 }
 
+.tk-section .watermark {
+  filter:brightness(.04);
+  opacity:.1;
+  position: absolute;
+  right:-20%;
+  width:100%;
+  transform: translateX(500px) translateY(00px);
+  bottom:0%;
+}
+
 .pd{
   margin-top:50%;
   z-index: 99;

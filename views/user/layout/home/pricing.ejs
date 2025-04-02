@@ -1,0 +1,51 @@
+<header class="header-price">
+  <h1>Price List</h1>
+</header>
+<div class="price-section">
+  <div class="price-group">
+    <div class="price-item"><span>Standard Screen Cleaning</span><span class="small-item">$3 per screen</span></div>
+    <div class="price-item"><span>Standard Windows</span><span class="small-item">$12 (interior & exterior) | $6 (interior or exterior)  per pane </span></div>
+    <div class="price-item"><span>Large Windows & Sliding Glass</span><span class="small-item">$18 (interior & exterior) | $8 (interior or exterior) per pane</span></div>
+    <div class="price-item"><span>Hard-to-Reach / 2nd Story</span><span class="small-item"> + $7 per pane (exterior & interior) </span></div>
+    <div class="price-item"><span>Extra Premium Detail Finish</span><span class="small-item"> + $3 / window</span></div>
+  </div>
+  <div class="line"></div>
+  <div class="price-group">
+    <p class="title">Service Area Map</p>
+    <p class="description">We serve the Greater Phoenix Area.<br>Outside our radius? No problem — just $9/mile extra.</p>
+    <div class="map-section">
+      <div id="map"></div>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+  function initMap() {
+    const center = { lat: 33.4484, lng: -112.0740 }; // Phoenix, AZ
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 10,
+      center: center,
+      mapId: "DEMO_MAP_ID"
+    });
+
+    new google.maps.Marker({
+      position: center,
+      map,
+      title: "Window Knight HQ"
+    });
+
+    new google.maps.Circle({
+      strokeColor: "#facc15",
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: "#facc15",
+      fillOpacity: 0.1,
+      map,
+      center: center,
+      radius: 40233 // 25 miles in meters
+    });
+  }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCykBvAPmyhECw4aGJkyRwcKt-e3_E1dyU&callback=initMap"></script>

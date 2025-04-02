@@ -1,0 +1,114 @@
+
+.header-price {
+  padding: 4rem 1rem 2rem;
+  color: #facc15;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  /* background: #0b0b0b; */
+  color: #f3f4f6;
+  font-size:20px !important;
+  padding-left:5%;
+}
+.header-price h1 {
+  font-family: 'Lato', serif;
+  font-size: 10rem;
+  text-align: left;
+  margin: 0;
+  opacity:.2;
+  font-weight: 800;
+  margin-top:2.5%;
+  content:"Before";
+  color:white;
+  font-size:150px;
+  opacity:.05;
+  font-weight:800;
+  transform: translateY(-50px);
+
+  /* height:100%; */
+  width:100%;
+}
+.header-price h2 {
+  font-weight: 400;
+  color: #f3f4f6;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: 0.5rem;
+}
+.price-section {
+  max-width: 100%;
+  padding:10%;
+  padding-top:10px;
+  padding-bottom:5%;
+  margin: 0 auto;
+  /* padding: 1rem 2rem 3rem; */
+}
+.price-group {
+  margin-bottom: 2.5rem;
+}
+.line {
+  height: 1px;
+  background: lightblue;
+  margin: 2rem auto;
+  width: 60%;
+  position: relative;
+}
+.line::before, .line::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: lightblue;
+  border: 1px solid lightblue;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.line::before {
+  left: -15px;
+}
+.line::after {
+  right: -15px;
+}
+.small-item{
+
+  font-size:18px;
+}
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color:white;
+  text-align: center;
+  font-family: "Lato";
+  margin-bottom:20px;
+  font-weight: 300;
+  border-bottom: 1px solid #1f2937;
+  font-size: 3rem;
+}
+
+.price-group p{
+  color:white;margin-bottom: 1rem;font-size:30px;text-align:center; color: #lightblue; font-weight: 600;
+}
+
+.price-group .title{
+  font-size:70px;
+}
+
+.price-group .description {
+  font-size:20px;
+  font-weight:200;
+}
+
+.map-section {
+  color:white;
+  text-align: center;
+  margin-top: 3rem;
+}
+#map {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 2px solid #facc15;
+}
