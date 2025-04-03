@@ -1,259 +1,42 @@
-.pd{
-  padding:0px
-}
+@media screen and (orientation: portrait){
 
-@media screen and (max-width:690px){
-  .navbar_custom{
-    margin-left:10px !important;
-    margin-top:10px !important;
-  }
-
-  #showcase_number{
-    z-index: 9;
-  }
-
-  .active-navbar{
-    padding-top:40px;
-    margin-top:-70px;
-    height:100%;
-    z-index: 9999999;
-    position: relative;
-    transition: all .5s;
-    opacity:1;
-    height:350px;
-    /* animation:  none !important; */
-    background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
-  }
-
-  #showcase_number{
-    z-index: 999;
-  }
-  .landing_background{
-    background-position-x:left !important
-  }
-  .pd{
-    padding:0px !important;
-  }
-  .why_choose_us_container{
-    margin-top:65% !important;
-    padding:30px;
-    padding-top:15%;
-    padding-bottom:20%;
-    line-height: 1.1;
-  }
-  html,body{
-    overflow-x: hidden;
-    scrollbar-width: none;
-  }
-  .landing_background .text-container{
-    left:0 !important;
-    top:15% !important;
-    width:100% !important;
-  }
-  .landing_background .text-container .title{
-    font-size:70px !important;
-  }
-  .why_us_col{
-    max-width:100% !important;
-    flex: 0 0 100% !important;
-  }
-  .content_value_container--title{
-    width:90% !important;
-    padding-left:0 !important
-  }
-  .value_banner{
-    top:75% !important;
-  }
-  .subscribe_container--form{
-    width:90% !important;
-  }
-  .content .text_container .title{
-    font-size:50px;line-height:1.1;
-  }
-  .content .text_container .subtitle{
-    font-size:40px;line-height:1.1;
-    margin-top:10px;
-  }
-  .subscribe_container--form{
-    width:100% !important;
-    margin-left:0% !important;
-    padding-bottom:70px !important;
-  }
-  .knight_container {
-    top:45%;
-    width:85%;
-  }
-  .work-grid{
-    grid-template-columns: 100%;
-    padding:30px;
-    padding-top:60px;
-    padding-bottom: 80px;
-  }
-  .subscribe_button{
-    margin-top:25%;
-    width:90%;
-    margin-left:5%;
-  }
-  .subscribe_container--form .content .subtitle{
-    font-size:30px;
-  }
-  .talent_container .title{
-    padding-bottom:50px
-  }
-  .photo-grid img {
-    opacity:0 !important;
-  }
-  .review-grid{
-    text-align: center !important;
-    grid-template-columns: 100%;
-  }
-  .client_slide_box .title{
-    padding-left:0 !important;
-  }
-  .slide-grid{
-    grid-template-columns: 100%;
-  }
-
-  .client_slide_box .title {
-    padding:0;
-    padding-top:20px;
-
-    font-size:35px;
-  }
-  .the_work_container{
-    padding-left:0 !important;
-    padding-right:0 !important;
-  }
-  .subscribe_container{
-    margin-top:0px !important;
-  }
-
-  .client--logo{
-    margin-left:25% !important;
-    width:30% !important;
-    height:100% !important;
-  }
-  .subscribe_container--form label{
-    margin-top:15%;
-  }
-  .showcase_container{
-    margin-top:0% !important;
-  }
-
-  .content_value_container--value{
-    width:100% !important;
-    left:0% !important;
-    top:400px !important;
-  }
-  .value_detail_col{
-    margin-top:20px !important;
-  }
-
-}
-@media screen and (max-width:1000px) and (min-width:590px) and (orientation:landscape){
-    .landing_background .text-container{
-      width:60% !important;
+    .home-title strong {
+      font-size:200px;
     }
-    .company_values_container{
-      margin-top:10% !important;
+    .landing_background .text-container {
+      width:100%;
     }
-    .value_banner{
-      width:30% !important;
-    }
-    .value_detail_box .title{
-      font-size:20px !important;
-    }
-
-    .client_slide_box .review{
-      width:80% !important;
-      padding-left:0px !important;
-      font-size:16.5px !important;
-    }
-    .slide-grid{
-      grid-template-columns: 65% 10% !important;
-      padding-top:30px !important;
-    }
-    .work-grid{
-      grid-template-columns: 100% !important;
-    }
-    .name-box .title{
-      font-size:50px !important;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  .landing_background {
-    height: 100vh !important;
-  }
-
-  .landing_background .text-container {
-    width: 90% !important;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .why_choose_us_container{
-    margin-top:-5%;
-  }
-  .home-title strong {
-    font-size:200px;
-  }
-  .knight_main{
-    margin-left:-50%;
-    width:200%;
-  }
-
-  .landing_background .text-container .title {
-    font-size: clamp(70px, 10vw, 100px) !important;
-    margin-bottom: 30px !important;
-    line-height: 1.1;
-  }
-
-  .landing_background .text-container .subtitle {
-    font-size: clamp(32px, 6vw, 48px) !important;
-    margin-top: 20px !important;
-    line-height: 1.2;
-  }
-
-  .knight_container {
-    top: 50% !important;
-    right: -10% !important;
-    width: 60% !important;
-    transform: translateY(-50%);
-  }
-
-  .talent_container .title {
-    font-size: clamp(40px, 6vw, 50px) !important;
-    padding: 20px !important;
-    text-align: center !important;
-  }
-
-  .work-grid {
-    grid-template-columns: 1fr !important;
-    background-size: cover !important;
-    padding: 40px 20px !important;
-    gap: 40px;
-  }
-
-  .name-box .title {
-    font-size: clamp(50px, 8vw, 60px) !important;
-    text-align: center;
-  }
-
-  .why_choose_us_container {
-    margin-top: 8% !important;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1400px) and (orientation: landscape) {
     .knight_container{
-      top:10% !important;
+      width:100%;
+      margin-top:80%;
+      transform: translateX(200px);
     }
     .why_choose_us_container{
-      margin-top:-7.5% !important;
+      transform: translateY(-100px);
     }
-    .value_detail_box .title{
-      font-size:40px !important  ;
+    .why_us_col{
+      width:100%;
+      max-width: 100%;
+      flex:100%;
+      margin-bottom: 30px;
+    }
+    .why_us_img {
+      width:33% !important;
+      justify-self:center;
+      margin-left:35%;
+    }
+    .why_us_text {
+      font-size:50px;
+    }
+    .section_text{
+      font-size:100px;
+      margin-top:2.5%;
+      margin-bottom:50px;
+    }
+    .why_choose_us_container .watermark{
+      width: 200%;
+      position: absolute;
+      top: 30%;
     }
 
 }
