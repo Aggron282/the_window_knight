@@ -1,211 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Price List - The Window Knight</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #042b38;
-      color: #e2e8f0;
-    }
-    header {
-      padding: 4rem 2rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 4rem;
-      font-weight: 800;
-      color: rgba(255, 255, 255, 0.05);
-    }
-    .price-section {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    .price-item {
-      display: flex;
-      justify-content: space-between;
-      border-bottom: 1px solid #1e3a4c;
-      padding: 1.2rem 0;
-      font-size: 1.1rem;
-    }
-    .price-item span:last-child {
-      color: #cbd5e1;
-    }
-    .line {
-      height: 1px;
-      background: #7dd3fc;
-      margin: 2rem auto;
-      width: 80%;
-    }
-    .calculator-section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 2rem;
-      background: #042b38;
-    }
-    .calculator-section h3 {
-      color: #7dd3fc;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .calc-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #1e3a4c;
-      padding: 1rem 0;
-      font-size: 1.1rem;
-    }
-    .calc-row label {
-      flex: 1;
-      color: #e0f2fe;
-    }
-    .calc-row input[type="number"] {
-      width: 80px;
-      padding: 0.4rem;
-      border-radius: 6px;
-      border: none;
-      background: #1e3a4c;
-      color: #e2e8f0;
-      text-align: right;
-    }
-    .calc-row input[type="checkbox"] {
-      transform: scale(1.4);
-    }
-    .estimate-box {
-      margin-top: 2rem;
-      background: #164e63;
-      padding: 2rem;
-      border-radius: 12px;
-      border: 1px solid #7dd3fc;
-      text-align: center;
-    }
-    .estimate-box h4 {
-      margin-top: 0;
-      color: #7dd3fc;
-      font-size: 1.4rem;
-    }
-    .estimate-box p {
-      font-size: 1.2rem;
-      margin: 0.5rem 0;
-    }
-    footer {
-      margin-top: 4rem;
-      padding: 2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Price List</h1>
-  </header>
 
-  <div class="price-section">
-    <div class="price-item">
-      <span>Standard Screen Cleaning</span>
-      <span>$3 per screen</span>
-    </div>
-    <div class="price-item">
-      <span>Standard Windows</span>
-      <span>$12 (interior & exterior) | $6 (interior or exterior) per pane</span>
-    </div>
-    <div class="price-item">
-      <span>Large Windows & Sliding Glass</span>
-      <span>$18 (interior & exterior) | $8 (interior or exterior) per pane</span>
-    </div>
-    <div class="price-item">
-      <span>Hard-to-Reach / 2nd Story</span>
-      <span>+ $7 per pane (exterior & interior)</span>
-    </div>
-    <div class="price-item">
-      <span>Extra Premium Detail Finish</span>
-      <span>+ $3 / window</span>
-    </div>
-    <div class="line"></div>
-  </div>
+  <section class="pricing-section">
 
-  <div class="calculator-section">
-    <h3>Get Your Estimate</h3>
-    <div class="calc-row">
-      <label for="standard">Standard Windows</label>
-      <input type="number" id="standard" min="0" placeholder="0" />
+    <header class="header-price">
+      <h1>Price List</h1>
+    </header>
+
+    <div class="price-grid">
+
+      <div class="price-section">
+        <div class="price-item">
+          <span class="title">Standard Screen Cleaning</span>
+          <span>$3 per screen</span>
+        </div>
+        <div class="price-item">
+          <span class="title">Standard Windows</span>
+          <span>$12 (interior & exterior) | $6 (interior or exterior) per pane</span>
+        </div>
+        <div class="price-item">
+          <span class="title">Large Windows & Sliding Glass</span>
+          <span>$18 (interior & exterior) | $8 (interior or exterior) per pane</span>
+        </div>
+        <div class="price-item">
+          <span class="title" >Hard-to-Reach / 2nd Story</span>
+          <span>+ $7 per pane (exterior & interior)</span>
+        </div>
+        <div class="price-item">
+          <span class="title" >Extra Premium Detail Finish</span>
+          <span>+ $3 / window</span>
+        </div>
+        <div class="line"></div>
+      </div>
+
+      <div class="calculator-section">
+        <h3>Get Your Estimate</h3>
+        <div class="calc-row">
+          <label for="standard">Standard Windows</label>
+          <input type="number" id="standard" min="0" placeholder="0" />
+        </div>
+        <div class="calc-row">
+          <label for="large">Large Windows</label>
+          <input type="number" id="large" min="0" placeholder="0" />
+        </div>
+        <div class="calc-row">
+          <label for="screens">Screens</label>
+          <input type="number" id="screens" min="0" placeholder="0" />
+        </div>
+        <div class="calc-row">
+          <label for="hard">Hard-to-Reach Windows</label>
+          <input type="number" id="hard" min="0" placeholder="0" />
+        </div>
+        <div class="calc-row">
+          <label for="detail">Add Detail Finish?</label>
+          <input type="checkbox" id="detail" />
+        </div>
+
+        <div class="estimate-box">
+          <h4 class="title">Estimated Total</h4>
+          <p id="interiorTotal">Interior Only: $0.00</p>
+          <p id="fullTotal">Interior + Exterior: $0.00</p>
+        </div>
+      </div>
+
     </div>
-    <div class="calc-row">
-      <label for="large">Large Windows</label>
-      <input type="number" id="large" min="0" placeholder="0" />
-    </div>
-    <div class="calc-row">
-      <label for="screens">Screens</label>
-      <input type="number" id="screens" min="0" placeholder="0" />
-    </div>
-    <div class="calc-row">
-      <label for="hard">Hard-to-Reach Windows</label>
-      <input type="number" id="hard" min="0" placeholder="0" />
-    </div>
-    <div class="calc-row">
-      <label for="detail">Add Detail Finish?</label>
-      <input type="checkbox" id="detail" />
-    </div>
+    <!-- <div class="wave-container">
+      <div  class="wave-watermark"/>
+    </div> -->
+    <script>
+      function calculateEstimate() {
+        const standard = parseInt(document.getElementById("standard").value) || 0;
+        const large = parseInt(document.getElementById("large").value) || 0;
+        const screens = parseInt(document.getElementById("screens").value) || 0;
+        const hard = parseInt(document.getElementById("hard").value) || 0;
+        const detail = document.getElementById("detail").checked;
 
-    <div class="estimate-box">
-      <h4>Estimated Total</h4>
-      <p id="interiorTotal">Interior Only: $0.00</p>
-      <p id="fullTotal">Interior + Exterior: $0.00</p>
-    </div>
-  </div>
+        const screenPrice = 3;
+        const standardPriceInterior = 6;
+        const standardPriceBoth = 12;
+        const largePriceInterior = 8;
+        const largePriceBoth = 18;
+        const hardFee = 7;
+        const detailFee = 3;
 
-  <footer>
-    <p>© The Window Knight | www.thewindowknight.com</p>
-  </footer>
+        const interior = (
+          standard * standardPriceInterior +
+          large * largePriceInterior +
+          screens * screenPrice +
+          hard * hardFee
+        );
 
-  <script>
-    function calculateEstimate() {
-      const standard = parseInt(document.getElementById("standard").value) || 0;
-      const large = parseInt(document.getElementById("large").value) || 0;
-      const screens = parseInt(document.getElementById("screens").value) || 0;
-      const hard = parseInt(document.getElementById("hard").value) || 0;
-      const detail = document.getElementById("detail").checked;
+        const both = (
+          standard * standardPriceBoth +
+          large * largePriceBoth +
+          screens * screenPrice +
+          hard * hardFee
+        );
 
-      const screenPrice = 3;
-      const standardPriceInterior = 6;
-      const standardPriceBoth = 12;
-      const largePriceInterior = 8;
-      const largePriceBoth = 18;
-      const hardFee = 7;
-      const detailFee = 3;
+        const detailCost = detail ? (standard + large + hard) * detailFee : 0;
 
-      const interior = (
-        standard * standardPriceInterior +
-        large * largePriceInterior +
-        screens * screenPrice +
-        hard * hardFee
-      );
-
-      const both = (
-        standard * standardPriceBoth +
-        large * largePriceBoth +
-        screens * screenPrice +
-        hard * hardFee
-      );
-
-      const detailCost = detail ? (standard + large + hard) * detailFee : 0;
-
-      document.getElementById("interiorTotal").textContent = `Interior Only: $${(interior + detailCost).toFixed(2)}`;
-      document.getElementById("fullTotal").textContent = `Interior + Exterior: $${(both + detailCost).toFixed(2)}`;
-    }
-
-    document.querySelectorAll('input').forEach(input => {
-      input.addEventListener('input', calculateEstimate);
-      input.addEventListener('change', calculateEstimate);
-    });
-  </script>
-</body>
-</html>
+        document.getElementById("interiorTotal").textContent = `Interior Only: $${(interior + detailCost).toFixed(2)}`;
+        document.getElementById("fullTotal").textContent = `Interior + Exterior: $${(both + detailCost).toFixed(2)}`;
+      }
+      document.querySelectorAll('input').forEach(input => {
+        input.addEventListener('input', calculateEstimate);
+        input.addEventListener('change', calculateEstimate);
+      });
+    </script>
+</section>

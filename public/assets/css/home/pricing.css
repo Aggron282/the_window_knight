@@ -7,7 +7,12 @@
   /* background: #0b0b0b; */
   color: #f3f4f6;
   font-size:20px !important;
-  padding-left:5%;
+
+}
+.price-grid{
+  display: grid;
+  padding:50px;
+  grid-template-columns: repeat(2,1fr);
 }
 .header-price h1 {
   font-family: 'Lato', serif;
@@ -22,6 +27,7 @@
   font-size:150px;
   opacity:.05;
   font-weight:800;
+  padding-left:2.5%;
   transform: translateY(-50px);
 
   /* height:100%; */
@@ -30,7 +36,7 @@
 .header-price h2 {
   font-weight: 400;
   color: #f3f4f6;
-  font-size: 1.2rem;
+  font-size: 2rem;
   letter-spacing: 1px;
   margin-top: 0.5rem;
 }
@@ -83,20 +89,26 @@
   margin-bottom:20px;
   font-weight: 300;
   border-bottom: 1px solid #1f2937;
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
-.price-group p{
+.price-group span{
+  font-size:20px;
   color:white;margin-bottom: 1rem;font-size:30px;text-align:center; color: #lightblue; font-weight: 600;
 }
 
 .price-group .title{
   font-size:70px;
+  font-weight: bold;
 }
 
 .price-group .description {
-  font-size:20px;
+  font-size:50px;
   font-weight:200;
+}
+
+.price-item span{
+    font-size:1.7rem;
 }
 
 .map-section {
@@ -111,4 +123,160 @@
   margin: 0 auto;
   border-radius: 12px;
   border: 2px solid #facc15;
+}
+
+.header-price {
+  padding: 4rem 2rem 1rem;
+  text-align: center;
+}
+.header-price {
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.05);
+}
+
+.price-section {
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  padding: 2rem;
+  width:100%;
+  position: relative;
+z-index:100;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1e3a4c;
+  padding: 1.2rem 0;
+  font-size: 1.1rem;
+}
+
+.price-item span:last-child {
+  color: #cbd5e1;
+}
+
+.line {
+  height: 1px;
+  background: #7dd3fc;
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.calculator-section {
+  /* max-width: 1000px; */
+  margin: 2rem auto;
+  position: relative;
+z-index:100;
+  /* padding: 2rem; */
+  width:70%;
+  transform:translateY(-150px);
+  padding:5rem;
+  background: #042b38;
+}
+
+.calculator-section h3 {
+  color: #7dd3fc;
+  text-align: center;
+  font-family: "Lato";
+  margin-bottom: 2rem;
+}
+
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1e3a4c;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+}
+
+.calc-row label {
+  flex: 1;
+  color: #e0f2fe;
+}
+
+.calc-row input[type="number"] {
+  width: 80px;
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: none;
+  background: #1e3a4c;
+  color: #e2e8f0;
+
+  text-align: center;
+}
+.pricing-section{
+  overflow: hidden;
+  position: relative;
+}
+.calc-row input[type="checkbox"] {
+  transform: scale(1.4);
+}
+
+.estimate-box {
+  margin-top: 2rem;
+  background: #164e63;
+  border-radius: 12px;
+  border: 1px solid #7dd3fc;
+  text-align: center;
+  font-family: "Lato";
+
+
+}
+
+.estimate-box h4 {
+  margin-top: 0;
+  color: #7dd3fc;
+  font-family: "Lato";
+
+  font-size: 1.4rem;
+}
+.calculator-section h3{
+  font-size:30px;
+}
+
+.calc-row label{
+  font-size: 2rem !important;
+  font-family: "Lato";
+}
+.wave-container{
+  position:absolute;
+  width:100%;
+  opacity:.1;
+}
+.wave-watermark{
+  width:1000px;
+  top:-1100px;
+  z-index: 9;
+  border-radius: 50%;
+  background:black;
+  height:1000px;
+  right:-20%;
+  position: absolute;
+  z-index:99;
+}
+.price-item .title{
+  font-weight:bold;
+  font-size:20px
+}
+/* <div class="wave-container">
+  <img src = "./assets/images/who/wave.png" class="wave-watermark"/>
+</div> */
+.calc-row input{
+  font-size:2rem;
+  text-align: center;
+}
+.estimate-box .title {
+  font-size: 2rem;
+  font-family: "Lato";
+  color:white;
+  font-weight:600;
+  margin: 0.5rem 0;
+}
+.estimate-box p {
+  font-size: 1.5rem;
+  font-family: "Lato";
+  color:white;
+  margin: 0.5rem 0;
 }
