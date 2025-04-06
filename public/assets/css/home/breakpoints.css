@@ -50,11 +50,111 @@
       width:100%;
       top:-5% !important;
     }
+    .value_detail_box .title{
+      font-size:55px;
+    }
+    .pricing-section{
+      padding-top:5% !important;
+
+    }
+    .price-item{
+      display: flex;
+flex-direction: column !important;
+justify-content: space-between;
+border-bottom: 1px solid #1e3a4c;
+padding: 1.2rem 0;
+font-size: 1.1rem;
+    }.price-item span {
+      font-size:30px;
+    }
+    .calculator-section h3{
+        font-size:45px;
+
+    }
+    .estimate-box{
+          margin-top: 50px;
+    }
+    .twk-review-card{
+      font-size:30px;
+    }
+    .twk-review-text{
+      font-size:25px;
+    }
+    .tk-section .watermark {
+    transform: translateX(200px) translateY(700px);
+    bottom: 0%;
+  }
+  .content .text_container .title{
+    margin-bottom: 0px;
+  }
+  .calculator-section{
+        width: 90%;
+  }
+  .content .text_container .subtitle{
+    margin-top: -15px;
+    margin-bottom:5%;
+  }
+  #subscribe input{
+    font-size:30px;
+  }
+    .twk-review-author{
+      font-size:20px;
+      font-weight: bold;
+    }
+    .tk-section{
+      padding-bottom:20%
+    }
+    .twk-review-grid{
+      margin-top:20%;
+    }
+    .tk-section{
+      margin-top:-25%;
+    }
+    .twk-review-grid{
+      grid-template-columns: repeat(2,1fr);
+    }
+    .slide-content {
+      height:70%;
+    }
+    .calculator-section{
+      padding-bottom: 20%;
+    }
+    .tkw-review-grid{
+          grid-template-columns: repeat(2, 1fr);
+    }
+    .price-item span {
+      font-size:30px;
+      padding-bottom: 20px;
+          margin-top: 10px;
+    }
+    .calc-row label{
+      font-size:30px !important;
+    }
+    .estimate-box{
+      font-size:25px;
+    }
+    #interiorTotal{
+      font-size:25px;
+    }
+    #fullTotal{
+      font-size:25px;
+    }
+    .estimate-box .title{
+      font-size:30px;
+    }
+    .slideshow-section{
+      padding-top:15%;
+    }
+    .price-item .title {
+      font-size:30px;
+      margin-top: 10px;
+      padding-bottom: 5px;
+    }
     .price-grid{
       display: grid;
       padding:50px;
           grid-row-gap: 15%;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(1,1fr);
     }
     .content_value_container--title{
       width:100%;
@@ -69,17 +169,26 @@
       margin-top:30%;
     }
     .company_values_container{
-      height:40vh;
+      height:55vh;
     }
     .why_choose_us_container .watermark{
       width: 200%;
       position: absolute;
       top: 30%;
     }
-    .value_detail_col{
-      width:25%;
-      flex:25%;
-      max-width:25%;
+    .estimate-box{
+      padding-top:10px;
+
     }
+    .value_banner--active{
+      height:250px
+    }
+    .estimate-box p{
+      margin-top:20px;
+    }
+    .estimate-box h4{
+      margin-top:30px;
+    }
+
 
 }
