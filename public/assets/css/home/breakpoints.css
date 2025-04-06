@@ -1,5 +1,7 @@
 @media screen and (orientation: portrait){
-
+    body{
+      overflow-x: hidden;
+    }
     .home-title strong {
       font-size:200px;
     }
@@ -12,7 +14,7 @@
       transform: translateX(200px);
     }
     .why_choose_us_container{
-      transform: translateY(-100px);
+      transform: translateY(-150px);
     }
     .why_us_col{
       width:100%;
@@ -33,10 +35,51 @@
       margin-top:2.5%;
       margin-bottom:50px;
     }
+    .content_value_container--value{
+      width:90% !important;
+    }
+    .value_detail_container{
+      margin-top:10%;
+    }
+    .value_banner{
+      top:35%;
+      width:90%;
+    }
+    .content_value_text--title{
+      font-size:155px;
+      width:100%;
+      top:-5% !important;
+    }
+    .price-grid{
+      display: grid;
+      padding:50px;
+          grid-row-gap: 15%;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .content_value_container--title{
+      width:100%;
+    }
+    .content_value_text--learn{
+      font-size:40px;
+    }
+    .content_value_text--subtitle{
+      font-size:35px;
+    }
+    .content_value_container--value{
+      margin-top:30%;
+    }
+    .company_values_container{
+      height:40vh;
+    }
     .why_choose_us_container .watermark{
       width: 200%;
       position: absolute;
       top: 30%;
+    }
+    .value_detail_col{
+      width:25%;
+      flex:25%;
+      max-width:25%;
     }
 
 }

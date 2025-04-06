@@ -45,9 +45,10 @@
   width:50%;
   position: absolute;
   padding-left: 40px;
-  bottom:45%;
+  bottom:80%;
   text-shadow: 0px 0px 10px black;
 }
+
 
 .content_value_container--value{
   float:right;
