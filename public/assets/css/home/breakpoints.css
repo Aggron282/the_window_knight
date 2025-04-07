@@ -59,11 +59,11 @@
     }
     .price-item{
       display: flex;
-flex-direction: column !important;
-justify-content: space-between;
-border-bottom: 1px solid #1e3a4c;
-padding: 1.2rem 0;
-font-size: 1.1rem;
+  flex-direction: column !important;
+  justify-content: space-between;
+  border-bottom: 1px solid #1e3a4c;
+  padding: 1.2rem 0;
+  font-size: 1.1rem;
     }.price-item span {
       font-size:30px;
     }
@@ -191,4 +191,86 @@ font-size: 1.1rem;
     }
 
 
+}
+
+
+@media screen and (max-width: 360px) {
+  /* very small screen tweaks */
+}
+
+/* Standard phones (portrait) */
+@media screen and (max-width: 480px) {
+  /* tighten spacing, font scaling */
+}
+
+/* Large phones and small tablets (portrait) */
+@media screen and (max-width: 768px) {
+  /* mobile layout styles */
+}
+
+/* Tablets (portrait and landscape) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+  .showcase_container{
+    height:100vh;
+    z-index: 999999;
+  }
+  .landing_background .text-container{
+    top:22.5%;
+  }
+  .why_choose_us_container{
+    margin-top:35%;
+
+  }
+  .why_us_img{
+    width:20%;
+    margin-left: 40%;
+  }
+  .why_us_text{
+    font-size:40px;
+    margin-bottom:5%;
+  }
+
+  .value_banner{
+    top:45%;
+    height:50px;
+  }
+  .value_detail_row{
+    margin-top:-30%;
+  }
+  .value_detail_col{
+    width:50%;
+    flex:50%;
+    max-width: 50%;
+  }
+  .value_detail_box .title{
+    font-size:40px;
+  }
+  .gallery{
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  }
+  .subscribe_button{
+    font-weight: bold;
+  }
+  #subscribe input{
+    font-size:16px;
+  }
+  .line{
+    top:100px;
+  }
+  #showcase_number a{
+    font-size:30px;
+    font-weight: 500;
+  }
+
+}
+
+/* Laptops */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* desktop styles start here */
+}
+
+/* Large desktops */
+@media screen and (min-width: 1441px) {
+  /* wide screen enhancements */
 }
