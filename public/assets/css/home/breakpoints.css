@@ -1,3 +1,4 @@
+
 @media screen and (orientation: portrait){
     body{
       overflow-x: hidden;
@@ -193,6 +194,10 @@
 
 }
 
+.showcase_container--mobile{
+  position: absolute;
+  z-index: -90;
+}
 
 @media screen and (max-width: 360px) {
   /* very small screen tweaks */
@@ -202,6 +207,14 @@
 @media screen and (max-width: 480px) {
   .showcase_container {
     z-index:999999
+  }
+  .showcase_container--mobile{
+    position: relative;
+    z-index: 10;
+  }
+  .showcase_container{
+    position: fixed;
+    z-index: -10;
   }
   .landing_background .text-container .title{
     font-size:120px;
@@ -290,7 +303,7 @@
   }
   .work::before{
     margin-top:20%;
-    font-size:85px;
+    font-size:8 5px;
   }
 
   #subscribe input{
