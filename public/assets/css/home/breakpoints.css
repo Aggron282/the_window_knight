@@ -210,7 +210,8 @@
   }
   .showcase_container--mobile{
     position: relative;
-    z-index: 10;
+    z-index: 900;
+    background: linear-gradient(to bottom right, #0f172a, #3b82f6);
   }
   .showcase_container{
     position: fixed;
