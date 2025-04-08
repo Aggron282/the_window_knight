@@ -227,10 +227,11 @@
 padding-left: 20px;
 text-align: left;
 font-size: 65px;
+margin-bottom:20px;
   }
   .landing{
     color: white;
-    padding-top: 25%;
+    padding-top: 20%;
   }
   .tagline {
     text-align: left;
@@ -238,6 +239,7 @@ font-size: 65px;
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 600;
+    padding-left: 5%;
 }
 .why_choose_us_container{
   margin-top:38% !important;
@@ -246,6 +248,7 @@ font-size: 65px;
     font-size: 1.5rem;
     max-width: 80%;
     margin-bottom: 2rem;
+
     line-height: 1.6;
 }
 .cta-button {
