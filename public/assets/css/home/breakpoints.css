@@ -225,44 +225,94 @@
   }
 
   .company_values_container--mobile{
-    background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
+    /* background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1)); */
     align-items: center;
     padding:5%;
     position: relative;
-    margin-top:-20%;
+    margin-top:-40%;
     height:100%;
     z-index: 999999;
     visibility: visible;
+    background:white;
+    color:black;
     font-family: "Lato";
   }
-
+  .c2ontent{
+      background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
+  }
+  .why_choose_us_container{
+    background:none !important;
+  }
   .company_values_container--mobile .title{
     color:lightblue;
-    font-size:50px;
-    text-shadow: 0px 0px 10px white;
-
+    font-size:40px;
+    text-transform: capitalize;
     font-weight: normal;
     font-family: "Lato";
+    margin-top:5%;
+
+    color:rgba(0, 20, 30, 1)
   }
 
   .company_values_container--mobile .divider{
     font-size:40px;
-    color:white;
     font-weight: 300;
+    color:rgba(0, 20, 30, 1)
+  }
+
+  .section_text{
+    font-size:50px;
   }
 
   .company_values_container--mobile .description{
     font-size:18px;
-    color:white;
+    color:rgba(0, 20, 30, 1);
+  }
+  .pricing-section{
+    margin-top:-40%;
+
+  }
+      .slideshow-section {
+        margin-top:30%;
+      }
+  .calculator-section{
+    padding:10px;
+  }
+  .line{
+    visibility: hidden;
+  }
+  .price-grid{
+    padding:40px;
+  }
+  #interiorTotal, #fullTotal{
+    font-size:18px !important;
+  }
+  .estimate-box p {
+    font-size:18px;
+  }
+  .calculator-section {
+    background:none !important;
+  }
+  .why_us_row{
+    padding:20%;
+    padding-top:0%;
+  }
+  .why_us_text {
+    font-size:30px;
+  }
+  .watermark{
+    width:500%;
+    top:-30%;
   }
 
   .company_values_container--mobile .learn-more{
     font-weight:700;
-    background:lightblue;
-    color:black;
+    color:white;
+    background:rgba(0, 20, 30, 1);
+    font-size: 18px;
+    padding: 10px;
+    width: 150px;
   }
-
-
 
   .showcase_container{
     position: fixed;
