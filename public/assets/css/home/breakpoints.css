@@ -256,6 +256,8 @@
       max-width: 100% !important;
       margin-bottom: 2rem;
       line-height: 1.6;
+      padding-left: 5%;
+      text-align: center;
   }
 
   .cta-button {
