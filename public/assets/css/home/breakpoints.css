@@ -221,6 +221,43 @@
     font-size:120px;
     text-align: center;
   }
+
+  .landing .logo{
+    line-height: 1.4;
+padding-left: 20px;
+text-align: left;
+font-size: 70px;
+  }
+  .landing{
+    font-size: 80px;
+    color: white;
+    padding-top: 40%;
+  }
+  .tagline {
+    text-align: left;
+    margin-top: 40px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+.description {
+    font-size: 1.5rem;
+    max-width: 80%;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+.cta-button {
+    background-color: black;
+    color: #0f172a;
+    font-size: 2rem;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
   .landing_background .text-container .title strong{
     font-size:100px;
   }
