@@ -215,7 +215,7 @@
     position: relative;
     z-index: 900;
     visibility: visible !important;
-    background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, .75), rgba(0, 50, 70, .3));
+    background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, .75), rgba(0, 50, 70, .3)),url("./assets/images/slant.png ");
   }
 
   .company_values_container{
