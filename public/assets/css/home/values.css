@@ -7,6 +7,10 @@
   padding-left: 10px;
 }
 
+.company_values_container--mobile{
+  
+}
+
 .company_values_background{
   z-index: 3;
   height: 100vh;

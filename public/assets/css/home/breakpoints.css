@@ -1,4 +1,8 @@
-
+.company_values_container--mobile{
+  position: fixed;
+  z-index: -99;
+  visibility: hidden;
+}
 @media screen and (orientation: portrait){
     body{
       overflow-x: hidden;
@@ -212,6 +216,81 @@
     z-index: 900;
     visibility: visible !important;
     background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, .75), rgba(0, 50, 70, .3));
+  }
+
+  .company_values_container{
+    visibility: hidden;
+    z-index: -99;
+    position: fixed;
+  }
+
+  .company_values_container--mobile{
+    background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
+    align-items: center;
+    padding:5%;
+    font-family: "Lato";
+  }
+
+  .company_values_container--mobile .title{
+    color:lightblue;
+    font-size:60px;
+    font-weight: bold;
+    font-family: "Lato";
+  }
+
+  .company_values_container--mobile .divider{
+    font-size:40px;
+    color:white;
+  }
+
+  .company_values_container--mobile .description{
+    font-size:18px;
+    color:white;
+  }
+
+  .company_values_container--mobile .learn-more{
+    font-weight:700;
+    background:lightblue;
+    color:black;
+  }
+
+  .photo-grid{
+    display: grid;
+    grid-gap:2px;
+    padding:5%;
+  }
+
+  .photo-1{
+      grid-row: 1 / 2;
+      grid-column: 1 / span 2;
+  }
+  .photo-2{
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+  }
+  .photo-3{
+      grid-row: 2 / 3;
+      grid-column: 3 / 4;
+  }
+  .photo-4{
+      grid-row: 2 / 3;
+      grid-column: 4 / span 2;
+  }
+  .photo-5{
+      grid-row: 2 / 3;
+      grid-column: 1 / span 2;
+  }
+  .photo-6{
+      grid-row: 3 / 4;
+      grid-column: 4 / span 2;
+  }
+  .photo-7{
+      grid-row: 3 / 4;
+      grid-column: 5 / 6
+  }
+  .photo-8{
+      grid-row: 3 / 4;
+      grid-column: 6 / 7;
   }
 
   .showcase_container{

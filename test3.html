@@ -2,20 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Window Knight - Landing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Work Gallery</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background: #111;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 15px;
+      transition: transform 0.4s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
-  <section class="landing">
-    <div class="logo">The Window Knight</div>
-    <div class="tagline">Defending Your View</div>
-    <p class="description">
-      We provide professional window cleaning services with a shining finish and knight-worthy care. Let your light shine through crystal-clear glass, every time.
-    </p>
-    <a href="/book" class="cta-button">Get 30% Off Recurring Services</a>
-  </section>
+  <div class="container">
+    <h1>Our Work</h1>
+    <div class="gallery">
+      <!-- Replace these with your real images -->
+      <div class="gallery-item"><img src="https://via.placeholder.com/600x400?text=Work+1" alt="Work 1"></div>
+      <div class="gallery-item"><img src="https://via.placeholder.com/600x400?text=Work+2" alt="Work 2"></div>
+      <div class="gallery-item"><img src="https://via.placeholder.com/600x400?text=Work+3" alt="Work 3"></div>
+      <div class="gallery-item"><img src="https://via.placeholder.com/600x400?text=Work+4" alt="Work 4"></div>
+      <div class="gallery-item"><img src="https://via.placeholder.com/600x400?text=Work+5" alt="Work 5"></div>
+      <div class="gallery-item"><img src="https://via.placeholder.com/600x400?text=Work+6" alt="Work 6"></div>
+    </div>
+  </div>
+
+  <script>
+    // Ready for expansion (e.g. lightbox or lazy load)
+    console.log("Gallery Loaded");
+  </script>
 </body>
 </html>
