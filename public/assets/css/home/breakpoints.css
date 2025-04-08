@@ -205,9 +205,7 @@
 
 /* Standard phones (portrait) */
 @media screen and (max-width: 480px) {
-  .showcase_container {
-    z-index:999999
-  }
+
   .showcase_container--mobile{
     position: relative;
     z-index: 900;
@@ -215,7 +213,7 @@
   }
   .showcase_container{
     position: fixed;
-    z-index: -10;
+    z-index: -1000;
   }
   .landing_background .text-container .title{
     font-size:120px;
@@ -232,7 +230,7 @@ margin-bottom:20px;
   .landing{
     color: white;
     padding-top: 30%;
-    flex-direction: start;
+    justify-content:  start;
   }
   .tagline {
     text-align: left;
