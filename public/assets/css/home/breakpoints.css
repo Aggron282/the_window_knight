@@ -231,7 +231,8 @@ margin-bottom:20px;
   }
   .landing{
     color: white;
-    padding-top: 20%;
+    padding-top: 30%;
+    flex-direction: start;
   }
   .tagline {
     text-align: left;
