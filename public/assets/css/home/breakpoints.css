@@ -211,6 +211,87 @@
 /* Standard phones (portrait) */
 @media screen and (max-width: 480px) {
 
+
+  .slide-text{
+    position: absolute;
+    bottom: 70%;
+    left: 0rem;
+    z-index: 3;
+    background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
+    padding: 1.5rem 3rem;
+    /* border-radius: 12px; */
+    /* max-width: 700px; */
+    width:100%;
+    max-width: 100% !important;
+    padding-bottom: 3rem;
+    border-radius:0px;
+  }
+#fullTotal{
+  margin-top:-1px;
+}
+.subscribe_container{
+
+}
+.subscribe_container .text_container .title {
+    font-size: 35px;
+}
+.subscribe_container .text_container .subtitle {
+    font-size: 20px;
+    font-weight: "Lato" !important;
+}
+.gallery-section{
+  position: fixed;
+  z-index:-11;
+  visibility: hidden;
+}
+.subscribe_button {
+  margin-left:0%;
+}
+  .swiper{
+    margin-top: -35% !important;
+  }
+  .label--review::before{
+    transform: translateX(-50px);
+font-size: 50px;
+  }
+  .subscribe_container{
+    padding:12px;
+  }
+  #subscribe {
+     width: 100%;
+     margin-left: 0%;
+}
+  .subscribe_container--form{
+    width:100%;
+    margin-top:5%;
+    margin-left:0%;
+  }
+  .twk-review-grid {
+          grid-template-columns: repeat(1, 1fr);
+      }
+  .slideshow-section{
+    margin-top:40% !important;
+  }
+    .label--work::before {
+        text-align: center !important;
+        width: 100% !important;
+        position: relative;
+        right:20px;
+        justify-self:center;
+        font-size: 50px !important;
+    }
+
+
+  .slide-text .btn{
+    font-size:1.2rem !important;
+  }
+  .slide-text h2 {
+    font-size:2rem;
+  }
+  .slide-text p {
+    font-size:1.5rem;
+    font-weight: 500;
+  }
   .showcase_container--mobile{
     position: relative;
     z-index: 900;
@@ -459,8 +540,12 @@
   }
 
   .tk-section{
-    margin-top:-75%;
+    margin-top:-125%;
   }
+
+  .twk-review-grid {
+    margin-top: 40%;
+}
 
   .tk-review-grid{
     grid-template-columns: repeat(1,1fr);
@@ -537,6 +622,19 @@
       top:95%;
     }
 
+    .tk-section .watermark {
+    transform: translateX(00px) translateY(1200px);
+    bottom: 0%;
+}
+.tk-section .watermark {
+    filter: brightness(.04);
+    opacity: .1;
+    position: absolute;
+    right: 0%;
+    width: 272%;
+    transform: translateX(500px) translateY(00px);
+    bottom: 0%;
+}
 }
 
 /* Large phones and small tablets (portrait) */
