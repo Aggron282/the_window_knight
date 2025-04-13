@@ -175,7 +175,7 @@
 
 .twk-review-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0, 45, 100, 0.3);
+  box-shadow: 0 10px 30px rgba(0 , 45, 100, 0.3);
 }
 
 .twk-review-logo {
