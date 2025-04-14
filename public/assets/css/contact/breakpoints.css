@@ -323,14 +323,43 @@ body {
     left:0% !important;
     width:100% !important;
   }
-
+  .landing_background--about{
+    transform: scale(1.05);
+  }
   .landing_background--about .text-container .title{
     font-size:70px !important;
   }
-
+  html,body{
+    overflow-x: hidden;
+  }
+  .hero-container {
+      width: 90%;
+      bottom: -10%;
+      left: 0%;
+      transform: translateY(20px) scale(1);
+      position: absolute;
+      z-index: 99;
+  }
   .landing_background--about .text-container .subtitle{
     font-size:30px !important;
   }
+  .glow {
+    width: 200px;
+    position: absolute;
+    left: 5%;
+    top: 11%;
+    z-index: 9;
+    height: 200px;
+    background: lightblue;
+    filter: blur(5px);
+    opacity: .1;
+    animation: infinite ease-in 5s glowing;
+    border-radius: 50%;
+}
+.box-f .subtitle {
+    font-size: 20px;
+    text-align: center !important;
+}
 
   .landing_background--about .text-container .subtitle--button{
     font-size:30px !important;
