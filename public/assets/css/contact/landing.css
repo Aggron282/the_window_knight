@@ -81,14 +81,17 @@
 
 .landing_background--about .text-container .subtitle--button{
   padding:20px;
-  font-size:40px;
+  font-size:35px;
   text-shadow: 0px 0px 10px black;
   line-height: 1;
   display: inline;
   border-radius:40px;
   margin-top:40px;
-  background:linear-gradient(140deg , rgba(75, 25, 64,1),rgba(75, 25, 64,1));
+  /* background:linear-gradient(140deg , rgba(75, 25, 64,1),rgba(75, 25, 64,1)); */
+  background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1)) !important;
+
 }
+
 
 .landing_background--about .landing_img{
   width:100%;

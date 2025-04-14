@@ -152,7 +152,7 @@ body {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 
   .hero-container {
     left: 10%;
@@ -173,6 +173,13 @@ body {
     left: 20%;
   }
 
+  .hero-container {
+    bottom:-10% !important;
+  }
+
+  .hero-container {
+    transform: translateY(20px) scale(1) !important;
+  }
 
 }
 
