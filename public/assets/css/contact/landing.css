@@ -5,11 +5,12 @@
   position: relative;
   z-index: 99;
   opacity: 1;
-  background:linear-gradient(140deg , rgba(75, 25, 64,.8),rgba(75, 25, 64,.7),rgba(75, 25, 64,.5),rgba(75, 25, 64,0),rgba(66,57,101,0)),url("./../../images/contact_background.png") no-repeat center center;
+  /* background:linear-gradient(140deg , rgba(75, 25, 64,.8),rgba(75, 25, 64,.7),rgba(75, 25, 64,.5),rgba(75, 25, 64,0),rgba(66,57,101,0)),url("./../../images/contact_background.png") no-repeat center center; */
   filter: blur(0px) brightness(1);
   transform: scale(1);
   background-size: cover;
   animation: squeegeeEffect 3s ease-out forwards;
+  background:linear-gradient(to right bottom, rgba(0, 20, 30, .85), rgba(0, 35, 50, .75), rgba(0, 50, 70, .5)), url('./../../images/contact_background.png');
   clip-path: inset(0 0 0 0); /* Fully cleared */
 }
 
