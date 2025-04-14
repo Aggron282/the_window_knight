@@ -46,8 +46,12 @@
 
 
 }
+
+ .text_container .subtitle{
+  margin-top:-20px !important;
+}
 .subscribe_container--form{
-  padding:80px;
+  padding:20px;
   padding-bottom:5%;
   width:80%;
   margin-left:10%;

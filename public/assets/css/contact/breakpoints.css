@@ -462,6 +462,51 @@ body {
     width:100%;
   }
 
+  .her {
+    position: absolute;
+    width: 80%;
+    bottom: 30%;
+    left: 30%;
+    opacity: .7;
+    z-index: 99999;
+    bottom: 0%;
+left: 10%;
+    filter: brightness(.2);
+}
+.circle-light--active {
+    filter: brightness(1);
+    transform: translateY(100px) rotateY(0deg);
+    opacity: 1;
+    transition: all 2s;
+}
+.signal_container .text-container .description {
+  font-size:20px;
+}
+
+.signal_container .text-container .subtitle {
+    font-size: 30px;
+}
+.signal_container .text-container .title {
+    font-size: 45px;
+    line-height: 1.2;
+}
+.gates-unique {
+    height: 600px;
+}
+.gate-right-unique img {
+        height: 100% !important;
+        object-fit: cover;
+        object-position: right;
+
+        width: 100% !important;
+  }
+  .gate-left-unique img {
+    height: 100% !important;
+    object-position: left;
+    object-fit: cover;
+    width: 100% !important;
+}
+
 }
 
 @keyframes grow-mobile{
