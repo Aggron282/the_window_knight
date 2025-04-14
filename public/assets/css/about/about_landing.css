@@ -65,3 +65,64 @@
   opacity:.9;
   filter:blur(30px);
 }
+
+.about-section {
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(0, 20, 30, .95), rgba(0, 35, 50, .95), rgba(0, 50, 70, .95)), url("./../../images/knight_background.png") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem;
+}
+
+.about-overlay {
+  max-width: 900px;
+  text-align: center;
+  padding: 3rem;
+  background-color: rgba(0, 10, 20, 0.6);
+  border-radius: 12px;
+  padding-top:4rem;
+  padding-bottom:4rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.about-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.about-content h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #6ec1e4;
+  margin-bottom: 20px;
+
+}
+
+.about-content p {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #f0f4f8;
+  margin-bottom: 20px;
+
+}
+
+.about-button {
+  padding: 0.9rem 2rem;
+  background-color: #0ea5e9;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+  background-color: #0284c7;
+}

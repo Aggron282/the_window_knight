@@ -6,277 +6,21 @@ body {
   overflow-x: hidden;
 }
 
-/* General Media Query for Landscape Orientation */
-/* @media screen and (orientation: landscape) {
-  .landing_background--about .text-container .title {
-    font-size: 100px;
-  }
-} */
 
-/* 1501px - 1600px Screen Width */
-/* @media screen and (max-width: 1500px) and (min-width: 1400px) {
-  .what_we_do_link {
-    font-size: 25px;
-  }
-
-  .what_we_do_col{
-    width:150%;
-  }
-
-
-
-  form * {
-    margin-top: 5% !important;
-  }
-
-  .landing_background--about .text-container .title {
-    font-size: 120px;
-  }
-
-  .landing_background--about .text-container .subtitle {
-    font-size: 50px;
-    font-weight: 400;
-  }
-
-  .icon h3,
-  .right p {
-    font-size: 30px;
-  }
-
-  .header_banner h1 {
-    font-size: 60px;
-  }
-
-  .window-knight-section {
-    padding-top: 150px;
-  }
-
-  .meet_team_text--paragraph {
-    font-size: 25px;
-  }
-
-  #wave {
-    transform: rotate(90deg);
-    width: 1200px !important;
-    height: 300% !important;
-    position: absolute;
-    right: 0%;
-    top: -100%;
-  }
-} */
-
-/* 1401px - 1500px Screen Width */
-@media screen and (max-width: 1500px) and (min-width: 1401px) {
-  .what_we_do_link {
-    font-size: 20px;
-  }
-
-  .what_we_do_col{
-    width:150%;
-  }
-  .landing_background--about {
-    height: 115vh;
-    background-position: top;
-  }
-
-  .icon h3,
-  .right p {
-    font-size: 28px;
-  }
-
-  .window-knight-section {
-    padding-top: 100px;
-  }
-
-  .meet_team_text--paragraph {
-    font-size: 24px;
-  }
-
-  #wave {
-    width: 1200px !important;
-    height: 300% !important;
-    right: -2.5%;
-    top: -100%;
-  }
-
-  .about_link_row {
-    width: 130%;
-  }
-}
-
-/* 1300px - 1400px Screen Width */
-@media screen and (max-width: 1400px) and (min-width: 1201px) {
-  .landing_background--about {
-    height: 110vh;
-    background-position: top;
-  }
-
-  .what_we_do_col{
-    width:150%;
-  }
-  .icon h3,
-  .right p {
-    font-size: 26px;
-  }
-
-  .window-knight-section {
-    padding-top: 100px;
-  }
-
-  .meet_team_text--paragraph {
-    font-size: 22px;
-  }
-
-  #wave {
-    width: 1200px !important;
-    height: 300% !important;
-    right: -5%;
-    top: -100%;
-  }
-}
-
-/* Tablet and Small Laptops */
-@media screen and (max-width: 1200px) {
-  .landing_background--about .text-container .title {
-    font-size: 90px;
-  }
-  .what_we_do_col{
-    width:150%;
-  }
-
-  .window-knight-section {
-    padding-top: 80px;
-  }
-
-  .icon h3,
-  .what_we_do_link {
-    font-size: 20px;
-  }
-
-  .meet_team_text--paragraph {
-    font-size: 20px;
-  }
-
-  .right p {
-    font-size: 24px;
-  }
-}
-
-/* Mobile Devices (768px and Below) */
-@media screen and (max-width: 768px) {
-  .landing_background--about {
-    height: 140%;
-    padding: 20px;
-    text-align: center;
-  }
-  .landing_background--about{
-    background:linear-gradient(140deg , rgba(75, 25, 64,1),rgba(75, 25, 64,.9),rgba(75, 25, 64,.8),rgba(75, 25, 64,.5),rgba(66,57,101,0)),url("./../../images/pann.png") no-repeat center center;
-
-  }
-
-  .landing_background--about .text-container .title {
-    font-size: 60px;
-  }
-
-  .landing_background--about .text-container .subtitle {
-    font-size: 24px;
-  }
-
-  .icon h3 {
-    font-size: 18px;
-  }
-
-  .what_we_do_description,
-  .meet_team_text--paragraph {
-    font-size: 18px;
-  }
-
-  .about_link_row {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  #wave {
-    width: 100%;
-    height: 200%;
-    top: -50%;
-  }
-}
-
-/* Small Mobile Devices (320px - 480px) */
-/* @media screen and (max-width: 480px) {
-  .landing_background--about .text-container .title {
-    font-size: 50px;
-  }
-
-  .landing_background--about .text-container .subtitle {
-    font-size: 18px;
-  }
-
-  .what_we_do_description,
-  .right p {
-    font-size: 16px;
-  }
-
-  .what_we_do_link {
-    font-size: 16px;
-  }
-} */
-
-
-@media screen and (max-width:1000px) and (min-width:590px) and (orientation:landscape){
-  .landing_background--about .text_container{
-    width:80%  !important;
-    left:0  !important;
-    text-align: left  !important
-  }
-  .landing_background--about .text_container .title{
-    font-size:80px  !important
-  }
-  .landing_background--about .text_container .subtitle{
-    font-size:34px  !important
-  }
-  .flex-direction{
-    align-items: none !important;
-  }
-  .what_we_do_link {
-    font-size:15px !important
-  }
-  .meet_team_container--body{
-    grid-template-columns: 100% !important;
-  }
-  .right p {
-    font-size:16px !important;
-  }
-}
-
-@media screen and (max-width:690px){
-  .navbar_custom{
-    margin-left:10px !important;
-    margin-top:10px !important;
-  }
-  .active-navbar{
-    padding-top:40px;
-    margin-top:-70px;
-    height:100%;
-    z-index: 9999999;
+.showcase-wrapper {
     position: relative;
-    transition: all .5s;
-    height:350px;
+}
 
-    opacity:1;
-    background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
-  }
-  #showcase_number{
-    z-index: 9;
-  }
-  .landing_background--about{
-    background-position: center center;
-  }
-  .showcase_container{
-    margin-top:0% !important;
-  }
+.showcase_container--mobile{
+  position: absolute;
+  z-index: -90;
+  visibility: hidden;
+}
+.clouds{
+  visibility: hidden;
+}
+@media screen and (max-width:490px){
+
   .mission_col{
     width:100% !important;
     max-width:100% !important;
@@ -287,124 +31,45 @@ body {
     font-size:60px !important;
   }
 
+  .showcase_container{
+    position: absolute !important;
+    z-index: -90;
+    visibility: hidden;
+  }
+
+  .showcase_container--mobile{
+    position: relative;
+    z-index:929290;
+    visibility: visible;
+  }
+
   .mission_text--description{
     font-size:20px !important;
   }
 
-  .what_we_do_col{
-    padding:5% !important;
-    padding-left:10% !important;
-    padding-right:0% !important;
-  }
 
-  .what_we_do_link{
-    font-size:14px !important;
-  }
-
-  .meet_team_text--headline{
-    font-size:30px !important;
-  }
-
-  .meet_team_container--body{
-    grid-template-columns:100% !important;
-  }
-
-  .text_wrapper{
-    padding:40px !important;
+  .learn_about_me_section{
+    height:100% !important;
   }
 
 
-  .header-banner h1{
-    font-size:30px !important;
+  .learn-grid {
+      display: grid;
+      grid-template-columns: 100% 100%;
   }
 
-  .content .left, .content .right{
-    width:100% !important;
-    padding:20px !important;
+  .heading-container p {
+      font-size: 18px;
   }
-
-  .cta-button{
-    margin-top:50px !important;
-    margin-left:12.5% !important;
-  }
-
-  .k-glow{
-    opacity: 0;
-    z-index: 9999 !important;
-  }
-
-  .showcase_container{
-    height:90vh !important;
-  }
-
-  .landing_background--about .text-container{
-    width:100% !important;
-    top:15% !important;
-    left:2.5% !important;
-    text-align: left !important;
-  }
-
-  .landing_background--about .text-container .title{
-    font-size:90px !important;
-  }
-
-  .right p{
-    font-size:18px !important;
-  }
-
-  .input-control{
-    margin-top:30px !important;
-  }
-
-  .landing_background--about .text-container .subtitle{
-    font-size:28px !important;
-  }
-
+  .navbar_custom {
+    position: relative;
+    margin-top: 10px;
 }
 
-@media screen and (max-width:1100px) and (min-width:700px) and (orientation:portrait){
-  .landing_background--about .text-container{
-    top:17.5% !important;
-    width:80% !important;
+  .what_we_do_container{
+    height:100vh !important;
   }
-  
-  .landing_background--about .text-container .title{
-    font-size:100px !important;
+  .what_we_do_link {
+    font-size: 1.8rem !important;
   }
-  .landing_background--about .text-container .subtitle{
-    font-size:50px !important;
-  }
-  .landing_background--about{
-    background-position: bottom right !important;
-  }
-  .what_we_do_container .what_we_do_title{
-  font-size:100px
-  }
-  .what_we_do_container {
-    padding-top:2.5% !important;
-  }
-  .meet_team_container--body{
-    grid-template-columns: 100% !important;
-  }
-  .text_wrapper{
-    padding:70px !important;
-  }
-  .left h2{
-    font-size:60px !important;
-  }
-  .right p {
-    font-size:18px !important
-  }
-  #wave{
-    opacity: 0 !important;
-
-  }
-  #quote{
-    margin-top:40px;
-  }
-  .mission_text--description{
-    font-size:30px !important;
-  }
-
-
 }
