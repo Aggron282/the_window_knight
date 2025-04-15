@@ -14,7 +14,7 @@ modalWrapper.addEventListener('click', (e) => {
 });
 
 function ToggleModal(isOn){
-  console.log(isOn)
+
   isModalOn = isOn;
 
   if(isOn){
