@@ -96,7 +96,7 @@ const Init_Navbar = () => {
               </div>
 
               <div class="col-12">
-                <a href="/schedule" ><p class="link_nav medium-font">Schedule Quote</p> </a>
+                <a href="http://www.quotes.thewindowknight.com" ><p class="link_nav medium-font">Schedule Quote</p> </a>
               </div>
 
             </div>
@@ -111,7 +111,7 @@ const Init_Navbar = () => {
 
     `;
 
-    
+
   nav_button = document.getElementById("button_navbar");
 
   if(nav_button){
