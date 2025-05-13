@@ -54,7 +54,7 @@ const Init_Navbar = () => {
           <p class="link_nav">Contact Us</p>
         </a>
 
-        <a class="col-3  nav_col sc_col nav_col--schedule" href="/#subhere">
+        <a class="col-3  nav_col sc_col nav_col--schedule" href="https://www.quotes.thewindowknight.com">
           <p class="link_nav">Free Quote</p>
         </a>
 
@@ -96,7 +96,7 @@ const Init_Navbar = () => {
               </div>
 
               <div class="col-12">
-                <a href="http://www.quotes.thewindowknight.com" ><p class="link_nav medium-font">Schedule Quote</p> </a>
+                <a href="https://www.quotes.thewindowknight.com" ><p class="link_nav medium-font">Schedule Quote</p> </a>
               </div>
 
             </div>
