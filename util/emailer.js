@@ -25,7 +25,7 @@ async function sendReviewRequestEmail(email, code) {
     to: email,
     subject: "Thanks for Using The Window Knight – Here's $10 Off",
     html
-  });
+  }).catch((err)=>{console.log(err)});
 }
 
 module.exports = { sendReviewRequestEmail };
