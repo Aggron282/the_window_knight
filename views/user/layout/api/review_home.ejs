@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Window Knight</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>The Window Knight</h1>
+
+  <div class="feature-box">
+    <h2>Send Review Request</h2>
+    <input type="email" id="email" placeholder="Customer Email">
+    <button onclick="sendRequest()">Send</button>
+  </div>
+
+  <div class="feature-box">
+    <h2>Redeem Code</h2>
+    <input type="text" id="code" placeholder="Enter Redemption Code">
+    <button onclick="redeemCode()">Redeem</button>
+    <div id="status"></div>
+  </div>
+
+  <script>
+    async function sendRequest() {
+      const email = document.getElementById('email').value;
+      const res = await fetch('/api/send-review', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      alert(res.ok ? "Email Sent!" : "Error sending email.");
+    }
+
+    async function redeemCode() {
+      const code = document.getElementById('code').value;
+      const res = await fetch('/api/redeem', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code })
+      });
+
+      const result = await res.json();
+      const status = document.getElementById("status");
+      if (result.success) {
+        status.innerHTML = "🎉 Code redeemed! $10 discount applied.";
+        // You can trigger confetti/fireworks here
+      } else {
+        status.innerHTML = "❌ Invalid or already used code.";
+      }
+    }
+  </script>
+</body>
+</html>

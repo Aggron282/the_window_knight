@@ -14,6 +14,7 @@ var express = require("express");
 var expressLayouts = require('express-ejs-layouts');
 var user_routes = require("./routes/user/user_routes.js");
 var admin_routes = require("./routes/admin/admin_routes.js");
+var api_routes = require("./routes/api/api_routes.js");
 var db = require("./util/database.js");
 var bodyParser = require("body-parser");
 var axios = require("axios");
@@ -56,6 +57,7 @@ app.use((req,res,next)=>{
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.use(user_routes);
+app.use(api_routes);
 
 app.use((req, res, next) => {
 
