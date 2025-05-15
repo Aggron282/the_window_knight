@@ -3,22 +3,118 @@
 <head>
   <title>The Window Knight</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap">
+
+
+<style>
+  body{
+    background:url("./assets/images/window_clean.png");
+    padding:100px;
+    font-family: "Inter"
+  }
+  .modal{
+    display: flex;
+    box-shadow: 0px 0px 40px rgba(0,0,0,.5);
+    justify-self:center;
+    align-self: center;
+    animation:  .6s 1 in_a ease-in;
+    background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
+
+  }
+  .modal-grid{
+    display: grid;
+    min-height: 600px;
+    grid-template-columns: 40% 1fr;
+  }
+  .feature-img{
+    max-height: 600px;
+    width:100%;
+    object-fit: cover;
+  }
+  .feature-box h2{
+    color:white;
+    text-align: center;
+    font-size:50px;
+  }
+    .feature-box h2 strong{
+      color:#38b6ff;
+
+    }
+  .feature-box{
+    padding:20px;
+  }
+  @keyframes in_a {
+    0%{
+      transform: scale(0) rotateX(0deg);
+    }
+    100%{
+      transform: scale(1) rotateX(720deg);
+    }
+  }
+  .feature-box input{
+    width:80%;
+    margin-left:10%;
+    font-size:25px;
+    margin-top: 10%;
+    text-align: center;
+    padding:20px;
+    padding-right:0px;
+    border:10px solid #38b6ff;
+    padding-left:0px;
+  }
+  .feature-box button{
+    width:50%;
+    margin-left:25%;
+    border:10px solid #38b6ff;
+    background:#38b6ff;
+    color:white;
+    font-size:30px;
+    font-weight: 800;
+    border-radius: 10px;
+    margin-top:30px;
+    padding:20px;
+    margin-bottom: 10px;
+    transition: all .5s;
+  }
+    .feature-box a{
+      color:white;
+      margin-top:10%;
+      font-size:20px;
+      text-align: right;
+      width:90%;
+      margin-left:5%;
+      transition: all .5s;
+      display: block;
+      text-decoration: none;
+      transform: translateY(30px);
+    }
+    .feature-box a:hover{
+
+      color:limegreen;
+    }
+  .feature-box button:hover{
+    background:limegreen;color:black;
+  }
+</style>
 </head>
 <body>
-  <h1>The Window Knight</h1>
-
-  <div class="feature-box">
-    <h2>Send Review Request</h2>
-    <input type="email" id="email" placeholder="Customer Email">
-    <button onclick="sendRequest()">Send</button>
-  </div>
-
-  <div class="feature-box">
+  <section class="modal">
+    <div class="modal-grid">
+      <img class="feature-img" src = "./assets/images/knight_review_2.png"/>
+      <div class="feature-box">
+        <h2>Send <strong>Review</strong> Request</h2>
+        <input type="email" id="email" placeholder="Customer Email">
+        <button onclick="sendRequest()">Send</button>
+        <a href = "/"> Cancel </a>
+      </div>
+   </div>
+  </section>
+  <!-- <div class="feature-box">
     <h2>Redeem Code</h2>
     <input type="text" id="code" placeholder="Enter Redemption Code">
     <button onclick="redeemCode()">Redeem</button>
     <div id="status"></div>
-  </div>
+  </div> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
