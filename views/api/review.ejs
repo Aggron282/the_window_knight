@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Window Knight</title>
+  <link rel="stylesheet" href="./assets/css/api/review.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap">
+</head>
+<body>
+  <section class="modal">
+    <div class="modal-grid">
+      <img class="feature-img" src = "./assets/images/knight_review_2.png"/>
+      <div class="feature-box">
+        <h2>Send <strong>Review</strong> Request</h2>
+        <input type="email" id="email" placeholder="Customer Email">
+        <button onclick="sendRequest()">Send</button>
+        <a href = "/"> Cancel </a>
+      </div>
+   </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+    async function sendRequest() {
+      const email = document.getElementById('email').value;
+      const res = await axios.post('/review/send', {email:email});
+      console.log(res);
+      alert(res.ok ? "Email Sent!" : "Error sending email.");
+    }
+
+
+  </script>
+</body>
+</html>

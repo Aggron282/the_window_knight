@@ -5,7 +5,11 @@ const ReviewDiscount = require('../../models/review_discount.js');
 const { sendReviewRequestEmail } = require('./../../util/emailer.js');
 
 const GetReviewPage = (req,res,next)=>{
-  res.render(path.join(rootDir,"views","/api/review_home.ejs"));
+  res.render(path.join(rootDir,"views","/api/review.ejs"));
+}
+
+const GetRedeemPage = (req,res,next)=>{
+  res.render(path.join(rootDir,"views","/api/redeem.ejs"));
 }
 
 const Redeem = async (req,res)=> {
@@ -48,3 +52,4 @@ const SendReview = async (req, res) => {
 module.exports.SendReview = SendReview;
 module.exports.Redeem = Redeem;
 module.exports.GetReviewPage = GetReviewPage;
+module.exports.GetRedeemPage = GetRedeemPage;

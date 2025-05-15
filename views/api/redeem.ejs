@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Window Knight</title>
+  <link rel="stylesheet" href="./assets/css/api/review.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap">
+</head>
+<body>
+  <section class="modal">
+    <div class="modal-grid">
+      <img class="feature-img" src = "./assets/images/knight_review_3.png"/>
+      <div class="feature-box">
+        <h2>Enter Code to <strong>Redeem</strong></h2>
+        <input type="text" id="code" placeholder="Enter Redemption Code">
+        <button onclick="redeemCode()">Redeem</button>
+        <div id="status"></div>
+        <a href = "/"> Cancel </a>
+      </div>
+   </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+
+
+    async function redeemCode() {
+      const code = document.getElementById('code').value;
+      const res = await axios.post('/review/redeem', {code:code});
+
+      const result = await res.json();
+      const status = document.getElementById("status");
+      if (result.success) {
+        status.innerHTML = "🎉 Code redeemed! $10 discount applied.";
+        // You can trigger confetti/fireworks here
+      } else {
+        status.innerHTML = "❌ Invalid or already used code.";
+      }
+    }
+  </script>
+</body>
+</html>
