@@ -101,8 +101,11 @@
 .hours-unique .grid-container-hours{
   grid-template-columns: repeat(4, 25%);
   display: grid;
+  margin-top:5%;
 }
-
+.gates-unique.open .hours-unique {
+  padding-top:50px
+}
 .gate-left-unique img{
   top:-10px;
 }

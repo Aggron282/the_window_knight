@@ -7,6 +7,10 @@
   padding:50px;
   animation: fadeIn 2s ease-in-out;
 }
+.showcase_container{
+  height:100vh !important;
+
+}
 
 .contact-section .title{
   font-size:60px;

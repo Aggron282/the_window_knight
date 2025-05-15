@@ -12,18 +12,25 @@ const GetRedeemPage = (req,res,next)=>{
   res.render(path.join(rootDir,"views","/api/redeem.ejs"));
 }
 
-const Redeem = async (req,res)=> {
-    const { code } = req.body;
-    const record = await ReviewDiscount.findOne({ access_code: code });
+const Redeem = async (req, res) => {
+  const { code } = req.body;
+  const record = await ReviewDiscount.findOne({ access_code: code });
 
-    if (record && !record.date_redeemed) {
-      record.date_redeemed = new Date();
-      await record.save();
-      return res.json({ success: true });
-    }
+  if (!record) {
+    return res.json({ success: false });
+  }
 
-    res.json({ success: false });
-}
+  // Only allow redemption if not already redeemed
+  if (!record.date_redeemed) {
+    record.date_redeemed = new Date();
+    await record.save();
+    return res.json({ success: true });
+  }
+
+  // Already redeemed
+  res.json({ success: false });
+};
+
 
 const SendReview = async (req, res) => {
   const { email } = req.body;

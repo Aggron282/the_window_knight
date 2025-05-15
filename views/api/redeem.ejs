@@ -18,24 +18,85 @@
       </div>
    </div>
   </section>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Include somewhere in body -->
+<div id="fireworks-container" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:99;"></div>
+
+<script>
+async function showFireworks() {
+  var firworks_container = document.getElementById("fireworks-container");
+
+  const { tsParticles } = window;
+  firworks_container.style.zIndex=999;
+  await tsParticles.load("fireworks-container", {
+    fullScreen: { enable: false },
+    background: { color: "transparent" },
+    particles: {
+      number: { value: 0 },
+      color: { value: ["#f00", "#0f0", "#00f", "#ff0", "#0ff", "#f0f"] },
+      shape: { type: "circle" },
+      opacity: { value: 1 },
+      size: { value: 5, random: { enable: true, minimumValue: 1 } },
+      life: { duration: { sync: true, value: 1 }, count: 10 },
+      move: {
+        enable: true,
+        gravity: { enable: true, acceleration: 9.81 },
+        speed: { min: 10, max: 20 },
+        direction: "none",
+        decay: 0.1,
+        outModes: { default: "destroy", top: "none" }
+      }
+    },
+    emitters: {
+      life: { count: 10, duration: 0.1 },
+      rate: { delay: 0.2, quantity: 50 },
+      position: { x: 50, y: 50 },
+      size: { width: 100, height: 100 },
+      particles: { move: { direction: "none", speed: { min: 10, max: 20 } } }
+    }
+  });
+}
+
+function removeFireworks() {
+  var firworks_container = document.getElementById("fireworks-container");
+  window.tsParticles.domItem(0)?.destroy();
+  firworks_container.style.zIndex=-1;
+}
+</script>
 
   <script>
-
+    var redeem_timer;
+    var remove_firework_timer;
 
     async function redeemCode() {
       const code = document.getElementById('code').value;
-      const res = await axios.post('/review/redeem', {code:code});
-
-      const result = await res.json();
+      const {data} = await axios.post('/review/redeem', {code:code});
       const status = document.getElementById("status");
-      if (result.success) {
-        status.innerHTML = "🎉 Code redeemed! $10 discount applied.";
-        // You can trigger confetti/fireworks here
+      clearTimeout(remove_firework_timer);
+      clearTimeout(redeem_timer);
+      var firworks_container = document.getElementById("fireworks-container");
+      if (data.success) {
+        status.innerHTML = `<div class="popup--status popup--status--good">🎉 Code redeemed! $10 discount applied.</div>`
+        redeem_timer = setTimeout(()=>{
+          const popup = document.querySelector(".popup--status");
+          popup.classList.add("popup--status--remove");
+        },10500)
+
+       showFireworks();
+
+            remove_firework_timer =  setTimeout(()=>{
+                removeFireworks();
+              },15000)
       } else {
-        status.innerHTML = "❌ Invalid or already used code.";
+        status.innerHTML = `<div class="popup--status popup--status--bad">Error: Invalid or already used code.</div>`
+        redeem_timer = setTimeout(()=>{
+          const popup = document.querySelector(".popup--status");
+          popup.classList.add("popup--status--remove");
+        },4500)
       }
+
     }
   </script>
 </body>

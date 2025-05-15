@@ -30,13 +30,13 @@
 
 .hero-container{
   position: absolute;
-  width:85%;
-  bottom:-10%;
-  left:30%;
+  width:65%;
+  bottom:-25%;
+  left:40% !important;
   animation: 2s ease-in hero 1;
   animation-delay: 1s;
   z-index: 99;
-  transform: translateY(20px) scale(1);
+  /* transform: translateX(300px) translateY(80px) scale(.5) !important; */
   filter:opacity(1);
 }
 
@@ -44,7 +44,7 @@
   object-fit: contain;
   z-index: 99;
   position: relative;
-  width:100%;
+  width:80%;
 }
 
 .landing_background--about .text-container{

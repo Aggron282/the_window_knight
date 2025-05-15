@@ -6,6 +6,8 @@ body{
 }
 .modal{
   display: flex;
+  position: relative;
+  z-index: 999999;
   box-shadow: 0px 0px 40px rgba(0,0,0,.5);
   justify-self:center;
   align-self: center;
@@ -67,6 +69,59 @@ body{
   margin-top:30px;
   padding:20px;
   transition: all .5s;
+}
+@keyframes popup {
+  0%{
+    transform: translateX(500px);
+  }
+  90%{
+    transform: translateX(-30px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+@keyframes popup--good {
+  0%{
+    transform: translateY(-100px);
+  }
+  60%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+.popup--status{
+  animation:popup .5s 1 ease-in;
+  position: fixed;
+  z-index: 999;
+  right:0;
+  top:5%;
+  border-radius: 10px;
+  padding:10px;
+  box-shadow:0px 0px 10px rgba(0,0,0,.5);
+  text-align:center;
+  font-size:20px;
+}
+.popup--status--bad{
+  background: orangered;
+  color:white;
+}
+
+.popup--status--remove{
+  transition: all .5s;
+  transform: translateX(2000px);
+}
+.popup--status--good{
+  background: limegreen;
+  font-weight:800;
+  font-size:50px;
+  animation: popup--good .5s ease-in 1;
+  width:100%;
+  top:0%;
+
+  color:black;
 }
   .feature-box a{
     color:white;
