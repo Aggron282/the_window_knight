@@ -39,44 +39,50 @@
   const reviews = [
     {
       name: "Pita Jungle",
-      logo: "/images/logo-knight.png",
+      logo: "pita.png",
       text: "Absolutely the best experience! Reliable and personable services.",
       author: "Bassel Osmani - Owner"
     },
     {
       name: "Rachel's Art Studio",
-      logo: "/images/logo-knight.png",
+      logo: "rachel.png",
       text: "Lovely employees and always leave our windows spotless",
       author: "Rachel - Owner"
     },
     {
       name: "U.S Egg",
-      logo: "/images/logo-knight.png",
+      logo: "usegg.png",
       text: "We have been using them for years and plan to continue for a long time.",
       author: "The Gebran Family - Owners"
     },
     {
       name: "Chipotle",
-      logo: "/images/logo-knight.png",
+      logo: "chipotle.png",
       text: "Affordable and reliable, we especially love their deals",
       author: "Chipotle on Shea and Scottsdale"
     },
     {
       name: "Qdoba",
-      logo: "/images/logo-knight.png",
+      logo: "qdoba.png",
       text: "Affordable and reliable, we especially love their deals",
       author: "Qdoba on Scottsdale Rd"
     },
     {
       name: "Sims Business Systems",
-      logo: "./images/logo.png",
+      logo: "sims.jpg",
       text: "Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.",
       author: "Mark Sims - Owner"
     },{
       name: "Pretty Decent Concepts",
-      logo: "./images/logo.png",
+      logo: "decent.png",
       text: "Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.",
       author: "Theodore Meyers - Owner"
+    },
+    {
+      name: "BKB",
+      logo: "bkb.png",
+      text: "'Our windows have never looked better — the natural light now pours in and makes our space shine. Guests have even complimented the view! Highly recommend for any business that values quality and presentation.'",
+      author: "Breakfast Kitchen Bar - Owner"
     }
   ];
 
@@ -86,7 +92,7 @@
     const card = document.createElement('div');
     card.className = 'twk-review-card';
     card.innerHTML = `
-      <img class="twk-review-logo" src="${review.logo}" alt="${review.name} logo" />
+      <img class="twk-review-logo" src="./assets/images/reviews/${review.logo}" alt="${review.name} logo" />
       <div class="twk-review-name">${review.name}</div>
       <div class="twk-review-text">⭐⭐⭐⭐⭐</div>
       <div class="twk-review-text">"${review.text}"</div>

@@ -50,7 +50,87 @@
   padding:10px;
 }
 
+.twk-review-logo{
+  padding:10px;
+  background: white;
+  width:100px !important;
+  height: 100px !important;
+  object-fit: contain;
+  border-radius:20px;
+}
 
+
+/* CONTACT BADGE: BASE STYLE */
+.fixed-contact {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: auto;
+  height: auto;
+  z-index: 10000;
+  perspective: 1000px;
+  transition: top 0.4s ease;
+}
+
+.contact-card {
+  width: 220px;
+  height: 50px;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-family: "Teko", sans-serif;
+  font-size: 1.4rem;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.fixed-contact:hover .contact-card {
+  transform: rotateY(180deg);
+}
+
+.contact-front,
+.contact-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(0,191,255,0.6);
+}
+
+/* FRONT: PHONE */
+.contact-front {
+  background: linear-gradient(to right, #00334d, #005672);
+}
+
+/* BACK: EMAIL */
+.contact-back {
+  background: linear-gradient(to right, #005672, #00334d);
+  transform: rotateY(180deg);
+}
+
+/* STICKY ON SCROLL + FULL WIDTH */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  right: 0;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #00212d, #00384d);
+  border-bottom: 2px solid #00bfff;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
 
 .showcase_container--video{
   margin-top:-5%;

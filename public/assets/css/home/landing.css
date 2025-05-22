@@ -22,6 +22,8 @@
 }
 
 
+
+
 .landing {
   padding: 2rem;
   display: flex;
@@ -30,7 +32,7 @@
   text-align: center;
   height: 100vh;
   color:white;
-  padding-top:10%;
+  padding-top:15%;
 }
 
 .logo {
@@ -176,6 +178,7 @@
   position: absolute;
   z-index: 999;
   right:5%;
+  top:10%;
   box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
 }
 
@@ -202,4 +205,8 @@
   opacity: 1;
   animation-delay:.5s;
   filter: blur(0);
+}
+
+.landing_background .text-container{
+  top:25%;
 }
