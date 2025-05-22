@@ -239,3 +239,29 @@
 .contact-float.scrolling {
   right: -600px; /* Adjust as needed */
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+.nav_links{
+  flex-direction: row;
+  transform: translateX(-40px);
+}.link_nav--title{
+  font-size:4rem;
+}
+.link_nav{
+  font-size:19px;
+}
+.logo_new{
+  width:100px;
+  height:100px;
+}
+.landing_background{
+  margin-top:15%;
+}
+.q-btn{
+  transform: translateY(-15px) translateX(20px);
+
+}
+.landing_background .text-container{
+  top:20%;
+}
+}

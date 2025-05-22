@@ -808,3 +808,165 @@
 @media screen and (min-width: 1441px) {
   /* wide screen enhancements */
 }
+
+
+
+@media (max-width: 1024px) {
+  .landing_background .text-container {
+    width: 80%;
+    left: 10%;
+    top: 20%;
+    font-size: 1.8rem;
+  }
+
+  .landing_background .text-container .title {
+    font-size: 12vw; /* scales with screen */
+  }
+
+  .landing_background .text-container .subtitle {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+  }
+
+  .knight_container {
+    width: 70%;
+    right: 2%;
+    top: 25%;
+  }
+
+  .knight_container .glow {
+    width: 300px;
+    height: 300px;
+  }
+
+  .knight_main {
+    transform: scale(0.8) translateY(80px);
+  }
+}
+
+@media (max-width: 768px) {
+  .landing_background .text-container {
+    width: 90%;
+    left: 5%;
+    top: 15%;
+    font-size: 1.5rem;
+  }
+
+  .landing_background .text-container .title {
+    font-size: 11vw;
+  }
+
+  .landing_background .text-container .subtitle {
+    font-size: 1rem;
+    padding: 8px 12px;
+  }
+
+  .knight_container {
+    width: 85%;
+    right: 0%;
+    top: 30%;
+  }
+
+  .knight_container .glow {
+    width: 250px;
+    height: 250px;
+  }
+
+  .knight_main {
+    transform: scale(0.7) translateY(70px);
+  }
+}
+
+@media (max-width: 480px) {
+  .landing_background .text-container {
+    width: 95%;
+    left: 2.5%;
+    top: 10%;
+    font-size: 1.2rem;
+  }
+
+  .landing_background .text-container .title {
+    font-size: 10vw;
+  }
+
+  .landing_background .text-container .subtitle {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .knight_container {
+    width: 100%;
+    right: 0;
+    top: 35%;
+  }
+
+  .knight_main {
+    transform: scale(0.6) translateY(50px);
+  }
+
+  .knight_container .glow {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (max-width: 1024px) {
+  .landing-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    text-align: center;
+  }
+
+  .text-container {
+    order: 2;
+    width: 100%;
+  }
+
+  .knight_container {
+    order: 1;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .landing_background .text-container{
+    top:30%;
+  }
+  .phone-text, .email-text{
+    font-size:30px;
+  }
+  .contact-float {
+    right: -100px;
+    top:20%;
+  }
+  .value_banner--active {
+        height: 50px;
+    }
+    .value_detail_col {
+    width: 50%;
+    max-width: 50%;
+    flex: 25%;
+}
+.pd{
+  margin-top:70%;
+}
+.value_detail_row {
+        margin-top: -30%;
+    }
+    .value_banner {
+    top: 55%;
+    }
+}
+
+
+@media (max-width: 600px) {
+  .text-container .title {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+
+  .glass-deal-btn {
+    width: 90%;
+  }
+
+  .knight_main {
+    max-width: 300px;
+  }
+
+}
