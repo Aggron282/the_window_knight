@@ -4,6 +4,7 @@
   position: relative;
   padding:0px;
   padding-right:0px;
+  
   color:white;
   transform:translateY(-100px);
 }
@@ -19,6 +20,21 @@
 }
 
 .logo-box img{
+  width:100%;
+}
+
+.clean-btn {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+canvas{
+  position: absolute;
+  top:0;left:0;
   width:100%;
 }
 

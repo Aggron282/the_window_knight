@@ -100,7 +100,7 @@
 }
 
 .label--after::before {
-    content:"After";
+    content:"After" !important;
 }
 
 
