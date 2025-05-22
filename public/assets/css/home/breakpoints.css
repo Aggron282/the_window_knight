@@ -910,15 +910,11 @@
   }
 }
 @media (max-width: 1024px) {
-  .landing-grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    text-align: center;
-  }
 
   .text-container {
     order: 2;
     width: 100%;
+    position: absolute;
   }
 
   .knight_container {
@@ -944,6 +940,11 @@
     max-width: 50%;
     flex: 25%;
 }
+.why_us_img {
+    width: 25% !important;
+    justify-self: center;
+    margin-left: 37.5%;
+}
 .pd{
   margin-top:70%;
 }
@@ -952,6 +953,9 @@
     }
     .value_banner {
     top: 55%;
+    }
+    .landing-grid{
+    display: block !important;
     }
 }
 
