@@ -77,4 +77,15 @@
     margin-bottom: 10%;
   }
 
+  .slideshow-section{
+        height: 100vh !important;
+  }
+  .label--work{
+        transform: translateX(30px);
+  }
+  .twk-review-grid{
+    height: 100vh;
+    overflow-y: scroll;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }

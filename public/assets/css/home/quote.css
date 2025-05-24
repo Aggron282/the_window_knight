@@ -1,0 +1,197 @@
+/* Quote Section */
+.quote-section {
+  background: url('/assets/images/pricing.png') no-repeat center center;
+  background-size: cover;
+  padding: 5vh 5vw;
+  min-height: 90vh;
+  display: flex;
+  color: white;
+  padding-top: 5%;
+}
+
+.quote-content {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: flex-start;
+  max-width: 900px;
+  gap: 2rem;
+}
+
+.quote-text h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  font-family: 'Teko', sans-serif;
+}
+.quote-text{
+  width:60%;
+}
+.quote-text p {
+  font-size: 2rem;
+  color: #cfdfe9;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+}
+
+/* Radar-style Button */
+.pulse-button {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #001f2f 60%, #003e52 100%);
+  display: flex;
+  border: 5px solid #00e6f6;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+  text-decoration: none;
+  overflow: visible;
+  margin-top: 30%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.pulse-button:hover {
+  background: radial-gradient(circle, #00bfff 60%, #007ca6 100%);
+}
+
+.pulse-label {
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 2;
+  text-align: center;
+}
+
+/* Pulsing Rings */
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #00e6f6;
+  border-radius: 50%;
+  animation: pulse-ring 3s infinite ease-out;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.pulse-ring.delay1 {
+  animation-delay: 0.4s;
+}
+
+.pulse-ring.delay2 {
+  animation-delay: 0.8s;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+
+.review-section {
+  background: linear-gradient(to bottom right, #00141e, #002332);
+  color: white;
+  padding: 6% 5%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+.review-section h2 {
+  font-family: "Teko", sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  margin-bottom: 1rem;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr) !important;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem auto;
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-author {
+  font-weight: bold;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.review-stars {
+  color: #facc15;
+  margin: 0.5rem 0;
+  font-size: 2rem;
+}
+
+.review-content {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #e0f7fa;
+}
+
+.google-button {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: #00bfff;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.google-button:hover {
+  background: #009acd;
+}
+
+.google-review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #4285F4 !important;
+  background: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 2rem;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.google-review-btn:hover {
+  color:white !important;
+  background-color: #357ae8;
+  text-decoration: none;
+}
+
+.google-review-btn:hover img {
+filter:brightness(1000);
+}
+
+.google-review-btn img {
+  width: 20px;
+  height: 20px;
+}
