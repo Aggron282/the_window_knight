@@ -104,6 +104,9 @@
     align-items: center;
     transition: top 0.4s ease;
 }
+.text-container{
+  margin-top: 40%;
+}
 .phone-text, .email-text{
   font-size:35px;
 }
@@ -121,7 +124,7 @@
       margin-top: 25px;
 }
 .text-container .title {
-    font-size: clamp(3rem, 40vw, 14rem);
+    font-size: clamp(3rem, 40vw, 10rem);
     line-height: 1;
     margin-bottom: 1rem;
 }
@@ -149,10 +152,17 @@
 
       justify-content: flex-start !important
 }
+.glass-deal-btn{
+      width: 150% ;
+      font-size:4rem;
+}
 }
 
 
 @media (max-width:1024px) {
+  body{
+    overflow-x: hidden;
+  }
   .logo-title-container{
     justify-content: center;
   }
@@ -171,24 +181,23 @@ margin-top: 20px;
   }
 
 
-.knight_container {
-    position: relative;
-    display: flex
-;
-    align-items: flex-end;
-    /* justify-content: center; */
-    animation: knight_appear 2s ease-in;
-    width: 330%;
-    transform: translateX(-300px);
-    margin-top: 120%;
-}
-* {
-
-  .contact-float {
-      right: -80px !important;
-      top: 15% !important;
-      font-size: 1.8rem !important;
+  .knight_container{
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      /* justify-content: center; */
+      animation: knight_appear 2s ease-in;
+      width: 330%;
+      transform: translateX(-300px);
+      margin-top: 230%;
   }
+
+
+.contact-float {
+            right: -110px !important;
+            top: 25% !important;
+            font-size: 1.8rem !important;
+        }
 
   .nav_links {
     font-size: 1.1rem !important; /* Replace invalid 222 */
