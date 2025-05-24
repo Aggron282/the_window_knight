@@ -1,119 +1,160 @@
-.subscribe_container{
-  width:100%;
-  position: relative;
-  z-index:999;
+.knight-contact-section {
+  background: linear-gradient(to bottom right, rgba(0, 20, 30, 0.75), rgba(0, 35, 50, 0.75)), url("./../../images/pannn.png");
+  background-size: cover;
+  color: white;
+  padding: 5% 2rem;
+  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
-  color:white;
-  padding:20px;
-  /* margin-top:40px; */
-  padding-bottom:10%;
-  padding-top:10%;
-}
-
-.subscribe_input{
-  margin-top:10px;
-}
-
-.sub-b{
-  background-size: cover !important;
-  background-position: right top;
-  background:linear-gradient(to right bottom , rgba(0, 0, 0,.5),rgba(66,57,101,.7)),url("./../../images/pannn.png");
-  position: absolute;
-  height:120%;
-  left:0;
-  top:0;
-  transform: rotateZ(-360deg);
-  width:100%;
-  filter:blur(2px);
-}
-
-.content{
   position: relative;
-  z-index: 999999999;
 }
 
-.sub--b{
-  background-size: cover !important;
-  background-position: right top;
-  position: absolute;
-  height:100%;
-  width:100%;
-  left:0;
-  top:0;
-  background:rgba(66,57,101,1);
-  opacity: 1;
-  background: linear-gradient(to right bottom,rgba(0, 35, 50, 1),rgba(0, 35, 50, 1));
-
+.knight-form-wrapper {
+  max-width: 1200px;
+  background:
+      linear-gradient(to bottom right, rgba(0, 20, 30, 0.75), rgba(0, 35, 50, 0.75));
+  margin: auto;
 }
 
- .text_container .subtitle{
-  margin-top:-20px !important;
-}
-.subscribe_container--form{
-  padding:20px;
-  padding-bottom:5%;
-  width:80%;
-  margin-left:10%;
-  z-index:999;
-  align-items: center;
-  box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-  position: relative;
-
-}
-
-.subscribe_container--form label{
-  font-family: "Teko" !important;
-  font-size: 20px !important;
-  text-align: left !important;
+.knight-form-bg {
+  background:
+    linear-gradient(to bottom right, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1)),
+    url("./assets/images/pann.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-blend-mode: overlay; */
+  /* background-color: rgba(0, 0, 0, 0.75); */
+  padding: 4rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
-.subscribe_container--form .text_container{
-  font-size:20px;
-  font-family: "Montserrat"
-}
-
-.subscribe_container--form .text_container .title{
-  font-size:30px;
-}
-
-.subscribe_button{
-  background:#38b6ff;
-  color:white;
-  border:none;
-  font-size:25px;
-  width:50%;
-  margin-top:5%;
-  margin-left: 25%;
-  box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-  font-weight:200;
-  font-family: "Montserrat"
-}
-
-.subscribe_container .text_container{
+.knight-contact-title {
+  font-family: 'Teko', sans-serif;
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
   text-align: center;
-  font-family: "Teko"
 }
 
-.subscribe_container .text_container .title{
-  font-size: 60px;
+.knight-contact-subtitle {
+  font-size: 2rem;
+  color: #cde4f1;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
-.subscribe_container .text_container .subtitle{
-  font-size: 30px;
-}
-#subscribe{
-  width:80%;
-  margin-left:10%;
+.knight-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
- #subscribe textarea{
-   font-size:18px;
- }
- #subscribe input{
-   padding: 20px;
-   font-family: "Lato";
-   font-size: 15px;
-   border: 2px solid #ddd;
-   border-radius: 5px;
-   transition: border 0.3s ease;
+.knight-contact-form input,
+.knight-contact-form textarea {
+  padding: 2rem;
+  border: none;
+  border-radius: 10px;
+  background: #0f1f2d;
+  color: white;
+  font-size: 2rem;
+}
+
+.knight-contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.knight-contact-form button {
+  background: #00e6f6;
+  color: #001f2f;
+  font-weight: bold;
+  padding: 1.25rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.knight-contact-form button:hover {
+  background: #00c0d1;
+}
+
+.knight-form-popup {
+  display: none;
+  margin-top: 1.5rem;
+  background: #00bfff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.knight-trust-box {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.knight-trust-box h3 {
+  font-family: 'Teko', sans-serif;
+  font-size: 2.5rem;
+}
+
+.knight-trust-box p {
+  color: #a0c9de;
+  font-size: 2rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.knight-map-embed {
+  margin-top: 2.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+.knight-map-embed iframe {
+  width: 100%;
+  height: 350px;
+  border: none;
+}
+
+#knightConfettiCanvas {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+  .knight-form-bg {
+    padding: 2rem 1.5rem;
+  }
+
+  .knight-contact-title {
+    font-size: 2.6rem;
+  }
+
+  .knight-contact-form input,
+  .knight-contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .knight-contact-form button {
+    font-size: 1.1rem;
+  }
+
+  .knight-map-embed iframe {
+    height: 250px;
+  }
 }
