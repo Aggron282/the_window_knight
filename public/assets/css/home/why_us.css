@@ -1,61 +1,85 @@
-.why_us_img{
-  width:50%;
-  margin-left: 25%;
-}
-
-.why_us_text{
-  text-align: center;
-  color:white;
-  font-size:25px;
-  font-family: "Montserrat";
-  font-weight: 300;
-}
-
-.section_text{
-  font-size:65px;
-  text-align:center;
-  color:white;
-  font-family:'Teko';
-  font-size:200;
-  letter-spacing:2px;
-}
-
-.why_choose_us_container{
-  width:100%;
-  padding-bottom:10%;
-  padding-top:5%;
-  margin-top:-5%;
-  position: relative;
-  z-index:99;
+.why_choose_us_container {
+  width: 100%;
+  background: linear-gradient(to right bottom, #002332, #001a28);
+  padding: 5% 2%;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to right bottom,rgba(0, 35, 50, 1),rgba(0, 35, 50, 1));
+  z-index: 5;
+  display: grid;
+  place-items: center;
+}
+
+.section_text {
+  font-family: 'Teko', sans-serif;
+  color: white;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 3rem;
+}
+
+.grid_why_us {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+.why_us_card {
+  text-align: center;
+  padding: 2rem 1rem;
+  /* background: rgba(255, 255, 255, 0.02); */
+  border-radius: 15px;
+  /* backdrop-filter: blur(4px); */
+  transition: transform 0.3s ease;
+}
+
+.why_us_card:hover {
+  transform: scale(1.05);
+}
+
+.why_us_img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.why_us_text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: white;
+  font-weight: 400;
 }
 
 .watermark {
-  width:100%;
-  animation: none;
-  opacity:.04;
   position: absolute;
-  top:-10%;
-  left:0%;
-  z-index:-3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0.05;
+  z-index: 0;
 }
 
-@media screen and (max-width:900px) and (orientation:portrait) and (min-width:700px){
+/* Tablet Specific */
+@media (max-width: 1024px) {
+  .grid_why_us {
+    gap: 2rem;
+  }
+}
 
-  .watermark{
-    bottom:-25%;
-    width:120%;
+/* Mobile Specific */
+@media (max-width: 600px) {
+  .why_us_card {
+    padding: 1.5rem 0.5rem;
   }
 
-  .why_choose_us_container{
-    padding-top:10%;
-    padding-bottom:15%;
+  .why_us_img {
+    width: 60px;
   }
 
-  .why_us_row{
-    padding-top:5%;
+  .why_us_text {
+    font-size: 1.1rem;
   }
-
 }
