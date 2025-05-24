@@ -66,3 +66,15 @@
   font-weight: 600;
   color: #e6f9ff;
 }
+
+
+@media (max-width:1024px){
+  .window-cleaning-container {
+    display: block;
+  }
+  .cleaning-grid {
+    margin-top:10%;
+    margin-bottom: 10%;
+  }
+
+}
