@@ -1,6 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: 0;
+  background-image: linear-gradient(rgba(75, 25, 64,.6), rgba(75, 25, 64,.5)),url("./../../images/wet_new.png");
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
   font-family: Arial, sans-serif;
 }
 .rainbow-border {

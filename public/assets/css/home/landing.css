@@ -160,9 +160,7 @@
 
 
 @media (max-width:1024px) {
-  body{
-    overflow-x: hidden;
-  }
+
   .logo-title-container{
     justify-content: center;
   }
