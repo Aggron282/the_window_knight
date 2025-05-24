@@ -1,50 +1,3 @@
-<!-- <div class="showcase-wrapper">
-<div class="showcase_container relative">
-
-  <div class="contact-float" id="contactFloat">
-  <div class="contact-visible">
-    <span class="phone-icon">📞</span>
-    <a href="tel:4808220511" class="phone-text">480-822-0511</a>
-  </div>
-  <div class="contact-reveal">
-    <span class="email-icon">✉️</span>
-    <a href="mailto:marco@thewindowknight.com" class="email-text">marco@thewindowknight.com</a>
-  </div>
-</div>
-
-
-  <div class="dirty_background"></div>
-
-  <div class="landing_background">
-      <div class="knight_container">
-        <img class="knight_main"  id="parallax" src = "./assets/images/the_knight.png" alt = "A knight on a watery horse, he is holding a squeegee pole and it defending against grime "/>
-        <div class="sparkle_container"></div>
-      </div>
-      <div class="text-container">
-        <p class="title home-title"> <strong>Defend</strong> <br>Your View Today!</p>
-        <button class="glass-deal-btn">
-              Get 20% Off Recurring Services
-            </button>
-      </div>
-  </div>
-
-</div>
-
-  <div class="showcase_container--mobile relative">
-
-    <section class="landing">
-      <div class="logo">The Window Knight</div>
-      <div class="tagline">Defending Your View</div>
-      <p class="description">
-        We provide professional window cleaning services with a shining finish and knight-worthy care. Let your light shine through crystal-clear glass, every time.
-      </p>
-      <button class="rainbow-border"><a href="/book" class="cta-button glow-button">Get 20% Off Recurring Services</a></button>
-    </section>
-
-  </div>
-
-</div> -->
-
 <div class="showcase-wrapper">
   <div class="showcase_container">
 
@@ -73,7 +26,16 @@
 
         <!-- Right: Knight -->
         <div class="knight_container">
-          <img class="knight_main" id="parallax" src="./assets/images/the_knight.png" alt="Knight Defending with Squeegee">
+          <picture>
+            <source srcset="./assets/images/the_knight.png" type="image/webp">
+            <img
+              class="knight_main"
+              id="parallax"
+              src="./assets/images/the_knight.png"
+              alt="Knight in shining armor on a horse defending a window with a squeegee"
+              loading="lazy"
+            />
+          </picture>
           <div class="sparkle_container"></div>
         </div>
 
