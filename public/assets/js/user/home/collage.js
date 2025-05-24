@@ -106,7 +106,7 @@ async function animateDirty() {
   }
 
   const start = performance.now();
-  const duration = 2000;
+  const duration = 1500;
 
   function animate(now) {
     const elapsed = now - start;
@@ -139,19 +139,26 @@ async function animateDirty() {
 
 function bounceTransition(imgs, newSrcs) {
   imgs.forEach((img, i) => {
-    img.style.transform = 'scale(0.7)';
+    const wrapper = img.closest('.img-wrapper');
+    const overlay = wrapper.querySelector('.black-overlay');
+
+    const delay = i * 150; // 150ms delay between each tile
+
     setTimeout(() => {
-      img.style.transform = 'translateY(-100px)';
+      overlay.style.opacity = 1; // Fade to black
+
       setTimeout(() => {
         img.src = newSrcs[i];
-        img.style.transform = 'translateY(100px)';
+
         setTimeout(() => {
-          img.style.transform = 'scale(1)';
-        }, 200);
-      }, 200);
-    }, 100);
+          overlay.style.opacity = 0; // Fade back in
+        }, 100); // Short pause before revealing
+      }, 300); // Wait while blacked out
+
+    }, delay); // Stagger blackout
   });
 }
+
 
 toggleBtn.addEventListener('click', async () => {
   if (!cleaned) {

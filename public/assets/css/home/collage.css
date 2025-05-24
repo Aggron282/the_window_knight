@@ -22,6 +22,8 @@
 }
 
 .glow-box {
+  align-self: center;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,5 +88,30 @@ canvas {
   top: 0;
   left: 0;
   z-index: 1;
+  pointer-events: none;
+}
+
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-wrapper .img-tile {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 2;
   pointer-events: none;
 }
