@@ -162,3 +162,43 @@ margin-top: 20px;
 /* transform: translateX(25px); */
   }
 }
+
+@media (max-width: 1024px) {
+  .knight_main {
+    width: 100% !important;
+    right: 0 !important;
+    top: auto !important;
+  }
+
+
+.knight_container {
+    position: relative;
+    display: flex
+;
+    align-items: flex-end;
+    /* justify-content: center; */
+    animation: knight_appear 2s ease-in;
+    width: 330%;
+    transform: translateX(-300px);
+    margin-top: 120%;
+}
+* {
+
+  .contact-float {
+      right: -80px !important;
+      top: 15% !important;
+      font-size: 1.8rem !important;
+  }
+
+  .nav_links {
+    font-size: 1.1rem !important; /* Replace invalid 222 */
+    transform: none !important;
+    padding-left: 0 !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+
+  .logo-title-container {
+    justify-content: center !important;
+  }
+}
