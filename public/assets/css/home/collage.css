@@ -1,0 +1,90 @@
+.collage {
+  padding: 20px;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1400px;
+  margin: auto;
+  margin-top: 5%;
+  z-index: 5;
+}
+
+.img-tile {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+}
+
+.glow-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, #00f0ff33, #00141e);
+  border-radius: 12px;
+  position: relative;
+}
+
+#beforelabel {
+  font-size: 2rem;
+  font-weight: bold;
+  color:white;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.circle-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00f0ff, #004455);
+  border: 3px solid #0ff;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 0 0 8px #0ff;
+  cursor: pointer;
+  animation: pulseGlow 2s infinite;
+}
+
+.circle-button.dirty {
+  background: radial-gradient(circle, #5a2e0d, #1a0a00);
+  border: 3px solid #a34f00;
+  text-shadow: 0 0 8px #ff9900;
+  animation: pulseSuck 2s infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px #0ff;
+  }
+  50% {
+    box-shadow: 0 0 25px #00f0ff88;
+  }
+}
+
+@keyframes pulseSuck {
+  0%, 100% {
+    box-shadow: 0 0 5px #a34f00;
+  }
+  50% {
+    box-shadow: 0 0 25px #ff660044 inset;
+  }
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
