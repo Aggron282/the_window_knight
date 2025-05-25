@@ -146,14 +146,14 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  
+
   .wk-img {
       position: absolute;
       left: -20%;
       top: 0;
       object-fit: fill;
       height: 100%;
-      width: 150%;
+      width: 170%;
       object-position: center left;
   }
   .contact-float {
