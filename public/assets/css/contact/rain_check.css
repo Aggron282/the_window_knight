@@ -6,6 +6,10 @@
   z-index: 9;
 }
 
+.navbar_container{
+  z-index: 99;
+}
+
 #rainCanvas{
   position: absolute;
   width:100%;
