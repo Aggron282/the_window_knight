@@ -1,60 +1,44 @@
-<div class="showcase-wrapper">
-  <div class="showcase_container relative">
 
-    <div class="contact-float" id="contactFloat">
-    <div class="contact-visible">
-      <span class="phone-icon">📞</span>
-      <a href="tel:4808220511" class="phone-text">480-822-0511</a>
-    </div>
-    <div class="contact-reveal">
-      <span class="email-icon">✉️</span>
-      <a href="mailto:marco@thewindowknight.com" class="email-text">marco@thewindowknight.com</a>
-    </div>
-  </div>
+  <div class="wk-hero-wrapper">
+    <img src = "./assets/images/rainy.png" class="wk-img"/>
+    <div class="wk-overlay"></div>
 
+    <div class="wk-hero-section">
+      <div class="wk-hero-left">
+        <h1>
+          <span class="wk-title-light">Let’s</span>
+          <span class="wk-title-highlight">Shine</span>
+          <span class="wk-title-light">Windows</span>
+        </h1>
 
-    <div class="dirty_background"></div>
+        <p class="wk-description">
+          Discover the magic of sparkling windows. At The Window Knight, we turn grime into shine with expert care,
+          cutting-edge tools, and unbeatable service. Enter your email to get exclusive deals, seasonal tips, and priority booking alerts.
+        </p>
 
-    <div class="landing_background--about">
-
-        <div class="text-container">
-          <p class="title"> Learn About Us</p>
-          <p class="subtitle"> We are a team of window washers who grew up in this community, walking its streets and calling it home..</p>
-        </div>
-        <!-- <script src = "./assets/js/user/new_landing.js">
-
-
-       </script> -->
-
-    </div>
-
-  </div>
-
-  <div class="showcase_container--mobile">
-    <section class="about-cinematic">
-      <div class="about-grid">
-        <div class="about-image">
-          <div class="glow-frame">
-            <img src="./assets/images/new_logo.png" alt="Window Knight" />
-          </div>
+        <div class="wk-email-row">
+          <input type="email" placeholder="Your Email" id="wkEmailInput" class="wk-input-field"/>
+          <button class="wk-send-button" onclick="submitWkEmail()">SEND</button>
         </div>
 
-        <div class="about-text">
-          <h1 class="tagline">Not Just Clean — <span>Knight-Level Clarity</span></h1>
-          <p class="hero-desc">
-            The Window Knight stands at the intersection of elegance and excellence.
-            We don’t just clean windows — we elevate the standard of what clean should feel like.
-          </p>
-          <div class="pillars">
-            <div class="pillar">🧠 Precision</div>
-            <div class="pillar">🛡️ Integrity</div>
-            <div class="pillar">🌟 Legendary Service</div>
-          </div>
+        <div class="wk-social-links">
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png"/></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png"/></a>
         </div>
       </div>
-    </section>
 
 
+    </div>
   </div>
 
-</div>
+  <script>
+    function submitWkEmail() {
+      const email = document.getElementById('wkEmailInput').value;
+      if (email) {
+        alert(`Thanks for subscribing with ${email}!`);
+      } else {
+        alert("Please enter a valid email.");
+      }
+    }
+  </script>
