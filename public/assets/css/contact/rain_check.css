@@ -95,3 +95,52 @@
   height:100%;
   left:0%;
 }
+
+@media (max-width: 1024px) {
+  .spotlight--active {
+    opacity: 1 !important;
+    transition: all .5s;
+    transform: scale(3) rotate(45deg) !important;
+    filter: brightness(1) blur(0px);
+}
+.circle-light{
+  display:none;
+  visibility:hidden;
+
+}
+.city {
+    position: absolute;
+    width: 100%;
+    bottom: 45%;
+    z-index: 888;
+    opacity: 1;
+    height: 70%;
+    left: 0%;
+}
+.spotlight {
+    bottom: 55%;
+    z-index: 9;
+    left: 35%;
+    transform: rotateZ(-160deg);
+    width: 70%;
+    opacity: .9;
+    position: absolute;
+}
+.signal_container .text-container {
+    padding: 70px;
+    color: white;
+    width: 90%;
+}
+.box-f {
+    width: 100% !important
+    ;
+    background: linear-gradient(to bottom, rgba(0, 35, 50, 1), rgba(0, 35, 50, 1));
+    margin-left: 0% !important;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+    padding: 50px;
+}
+.signal_container{
+  height:100vh;
+
+}
+}
