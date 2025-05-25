@@ -85,7 +85,8 @@
     flex-direction: column;
   }
   .section-description {
-    font-size: 3rem;
+    font-size: 1.6rem;
+    width:80% !important;
     text-align: justify;
   }
   .section-title {
