@@ -26,7 +26,7 @@ const gallery = document.getElementById('gallery');
 let savedLayout = localStorage.getItem('galleryLayout');
 // savedLayout = null; // Remove this line to enable persistent layout
 
-if (!savedLayout) {
+if (savedLayout) {
   // Load the saved layout
   savedLayout = JSON.parse(savedLayout);
 } else {

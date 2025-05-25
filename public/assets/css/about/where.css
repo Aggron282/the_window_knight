@@ -30,7 +30,7 @@
 }
 
 .knight-clean-section {
-  background: linear-gradient(to right bottom, rgba(0, 10, 20, 1) ,rgba(0, 10, 20, 0)),url('./../../images/knight_sun.png') no-repeat center center;
+  background: linear-gradient(to right bottom, rgba(0, 10, 20, 1),rgba(0, 10, 20, 0) ,rgba(0, 10, 20, 0)),url('./../../images/knight_sun.png') no-repeat center center;
   background-size: cover;
   position: relative;
   min-height: 600px;
