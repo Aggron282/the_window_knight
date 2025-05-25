@@ -11,12 +11,12 @@ const images = [
   'what_we_do_1.png',
   'after_1.png',
   'what_we_do_new.png',
-  'photo_3.png',
+  'pita_photo.jpg',
   'photo_4.png',
-  'photo_3.png',
-  'photo_4.png',
+  'me_background.png',
+  'wet.png',
 
-  'knight_clean--1.png',
+  'pannn.png',
 ];
 
 // Get the gallery container
@@ -26,7 +26,7 @@ const gallery = document.getElementById('gallery');
 let savedLayout = localStorage.getItem('galleryLayout');
 // savedLayout = null; // Remove this line to enable persistent layout
 
-if (savedLayout) {
+if (!savedLayout) {
   // Load the saved layout
   savedLayout = JSON.parse(savedLayout);
 } else {
