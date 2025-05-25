@@ -202,7 +202,7 @@
       transition: all .5s;
       transform:translateY(0px);
     }
-    .spotlight{
+    /* .spotlight{
       opacity:0 !important;
       transform: scaleY(0);
       filter:brightness(0) blur(5px);
@@ -213,7 +213,7 @@
       transition: all .5s;
       transform: scaleY(1);
       filter:brightness(1) blur(0px);
-    }
+    } */
 
 
     .box-f{

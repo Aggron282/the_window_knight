@@ -80,9 +80,10 @@
   bottom:55%;
   z-index: 9;
   left:35%;
-  transform: rotateZ(-160deg);
+  transform: rotateZ(80deg) scale(.1) translateY(400px) translateX(100px);
   width:70%;
-  opacity:.9;
+  transition: all .5s;
+  /* opacity:0; */
   position: absolute;
 }
 
@@ -100,7 +101,7 @@
   .spotlight--active {
     opacity: 1 !important;
     transition: all .5s;
-    transform: scale(3) rotate(45deg) !important;
+    transform: scale(3) rotate(45deg) ;
     filter: brightness(1) blur(0px);
 }
 .circle-light{
@@ -143,4 +144,9 @@
   height:100vh;
 
 }
+}
+.spotlight--active {
+  transform: scale(2) rotate(160deg) translateX(-100px) translateY(0px);
+  transition: all 2s;
+  opacity:.9;
 }
