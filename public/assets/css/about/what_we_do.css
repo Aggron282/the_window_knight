@@ -9,6 +9,10 @@
   /* justify-content: center; */
 }
 
+.navbar_custom{
+  z-index: 99;
+}
+
 .what-we-do-inner {
   display: flex;
   flex-direction: row;
