@@ -1,28 +1,27 @@
-var login_form = document.querySelector("#loginform");
-var login_btn = document.querySelector("#loginbtn");
+async function handleLogin() {
+  const username = document.getElementById('username').value.trim();
+  const password = document.getElementById('password').value.trim();
+  const overlay = document.getElementById('loginOverlay');
+  const errorPopup = document.getElementById('errorPopup');
 
-const Login = async () => {
+  overlay.classList.add('active');
 
-  var data = CreateFormData(login_form);
-
-  const res = await axios.post("/auth/login",data);
-
-  if(res.data){
-    CreatePopup("Success!")
-    DelayedRedirect(1000,"/admin");
+  try{
+  var {data} = await axios.post("/auth/login",{username:username,key:password});
+  console.log(data);
+  if(data.err){
+    console.log(data.err);
+    alert("Cannot Login");
+    overlay.classList.remove("active");
+  }else{
+    overlay.classList.remove("active");
+    window.location.assign("/admin");
   }
-  else{
-    CreatePopup("Wrong Username / Password");
-  }
+}catch(err){
+  console.log(err);
+  alert("Cannot Login");
+  overlay.classList.remove('active');
 
 }
 
-login_btn.addEventListener("click",(e)=>{
-  e.preventDefault();
-  Login();
-})
-
-login_form.addEventListener("submit",(e)=>{
-  e.preventDefault();
-  Login();
-})
+}

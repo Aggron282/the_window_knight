@@ -25,7 +25,9 @@
     "nodemon": "^2.0.20",
     "path": "^0.12.7",
     "random-hash": "^4.0.1",
-    "sequelize": "^6.28.0"
+    "sequelize": "^6.28.0",
+    "tls": "^0.0.1",
+    "vm": "^0.1.0"
   },
   "homepage": "http://thewindowknight.com",
   "scripts": {

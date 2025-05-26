@@ -1,46 +1,60 @@
-<%- include("./layout/head.ejs") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Window Knight | Login</title>
+  <link href = "/assets/css/admin/auth.css" type="text/css" rel="stylesheet"/>
+  <style>
+    #forgot{
+      display: inline;
 
-   <div class="container-fluid auth_container">
+    }
+    #forgot:hover{
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
 
-    <div class="auth_background"></div>
+<div class="background"></div>
 
-    <div class="auth_modal">
-
-        <img class="logo_auth" src = "/assets/images/logo.png"/>
-
-        <form action = "/auth/login/" method = "POST" id ="loginform">
-
-            <input class="auth_form" name="username" placeholder="Enter Username">
-            <input class="auth_form" name="key" placeholder="Enter Secret Key">
-
-            <button class="auth_submit" type="submit" id='loginbtn'>Submit</button>
-
-            <p  class="forgot_auth">
-                If you are the owner of this company,
-                <br/>
-                login with your secret key that is emailed to you
-                <br />
-                Didn't recieve a email?</p>
-                <a href = "/admin/auth/forgot" id="email">Click Here</a>
-
-        </form>
-
+<div class="login-container">
+  <div class="login-box">
+    <h2>Login to Window Knight</h2>
+    <input type="text" id="username"  placeholder="Username" />
+    <input type="password"  id="password" placeholder="Password" />
+    <button onclick="handleLogin()">Login</button>
+    <div class="login-links">
+      <p id="forgot" >Forgot credentials?</p> | <a href="https://thewindowknight.com" target="_blank">Back to Site</a>
     </div>
-
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"
-    integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer">
-  </script>
+</div>
 
-  <script async src="https://api.countapi.xyz/hit/cfswindows.com/56ce2f5b-45e5-470f-8d13-34084938dd33?callback=websiteVisits"></script>
+<div class="overlay" id="loginOverlay">
+  <div class="spinner"></div>
+</div>
+
+<div class="error-popup" id="errorPopup">Invalid credentials. Please try again.</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <script src ="/assets/js/util.js"></script>
-  <script src ="/assets/js/form_submit.js"></script>
-  <script src = "/assets/js/popup.js"></script>
-  <script src = "/assets/js/admin/login.js"></script>
-
-  </body>
-
-  </html>
+<script src = "/assets/js/admin/login.js"></script>
+<script>
+var forgot = document.querySelector("#forgot");
+forgot.addEventListener("click",(e)=>{Forgot()});
+  async  function  Forgot(){
+      console.log("Clicked")
+        var {data} = await axios.post("/admin/auth/forgot");
+        if(data.accepted){
+          alert("Password was sent to your email");
+        }else{
+          alert("Error: Cannot send email");
+        }
+    }
+</script>
+</body>
+</html>

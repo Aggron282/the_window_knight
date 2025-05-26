@@ -58,6 +58,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
 app.use(user_routes);
 app.use(api_routes);
+app.use(admin_routes);
 
 app.use((req, res, next) => {
 
