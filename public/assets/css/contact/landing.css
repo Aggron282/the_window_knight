@@ -12,7 +12,7 @@
   position: absolute;
   bottom: 0;
   right: 0%;
-  width: 40%;
+  width: 60%;
   z-index: 99;
   animation: 2s ease-in hero 1;
   animation-delay: 1s;
@@ -20,9 +20,9 @@
 
 .hero-container img {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   object-fit: contain;
-  transform: translateX(100px);
+  transform: translateX(-100px);
 }
 
 .glow {
@@ -41,7 +41,7 @@
 
 .landing_background--about .text-container {
   position: absolute;
-  top: 30%;
+  top: 5%;
   left: 5%;
   max-width: 600px;
   color: white;
@@ -88,7 +88,7 @@
 
 .hero-container {
     position: absolute;
-    bottom: -24%;
+    bottom:-10%;
     right: -20%;
     width: 80%;
     z-index: 99;
@@ -104,11 +104,13 @@
     filter: blur(5px);
     opacity: 0.1;
     border-radius: 50%;
-    left: 40%;
+    left: 30%;
     top: 10%;
     animation: glowing 5s ease-in-out infinite;
     z-index
   }
+
+
 
 /* Tablet Optimization */
 @media (max-width: 1024px) {

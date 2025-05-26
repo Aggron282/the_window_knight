@@ -134,9 +134,7 @@
   margin-top:-5%;
 }
 
-.navbar_container{
-  position: absolute !important;
-}
+
 
 #showcase_vid{
   height:100%;
@@ -163,6 +161,9 @@
   position:absolute;
 }
 
+.contact-float{
+  top:1%;
+}
 @media screen and (max-width:900px) and (orientation:portrait) and (min-width:700px){
 
   .showcase_container---video--overlay{
