@@ -1,34 +1,38 @@
-<div class="contact-section">
+<div class="contact-section" role="region" aria-labelledby="contact-heading">
   <div class="box-f">
-    <p class="title">Contact The Window Knight</h1>
-    <p class="subtitle">Brighten your view today! We’re here to assist you with professional, streak-free window cleaning services.</p>
+    <h2 class="title" id="contact-heading">Contact The Window Knight</h2>
+    <p class="subtitle">
+      Brighten your view today! We’re here to assist you with professional, streak-free window cleaning services in Phoenix, Arizona.
+    </p>
 
     <div class="contact-details">
-        <p><strong>Phone:</strong> <a href="tel:480-822-0511">480-822-0511</a></p>
-        <p><strong>Email:</strong> <a href="mailto:marco@thewindowknight.com">marco@thewindowknight.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:480-822-0511">480-822-0511</a></p>
+      <p><strong>Email:</strong> <a href="mailto:marco@thewindowknight.com">marco@thewindowknight.com</a></p>
     </div>
 
-    <form class="contact-form" id="subscribe--contact">
-        <input type="text" name="name" placeholder="Your Name">
-        <input type="email" name="email" placeholder="Your Email">
-        <input type="tel" name="phone" placeholder="Your Phone Number">
-        <textarea name="message" rows="5" placeholder="Your Message" ></textarea>
-        <button class="subscribe_button--contact">Send Message</button>
+    <form class="contact-form" id="subscribe--contact" name="contact-form" method="POST" aria-label="Contact form">
+      <input type="text" name="name" placeholder="Your Name" required aria-required="true">
+      <input type="email" name="email" placeholder="Your Email" required aria-required="true">
+      <input type="tel" name="phone" placeholder="Your Phone Number">
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <button class="subscribe_button--contact" type="submit">Send Message</button>
     </form>
 
-    <div class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66324.79294785734!2d-112.07221666957457!3d33.44837674622813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b0f01438cbafb%3A0xbcfb15390b25f84f!2sPhoenix%2C%20AZ!5e0!3m2!1sen!2sus!4v1642741604950!5m2!1sen!2sus"
-            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="map" aria-hidden="true">
+      <iframe
+        title="The Window Knight service area map for Phoenix, AZ"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d66324.79294785734!2d-112.07221666957457!3d33.44837674622813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b0f01438cbafb%3A0xbcfb15390b25f84f!2sPhoenix%2C%20AZ!5e0!3m2!1sen!2sus!4v1642741604950!5m2!1sen!2sus"
+        width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+      </iframe>
     </div>
 
     <div class="why-choose-us">
-        <p class="title">Why Choose Us?</p>
-        <ul>
-            <li>✅ Affordable, Local, and Reliable Services</li>
-            <li>✅ Eco-Friendly Cleaning Solutions</li>
-            <li>✅ 100% Satisfaction Guarantee</li>
-        </ul>
+      <h3 class="title">Why Choose Us?</h3>
+      <ul>
+        <li>✅ Affordable, Local, and Reliable Services</li>
+        <li>✅ Eco-Friendly Window Cleaning Solutions</li>
+        <li>✅ 100% Satisfaction Guarantee with every job</li>
+      </ul>
     </div>
-    </div>
+  </div>
 </div>

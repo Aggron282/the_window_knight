@@ -1,53 +1,58 @@
-<section class="gates-section-unique">
-    <h1 class="title gate-title">Find Us On Social Media!</h1>
-    <!-- <p class="subtitle">Opening the gates of operation to brighten your world.</p> -->
-    <div class="gates-unique" id="gates-unique">
-        <div class="gate-left-unique">
-          <img src = "./assets/images/az3.png" alt = "One half of a portrait of a knight with tainted window look">
-        </div>
-        <div class="gate-right-unique">
-          <img src = "./assets/images/az2.png" alt = "One half that completes the picture of the knight with tainted glass look">
+<section class="gates-section-unique" role="region" aria-labelledby="social-media-heading">
+  <h2 class="title gate-title" id="social-media-heading">Find Us On Social Media!</h2>
+  <!-- <p class="subtitle">Opening the gates of operation to brighten your world.</p> -->
 
-        </div>
-        <div class="hours-unique">
-            <h1 class="title">Social Media Links</h1>
-            <div class="grid-container-hours">
-  <div>
-    <a href="https://nextdoor.com/pages/custom-facility-services-scottsdale-az/" target="_blank">
-      <img src="./assets/images/nextdoor.png" class="icon icon-s-1" alt="Nextdoor icon" />
-      <p class="social_title social_title1">@thewindowknight</p>
-    </a>
-  </div>
-
-  <div>
-    <a href="https://www.instagram.com/thewindowknight/" target="_blank">
-      <img src="./assets/images/insta.png" class="icon icon-s-2" alt="Instagram icon" />
-      <p class="social_title social_title2">@thewindowknight</p>
-    </a>
-  </div>
-
-  <div>
-    <a href="https://g.page/r/CbHNKaqYMW84EAE/review" target="_blank">
-      <img src="./assets/images/google.png" class="icon icon-s-3" alt="Google icon" />
-      <p class="social_title social_title3">@The Window Knight</p>
-    </a>
-  </div>
-
-  <div>
-    <a href="https://www.linkedin.com/company/thewindowknight/" target="_blank">
-      <img src="./assets/images/linkden.png" class="icon icon-s-4" alt="LinkedIn icon" />
-      <p class="social_title social_title4">@the_window_knight</p>
-    </a>
-  </div>
-</div>
-
-        </div>
+  <div class="gates-unique" id="gates-unique">
+    <div class="gate-left-unique">
+      <img src="./assets/images/az3.png" alt="Stylized knight in tinted armor - left side of composite portrait" width="400" height="500" loading="lazy" />
     </div>
+    <div class="gate-right-unique">
+      <img src="./assets/images/az2.png" alt="Stylized knight in tinted armor - right side of composite portrait" width="400" height="500" loading="lazy" />
+    </div>
+
+    <div class="hours-unique" itemscope itemtype="https://schema.org/LocalBusiness">
+      <meta itemprop="name" content="The Window Knight">
+      <meta itemprop="url" content="https://www.thewindowknight.com">
+      <meta itemprop="address" content="Scottsdale, Arizona">
+
+      <h3 class="title">Social Media Links</h3>
+
+      <div class="grid-container-hours">
+        <div>
+          <a href="https://nextdoor.com/pages/custom-facility-services-scottsdale-az/" target="_blank" rel="noopener noreferrer" aria-label="Find us on Nextdoor">
+            <img src="./assets/images/nextdoor.png" class="icon icon-s-1" alt="Nextdoor social icon" />
+            <p class="social_title social_title1" itemprop="sameAs">@thewindowknight</p>
+          </a>
+        </div>
+
+        <div>
+          <a href="https://www.instagram.com/thewindowknight/" target="_blank" rel="noopener noreferrer" aria-label="Find us on Instagram">
+            <img src="./assets/images/insta.png" class="icon icon-s-2" alt="Instagram social icon" />
+            <p class="social_title social_title2" itemprop="sameAs">@thewindowknight</p>
+          </a>
+        </div>
+
+        <div>
+          <a href="https://g.page/r/CbHNKaqYMW84EAE/review" target="_blank" rel="noopener noreferrer" aria-label="Review us on Google">
+            <img src="./assets/images/google.png" class="icon icon-s-3" alt="Google review icon" />
+            <p class="social_title social_title3" itemprop="sameAs">@The Window Knight</p>
+          </a>
+        </div>
+
+        <div>
+          <a href="https://www.linkedin.com/company/thewindowknight/" target="_blank" rel="noopener noreferrer" aria-label="Find us on LinkedIn">
+            <img src="./assets/images/linkden.png" class="icon icon-s-4" alt="LinkedIn social icon" />
+            <p class="social_title social_title4" itemprop="sameAs">@the_window_knight</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <script>
-    function toggleGates() {
-        const gates = document.getElementById('gates-unique');
-        gates.classList.toggle('open');
-    }
+  function toggleGates() {
+    const gates = document.getElementById('gates-unique');
+    gates.classList.toggle('open');
+  }
 </script>
