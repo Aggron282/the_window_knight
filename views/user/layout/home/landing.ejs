@@ -1,27 +1,32 @@
 <div class="showcase-wrapper">
-  <div class="showcase_container">
+  <div class="showcase_container" aria-label="Hero section showcasing The Window Knight’s Phoenix AZ window cleaning services">
 
     <!-- Floating Contact -->
     <div class="contact-float" id="contactFloat">
       <div class="contact-visible">
-        <span class="phone-icon">📞</span>
-        <a href="tel:4808220511" class="phone-text">480-822-0511</a>
+        <span class="phone-icon" aria-hidden="true">📞</span>
+        <a href="tel:4808220511" class="phone-text" title="Call The Window Knight">480-822-0511</a>
       </div>
       <div class="contact-reveal">
-        <span class="email-icon">✉️</span>
-        <a href="mailto:marco@thewindowknight.com" class="email-text">marco@thewindowknight.com</a>
+        <span class="email-icon" aria-hidden="true">✉️</span>
+        <a href="mailto:marco@thewindowknight.com" class="email-text" title="Email The Window Knight">marco@thewindowknight.com</a>
       </div>
     </div>
 
     <!-- Background Layers -->
-    <div class="dirty_background"></div>
+    <div class="dirty_background" aria-hidden="true"></div>
     <div class="landing_background">
+
       <div class="landing-grid">
 
         <!-- Left: Text -->
         <div class="text-container">
-          <p class="title home-title"><strong>Defend</strong><br>Your View Today!</p>
-          <button class="glass-deal-btn">Get 20% Off Recurring Services</button>
+          <p class="title home-title">
+            <strong>Defend</strong><br>Your View Today!
+          </p>
+          <button class="glass-deal-btn" aria-label="Get 20% Off Recurring Window Cleaning Services in Phoenix">
+            Get 20% Off Recurring Services
+          </button>
         </div>
 
         <!-- Right: Knight -->
@@ -32,11 +37,11 @@
               class="knight_main"
               id="parallax"
               src="./assets/images/the_knight.png"
-              alt="Knight in shining armor on a horse defending a window with a squeegee"
+              alt="The Window Knight in armor on horseback using a squeegee to clean windows – Phoenix AZ's top-rated window cleaning service"
               loading="lazy"
             />
           </picture>
-          <div class="sparkle_container"></div>
+          <div class="sparkle_container" aria-hidden="true"></div>
         </div>
 
       </div>
@@ -44,14 +49,16 @@
   </div>
 
   <!-- Mobile fallback -->
-  <div class="showcase_container--mobile">
+  <div class="showcase_container--mobile" aria-label="Mobile Hero Section for Window Knight Window Cleaning Services in Arizona">
     <section class="landing">
       <div class="logo">The Window Knight</div>
       <div class="tagline">Defending Your View</div>
       <p class="description">
-        We provide professional window cleaning services with a shining finish and knight-worthy care. Let your light shine through crystal-clear glass, every time.
+        We provide professional window cleaning services in Phoenix and Scottsdale with a shining finish and knight-worthy care. Let your light shine through crystal-clear glass, every time.
       </p>
-      <button class="cta-button">Get 20% Off Recurring Services</button>
+      <button class="cta-button" aria-label="Get 20% Off Window Cleaning Now">
+        Get 20% Off Recurring Services
+      </button>
     </section>
   </div>
 </div>

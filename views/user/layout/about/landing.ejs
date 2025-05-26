@@ -1,54 +1,59 @@
-
-  <div class="wk-hero-wrapper">
-    <div class="contact-float" id="contactFloat">
-      <div class="contact-visible">
-        <span class="phone-icon">📞</span>
-        <a href="tel:4808220511" class="phone-text">480-822-0511</a>
-      </div>
-      <div class="contact-reveal">
-        <span class="email-icon">✉️</span>
-        <a href="mailto:marco@thewindowknight.com" class="email-text">marco@thewindowknight.com</a>
-      </div>
+<section class="wk-hero-wrapper" aria-label="The Window Knight Hero Section - Sparkling Window Cleaning in Arizona">
+  <div class="contact-float" id="contactFloat">
+    <div class="contact-visible">
+      <span class="phone-icon">📞</span>
+      <a href="tel:4808220511" class="phone-text">480-822-0511</a>
     </div>
-    <img src = "./assets/images/rainy.png" class="wk-img"/>
-    <div class="wk-overlay"></div>
-
-    <div class="wk-hero-section">
-      <div class="wk-hero-left">
-        <h1>
-          <span class="wk-title-light">Let’s</span>
-          <span class="wk-title-highlight">Shine</span>
-          <span class="wk-title-light">Windows</span>
-        </h1>        
-
-        <p class="wk-description">
-          Discover the magic of sparkling windows. At The Window Knight, we turn grime into shine with expert care,
-          cutting-edge tools, and unbeatable service. Enter your email to get exclusive deals, seasonal tips, and priority booking alerts.
-        </p>
-
-        <div class="wk-email-row">
-          <input type="email" placeholder="Your Email" id="wkEmailInput" class="wk-input-field"/>
-          <button class="wk-send-button" onclick="submitWkEmail()">SEND</button>
-        </div>
-
-        <div class="wk-social-links">
-          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png"/></a>
-          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png"/></a>
-          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png"/></a>
-        </div>
-      </div>
-
-
+    <div class="contact-reveal">
+      <span class="email-icon">✉️</span>
+      <a href="mailto:marco@thewindowknight.com" class="email-text">marco@thewindowknight.com</a>
     </div>
   </div>
 
-  <script>
-    function submitWkEmail() {
-      const email = document.getElementById('wkEmailInput').value;
-      if (email) {
-        alert(`Thanks for subscribing with ${email}!`);
-      } else {
-        alert("Please enter a valid email.");
-      }
+  <img src="./assets/images/rainy.png" class="wk-img" alt="Knight-themed Arizona rain and window background image" loading="lazy" />
+  <div class="wk-overlay" aria-hidden="true"></div>
+
+  <div class="wk-hero-section">
+    <div class="wk-hero-left">
+      <h1>
+        <span class="wk-title-light">Let’s</span>
+        <span class="wk-title-highlight">Shine</span>
+        <span class="wk-title-light">Windows</span>
+      </h1>
+
+      <p class="wk-description">
+        Discover the magic of sparkling clean windows in Phoenix, Scottsdale, and surrounding areas. At <strong>The Window Knight</strong>,
+        we transform grime into shine using eco-safe tools, streak-free techniques, and customer-first service.
+        Enter your email to receive exclusive offers, window care tips, and seasonal service alerts.
+      </p>
+
+      <form class="wk-email-row" aria-label="Email Subscription Form" onsubmit="submitWkEmail(); return false;">
+        <input type="email" placeholder="Your Email" id="wkEmailInput" class="wk-input-field" aria-label="Enter your email for exclusive window cleaning deals" required />
+        <button type="submit" class="wk-send-button">SEND</button>
+      </form>
+
+      <div class="wk-social-links" aria-label="Window Knight Social Media">
+        <a href="https://www.facebook.com/thewindowknight" target="_blank" rel="noopener" aria-label="Facebook - The Window Knight">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook Icon" loading="lazy" />
+        </a>
+        <a href="https://twitter.com/thewindowknight" target="_blank" rel="noopener" aria-label="Twitter - The Window Knight">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter Icon" loading="lazy" />
+        </a>
+        <a href="https://www.youtube.com/@thewindowknight" target="_blank" rel="noopener" aria-label="YouTube - The Window Knight">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/youtube-play.png" alt="YouTube Icon" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function submitWkEmail() {
+    const email = document.getElementById('wkEmailInput').value;
+    if (email) {
+      alert(`Thanks for subscribing with ${email}!`);
+    } else {
+      alert("Please enter a valid email.");
     }
-  </script>
+  }
+</script>
