@@ -43,12 +43,14 @@ router.get("/admin",CheckAuth,adminController.GetIndexPage);
 // // Add Labor Data
 // router.post("/admin/laborer/add",CheckAuth,laborController.AddLaborer);
 // Auth Routes
+
 router.post("/auth/login",authController.Login);
 router.post("/admin/auth/forgot",authController.ForgotKey);
+router.get("/admin/blogger",CheckAuth,adminController.GetBlogPage);
 
 // Get Login Page
+
 router.get("/auth/login",authController.GetLoginPage);
 
 // Meta Routes (Change)
-
 module.exports = router;

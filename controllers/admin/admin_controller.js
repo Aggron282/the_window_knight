@@ -34,6 +34,10 @@ var email_sensitive = require("./../../util/sensitive.js").email;
 
 var data = null;
 
+const GetBlogPage = async (req,res)=>{
+  res.render(path.join(rootDir,"views","/admin/layout/blog/blog.ejs"),{blogs:null});
+}
+
 const GetIndexPage = async (req,res,next) => {
 
     if(!data){
@@ -203,3 +207,4 @@ function ReturnEmailHTML(contact_name){
 
 module.exports.SubscribeUser = SubscribeUser;
 module.exports.GetIndexPage = GetIndexPage;
+module.exports.GetBlogPage = GetBlogPage;
