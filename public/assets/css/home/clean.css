@@ -89,3 +89,24 @@
     grid-template-columns: repeat(1, 1fr) !important;
   }
 }
+
+@media (max-width:400px){
+  .review-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 0 auto 3rem auto;
+    grid-template-columns: 1fr;
+
+   }
+   .review-section h2{
+      font-size: clamp(4.2rem, 5vw, 4rem);
+   }
+   .trusted-section h2 {
+    font-size: clamp(5rem, 5vw, 8rem);
+    font-family: 'Teko', sans-serif;
+    margin-bottom: 0.5rem;
+  }
+  .trusted-grid{
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+  }
+}

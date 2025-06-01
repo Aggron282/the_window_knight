@@ -113,13 +113,13 @@
 }
 
 .review-section h2 strong{
-  color: #4285F4 !important;
+  color: #4285F4;
   font-size:12rem;
 
 }
 .review-grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr) !important;
+  grid-template-columns: repeat(2,1fr);
   gap: 2rem;
   /* max-width: 1200px; */
   margin: 0 auto 3rem auto;
@@ -312,4 +312,24 @@ filter:brightness(1000);
     cursor: pointer;
     transition: background 0.3s ease;
 }
+}
+
+@media (max-width:400px){
+  .pulse-button{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #001f2f 60%, #003e52 100%);
+    display: flex;
+    border: 5px solid #00e6f6;
+    align-items: center;
+    justify-content: center;
+    margin-left: -30%;
+    text-decoration: none;
+    overflow: visible;
+    margin-top: 150%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
 }
