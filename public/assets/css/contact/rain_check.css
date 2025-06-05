@@ -154,3 +154,23 @@
   transition: all 2s;
   opacity:.9;
 }
+@media (max-width:400px){
+  .signal_container .text-container .title {
+    line-height: .9;
+  }
+  .signal_container .text-container .description {
+    font-size: 20px;
+  }
+  .city{
+    position: absolute;
+    width: 170%;
+    bottom: 55%;
+    z-index: 888;
+    opacity: 1;
+    height: 70%;
+    left: 0%;
+  }
+  .signal_container{
+    height: 100%;
+  }
+}

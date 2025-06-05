@@ -75,3 +75,29 @@
   top:7.5%;
   left:25%;
 }
+
+
+@media (max-width:400px){
+  .rain_check_container {
+    margin-top: 45%;
+  }
+
+  .text-container
+{
+    width: 90%;
+    top: 5%;
+    left: 5%;
+}
+
+.rain-grid .text-container {
+    position: relative;
+    color: white;
+    font-family: "Lato";
+    padding: 50px;
+    margin-left: 0%;
+    z-index: 9999;
+    bottom:50px;
+        transform: translateY(-20px);
+}
+
+}

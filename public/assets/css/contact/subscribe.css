@@ -121,3 +121,18 @@
 .why-choose-us .title{
   font-family:  "Teko"
 }
+
+@media (max-width:400px){
+  .contact-section{
+    padding:0px;
+  }
+  .contact-section .title {
+    font-size: 50px;
+    font-family: "Teko";
+  }
+  .contact-section .subtitle {
+    font-size: 20px;
+    font-family: "Lato";
+    font-weight: 300;
+  }
+}

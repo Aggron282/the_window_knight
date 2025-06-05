@@ -278,3 +278,59 @@
   }
 
 }
+
+@media (max-width:400px){
+
+  .landing_background--about {
+    width: 100%;
+    min-height: 120vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(to right bottom, rgba(0, 20, 30, .85), rgba(0, 35, 50, .75), rgba(0, 50, 70, .5)), url(./../../images/contact_background.png) no-repeat center center / cover;
+    animation: squeegeeEffect 3s ease-out forwards;
+    padding-bottom: 10%;
+  }
+
+  .landing_background--about .text-container {
+    width: 90% !important;
+    top: 5% !important;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    max-width: 600px;
+    color: white;
+    font-family: "Teko", sans-serif;
+    padding: 20px;
+    z-index: 999;
+    animation: textboxEntrance 2.5s ease-in forwards;
+  }
+
+  .landing_background--about .text-container .title {
+    font-size: 17vw;
+  }
+
+  .landing_background--about .text-container .subtitle {
+    font-size: 7vw;
+  }
+
+  .landing_background--about .text-container .glass-deal-btn {
+    font-size: 9vw;
+    line-height: 1;
+  }
+
+  .navbar_container .n-desktop {
+    position: fixed;
+    opacity: 0;
+    z-index: -99;
+  }
+  .contact-float {
+    position: fixed !important;
+    bottom:0% !important;
+    width:100% !important;
+    z-index: -9;
+    opacity:0;
+    left:0% !important;
+  }
+
+
+}

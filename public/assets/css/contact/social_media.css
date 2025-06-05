@@ -166,3 +166,24 @@
 .button-unique:hover {
     background-color: #1abc9c;
 }
+
+
+@media (max-width:400px){
+  .gates-unique{
+    height:65%;
+  }
+  .hours-unique .grid-container-hours {
+    grid-template-columns: repeat(2, 50%);
+    display: grid;
+    grid-gap: 10px;
+    margin-top: 5%;
+  }
+  .gate-left-unique img{
+    object-fit: cover;
+    height: 130%;
+  }
+  .gate-right-unique img{
+    object-fit: cover;
+    height: 130%;
+  }
+}
