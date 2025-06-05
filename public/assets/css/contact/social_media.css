@@ -172,6 +172,10 @@
   .gates-unique{
     height:65%;
   }
+
+  .gates-section-unique{
+    height:100%;
+  }
   .hours-unique .grid-container-hours {
     grid-template-columns: repeat(2, 50%);
     display: grid;
