@@ -170,11 +170,13 @@
 
 @media (max-width:400px){
   .gates-unique{
-    height:65%;
+    height:90%;
   }
-
+  .hours-unique{
+    top:50%;
+  }
   .gates-section-unique{
-    height:auto;
+    height:auto !important;
   }
   .hours-unique .grid-container-hours {
     grid-template-columns: repeat(2, 50%);
