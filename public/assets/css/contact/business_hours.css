@@ -80,7 +80,7 @@
 @media (max-width:400px){
   .rain_check_container {
     margin-top: 60%;
-    height:100%;
+    height:auto;
   }
 
   .text-container
@@ -88,6 +88,10 @@
     width: 90%;
     top: 5%;
     left: 5%;
+}
+
+.rain-grid{
+  height:auto;
 }
 
 .rain-grid .text-container {
