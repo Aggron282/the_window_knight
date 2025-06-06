@@ -46,7 +46,7 @@
   max-width: 1200px;
   width: 100%;
   padding-top: 0px;
-  
+
 }
 
 .wk-hero-left {
@@ -170,7 +170,7 @@
 }
 
 .learn_about_me_section{
-  height: 100% !important;
+  height: 100% ;
 }
 .heading-container p {
     font-size: 24px !important;
@@ -184,6 +184,7 @@
     font-size: 2.2rem;
         width: 150%;
   }
+  
   .knight-text{
     margin-top: 10%;
 width: 150%;
@@ -192,4 +193,43 @@ max-width: 400px;
 }
 .wk-input-field{
   font-size:2rem;
+}
+
+
+@media (max-width:400px){
+  .n-desktop{
+    position: fixed;
+    z-index:-1;
+    visibility: hidden;
+    opacity:0;
+  }
+  .contact-float{
+    position: fixed;
+    z-index:-1;
+    visibility: hidden;
+    opacity:0;
+  }
+  .wk-send-button {
+    width:50%;
+  }
+  .wk-hero-left h1 {
+    font-size: 6rem;
+    margin-bottom: 20px;
+  }
+  .wk-hero-left {
+        padding-top: 60px;
+    max-width: 300px;
+}
+  .wk-img {
+        position: absolute;
+        left: -10%;
+        top: 0;
+        object-fit: cover;
+        height: 100%;
+        width: 190%;
+        object-position: top;
+    }
+    .wk-hero-wrapper{
+      padding:0;
+    }
 }

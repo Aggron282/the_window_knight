@@ -113,3 +113,28 @@
     text-align: center;
   }
 }
+
+
+@media (max-width:400px){
+  .section-description {
+        font-size: 2rem;
+        width: 80% !important;
+        text-align: left;
+  }
+  .section-title {
+        line-height: .9;
+        font-size:8rem;
+      }
+
+      .text-col{
+        padding:0;
+      }
+      .what-we-do{
+        height:auto !important;
+      }
+
+      
+
+      .map-header h2 {
+      font-size: 4rem  ;
+}

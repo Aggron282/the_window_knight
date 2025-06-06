@@ -113,3 +113,34 @@
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
 }
+
+
+@media (max-width:400px){
+  .knight-clean-section {
+    background: linear-gradient(to right bottom, rgba(0, 10, 20, 1), rgba(0, 10, 20, 0), rgba(0, 10, 20, 0)), url(./../../images/knight_sun.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+    min-height: 700px;
+     display: block;
+    /* align-items: center; */
+    color: #fff;
+  }
+  .knight-text h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .knight-text p {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #d0ecff;
+  }
+  .knight-overlay{
+    height:auto;
+  }
+  .knight-cta {
+    width:60%;
+    margin-top: 10%;
+  }
+}

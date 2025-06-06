@@ -90,3 +90,27 @@
 .heading-container strong{
   color: #38b6ff;
 }
+
+
+@media (max-width:400px){
+
+
+  .learn-grid {
+    display: grid;
+    grid-template-columns: 100%;
+}
+.learn_about_me_section{
+  height:auto !important;
+}
+.picture-container{
+  max-height:700px;
+  padding:2rem;
+  padding-right: 3rem;
+}
+.picture img{
+  object-fit: cover;
+}
+.picture--normal{
+  grid-column: 1 / span 5;
+}
+}
