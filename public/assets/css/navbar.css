@@ -272,3 +272,85 @@
   top:20%;
 }
 }
+
+
+
+/* Hide mobile menu and sidebar on desktop */
+.n-mobile {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .n-mobile {
+    display: block;
+  }
+
+  /* Hamburger button */
+  .mobile-nav-toggle {
+    position: absolute;
+    top: 8.2rem;
+    left: 1rem;
+    z-index: 99;
+    cursor: pointer;
+  }
+
+  .mobile-nav-toggle img {
+    height: 2.8rem;
+    width: 2.8rem;
+    z-index: 9;
+    position: relative;
+  }
+
+  /* Sidebar base */
+  .mobile-sidebar {
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    left: -100%;
+    height: 100vh;
+    width: 80%;
+    max-width: 300px;
+    background-color: #001420;
+    color: white;
+    z-index: 998;
+    display: flex;
+    flex-direction: column;
+    transition: left 0.4s ease;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
+  }
+
+  .mobile-sidebar.active {
+    left: 0;
+  }
+
+  /* Close button */
+  .sidebar-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+  }
+
+  .close-btn {
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  /* Sidebar links */
+  .sidebar-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1rem 2rem;
+  }
+
+  .sidebar-links a {
+    color: lightblue;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .sidebar-links a:hover {
+    color: white;
+  }
+}
