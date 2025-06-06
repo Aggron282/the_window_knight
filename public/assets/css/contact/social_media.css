@@ -174,7 +174,7 @@
   }
 
   .gates-section-unique{
-    height:100%;
+    height:auto;
   }
   .hours-unique .grid-container-hours {
     grid-template-columns: repeat(2, 50%);
