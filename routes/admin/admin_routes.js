@@ -47,7 +47,7 @@ router.get("/admin",CheckAuth,adminController.GetIndexPage);
 router.post("/auth/login",authController.Login);
 router.post("/admin/auth/forgot",authController.ForgotKey);
 router.get("/admin/blogger",CheckAuth,adminController.GetBlogPage);
-
+router.post("/admin/blogger/add",CheckAuth,adminController.PostBlog)
 // Get Login Page
 
 router.get("/auth/login",authController.GetLoginPage);

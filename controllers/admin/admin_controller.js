@@ -110,6 +110,13 @@ const SubscribeUser = async (req,res) => {
 
 }
 
+function PostBlog(req,res){
+  var {title,body, author} = req.body;
+  var date_submitted = new Date();
+  var image = req.file;
+
+}
+
 function EmailToSubscriber(contact_name,to_email,from_email){
   transport.sendMail({
     to:to_email,
