@@ -31,7 +31,6 @@
 
 .text-banner {
   color:white;
-  font-family: 'Akrobat';
   text-align:center;
   font-size:40px;
   font-weight:bold;
@@ -59,9 +58,7 @@
   text-align:center;
 }
 
-.akrobat {
-  font-family: "Akrobat";
-}
+
 
 .italic{
   font-style: italic;

@@ -55,6 +55,13 @@ const GetAboutUsPage = (req,res,next) => {
 
 }
 
+const GetBlogPage = (req,res,next) => {
+
+    var data = returnData("Window Washing 101","/blog",1,"blogs.css",req);
+    res.render(path.join(rootDir,"views","/user/blogs.ejs"),data);
+
+}
+
 
 const ExitOutOfModal = (req,res,next) => {
 
@@ -99,6 +106,7 @@ const GetContactUsPage = (req,res,next)=>{
 
 }
 
+exports.GetBlogPage = GetBlogPage;
 
 exports.GetAboutUsPage = GetAboutUsPage;
 exports.GetSchedulePage = GetSchedulePage;

@@ -60,7 +60,6 @@ body{
 
 label{
   margin-top:2.5%;
-  font-family:"Akrobat";
   font-size:17px;
   margin-top:1.5%;
   padding-top:2%;
@@ -72,9 +71,7 @@ html{
   box-sizing: border-box
 }
 
-th, td, tr{
-  font-family:"Akrobat";
-}
+
 
 td {
   text-align: center;
@@ -99,13 +96,7 @@ table{
   border:2px solid #e6e6e6;
 }
 
-@font-face { font-family: Akrobat; font-weight: normal; src: url('./../fonts/Akrobat-Black.otf'); }
 
-@font-face { font-family: Akrobat; font-weight: lighter; src: url('./../fonts/Akrobat-Light.otf'); }
-
-footer p, footer a, footer i {
-   font-family: "Akrobat";
- }
 
 a {
   text-decoration: none;

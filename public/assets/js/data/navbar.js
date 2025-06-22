@@ -1,5 +1,0 @@
-
-var desktop_nav = `
-
-
-`;

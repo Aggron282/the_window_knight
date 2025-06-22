@@ -1,141 +1,81 @@
-/* Dark background (blurry wrapper) */
-.twk-modal-wrapper {
+.modal-wrapper {
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
-  backdrop-filter: blur(10px); /* Blurry effect */
+  inset: 0;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 24, 48, 0.5);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  z-index: 999999;
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out;
 }
 
-.twk-title{
-  font-family: "Teko";
-  font-size: 30px;
-}
-
-.twk-text-container{
-  font-size: 18px;font-weight: 200;
-  padding: 20px;
-}
-
-#fireworkCanvas{
-  width:100%;
-  height:200px;
-  z-index: 99;
-  background:none;
-  position: relative;
-  left:0;
-  top:0;
-  background:rgba(0, 35, 50, 1);
-}
-
-/* Modal content */
-.twk-modal {
-  background: rgba(0, 35, 50, 1) !important;
-  border-radius: 10px;
-  width: 50%;
-  position: relative;
-  z-index: 1100;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(0.7); /* Start small */
-  transition: transform 0.3s ease;
-  text-align: center;
-}
-
-/* Modal header/title */
-.twk-banner {
-  background: black;
-  width: 100%;
-  padding: 20px;
-  color: white;
-  font-size: 30px;
-  font-family: "Teko", sans-serif;
-}
-
-/* Close button */
-.twk-close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  font-size: 18px;
-  cursor: pointer;
-  color: #555;
-}
-
-.twk-close-btn:hover {
-  color: #000;
-}
-
-/* When modal is active */
-.twk-modal-wrapper.active {
+.modal-wrapper.show {
   opacity: 1;
-  visibility: visible;
+  pointer-events: all;
 }
 
-.twk-modal-wrapper.active .twk-modal {
-  transform: scale(1); /* Scale up to full size */
+.modal-content {
+  background: radial-gradient(circle at top, #0e3c6d, #071e34);
+  color: white;
+  border-radius: 20px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  position: relative;
+  max-width: 800px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  animation: popIn 0.4s ease;
+  overflow: hidden;
 }
 
-/* Open button styling */
-.twk-open-modal-btn {
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-btn {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 10px 20px;
-  font-size: 16px;
+  top: 12px;
+  right: 16px;
+  background: transparent;
   color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
+  display: inline;
+  text-align: right;
+
+  font-size: 2rem;
+  border: none !important;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-.twk-open-modal-btn:hover {
-  background-color: #0056b3;
+.coupon-box {
+  background-color: #fff;
+  color: #0e3c6d;
+  border: 3px dashed #0e3c6d;
+  border-radius: 12px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
 
-/* Modal body */
-.twk-modal-body {
-  color: white;
-  font-family: "Lato", sans-serif;
+#fireworksContainer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* List styles */
-.twk-modal-body ul {
-  padding: 0;
-}
-
-.twk-modal-body li {
-  list-style-type: none;
-  margin: 5px 0;
-}
-
-/* Call-to-action button */
-.twk-cta-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #ffffff;
-  background-color: #28a745;
-  text-decoration: none;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.twk-cta-btn:hover {
-  background-color: #218838;
+.modal-content > *:not(#fireworksContainer) {
+  position: relative;
+  z-index: 1;
 }

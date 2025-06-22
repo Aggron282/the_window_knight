@@ -56,6 +56,7 @@ app.use((req,res,next)=>{
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static('public'));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use(user_routes);
 app.use(api_routes);
 app.use(admin_routes);

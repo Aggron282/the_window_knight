@@ -1,31 +1,51 @@
-const modalWrapper = document.getElementById('modalWrapper');
-const closeModalBtn = document.getElementById('closeBtn');
-var isModalOn = null
+let fireworks;
 
+const subscribe_button = document.querySelector(".subscribe-btn");
+const form_element = document.querySelector("#subscribe--contact");
 
-closeModalBtn.addEventListener('click', () => {
-  ToggleModal(false)
-});
+subscribe_button.addEventListener("click", SubmitSubscription);
+form_element.addEventListener("submit", SubmitSubscription);
 
-modalWrapper.addEventListener('click', (e) => {
-  if (e.target === modalWrapper && isModalOn) {
-    ToggleModal(false);
+async function SubmitSubscription(e) {
+  e.preventDefault();
+
+  const form_data = new FormData(form_element);
+  const form_obj = Object.fromEntries(form_data.entries());
+
+  try {
+    const { data } = await axios.post("/api/subscribe", form_obj);
+    console.log(data);
+    if (!data.err) {
+      showThankYouModal();
+    } else {
+      console.error(data.err);
+      alert("Could not submit request at this moment");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Could not submit request at this moment");
   }
-});
+}
 
-function ToggleModal(isOn){
+function showThankYouModal() {
+  const modal = document.getElementById('thankYouModal');
+  modal.classList.add('show');
+  modal.classList.remove('hidden');
 
-  isModalOn = isOn;
+  // const container = document.getElementById('fireworksContainer');
+  // fireworks = new Fireworks(container, {
+  //   rocketsPoint: { min: 0.3, max: 0.7 },
+  //   intensity: 20,
+  //   sound: { enabled: false },
+  // });
+  // fireworks.start();
+}
 
-  if(isOn){
-    modalWrapper.classList.add('active');
-    document.body.style.overflow = 'hidden';
-    InitFireworks();
+function closeThankYouModal() {
+  const modal = document.getElementById('thankYouModal');
+  modal.classList.remove('show');
+  modal.classList.add('hidden');
+  if (fireworks) {
+    fireworks.stop();
   }
-  else{
-    modalWrapper.classList.remove('active');
-    document.body.style.overflow = '';
-    CancelFireworks();
-  }
-
 }

@@ -8,9 +8,25 @@ var adminController = require("./../../controllers/admin/admin_controller.js");
 var authController = require("./../../controllers/admin/auth_controller.js");
 var laborController = require("./../../controllers/admin/labor_controller.js");
 var metaController = require("./../../controllers/admin/meta_controller.js");
+var aiController = require("./../../controllers/admin/ai_controller.js");
 var prospectController = require("./../../controllers/admin/prospect_controller.js");
 var userToOwnerController = require("./../../controllers/admin/user_to_owner_controller.js");
 var CheckAuth = require("./../../util/isAuth.js").CheckAuth;
+const multer = require("multer");
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // your folder
+  },
+  filename: function (req, file, cb) {
+    const ext = path.extname(file.originalname);
+    const name = path.basename(file.originalname, ext).replace(/\s+/g, '-');
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, `${name}-${uniqueSuffix}${ext}`);
+  }
+});
+
+const upload = multer({ storage });
 
 // Get Home Page
 router.get("/admin",CheckAuth,adminController.GetIndexPage);
@@ -47,7 +63,15 @@ router.get("/admin",CheckAuth,adminController.GetIndexPage);
 router.post("/auth/login",authController.Login);
 router.post("/admin/auth/forgot",authController.ForgotKey);
 router.get("/admin/blogger",CheckAuth,adminController.GetBlogPage);
-router.post("/admin/blogger/add",CheckAuth,adminController.PostBlog)
+router.post("/admin/blogger/ai-generate", CheckAuth, aiController.AIGenerateBlog);
+
+router.post("/admin/blogger/add", CheckAuth, upload.fields([
+  { name: 'cover', maxCount: 1 },
+  { name: 'gallery', maxCount: 10 }
+]), adminController.PostBlog);
+
+router.post("/admin/blogger/delete/:id",CheckAuth,adminController.PostBlog)
+
 // Get Login Page
 
 router.get("/auth/login",authController.GetLoginPage);

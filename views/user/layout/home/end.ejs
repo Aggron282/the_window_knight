@@ -1,30 +1,20 @@
+<!-- External Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js" integrity="sha512-LUKzDoJKOLqnxGWWIBM4lzRBlxcva2ZTztO8bTcWPmDSpkErWx0bSP4pdsjNH8kiHAUPaT06UXcb+vOEZH+HpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<script src = "/assets/js/user/modal.js"></script>
-<script src ="/assets/js/util.js"></script>
-<script src = "/assets/js/user/init_form.js"></script>
-<script src = "./assets/js/form_submit.js"></script>
-
-<script src ="/assets/js/data/navbar.js"></script>
-<script src ="/assets/js/user/navbar_render.js"></script>
-<script src = "/assets/js/user/home/our_clients.js"></script>
-<!-- <script src ="/assets/js/user/home/carousel.js"></script> -->
-<script src = "/assets/js/user/showcase.js"></script>
-<script src = "./assets/js/user/home/landing.js"></script>
-<script src = "./assets/js/user/home/subscribe.js"></script>
-<!-- <script src = "./assets/js/user/particles.js"></script> -->
-<script src = "./assets/js/user/fireworks.js"></script>
-<script src = "./assets/js/user/animate_on_scroll.js"></script>
-<script src = "./assets/js/user/home/home_scroll_animation.js"></script>
-<script src = "./assets/js/user/home/collage.js"></script>
-
-<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.8/dist/index.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- Your Custom Scripts -->
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/data/navbar.js"></script>
+<script src="/assets/js/user/navbar_render.js"></script>
+<script src="/assets/js/user/showcase.js"></script>
+<script src="/assets/js/user/home/landing.js"></script>
+<script src="/assets/js/user/animate_on_scroll.js"></script>
+<script src="/assets/js/user/home/collage.js"></script>
+<script src="/assets/js/user/modal.js"></script>
+
+<!-- Swiper Initialization -->
 <script>
   const swiper = new Swiper(".mySwiper", {
     loop: true,
@@ -37,73 +27,7 @@
   });
 </script>
 
-<!-- <script>
-  const reviews = [
-    {
-      name: "Pita Jungle",
-      logo: "pita.png",
-      text: "Absolutely the best experience! Reliable and personable services.",
-      author: "Bassel Osmani - Owner"
-    },
-    {
-      name: "Rachel's Art Studio",
-      logo: "rachel.png",
-      text: "Lovely employees and always leave our windows spotless",
-      author: "Rachel - Owner"
-    },
-    {
-      name: "U.S Egg",
-      logo: "usegg.png",
-      text: "We have been using them for years and plan to continue for a long time.",
-      author: "The Gebran Family - Owners"
-    },
-    {
-      name: "Chipotle",
-      logo: "chipotle.png",
-      text: "Affordable and reliable, we especially love their deals",
-      author: "Chipotle on Shea and Scottsdale"
-    },
-    {
-      name: "Qdoba",
-      logo: "qdoba.png",
-      text: "Affordable and reliable, we especially love their deals",
-      author: "Qdoba on Scottsdale Rd"
-    },
-    {
-      name: "Sims Business Systems",
-      logo: "sims.jpg",
-      text: "Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.",
-      author: "Mark Sims - Owner"
-    },{
-      name: "Pretty Decent Concepts",
-      logo: "decent.png",
-      text: "Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.Top-tier service. Respectful, fast, and brilliant outcome.",
-      author: "Theodore Meyers - Owner"
-    },
-    {
-      name: "BKB",
-      logo: "bkb.png",
-      text: "'Our windows have never looked better — the natural light now pours in and makes our space shine. Guests have even complimented the view! Highly recommend for any business that values quality and presentation.'",
-      author: "Breakfast Kitchen Bar - Owner"
-    }
-  ];
-
-  const grid = document.getElementById('twkReviewGrid');
-
-  reviews.forEach(review => {
-    const card = document.createElement('div');
-    card.className = 'twk-review-card';
-    card.innerHTML = `
-      <img class="twk-review-logo" src="./assets/images/reviews/${review.logo}" alt="${review.name} logo" />
-      <div class="twk-review-name">${review.name}</div>
-      <div class="twk-review-text">⭐⭐⭐⭐⭐</div>
-      <div class="twk-review-text">"${review.text}"</div>
-      <div class="twk-review-author">${review.author}</div>
-    `;
-    grid.appendChild(card);
-  });
-</script> -->
-
+<!-- Structured Data (LocalBusiness) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -112,7 +36,7 @@
   "image": "https://thewindowknight.com/assets/images/logo.png",
   "@id": "https://thewindowknight.com/",
   "url": "https://thewindowknight.com/",
-  "telephone": "+1-480-842-3660",
+  "telephone": "+1-480-822-0511",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "7131 E Rancho Vista Drive",
@@ -131,8 +55,3 @@
   "description": "The Window Knight is a locally-owned window cleaning company based in Phoenix, AZ. Offering residential and commercial window cleaning with streak-free results and honest service."
 }
 </script>
-
-</body>
-
-
-</html>

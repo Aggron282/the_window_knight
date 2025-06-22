@@ -21,13 +21,10 @@ router.get("/schedule",userController.GetSchedulePage);
 // Get Contact Page
 router.get("/contact_us",userController.GetContactUsPage);
 
-
-// Get Page Data
-router.get("/data/steps",userController.GetSteps);
-
 // User Posts to Admin
 router.post("/admin/subscribe",check("email").isEmail().normalizeEmail(),userToOwnerController.Subscribe)
-router.post("/admin/subscribe_user",
+router.get("/blogs",userController.GetBlogPage);
+router.post("/api/subscribe",
 check("name").isLength({min:1}),
 check("phone").isLength({min:4}),
 check("email").isEmail().normalizeEmail()

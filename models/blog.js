@@ -7,6 +7,10 @@ var Blog = new Schema({
     type:String,
     required:true
   },
+  subtitle:{
+    type:String,
+    required:true
+  },
   title:{
     type:String,
     required:true
@@ -19,7 +23,11 @@ var Blog = new Schema({
     type:Date,
     required:true
   },
-  images:{
+  coverImage:{
+    type:String,
+    required:true
+  },
+  gallery:{
     type:Array,
     required:false
   }

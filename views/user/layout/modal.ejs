@@ -1,24 +1,17 @@
-<div class="twk-modal-wrapper" id="modalWrapper">
-  <div class="twk-modal">
-    <button class="twk-close-btn" id="closeBtn">&times;</button>
-    <div class="twk-banner">
-      <p class="twk-title">Thank You for Subscribing!</p>
-    </div>
-    <div class="twk-modal-body">
 
-      <div class="twk-text-container">
-        <canvas id="fireworkCanvas"></canvas>
-        <p><strong>As a subscriber, you’ll enjoy:</strong></p>
-        <ul>
-          <li>✨ 15% off your first cleaning service</li>
-          <li>📅 Priority scheduling</li>
-          <li>💡 Exclusive cleaning tips and updates</li>
-        </ul>
+<div id="thankYouModal" class="modal-wrapper hidden">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeThankYouModal()">×</button>
+    <h2>🎉 Thank You for Reaching Out!</h2>
+    <p>We're excited to serve you! One of our team members will be in touch shortly.</p>
 
-        <a href="mailto:marco@thewindowknight.com">
-          <button class="twk-cta-btn">Book Your Service</button>
-        </a>
-      </div>
+    <div class="coupon-box">
+      <strong>$15 OFF</strong><br>
+      your first window cleaning service<br>
+      <small>(minimum service total $30)</small>
     </div>
-    </div>
-    </div>
+
+    <!-- Fireworks Container -->
+    <div id="fireworksContainer"></div>
+  </div>
+</div>

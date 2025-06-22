@@ -2,97 +2,202 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" conent="width=device-width, initial-scale=1.0" />
   <title>Blog Manager | The Window Knight</title>
+  <link rel="stylesheet" href="/assets/css/admin/dashboard.css" />
   <link rel="stylesheet" href="/assets/css/admin/blog.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="navbar">
-    <div>
-      <a href="/">Home</a>
-      <a href="https://www.thewindowknight.com" target="_blank">Main Site</a>
-    </div>
-    <div class="dropdown">
-      <span>👤 Profile</span>
-      <div class="dropdown-content">
-        <a href="/profile">Edit Credentials</a>
+  <header>
+    <h1>Window Knight Admin</h1>
+    <div class="profile-dropdown">
+      <i class="fas fa-user-circle fa-2x"></i>
+      <div class="profile-dropdown-content">
         <a href="/">Main Site</a>
+        <a href="#">Change Password</a>
+        <a href="#">Download Data</a>
         <a href="/logout">Logout</a>
       </div>
     </div>
-  </div>
+  </header>
+    <div class="popup hidden" id="popupMessage"></div>
+  <div class="dashboard-container">
+    <nav>
+      <a href="#"><i class="fas fa-envelope"></i> Emailer</a>
+      <a href="/admin/blogger"><i class="fas fa-pen-nib"></i> Blogger</a>
+      <a href="#"><i class="fas fa-calendar-alt"></i> Scheduler</a>
+      <a href="#"><i class="fas fa-chart-line"></i> Sales</a>
+      <a href="#"><i class="fas fa-file-invoice-dollar"></i> Online Quotes</a>
+      <a href="#"><i class="fas fa-wallet"></i> Finances</a>
+      <a href="#"><i class="fas fa-brain"></i> AI Journal</a>
+      <a href="#"><i class="fas fa-image"></i> Image Uploader</a>
+      <a href="#"><i class="fas fa-plug"></i> Web Services</a>
+    </nav>
 
-  <div class="blog-header">
-    <h1>Blog Manager</h1>
-    <button class="add-button" onclick="openModal()">+</button>
-  </div>
+    <main class="main-section">
+      <div class="blog-header">
+        <h2>Blog Manager</h2>
+      </div>
 
-  <div class="blog-feed" id="blogFeed">
-    <% if(blogs && blogs.length > 0) { %>
-      <% blogs.forEach(blog => { %>
-        <div class="blog-card" id="blog-<%= blog._id %>">
-          <img src="<%= blog.coverImage %>" class="cover-thumb" />
-          <div class="card-content">
-            <h2><%= blog.title %></h2>
-            <h4><%= blog.subtitle %></h4>
-            <p><%= blog.description.slice(0, 100) %>...</p>
-            <button onclick="deleteBlog('<%= blog._id %>')">❌</button>
-          </div>
+      <div class="dashboard-grid">
+        <!-- Add Blog Button Card -->
+        <div class="card blog-card add-blog" onclick="openModal()">
+          <div class="add-icon">+</div>
+          <p>Add Blog</p>
         </div>
-      <% }) %>
-    <% } else { %>
-      <p style="text-align:center; width:100%; font-size:24px">No blogs found.</p>
-    <% } %>
+
+        <!-- Blog Cards -->
+        <% if(blogs && blogs.length > 0) { %>
+          <% blogs.forEach(blog => { %>
+            <div class="card blog-card" id="blog-<%= blog._id %>">
+              <img src="<%= blog.coverImage %>" class="cover-thumb" />
+              <div class="card-content">
+                <h3><%= blog.title %></h3>
+                <p><%= blog.subtitle %></p>
+                <button onclick="deleteBlog('<%= blog._id %>')">❌</button>
+              </div>
+            </div>
+          <% }) %>
+        <% } else { %>
+          <p style="text-align:center; width:100%; font-size:24px">No blogs found.</p>
+        <% } %>
+      </div>
+    </main>
   </div>
 
+  <div id="aiModal" class="modal hidden ai-modal">
+  <div class="modal-content slide-up">
+    <span class="close" onclick="closeAIBotModal()">&times;</span>
+    <h2>Ask AI to write or improve your blog</h2>
+    <textarea id="aiPrompt" rows="4" placeholder="e.g., Make this blog more exciting and add tips for window cleaning"></textarea>
+    <button onclick="submitAIPrompt()" class="ai-submit">Submit Prompt</button>
+  </div>
+</div>
+  <!-- Modal -->
   <div id="blogModal" class="modal hidden">
-    <div class="modal-content">
+    <div class="modal-content slide-up">
       <span class="close" onclick="closeModal()">&times;</span>
-      <h2>Add New Blog</h2>
-      <form id="blogForm">
-        <input type="text" name="title" placeholder="Title" required />
-        <input type="text" name="subtitle" placeholder="Subtitle" required />
-        <input type="text" name="author" placeholder="Author" required />
-        <input type="file" name="cover" accept="image/*" required />
-        <input type="file" name="gallery" accept="image/*" multiple />
-        <textarea name="html" placeholder="Write your article HTML here..." rows="10" required></textarea>
+      <h2 style="margin-top: 0;">Add New Blog</h2>
+      <button type="button" onclick="openAIBotModal()" class="ai-button">
+        🤖 Generate with AI
+      </button>
+
+      <form id="blogForm" class="form-labeled" enctype="multipart/form-data">
+        <label>Title
+          <input placeholder="Enter Title" type="text" name="title" required value="Test"/>
+        </label>
+        <label>Subtitle
+          <input type="text" name="subtitle" required placeholder="Enter Subtitle" value="Test"/>
+        </label>
+        <label>Author
+          <input type="text" name="author" required placeholder="Enter Author" value="Test"/>
+        </label>
+        <label>Cover Image
+          <input type="file" name="cover" accept="image/*"  />
+        </label>
+        <label>Gallery Images
+          <input type="file" name="gallery" accept="image/*" multiple />
+        </label>
+        <label>Article Content (HTML)
+          <textarea name="html" rows="6" required placeholder="Enter Article " value="Test"></textarea>
+        </label>
         <button type="submit">Submit</button>
       </form>
     </div>
   </div>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     function openModal() {
       document.getElementById('blogModal').classList.remove('hidden');
     }
+
     function closeModal() {
       document.getElementById('blogModal').classList.add('hidden');
     }
 
     function deleteBlog(id) {
-      axios.delete(`/api/blogs/${id}`).then(() => {
+      axios.delete(`/admin/blogger/delete/${id}`).then(() => {
         document.getElementById(`blog-${id}`).remove();
       }).catch(err => alert('Failed to delete.'));
     }
 
+
+
     document.getElementById('blogForm').addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const formData = new FormData(form);
-      try {
-        await axios.post('/api/blogs', formData, {
-          headers: { 'Content-Type': 'multipart/form-data' }
-        });
-        location.reload();
-      } catch (err) {
-        console.error(err);
-        alert('Failed to submit blog.');
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+    try {
+      const response = await axios.post('/admin/blogger/add', formData,   {headers: {
+        'Content-Type': 'multipart/form-data'
+      }});
+
+      if (response.data.success) {
+        showPopup("✅ Blog posted successfully!");
+        setTimeout(() => location.reload(), 1500);
+      } else {
+        showPopup("⚠️ " + (response.data.message || "Something went wrong."));
       }
-    });
+    } catch (err) {
+      console.error(err);
+      showPopup("❌ Failed to submit blog. " + err  );
+    }
+  });
+
+  function showPopup(message) {
+    const popup = document.getElementById('popupMessage');
+    popup.textContent = message;
+    popup.classList.add('show');
+    popup.classList.remove('hidden');
+    setTimeout(() => popup.classList.remove('show'), 3000);
+  }
+
+  </script>
+
+  <script>
+  function openAIBotModal() {
+document.getElementById('aiModal').classList.remove('hidden');
+}
+function closeAIBotModal() {
+document.getElementById('aiModal').classList.add('hidden');
+}
+
+async function submitAIPrompt() {
+const prompt = document.getElementById('aiPrompt').value;
+
+// Get current form values
+const title = document.querySelector('[name="title"]').value;
+const subtitle = document.querySelector('[name="subtitle"]').value;
+const body = document.querySelector('[name="html"]').value;
+
+const aiRequest = {
+  prompt,
+  existing: { title, subtitle, body }
+};
+
+try {
+  const res = await axios.post('/admin/blogger/ai-generate', aiRequest);
+
+  if (res.data.success) {
+    const { title, subtitle, body } = res.data;
+    document.querySelector('[name="title"]').value = title;
+    document.querySelector('[name="subtitle"]').value = subtitle;
+    document.querySelector('[name="html"]').value = body;
+    showPopup("✅ AI blog generated!");
+  } else {
+    showPopup("⚠️ AI failed: " + res.data.message);
+  }
+  closeAIBotModal();
+} catch (err) {
+  console.error("AI Request failed:", err);
+  showPopup("❌ AI error.");
+}
+}
+
+
   </script>
 </body>
 </html>

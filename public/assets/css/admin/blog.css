@@ -106,26 +106,63 @@ body {
   cursor: pointer;
 }
 .modal {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: rgba(0,0,0,0.8);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  padding:30px;
+  padding-top: 10px;
+
 }
+
+.popup {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00e1ff;
+  color: #001420;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.popup.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .modal.hidden {
   display: none;
 }
+.ai-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
 .modal-content {
+  padding:30px;
   background: #002332;
-  padding: 30px;
+  /* padding: 30px; */
+  /* padding-top: 0px; */
   border-radius: 10px;
   width: 90%;
-  max-width: 600px;
+  max-width: 1000px;
   color: white;
 }
 .modal-content input,
@@ -151,4 +188,143 @@ body {
   font-size: 30px;
   color: white;
   cursor: pointer;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.blog-card img.cover-thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.blog-card .card-content {
+  padding: 15px;
+}
+
+.blog-card .card-content h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.blog-card .card-content p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.add-blog {
+  border: 2px dashed #888;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #555;
+  cursor: pointer;
+}
+
+.add-blog:hover {
+  background-color: #f9f9f9;
+}
+
+.add-icon {
+  font-size: 48px;
+  line-height: 1;
+}
+
+/* AI Modal Overlay */
+.ai-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10010; /* Make sure it's above the blog modal */
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+}
+
+.ai-modal.hidden {
+  display: none;
+}
+
+/* Modal content box */
+.ai-modal-content {
+  background: rgba(30, 30, 40, 0.85);
+  border-radius: 18px;
+  padding: 28px 32px;
+  width: 90%;
+  max-width: 520px;
+  color: #f0f0f0;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: fadeInUp 0.3s ease;
+}
+
+/* Close button */
+.ai-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Textarea */
+#aiPrompt {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Submit button */
+.ai-submit {
+  margin-top: 20px;
+  width: 100%;
+  background-color: #00bcd4;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.ai-submit:hover {
+  background-color: #0097a7;
+}
+
+/* Entry animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

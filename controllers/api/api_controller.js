@@ -3,7 +3,7 @@ var path = require("path");
 var rootDir = require("./../../util/path.js");
 const ReviewDiscount = require('../../models/review_discount.js');
 const { sendReviewRequestEmail } = require('./../../util/emailer.js');
-
+const Blog = require("./../../models/blog.js");
 const GetReviewPage = (req,res,next)=>{
   res.render(path.join(rootDir,"views","/api/review.ejs"));
 }
@@ -56,6 +56,14 @@ const SendReview = async (req, res) => {
 
 }
 
+async function GetBlogs(req,res){
+  var all_blogs = await Blog.find({});
+  console.log(all_blogs);
+  res.json({blogs:all_blogs});
+}
+
+
+module.exports.GetBlogs = GetBlogs;
 module.exports.SendReview = SendReview;
 module.exports.Redeem = Redeem;
 module.exports.GetReviewPage = GetReviewPage;
