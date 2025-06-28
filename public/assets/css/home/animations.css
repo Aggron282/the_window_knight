@@ -28,14 +28,15 @@
   }
   100%{
     opacity:1;
-    transform: scale(1);
+
+    transform: scale(1) rotateZ(500deg);
   }
 }
 @keyframes subc{
 
   0%{
     opacity:0;
-    transform: translateX(-300px);
+    transform: translateY(50px);
   }
   100%{
     opacity:1;
@@ -44,88 +45,46 @@
 
 }
 
-.wi-1{
+.why_us_card img{
   opacity:0;
-  transform: translateY(-30px) rotateY(0deg);
+  transform: translateY(-30px) rotateY(180deg);
 }
 
-.wi-2{
-  opacity:0;
-  transform: translateY(-30px) rotateY(0deg);
-}
-.after--1{
-  animation: squegee--right ease-in 4s 1;
-  clip-path: inset(0 0 0 0);
-
-}
-
-.after--2{
-  animation: squegee--left ease-in 3s 1;
-  clip-path: inset(0 0 0 0);
-
-}
-
-.after--3{
-  animation: squegee--right ease-in 1s 1;
-  clip-path: inset(0 0 0 0);
-
-}
-
-.after--4{
-  animation: squegee--left ease-in 2s 1;
-  clip-path: inset(0 0 0 0);
-
-}
-.wi-3{
-  opacity:0;
-  transform: translateY(-30px) rotateY(0deg);
-}
-
-
-.subscribe_container--home{
-  opacity:0%;
-}
-.subscribe_container--active{
-  opacity:100%;
-  animation: subc ease-in 1s 1;
-  transition:  all 1s;
-}
-
-.wt-1{
-  opacity:0;
-  transform: translateX(-30px);
-}
-
-.wt-2{
-  opacity:0;
-  transform: translateX(-30px);
-}
-
-.wt-3{
-  opacity:0;
-  transform: translateX(-30px);
-}
-
-.wt--active{
+.why_us_card--active img {
+  animation:why_icon .5s ease-in 1;
   opacity:1;
-  transform: translateX(0px);
-  transition: all .5s;
-}
-
-.wi--active{
-  opacity:1;
-  transition: all .5s;
-
   transform: translateY(0px) rotateY(0deg);
 }
 
-.value_detail_box{
-  transform:scale(0);
+.cleaning-grid {
   opacity:0;
+  transform: translateX(-300px);
 }
 
-.value_detail_box--active{
-  animation:values ease-in 1 1s;
+.cleaning-grid--active{
+  animation:subc .5s ease-in 1;
+  opacity:1 ;
+  transform: translateX(0px);
+}
+
+.value-card{
+  opacity:0;
+  transform: translateY(-30px) rotateY(180deg);
+}
+
+.value-card--active {
+  animation:why_icon .5s ease-in 1;
   opacity:1;
-  transform:scale(1);
+  transform: translateY(0px) rotateY(0deg);
+}
+
+.pulse_button{
+  opacity:0 ;
+  transform:scale(0) ;
+}
+
+.pulse_button--active{
+  animation:values .5s ease-in 1;
+  opacity:1 ;
+  transform:scale(1) ;
 }
