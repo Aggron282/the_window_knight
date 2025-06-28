@@ -107,3 +107,16 @@
     z-index: 0;
   }
 }
+
+@media (max-width:844px) and (orientation:landscape){
+  .watermark{
+    top:30%;
+  }
+  .grid_why_us{
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+  }
+  .contact-float{
+        top: 1% !important;
+  }
+
+}

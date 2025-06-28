@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: linear-gradient(to right, rgba(0, 20, 30, 0.9), rgba(0, 50, 70, 0.9), rgba(0, 20, 30, 0.6));
+  background: linear-gradient(90deg, rgba(0, 35, 50, 1), rgba(0, 50, 70, 1)) !important;
   backdrop-filter: blur(10px);
   z-index: 1000;
   padding:30px !important;
@@ -352,5 +352,31 @@
 
   .sidebar-links a:hover {
     color: white;
+  }
+}
+
+
+@media (max-width:844px) and (orientation:landscape){
+
+  .q-btn{
+    bottom:20px;
+  }
+
+  .c2ontent{
+    margin-top:-20%;
+  }
+  .landing-grid{
+    padding-top:5%;
+    padding-bottom: 5%;
+  }
+  .landing-grid .text-container{
+    margin-top:0%;
+  }
+  .showcase_container{
+    height:auto !important;
+  }
+  .landing_background{
+    height:125%;
+
   }
 }

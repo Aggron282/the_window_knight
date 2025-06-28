@@ -5,14 +5,14 @@ async function AIGenerateBlog(req, res) {
   try {
     const { prompt, existing } = req.body;
 
-    const basePrompt = prompt || "Write a professional window cleaning blog post.";
+    const basePrompt = prompt || "Write a professional window cleaning blog post in html format.";
 
     const context = existing?.title || existing?.subtitle || existing?.body
       ? `Improve the following blog content.\nTitle: ${existing.title}\nSubtitle: ${existing.subtitle}\nBody: ${existing.body}\n\n${basePrompt}`
       : basePrompt;
 
       const chatResponse = await openai.chat.completions.create({
-      model: "gpt-4",
+      model: "gpt-4o-mini",
       messages: [
         {
           role: "system",

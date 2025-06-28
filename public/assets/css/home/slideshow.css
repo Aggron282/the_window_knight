@@ -286,3 +286,53 @@ opacity:.9 !important;
   padding-top:10%;
 }
 }
+
+@media screen and (orientation: landscape) and (max-width: 844px) {
+  .slide-img {
+    height: 100%;
+  }
+
+  .slide-text {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+    font-size: 0.9rem;
+    transform: translateY(0);
+  }
+
+  .slide-text h2 {
+    font-size: 2rem;
+  }
+
+  .slide-text p {
+    font-size: 1.2rem;
+  }
+
+  .slide-text a.btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .slideshow-section {
+    padding: 1rem 2rem;
+    height: auto;
+    min-height: 100vh;
+    background-size: cover;
+  }
+
+  .swiper {
+    padding: 10px;
+  }
+  /* .slideshow-section{
+    height:100% !important;
+  } */
+  .label--work::before {
+    font-size: 80px;
+  }
+  .trusted-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}

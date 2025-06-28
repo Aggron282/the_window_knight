@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/images/logo_ico.png">
+  <link rel="icon" type="image/png" href="./assets/images/new_logo.png">
+
+  <!-- Bootstrap & Semantic UI -->
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/components/header.min.css">
+
+  <!-- Fonts (Cleaned to remove unused) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;700&family=Teko:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Learn about The Window Knight – Arizona’s top-rated window cleaning professionals serving Phoenix and beyond. Discover our mission, story, and premium residential and commercial glass cleaning services.">
+  <meta name="keywords" content="About The Window Knight, Phoenix window cleaners, residential window cleaning AZ, commercial window washing, Arizona streak-free windows, trusted window professionals, eco-friendly window washing Phoenix, best window cleaning in Arizona, local window cleaner near me, top-rated Phoenix window services">
+
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="About Us – The Window Knight | Phoenix Window Cleaning Experts">
+  <meta property="og:description" content="We are The Window Knight – a local, insured, and trusted window cleaning company based in Phoenix, AZ. Learn more about our journey and values.">
+  <meta property="og:image" content="https://www.thewindowknight.com/assets/images/new_logo.png">
+  <meta property="og:url" content="https://www.thewindowknight.com/about">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About The Window Knight">
+  <meta name="twitter:description" content="Phoenix-based window cleaning pros bringing clarity and shine to your home or business.">
+
+  <title>Window Washing 101 - The Window Knight | Phoenix Window Cleaning Experts</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/assets/css/util/animations.css" />
+  <link rel="stylesheet" href="/assets/css/util/icon-font.css" />
+  <link rel="stylesheet" href="/assets/css/footer.css" />
+  <link rel="stylesheet" href="/assets/css/navbar.css" />
+  <link rel="stylesheet" href="/assets/css/mobile_navbar.css" />
+  <link rel="stylesheet" href="/assets/css/blogs.css" />
+
+  <link rel="stylesheet" href="/assets/css/about/animations.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/modal.css" />
+  <link rel="stylesheet" href="/assets/css/util/size.css" />
+  <link rel="stylesheet" href="/assets/css/util/positions.css" />
+  <link rel="stylesheet" href="/assets/css/util/colors.css" />
+  <link rel="stylesheet" href="/assets/css/util/margin_padding.css" />
+  <link rel="stylesheet" href="/assets/css/util/util.css" />
+  <link rel = "stylesheet" href = "/assets/css/blog_detail.css"/>
+
+
+</head>
+
+<body>
+  <%- include("./layout/modal.ejs") %>
+
+  <div class="container-fluid page" >
+
+    <div class="navbar_wrapper">
+        <div class="navbar_container showcase_navbar">
+          <%- include("./layout/navbar.ejs") %>
+        </div>
+    </div>
+
+
+   <div class="cover-image" style="background-image: url('/uploads/<%= blog.coverImage %>');">
+     <a href="/blogs">
+        <div class="go_back">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 12H19M12 5L19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
+     <div class="cover-overlay">
+       <h1 class="title"><%= blog.title %></h1>
+       <h2 class="subtitle"><%= blog.subtitle %></h2>
+       <p class="author">By <%= blog.author %></p>
+     </div>
+   </div>
+
+   <main class="content-container">
+     <div class="blog-body">
+       <%- blog.body %>
+     </div>
+   </main>
+
+   <section class="gallery-section">
+     <h3 class="gallery-heading">Photo Highlights</h3>
+     <div class="gallery-scroll">
+       <% blog.gallery.forEach(img => { %>
+         <img src="/uploads/<%= img %>" alt="Gallery Image" class="gallery-img" />
+       <% }) %>
+     </div>
+   </section>
+
+   <section class="related-blogs-section">
+    <h3>More From The Window Knight</h3>
+    <div class="related-blogs-scroll">
+      <% relatedBlogs.forEach(related => { %>
+        <div class="related-blog-card">
+          <img src="/uploads/<%= related.coverImage %>" alt="Blog Cover">
+          <h4><%= related.title %></h4>
+          <p><%= related.subtitle %></p>
+          <a href="/blogs/<%= related._id %>">Read More →</a>
+        </div>
+      <% }) %>
+    </div>
+  </section>
+
+</body>
+</html>

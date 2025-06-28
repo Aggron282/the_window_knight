@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/assets/css/admin/blog.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
   <header>
     <h1>Window Knight Admin</h1>
@@ -46,76 +47,102 @@
           <div class="add-icon">+</div>
           <p>Add Blog</p>
         </div>
-
         <!-- Blog Cards -->
-        <% if(blogs && blogs.length > 0) { %>
-          <% blogs.forEach(blog => { %>
-            <div class="card blog-card" id="blog-<%= blog._id %>">
-              <img src="<%= blog.coverImage %>" class="cover-thumb" />
-              <div class="card-content">
-                <h3><%= blog.title %></h3>
-                <p><%= blog.subtitle %></p>
-                <button onclick="deleteBlog('<%= blog._id %>')">❌</button>
+        <% if (blogs && blogs.length > 0) { %>
+        <% blogs.forEach(blog => { %>
+           <div class="blog-card blog-card--inst" data-id="<%= blog._id %>">
+              <img src="/uploads/<%=blog.coverImage %>" alt="Blog Cover" />
+            <div class="blog-content">
+              <h3><%= blog.title %></h3>
+
+              <p><%= blog.body.length > 100 ? blog.body.substring(0, 100) + '...' : blog.summary %></p>
+
+              <div class="blog-actions">
+                <button class="edit-btn btn" data-id = "<%= blog._id %>" onclick='editBlog(this)'>Edit</button>
+                <button class="delete-btn btn" data-id="<%= blog._id %>">Delete</button>
               </div>
             </div>
-          <% }) %>
-        <% } else { %>
-          <p style="text-align:center; width:100%; font-size:24px">No blogs found.</p>
-        <% } %>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>No blog posts found.</p>
+      <% } %>
       </div>
     </main>
   </div>
 
-  <div id="aiModal" class="modal hidden ai-modal">
-  <div class="modal-content slide-up">
-    <span class="close" onclick="closeAIBotModal()">&times;</span>
-    <h2>Ask AI to write or improve your blog</h2>
-    <textarea id="aiPrompt" rows="4" placeholder="e.g., Make this blog more exciting and add tips for window cleaning"></textarea>
-    <button onclick="submitAIPrompt()" class="ai-submit">Submit Prompt</button>
-  </div>
-</div>
-  <!-- Modal -->
-  <div id="blogModal" class="modal hidden">
-    <div class="modal-content slide-up">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <h2 style="margin-top: 0;">Add New Blog</h2>
-      <button type="button" onclick="openAIBotModal()" class="ai-button">
-        🤖 Generate with AI
-      </button>
-
-      <form id="blogForm" class="form-labeled" enctype="multipart/form-data">
-        <label>Title
-          <input placeholder="Enter Title" type="text" name="title" required value="Test"/>
-        </label>
-        <label>Subtitle
-          <input type="text" name="subtitle" required placeholder="Enter Subtitle" value="Test"/>
-        </label>
-        <label>Author
-          <input type="text" name="author" required placeholder="Enter Author" value="Test"/>
-        </label>
+  <div class="blog-modal hidden" id="blogWizard">
+  <div class="blog-modal-content">
+    <span class="blog-close" onclick="closeModal()">&times;</span>
+    <h2>Create Blog</h2>
+    <div class="blog-progress">
+      <div class="blog-progress-step step-1 active"></div>
+      <div class="blog-progress-step step-2"></div>
+      <div class="blog-progress-step step-3"></div>
+    </div>
+    <form id="blogForm">
+      <div class="blog-form-section active" data-step="1">
+        <label>Author <input type="text" placeholder="Enter Author of Blog" name="author" required></label>
+        <label>Title <input placeholder="Enter Title of Blog" type="text" name="title" required></label>
+        <label>Subtitle <input placeholder="Enter Subtitle of Blog" type="text" name="subtitle" required></label>
+        <button type="button" class="blog-btn" onclick="nextStep()">Next</button>
+      </div>
+      <div class="blog-form-section" data-step="2">
         <label>Cover Image
-          <input type="file" name="cover" accept="image/*"  />
+          <div class="blog-upload-circle" onclick="document.getElementById('coverInput').click()">Upload Cover</div>
+          <input type="file" id="coverInput" name="cover" accept="image/*" style="display:none" onchange="previewImage(event, 'coverPreview')">
+          <div class="blog-image-preview-grid" id="coverPreview"></div>
         </label>
         <label>Gallery Images
-          <input type="file" name="gallery" accept="image/*" multiple />
+          <div class="blog-upload-circle" onclick="document.getElementById('galleryInput').click()">Upload Gallery</div>
+          <input type="file" id="galleryInput" name="gallery" accept="image/*" multiple style="display:none" onchange="previewImage(event, 'galleryPreview', true)">
+          <div class="blog-image-preview-grid" id="galleryPreview"></div>
         </label>
-        <label>Article Content (HTML)
-          <textarea name="html" rows="6" required placeholder="Enter Article " value="Test"></textarea>
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </div>
+        <button type="button" class="blog-btn back" onclick="backStep()">Back</button>
+        <button type="button" class="blog-btn" onclick="nextStep()">Next</button>
 
+      </div>
+      <div class="blog-form-section" data-step="3">
+        <div class="blog-editor-wrapper">
+          <button class="blog-ai-btn" type="button"  onclick="openAiModal()">🤖 AI Generate</button>
+          <label>Blog Content (HTML)
+            <textarea class="blog-html-input" name="html" placeholder="Write blog content with HTML..."></textarea>
+          </label>
+        </div>
+        <button type="button" class="blog-btn back" onclick="backStep()">Back</button>
+        <button type="submit" class="blog-btn">Submit Blog</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="ai-modal-wrapper hidden" id="aiModalBox">
+  <div class="ai-modal-box">
+    <span class="ai-modal-close" onclick="closeAiModal()">&times;</span>
+    <h2 class="ai-modal-title">Ask AI to Write or Improve</h2>
+    <textarea id="aiInputPrompt" class="ai-modal-textarea" placeholder="e.g., Make this blog more exciting and useful for homeowners."></textarea>
+    <button class="ai-modal-submit-btn" onclick="submitAiPromptToEditor()">Submit Prompt</button>
+  </div>
+</div>
+
+<!-- Loader Overlay -->
+<div class="ai-loader-overlay" id="aiLoader">
+  <div class="ai-loader-circle"></div>
+</div>
+
+<!-- Popup Message -->
+<div class="ai-popup-message" id="aiPopup">AI response received.</div>
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
     function openModal() {
-      document.getElementById('blogModal').classList.remove('hidden');
+      document.getElementById('blogWizard').classList.remove('hidden');
+      document.getElementById('coverInput').dataset.hasExisting = 'false';
+document.getElementById('galleryInput').dataset.hasExisting = 'false';
     }
 
     function closeModal() {
-      document.getElementById('blogModal').classList.add('hidden');
+      document.getElementById('blogWizard').classList.add('hidden');
     }
 
     function deleteBlog(id) {
@@ -124,27 +151,35 @@
       }).catch(err => alert('Failed to delete.'));
     }
 
-
-
     document.getElementById('blogForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    try {
-      const response = await axios.post('/admin/blogger/add', formData,   {headers: {
-        'Content-Type': 'multipart/form-data'
-      }});
 
-      if (response.data.success) {
-        showPopup("✅ Blog posted successfully!");
-        setTimeout(() => location.reload(), 1500);
-      } else {
-        showPopup("⚠️ " + (response.data.message || "Something went wrong."));
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const editingId = form.dataset.editing;
+
+      try {
+
+        const endpoint = editingId ? `/admin/blogger/edit/${editingId}` : '/admin/blogger/add';
+
+        const response = await axios.post(endpoint, formData, {
+          headers: { 'Content-Type': 'multipart/form-data' }
+        });
+
+        if (response.data.success) {
+          showPopup(editingId ? "✅ Blog updated successfully!" : "✅ Blog posted successfully!");
+          setTimeout(() => location.reload(), 1500);
+        }
+        else {
+          showPopup("⚠️ " + (response.data.message || "Something went wrong."));
+        }
+
+      } catch (err) {
+        console.error(err);
+        showPopup("❌ Failed to submit blog. " + err);
       }
-    } catch (err) {
-      console.error(err);
-      showPopup("❌ Failed to submit blog. " + err  );
-    }
+
   });
 
   function showPopup(message) {
@@ -158,12 +193,7 @@
   </script>
 
   <script>
-  function openAIBotModal() {
-document.getElementById('aiModal').classList.remove('hidden');
-}
-function closeAIBotModal() {
-document.getElementById('aiModal').classList.add('hidden');
-}
+
 
 async function submitAIPrompt() {
 const prompt = document.getElementById('aiPrompt').value;
@@ -197,6 +227,203 @@ try {
 }
 }
 
+
+let step = 1;
+function nextStep() {
+  if (step === 1) {
+    const author = document.querySelector('[name="author"]').value.trim();
+    const title = document.querySelector('[name="title"]').value.trim();
+    const subtitle = document.querySelector('[name="subtitle"]').value.trim();
+    if (!author || !title || !subtitle) {
+      showPopup("⚠️ Please fill out Author, Title, and Subtitle.");
+      return;
+    }
+  }
+  if (step === 2) {
+    const hasCover = coverInput.files.length > 0 || coverInput.dataset.hasExisting === 'true';
+    const cover = document.getElementById('coverInput').files.length;
+    if (!hasCover) {
+      showPopup("⚠️ Please upload a cover image.");
+      return;
+    }
+  }
+  document.querySelector(`.blog-form-section[data-step="${step}"]`).classList.remove('active');
+  document.querySelector(`.step-${step}`).classList.remove('active');
+  step++;
+  document.querySelector(`.blog-form-section[data-step="${step}"]`).classList.add('active');
+  document.querySelector(`.step-${step}`).classList.add('active');
+}
+
+function backStep() {
+  document.querySelector(`.blog-form-section[data-step="${step}"]`).classList.remove('active');
+  document.querySelector(`.step-${step}`).classList.remove('active');
+  step--;
+  document.querySelector(`.blog-form-section[data-step="${step}"]`).classList.add('active');
+  document.querySelector(`.step-${step}`).classList.add('active');
+}
+ function closeModal() {
+   document.getElementById('blogWizard').classList.add('hidden');
+ }
+
+ function previewImage(event, containerId, multiple = false) {
+   const files = event.target.files;
+   const container = document.getElementById(containerId);
+   container.innerHTML = '';
+   for (let file of files) {
+     const reader = new FileReader();
+     reader.onload = e => {
+       const img = document.createElement('img');
+       img.src = e.target.result;
+       container.appendChild(img);
+     };
+     reader.readAsDataURL(file);
+     if (!multiple) break;
+   }
+ }
+ async function submitAIPrompt() {
+   const prompt = document.getElementById('aiPrompt').value;
+   const title = document.querySelector('[name="title"]').value;
+   const subtitle = document.querySelector('[name="subtitle"]').value;
+   const aiRequest = { prompt, existing: { title, subtitle, body: '' } };
+
+   try {
+     const res = await axios.post('/admin/blogger/ai-generate', aiRequest);
+     if (res.data.success) {
+       document.querySelector('[name="html"]').value = res.data.body;
+     }
+     closeAIBotModal();
+   } catch (err) {
+     console.error("AI Error:", err);
+   }
+
+ }
+
+ function openAiModal() {
+  document.getElementById('aiModalBox').classList.remove('hidden');
+}
+
+function closeAiModal() {
+  document.getElementById('aiModalBox').classList.add('hidden');
+}
+
+function showAiLoader(show = true) {
+  document.getElementById('aiLoader').style.display = show ? 'flex' : 'none';
+}
+
+function showAiPopup(message) {
+  const popup = document.getElementById('aiPopup');
+  popup.textContent = message;
+  popup.classList.add('show');
+  setTimeout(() => popup.classList.remove('show'), 3000);
+}
+
+async function submitAiPromptToEditor() {
+  const prompt = document.getElementById('aiInputPrompt').value;
+  const title = document.querySelector('[name="title"]').value;
+  const subtitle = document.querySelector('[name="subtitle"]').value;
+  const htmlArea = document.querySelector('[name="html"]');
+  const payload = { prompt, existing: { title, subtitle, body: htmlArea.value } };
+
+  try {
+    showAiLoader(true);
+    const res = await axios.post('/admin/blogger/ai-generate', payload);
+    if (res.data.success) {
+      console.log(res.data);
+      htmlArea.value = res.data.body;
+      showAiPopup('✅ Blog content updated with AI!');
+      showAiLoader(false);
+    } else {
+      showAiPopup('⚠️ AI error: ' + (res.data.message || 'Unknown error'));
+          showAiLoader(false);
+    }
+  }
+  catch (err) {
+    console.error(err);
+    showAiPopup('❌ Failed to contact AI service');
+  }
+  finally {
+    showAiLoader(false);
+    closeAiModal();
+  }
+
+}
+
+const deleteBtns = document.querySelectorAll(".delete-btn");
+
+deleteBtns.forEach((btn) => {
+
+  btn.addEventListener("click", async (e) => {
+
+    const _id = e.target.dataset.id;
+
+    if (!_id) return alert("Blog ID not found.");
+
+    try {
+      const { data } = await axios.delete("/api/blog/delete/one", { data: { _id } });
+
+      if (!data._id) {
+        console.error(data.err);
+        alert("Could not delete blog.");
+        return;
+      }
+
+      const blogCards = document.querySelectorAll(".blog-card");
+
+      blogCards.forEach((card) => {
+        if (card.dataset.id === data._id) {
+          card.remove();
+        }
+      });
+    }
+    catch (err) {
+      console.error("Delete failed:", err);
+      alert("Something went wrong.");
+    }
+
+  });
+
+});
+
+async function editBlog(button) {
+  const blogCard = button.closest(".blog-card");
+  console.log(blogCard.getAttribute("data-id"))
+  const {data} = await axios.get(`/api/blog/one/${blogCard.getAttribute("data-id")}`);
+  var blog = data.blog;
+  document.querySelector('[name="author"]').value = blog.author || '';
+  document.querySelector('[name="title"]').value = blog.title || '';
+  document.querySelector('[name="subtitle"]').value = blog.subtitle || '';
+  document.querySelector('[name="html"]').value = blog.body || '';
+  const coverInput = document.getElementById('coverInput');
+  const galleryInput = document.getElementById('galleryInput');
+
+  coverInput.dataset.hasExisting = 'true';
+  galleryInput.dataset.hasExisting = blog.gallery && blog.gallery.length > 0 ? 'true' : 'false';
+
+  const coverPreview = document.getElementById('coverPreview');
+  coverPreview.innerHTML = `<img src="/uploads/${blog.coverImage}" alt="Cover Image" />`;
+
+  const galleryPreview = document.getElementById('galleryPreview');
+  galleryPreview.innerHTML = (blog.gallery || []).map(img => `<img src="/uploads/${img}" />`).join('');
+
+  document.getElementById('blogWizard').classList.remove('hidden');
+  document.getElementById('blogForm').dataset.editing = blog._id;
+  step = 1;
+  document.querySelectorAll('.blog-form-section').forEach(el => el.classList.remove('active'));
+  document.querySelector('[data-step="1"]').classList.add('active');
+  document.querySelectorAll('.blog-progress-step').forEach(el => el.classList.remove('active'));
+  document.querySelector('.step-1').classList.add('active');
+}
+
+var blog_cards = document.querySelectorAll(".blog-card");
+
+for(var i =0; i < blog_cards.length;i++){
+  blog_cards[i].addEventListener("click",(e)=>{
+    const blogCard = e.target.closest(".blog-card");
+    var _id = blogCard.getAttribute("data-id");
+    console.log(e.target)
+    window.open("/blog/"+_id);
+  })
+}
 
   </script>
 </body>

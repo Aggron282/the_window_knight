@@ -11,7 +11,6 @@ var rootDir = require("./../../util/path.js")
 
 // Get Home Page
 router.get("/",userController.GetHomePage);
-
 // Get About Page
 router.get("/about",userController.GetAboutUsPage);
 
@@ -24,6 +23,8 @@ router.get("/contact_us",userController.GetContactUsPage);
 // User Posts to Admin
 router.post("/admin/subscribe",check("email").isEmail().normalizeEmail(),userToOwnerController.Subscribe)
 router.get("/blogs",userController.GetBlogPage);
+router.get("/blog/:_id",userController.GetBlogDetailPage);
+
 router.post("/api/subscribe",
 check("name").isLength({min:1}),
 check("phone").isLength({min:4}),

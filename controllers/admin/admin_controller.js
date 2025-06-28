@@ -8,6 +8,7 @@ const ObjectId = mongoose.Types.ObjectId;
 const Labor = require("./../../data/labor.js");
 const Prospect = require("./../../models/prospects.js");
 const Owner = require("./../../models/owner.js");
+const Blog = require("./../../models/blog.js");
 const prospect_controller = require("./prospect_controller.js");
 const sales = require("./../../util/sales.js");
 const enums = require("./../../util/enums.js");
@@ -37,7 +38,9 @@ let data = null;
 
 // GET: Blog Page
 const GetBlogPage = async (req, res) => {
-  res.render(path.join(rootDir, "views", "/admin/layout/blog/blog.ejs"), { blogs: null });
+  var blogs = await Blog.find({});
+  console.log(blogs)
+  res.render(path.join(rootDir, "views", "/admin/layout/blog/blog.ejs"), { blogs: blogs });
 };
 
 // GET: Admin Dashboard
@@ -119,8 +122,6 @@ const SubscribeUser = async (req, res) => {
   res.json({ feedback: true, prospect: prospectRecord });
 };
 
-// POST: Blog
-const Blog = require('../../models/blog');
 
 const PostBlog = async (req, res) => {
   console.log("Body:", req.body);
@@ -140,7 +141,7 @@ const PostBlog = async (req, res) => {
       subtitle,
       author,
       html,
-      body: html.replace(/(<([^>]+)>)/gi, "").slice(0, 150),
+      body: html.replace(/(<([^>]+)>)/gi, ""),
       coverImage: coverImage.filename,
       gallery: galleryImages.map(file => file.filename),
       date_submitted: new Date()

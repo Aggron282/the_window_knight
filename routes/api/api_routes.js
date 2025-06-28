@@ -8,5 +8,7 @@ router.get("/redeem", apiController.GetRedeemPage);
 router.post("/review/send", apiController.SendReview);
 router.post("/review/redeem", apiController.Redeem);
 router.get("/api/blogs", apiController.GetBlogs);
+router.get("/api/blog/one/:id", apiController.GetOneBlog);
+router.delete("/api/blog/delete/one",apiController.DeleteOneBlog);
 
 module.exports = router;

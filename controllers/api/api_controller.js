@@ -62,7 +62,31 @@ async function GetBlogs(req,res){
   res.json({blogs:all_blogs});
 }
 
+async function GetOneBlog(req,res){
+  var _id = req.params.id;
+  console.log(_id);
+  // return;
+  var blog = await Blog.findOne({_id:_id});
+  res.json({blog:blog});
+}
 
+async function DeleteOneBlog(req,res){
+
+  var {_id} = req.body;
+  console.log(req.body)
+  try{
+    var delete_blog = await Blog.deleteOne({_id:_id});
+    console.log(delete_blog);
+    res.json({err:null,_id:_id});
+  }catch(err){
+    console.log(err);
+    res.json({err:err,_id:null});
+  }
+
+}
+
+module.exports.GetOneBlog = GetOneBlog;
+module.exports.DeleteOneBlog = DeleteOneBlog;
 module.exports.GetBlogs = GetBlogs;
 module.exports.SendReview = SendReview;
 module.exports.Redeem = Redeem;

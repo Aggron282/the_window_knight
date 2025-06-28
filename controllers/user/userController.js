@@ -10,7 +10,7 @@ const Clients = require("./../../config/clients.js");
 const ShowcaseHeadings = require("./../../config/showcase_headings.js");
 const Values = require("./../../config/values.js");
 const Steps = require("./../../config/steps.js");
-
+const Blog = require("./../../models/blog.js");
 const isLoaded = false;
 const { detect } = require('detect-browser');
 
@@ -62,6 +62,17 @@ const GetBlogPage = (req,res,next) => {
 
 }
 
+const GetBlogDetailPage = async (req,res,next) => {
+
+    var _id = req.params._id;
+    var blog = await Blog.findOne({_id:_id});
+    var blogs = await Blog.find({});
+
+    var data = returnData(`Window Washing 101 | ${blog.title} `,"/blog",1,"blog.css",req);
+
+    res.render(path.join(rootDir,"views","/user/blog_detail.ejs"),{data:data,blog:blog,relatedBlogs:blogs});
+
+}
 
 const ExitOutOfModal = (req,res,next) => {
 
@@ -87,6 +98,7 @@ const GetScheduleData = async(req,res,next) =>{
 
   var data = req.body;
   var quote = new Schedule(data.name,data.address,0,null,null,data.small,data.medium,data.large,data.screens);
+
   quote.save();
 
 }
@@ -107,7 +119,7 @@ const GetContactUsPage = (req,res,next)=>{
 }
 
 exports.GetBlogPage = GetBlogPage;
-
+exports.GetBlogDetailPage = GetBlogDetailPage;
 exports.GetAboutUsPage = GetAboutUsPage;
 exports.GetSchedulePage = GetSchedulePage;
 exports.GetSteps = GetSteps;
