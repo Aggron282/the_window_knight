@@ -334,7 +334,7 @@ filter:brightness(1000);
 
 }
 
-@media (max-width:844px) and (orientation:landscape){
+@media (max-height:500px) and (orientation:landscape){
 
   .pulse-button{
     margin-top:50%;

@@ -35,13 +35,13 @@
 }
 
 
-.what_we_do_title{
+.what-we-do--title{
   opacity: 0;
   transform: scale(1);
 }
 
 
-.what_we_do_description{
+.what-we-do--desc{
   opacity: 0;
   transform: scale(1);
 }
@@ -61,22 +61,22 @@
   animation: flipInX 1s ease-in 1;
 }
 
-.what_we_do_title--active{
-  opacity: 1;
-  transform: scale(1);
-  animation: bounceInY 1s ease-in 1;
+.what-we-do--title--active{
+  opacity: 1  ;
+  transform: scale(1)  ;
+  animation: bounceInY 1s ease-in 1  ;
 }
 
 .service-icon--1--active{
-  opacity: 1 !important;
-  transform: scale(1) !important;
+  opacity: 1 ;
+  transform: scale(1) ;
   transition: all .5s;
   animation: bounceInY 1s ease-in 1;
 }
 
 .service-icon--2--active{
-  opacity: 1 !important;
-  transform: scale(1) !important;
+  opacity: 1 ;
+  transform: scale(1) ;
   opacity: 1;
   transform: scale(1);
   animation: bounceInY 1s ease-in 1;
@@ -90,30 +90,42 @@
   position: relative;
 }
 
-.what_we_do_description--active{
-  opacity: 1;
-  transform: scale(1);
-  animation: fadeInScale .5s ease-in 1;
+.what-we-do--desc--active{
+  opacity: 1  ;
+  transform: scale(1) ;
+  animation: fadeInScale .5s ease-in 1  ;
 
 }
+
+.link-btn {
+  opacity:0;
+  transform: scale(0);
+}
+.link-btn--active{
+  opacity: 1  ;
+  transform: scale(1)  ;
+  animation: fadeInScale .5s ease-in 1  ;
+
+}
+
 
 .k-glow{
-  padding:0px !important;
+  padding:0px ;
   width:0%;
-  background: radial-gradient(circle,   rgba(0, 25, 64,1) 10%, rgba(0,57,101,1) 40%, rgba(0, 144, 217, .4) 60%) !important;
-  filter: blur(0px) !important;
+  background: radial-gradient(circle,   rgba(0, 25, 64,1) 10%, rgba(0,57,101,1) 40%, rgba(0, 144, 217, .4) 60%) ;
+  filter: blur(0px) ;
   opacity: 0;
 }
-.mission_text--title--active{
+.mission_text--active{
   opacity: 1;
   transform: scale(1);
   animation: slideInLeft 1s ease-in 1;
 }
 
 .k-glow--active{
-  padding:100px !important;
-  background: radial-gradient(circle,   rgba(75, 25, 64,1) 10%, rgba(66,57,101,1) 40%, rgba(61, 144, 217, .4) 60%) !important;
-  filter: blur(60px) !important;
+  padding:100px ;
+  background: radial-gradient(circle,   rgba(75, 25, 64,1) 10%, rgba(66,57,101,1) 40%, rgba(61, 144, 217, .4) 60%) ;
+  filter: blur(60px) ;
   width:20%;
   border-radius: 50%;
   opacity: 1;
@@ -305,4 +317,196 @@
 .element {
   opacity: 0;
   animation: fadeInScale 1s ease-out forwards;
+}
+
+@keyframes owner_title {
+  0%{
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes owner_desc {
+  0%{
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes owner_picture_small {
+  0%{
+    opacity: 0;
+    transform: scale(0) rotateZ(1200deg);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1) rotateZ(0deg);
+  }
+}
+
+@keyframes owner_picture_big {
+  0%{
+    opacity: 0;
+    transform: scale(0) rotateZ(1200deg);
+  }
+  90%{
+    transform: scale(1.1) rotateZ(0deg);
+  }
+  100%{
+    opacity: 0;
+    transform: scale(1) rotateZ(0deg);
+  }
+}
+
+
+.meet-owner-title {
+  opacity:0;
+  transform: translateY(50px);
+}
+
+.meet-owner-desc {
+  opacity:0;
+  transform: translateX(-200px);
+}
+
+.meet-owner-subtitle {
+  opacity:0;
+  transform: translateY(50px);
+}
+
+.meet-owner-btn--email {
+  opacity:0;
+  transform: translateX(-50px);
+}
+
+.meet-owner-btn--contact {
+  opacity:0;
+  transform: translateX(50px);
+}
+
+.meet-owner-btn--active{
+  opacity:1;
+  transform: rotate(0deg);
+  animation: flipInX 1s ease-in 1;
+}
+
+.meet-owner-picture--big{
+    transform: scale(0) rotateZ(-1200deg);
+}
+
+.meet-owner-picture--small{
+    transform: scale(0) rotateZ(1200deg);
+}
+
+.meet-owner-picture--active{
+  transform: scale(1) rotateZ(0deg);
+  animation: rotateIn .5s ease-in 1;
+  opacity:1;
+
+
+}
+.meet-owner-title--active{
+  animation: owner_title .5s ease-in 1;
+  opacity:1;
+  transform: translateY(0px);
+}
+
+.meet-owner-subtitle--active{
+  animation: owner_title .7s ease-in 1;
+  opacity:1;
+  transform: translateY(0px);
+}
+
+.meet-owner-desc--active{
+  animation: owner_desc .5s ease-in 1;
+  opacity: 1;
+  transform: translateX(0px);
+}
+@keyframes map_section {
+ 0%{
+   transform: translateY(100px) scaleY(.5);
+   opacity: 0;
+ }
+ 70%{
+   transform: translateY(-20px) scaleY(1.2);
+   opacity: 1;
+ }
+ 100%{
+   transform: translateY(0px) scaleY(1);
+   opacity: 1;
+ }
+}
+
+.map-container{
+  transform: translateY(100px) scale(.5);
+  opacity: 0;
+}
+.map-container--active{
+  transform: translateY(0px) scale(1);
+  opacity:1;
+  animation:map_section .6s ease-in 1;
+}
+
+
+/* BASE (INACTIVE) STATE */
+.knight-clean-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ACTIVE STATE */
+.knight-clean-section--active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SHIMMERING PANE EFFECT */
+.knight-clean-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0) 70%
+  );
+  transform: rotate(25deg) translateX(-100%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* ANIMATE SHIMMER ON ACTIVE */
+.knight-clean-section--active::before {
+  animation: paneShimmer 2s ease-in-out forwards;
+  /* opacity: 1; */
+}
+
+/* KEYFRAMES */
+@keyframes paneShimmer {
+  0% {
+    transform: rotate(25deg) translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(25deg) translateX(100%);
+    opacity: 0;
+  }
 }

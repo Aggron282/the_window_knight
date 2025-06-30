@@ -109,7 +109,7 @@
   }
 }
 
-@media (max-width:844px) and (orientation:landscape){
+@media (max-width:500px) and (orientation:landscape){
   .review-grid{
     grid-template-columns: 50% 50%;
   }

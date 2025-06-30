@@ -287,7 +287,7 @@ opacity:.9 !important;
 }
 }
 
-@media screen and (orientation: landscape) and (max-width: 844px) {
+@media screen and (orientation: landscape) and (max-height: 500px) {
   .slide-img {
     height: 100%;
   }

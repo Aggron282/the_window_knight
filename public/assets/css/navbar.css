@@ -60,6 +60,7 @@
   margin: 0;
   padding: 0;
   flex: 1 1 auto;
+
   justify-content: flex-end;
 }
 
@@ -362,6 +363,10 @@
     bottom:20px;
   }
 
+  .nav_links{
+    padding-bottom: 80px;
+    flex-direction: row !important;
+  }
   .c2ontent{
     margin-top:-20%;
   }

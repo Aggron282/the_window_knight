@@ -233,7 +233,7 @@
 
 }
 
-@media screen and (max-width:844px ) and (orientation:landscape){
+@media screen and (max-height:500px ) and (orientation:landscape){
 
   .cfs-heading-container {
     width:140% !important;
