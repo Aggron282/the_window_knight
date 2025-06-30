@@ -357,7 +357,7 @@
 }
 
 
-@media (max-width:844px) and (orientation:landscape){
+@media (max-height:500px) and (orientation:landscape){
 
   .q-btn{
     bottom:20px;
