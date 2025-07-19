@@ -337,7 +337,8 @@ filter:brightness(1000);
 @media (max-height:500px) and (orientation:landscape){
 
   .pulse-button{
-    margin-top:50%;
+    margin-top:70%;
+    margin-left: 10%;
   }
 
   .quote-content{
