@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Window Knight Admin Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href = "/assets/css/admin/prospects.css"/>
+  <link rel="stylesheet" href = "/assets/css/admin/dashboard.css"/>
+
+</head>
+<body>
+
+  <header>
+    <h1>Window Knight Admin</h1>
+    <div class="profile-dropdown">
+      <i class="fas fa-user-circle fa-2x"></i>
+      <div class="profile-dropdown-content">
+        <a href="/">Main Site</a>
+        <a href="#">Change Password</a>
+        <a href="#">Download Data</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
+  </header>
+
+
+  <div id="popupNotification" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded shadow-lg hidden transition-opacity duration-300 z-90" style="z-index:99999999999999999">
+  <p id="popupMessage" class="text-sm font-medium"></p>
+</div>
+
+
+
+  <main class="dashboard-container">
+
+    <nav>
+      <a href="/admin/emailer"><i class="fas fa-envelope"></i> Emailer</a>
+      <a href="/admin/blogger"><i class="fas fa-pen-nib"></i> Blogger</a>
+      <a href="#"><i class="fas fa-calendar-alt"></i> Scheduler</a>
+      <a href="#"><i class="fas fa-chart-line"></i> Sales</a>
+      <a href="#"><i class="fas fa-file-invoice-dollar"></i> Online Quotes</a>
+      <a href="#"><i class="fas fa-wallet"></i> Finances</a>
+      <a href="#"><i class="fas fa-brain"></i> AI Journal</a>
+      <a href="#"><i class="fas fa-image"></i> Image Uploader</a>
+      <a href="/admin/prospect"><i class="fas fa-plug"></i> Prospects </a>
+    </nav>
+
+    <div class="prospect-container">
+      <button class="add-prospect-btn" onclick="toggleProspectAddModal()">Add Prospect</button>
+      <%- include("./prospect/prospect_list.ejs") %>
+      <%- include("./prospect/add_prospect.ejs") %>
+
+    </div>
+
+    <div id="popupNotification" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 px-6 py-3 rounded-lg shadow-lg text-white text-sm font-medium hidden transition-all duration-300"
+       style="background: linear-gradient(to right, #16a34a, #065f46);">
+    <span id="popupMessage"></span>
+  </div>
+
+  </main>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script>
+
+    var submit_prospect = document.querySelector(".submit-prospect-btn");
+    const submitBtn = document.querySelector(".submit-prospect-btn");
+    let isEditMode = false;
+    let currentProspectId = null;
+
+    function handleEditProspect(prospect) {
+      isEditMode = true;
+      currentProspectId = prospect._id;
+
+      const form = document.querySelector("#prospectModal form");
+      form.name.value = prospect.name || "";
+      form.email.value = prospect.email || "";
+      form.phone.value = prospect.phone || "";
+      form.businessType.value = prospect.businessType || "";
+      form.reachedOut.value = prospect.reachedOut ? prospect.reachedOut.split("T")[0] : "";
+      form.status.value = prospect.status || "cold";
+
+      toggleProspectAddModal();
+    }
+
+    submitBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const form = document.querySelector("#prospectModal form") || document.querySelector("#prospectModal");
+      submitProspectForm({ target: form, preventDefault: () => {} });
+    });
+
+
+    function toggleProspectAddModal() {
+      const modal = document.getElementById("prospectModal");
+      modal.classList.toggle("hidden");
+      modal.classList.toggle("flex");
+    }
+
+    async function submitProspectForm(event) {
+
+      event.preventDefault();
+
+      const form = event.target;
+
+      const data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        phone: form.phone.value.trim(),
+        businessType: form.businessType.value.trim(),
+        status: form.status.value,
+        reachedOut: form.reachedOut.value
+      };
+
+      if (!data.name) return showPopup('Name is required.', true);
+      if (!data.email && !data.phone) return showPopup('Provide email or phone.', true);
+
+      const url = isEditMode ? `/admin/prospect/${currentProspectId}` : '/admin/prospect/add';
+      const method = isEditMode ? 'PUT' : 'POST';
+
+      try {
+        const res = await fetch(url, {
+          method,
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+
+        const result = await res.json();
+        if (result.success) {
+          showPopup(isEditMode ? "Prospect updated!" : "Prospect added!");
+          toggleProspectAddModal();
+          form.reset();
+          isEditMode = false;
+          currentProspectId = null;
+          setTimeout(() => location.reload(), 1500);
+        } else {
+          showPopup(result.message || "Something went wrong.", true);
+        }
+
+      } catch (err) {
+        console.error(err);
+        showPopup("Server error. Try again.", true);
+      }
+
+  }
+
+  function showPopup(message, isError = false) {
+      const popup = document.getElementById("popupNotification");
+      const msg = document.getElementById("popupMessage");
+
+      popup.style.background = isError
+        ? "linear-gradient(to right, #dc2626, #7f1d1d)" // red tone for error
+        : "linear-gradient(to right, #16a34a, #065f46)"; // green tone for success
+
+      msg.innerHTML = message;
+      popup.classList.remove("hidden");
+      popup.classList.add("opacity-100");
+
+      setTimeout(() => {
+        popup.classList.add("opacity-0");
+      }, 2500);
+
+      setTimeout(() => {
+        popup.classList.add("hidden");
+        popup.classList.remove("opacity-0");
+      }, 3000);
+    }
+
+  async function handleDelete(e, id) {
+      e.preventDefault();
+
+      // if (!confirm("Delete this prospect?")) return;
+
+      try {
+        const {data} = await axios.delete(`/admin/prospect/${id}`);
+
+        if (data.success) {
+          showPopup("Prospect deleted successfully.");
+          setTimeout(() => location.reload(), 1200);
+        } else {
+          showPopup(result.message || "Failed to delete.", true);
+        }
+      } catch (err) {
+        console.error("Delete error:", err);
+        showPopup("Server error while deleting.", true);
+      }
+  }
+
+</script>
+
+
+</body>
+</html>

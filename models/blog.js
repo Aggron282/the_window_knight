@@ -15,6 +15,11 @@ var Blog = new Schema({
     type:String,
     required:true
   },
+  
+  style:{
+    type:String,
+    required:false
+  },
   body:{
     type:String,
     required:true

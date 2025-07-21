@@ -71,7 +71,7 @@ const SetNewKey = async (manual) => {
     var new_key = Math.ceil(Math.random() * 999999999);
 
     const exec = await Owner.updateOne({email:email_sensitive},{$set:{secret_key:new_key}});
-    console.log(exec)
+
     if(!server.CheckIfCanEmail(manual)){
       console.log("Could not email");
       return;

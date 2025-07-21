@@ -158,6 +158,10 @@ video{
 
 .hidden{
   visibility: hidden;
+  opacity:0;
+  height:0px;
+  display: none;
+  width:0px;
 }
 
 .ghost{

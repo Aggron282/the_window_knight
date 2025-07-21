@@ -25,7 +25,7 @@
     <div class="popup hidden" id="popupMessage"></div>
   <div class="dashboard-container">
     <nav>
-      <a href="#"><i class="fas fa-envelope"></i> Emailer</a>
+      <a href="/admin/emailer"><i class="fas fa-envelope"></i> Emailer</a>
       <a href="/admin/blogger"><i class="fas fa-pen-nib"></i> Blogger</a>
       <a href="#"><i class="fas fa-calendar-alt"></i> Scheduler</a>
       <a href="#"><i class="fas fa-chart-line"></i> Sales</a>
@@ -33,7 +33,7 @@
       <a href="#"><i class="fas fa-wallet"></i> Finances</a>
       <a href="#"><i class="fas fa-brain"></i> AI Journal</a>
       <a href="#"><i class="fas fa-image"></i> Image Uploader</a>
-      <a href="#"><i class="fas fa-plug"></i> Web Services</a>
+      <a href="/admin/prospect"><i class="fas fa-plug"></i> Prospects</a>
     </nav>
 
     <main class="main-section">
@@ -43,7 +43,7 @@
 
       <div class="dashboard-grid">
         <!-- Add Blog Button Card -->
-        <div class="card blog-card add-blog" onclick="openModal()">
+        <div class="card add-blog" onclick="openModal()">
           <div class="add-icon">+</div>
           <p>Add Blog</p>
         </div>
@@ -60,8 +60,11 @@
               <div class="blog-actions">
                 <button class="edit-btn btn" data-id = "<%= blog._id %>" onclick='editBlog(this)'>Edit</button>
                 <button class="delete-btn btn" data-id="<%= blog._id %>">Delete</button>
+                <button class="open-btn btn" data-id="<%= blog._id %>">Open</button>
+
               </div>
             </div>
+
           </div>
         <% }) %>
       <% } else { %>
@@ -329,6 +332,7 @@ async function submitAiPromptToEditor() {
     const res = await axios.post('/admin/blogger/ai-generate', payload);
     if (res.data.success) {
       console.log(res.data);
+      console.log(res)
       htmlArea.value = res.data.body;
       showAiPopup('✅ Blog content updated with AI!');
       showAiLoader(false);
@@ -418,7 +422,7 @@ var blog_cards = document.querySelectorAll(".blog-card");
 
 for(var i =0; i < blog_cards.length;i++){
   blog_cards[i].addEventListener("click",(e)=>{
-    const blogCard = e.target.closest(".blog-card");
+    const blogCard = e.target.closest(".open-btn");
     var _id = blogCard.getAttribute("data-id");
     console.log(e.target)
     window.open("/blog/"+_id);

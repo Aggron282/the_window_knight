@@ -1,0 +1,73 @@
+<div class="container mx-auto px-6 py-10 max-w-5xl">
+  <h2 class="text-4xl font-extrabold text-gray-800 mb-8">Prospects</h2>
+
+  <% prospects.forEach(prospect => { %>
+    <div class="bg-white rounded-2xl shadow-md p-6 mb-6 transition hover:shadow-xl">
+      <div class="flex items-center justify-between">
+        <!-- Left Side: Icon + Name -->
+        <div class="flex items-center gap-4">
+          <% if (prospect.status === 'cold' || prospect.status < 1) { %>
+            <span title="Cold" class="text-blue-400 text-xl">❄️</span>
+          <% } else if (prospect.status === 'warm' || prospect.status == 2) { %>
+            <span title="Warm" class="text-yellow-400 text-xl">🔥</span>
+          <% } else if (prospect.status === 'hot' || prospect.status >= 3) { %>
+            <span title="Hot" class="text-red-600 text-2xl">🔥🔥</span>
+          <% } else if (prospect.status === 'dead' || prospect.status <0) { %>
+            <span title="Dead" class="text-gray-500 text-xl">💀</span>
+          <% } %>
+          <span class="text-lg font-semibold text-gray-900 tracking-tight"><%= prospect.name %></span>
+        </div>
+
+        <!-- Right Side: Action Buttons -->
+  <div class="flex items-center gap-3">
+    <% if (prospect.email) { %>
+      <a href="mailto:<%= prospect.email %>" class="bg-blue-100 hover:bg-blue-200 text-blue-800 text-xs font-medium px-3 py-1 rounded-full transition">Email</a>
+    <% } else { %>
+      <span class="bg-gray-200 text-gray-500 text-xs font-medium px-3 py-1 rounded-full">No Email</span>
+    <% } %>
+
+    <% if (prospect.phone) { %>
+      <a href="tel:<%= prospect.phone %>" title="Call"
+         class="bg-green-100 hover:bg-green-200 text-green-800 text-xs font-medium px-3 py-1 rounded-full transition">
+        📞 Call
+      </a>
+    <% } else { %>
+      <span title="No Phone"
+            class="bg-gray-200 text-gray-400 text-xs font-medium px-3 py-1 rounded-full">📞</span>
+    <% } %>
+
+    <!-- Edit -->
+    <button onclick='handleEditProspect(<%- JSON.stringify(prospect) %>)'
+          class="bg-yellow-100 hover:bg-yellow-200 text-yellow-800 text-xs font-medium px-3 py-1 rounded-full transition">
+    ✏️ Edit
+    </button>
+
+    <!-- Delete -->
+      <form onsubmit="handleDelete(event, '<%= prospect._id %>')" class="inline">
+        <button type="submit"
+          class="bg-red-100 hover:bg-red-200 text-red-800 text-xs font-medium px-3 py-1 rounded-full transition">
+          🗑️ Delete
+    </button>
+  </form>
+
+
+    <!-- Toggle Details -->
+    <button
+      onclick="document.getElementById('details-<%= prospect._id %>').classList.toggle('hidden')"
+      class="text-gray-500 hover:text-gray-700 transition transform hover:scale-110 text-xl"
+      title="View Details"
+    >⌄</button>
+  </div>
+
+      </div>
+
+      <!-- Dropdown Details -->
+      <div id="details-<%= prospect._id %>" class="hidden mt-4 text-gray-700 text-sm space-y-1 pl-1 border-t pt-4">
+        <p><strong>Email:</strong> <%= prospect.email || 'N/A' %></p>
+        <p><strong>Phone:</strong> <%= prospect.phone || 'N/A' %></p>
+        <p><strong>Business Type:</strong> <%= prospect.businessType || 'N/A' %></p>
+        <p><strong>Status:</strong> <%= prospect.status %></p>
+      </div>
+    </div>
+  <% }) %>
+</div>

@@ -66,11 +66,10 @@ const GetBlogDetailPage = async (req,res,next) => {
 
     var _id = req.params._id;
     var blog = await Blog.findOne({_id:_id});
-    var blogs = await Blog.find({});
-
-    var data = returnData(`Window Washing 101 | ${blog.title} `,"/blog",1,"blog.css",req);
-
-    res.render(path.join(rootDir,"views","/user/blog_detail.ejs"),{data:data,blog:blog,relatedBlogs:blogs});
+    var relatedBlogs = await Blog.find({});
+    // console.log(blog.style)
+    console.log(blog)
+    res.render(path.join(rootDir,"views","/user/blog_detail.ejs"), { blog: { ...blog._doc, body: blog.body }, relatedBlogs });
 
 }
 

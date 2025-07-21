@@ -10,6 +10,8 @@ var laborController = require("./../../controllers/admin/labor_controller.js");
 var metaController = require("./../../controllers/admin/meta_controller.js");
 var aiController = require("./../../controllers/admin/ai_controller.js");
 var prospectController = require("./../../controllers/admin/prospect_controller.js");
+var emailerController = require("./../../controllers/admin/email_controller.js");
+
 var userToOwnerController = require("./../../controllers/admin/user_to_owner_controller.js");
 var CheckAuth = require("./../../util/isAuth.js").CheckAuth;
 const multer = require("multer");
@@ -64,7 +66,17 @@ router.post("/auth/login",authController.Login);
 router.post("/admin/auth/forgot",authController.ForgotKey);
 router.get("/admin/blogger",CheckAuth,adminController.GetBlogPage);
 router.post("/admin/blogger/ai-generate", CheckAuth, aiController.AIGenerateBlog);
+router.post("/admin/prospect/add", CheckAuth, prospectController.AddProspect);
+router.get("/admin/prospect/", CheckAuth, prospectController.GetProspectPage);
+router.post("/admin/blogger/ai-generate", CheckAuth, aiController.AIGenerateBlog);
+router.put("/admin/prospect/:id",prospectController.EditProspect);
+router.get("/admin/emailer/", CheckAuth, emailerController.GetEmailerPage);
+router.post("/admin/emailer", upload.single("cover"), CheckAuth, emailerController.AddTemplate);
+router.put("/admin/emailer/:id",  upload.single("cover"),CheckAuth, emailerController.EditTemplate);
 
+router.post("/admin/emailer/send",CheckAuth, aiController.AIGenerateAndSendEmails);
+
+router.delete("/admin/prospect/:id", prospectController.DeleteProspect);
 router.post("/admin/blogger/add", CheckAuth, upload.fields([
   { name: 'cover', maxCount: 1 },
   { name: 'gallery', maxCount: 10 }

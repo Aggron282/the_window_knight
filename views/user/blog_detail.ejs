@@ -53,7 +53,93 @@
   <link rel="stylesheet" href="/assets/css/util/margin_padding.css" />
   <link rel="stylesheet" href="/assets/css/util/util.css" />
   <link rel = "stylesheet" href = "/assets/css/blog_detail.css"/>
+  <style>
+  /* Blog HTML styling */
+.blog-content article {
+max-width: 750px;
+margin: 2rem auto;
+padding: 1rem;
+font-family: 'Montserrat', sans-serif;
+line-height: 1.8;
+color: #222;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
+ h1, h2, h3,p {
+color: black;
+font-family: 'Montserrat', sans-serif;
+
+margin-top: 1.5rem;
+margin-bottom: 0.75rem;
+}
+
+h1, h2, h3 {
+font-family: 'Montserrat', sans-serif;
+font-weight: 700;
+margin-top: 1.5rem;
+margin-bottom: 0.75rem;
+}
+
+li {
+  font-family: 'Montserrat', sans-serif;
+
+}
+h1 {
+  font-size:35px;
+
+}
+h2{
+  font-weight:500;
+  font-size:25px;
+}
+h3{
+  font-weight:600;
+
+  font-size:20px;
+}
+
+.blog-content p {
+margin: 1rem 0;
+font-size: 1rem;
+}
+
+.blog-content ul,
+.blog-content ol {
+padding-left: 1.5rem;
+margin: 1rem 0;
+}
+
+.blog-content li {
+margin-bottom: 0.5rem;
+}
+
+.blog-content blockquote {
+margin: 1.5rem;
+padding: 1rem;
+background: #eef4ff;
+border-left: 5px solid #004aad;
+font-style: italic;
+}
+
+.blog-content img {
+max-width: 100%;
+border-radius: 6px;
+margin: 1rem 0;
+}
+
+.blog-content a {
+color: #007bff;
+text-decoration: underline;
+}
+
+
+.cover-overlay .title {
+  color:white;
+}
+
+  </style>
 
 </head>
 
@@ -78,15 +164,16 @@
         </div>
       </a>
      <div class="cover-overlay">
-       <h1 class="title"><%= blog.title %></h1>
-       <h2 class="subtitle"><%= blog.subtitle %></h2>
-       <p class="author">By <%= blog.author %></p>
+       <h1 class="title"><%= blog.title.replace(/—/g, ' ') %></h1>
+       <h2 class="subtitle"><%= blog.subtitle.replace(/—/g, ' ') %></h2>
+       <p class="author">By <%= blog.author.replace(/—/g, ' ') %></p>
      </div>
    </div>
 
    <main class="content-container">
+     <% console.log(blog.body) %>
      <div class="blog-body">
-       <%- blog.body %>
+       <%- blog.body.replace(/—/g, ' ') %>
      </div>
    </main>
 
@@ -105,13 +192,18 @@
       <% relatedBlogs.forEach(related => { %>
         <div class="related-blog-card">
           <img src="/uploads/<%= related.coverImage %>" alt="Blog Cover">
-          <h4><%= related.title %></h4>
-          <p><%= related.subtitle %></p>
+          <h4><%= related.title.replace(/—/g, ' ') %></h4>
+          <p><%= related.subtitle.replace(/—/g, ' ') %></p>
           <a href="/blogs/<%= related._id %>">Read More →</a>
         </div>
       <% }) %>
     </div>
   </section>
 
+  <script>
+      function replaceEmDashWithSpace(text) {
+        return text.replace(/—/g, ' ');
+    }
+  </script>
 </body>
 </html>

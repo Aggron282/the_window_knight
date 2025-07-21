@@ -4,7 +4,12 @@ const mongoose = require("mongoose");
 const { validationResult } = require("express-validator");
 const rootDir = require("./../../util/path.js");
 const ObjectId = mongoose.Types.ObjectId;
+const createDOMPurify = require('dompurify');
+const { JSDOM } = require('jsdom');
+const window = new JSDOM('').window;
+const DOMPurify = createDOMPurify(window);
 
+// Clean user HTML
 const Labor = require("./../../data/labor.js");
 const Prospect = require("./../../models/prospects.js");
 const Owner = require("./../../models/owner.js");
@@ -45,35 +50,13 @@ const GetBlogPage = async (req, res) => {
 
 // GET: Admin Dashboard
 const GetIndexPage = async (req, res, next) => {
+
   if (!data) {
     data = await utility.renderAllData(req, res);
   }
 
-  let page_counter = req.params?.prospects_page || 0;
-
-  const weekly_prospects = await prospect_controller.ReturnWeeklyProspects();
-  const all_prospects = await prospect_controller.ReturnAllProspects();
-  const page_data = utility.GetPageData(page_counter, 7, data.prospects);
-
-  const toggle_quotes = !req.params?.isCompleted || req.params.isCompleted == "0" ? 0 : 1;
-  data.toggle = toggle_quotes;
-
-  if (page_data) {
-    Object.assign(data, {
-      page_counter: page_data.page_counter,
-      post_per_page: page_data.posts_per_page,
-      page_length: page_data.page_length,
-      next_page: page_data.next_page,
-      prev_page: page_data.prev_page,
-      start_counter: page_data.start_counter,
-      first_page: page_data.first_page
-    });
-  }
-
-  data.weekly_sales = sales.GetSales(weekly_prospects);
-  data.total_sales = sales.GetSales(all_prospects);
-
   res.render(path.join(rootDir, "views", "/admin/index.ejs"), data);
+
 };
 
 // POST: Subscribe User
@@ -132,16 +115,17 @@ const PostBlog = async (req, res) => {
     const coverImage = req.files?.cover?.[0] || req.file;
     const galleryImages = req.files?.gallery || [];
 
+    // Validate required fields
     if (!title || !subtitle || !author || !html || !coverImage) {
-      return res.json({ success: false, message: "Missing required fields." });
+      return res.status(400).json({ success: false, message: "Missing required fields." });
     }
 
+    // Create and save new blog
     const blog = new Blog({
       title,
       subtitle,
       author,
-      html,
-      body: html.replace(/(<([^>]+)>)/gi, ""),
+      body: html,
       coverImage: coverImage.filename,
       gallery: galleryImages.map(file => file.filename),
       date_submitted: new Date()
