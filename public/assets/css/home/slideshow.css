@@ -290,7 +290,9 @@ opacity:.9 !important;
 
 .slideshow-section{
   padding-top:10%;
+  overflow: visible;
 }
+
 }
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
