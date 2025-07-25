@@ -184,7 +184,7 @@
     font-size: 2.2rem;
         width: 150%;
   }
-  
+
   .knight-text{
     margin-top: 10%;
 width: 150%;
@@ -231,5 +231,24 @@ max-width: 400px;
     }
     .wk-hero-wrapper{
       padding:0;
+    }
+}
+
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+
+    .nav_links{
+      padding-bottom:0px !important;
+    }
+    .q-btn{
+      right:-10px !important;
+      bottom:60px !important;
+    }
+    .contact-float{
+      right:-120px !important;
+      top:2% !important;
+    }
+    .wk-hero-wrapper{
+      padding-top:100px;
     }
 }

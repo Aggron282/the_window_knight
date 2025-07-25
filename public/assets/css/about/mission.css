@@ -53,3 +53,25 @@
 }
 
 }
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .mission_text{
+    font-size:20px !important;
+  }
+  .what-we-do{
+    height:none !important;
+  }
+  .section-description{
+    font-size:1.7rem;
+  }
+  .learn_about_me_section{
+    height:none !important;
+  }
+  .learn-grid{
+    grid-template-columns: 100%;
+    padding:20px;
+  }
+  .picture-container{
+    grid-template-rows: repeat(3,minmax(200px,1fr));
+  }
+}
