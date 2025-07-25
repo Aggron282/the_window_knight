@@ -65,3 +65,10 @@
   color: #666;
   line-height: 1.5;
 }
+
+
+@media (max-height:500px) and (orientation:landscape){
+  .blog-section{
+    margin-top:-15%;
+  }
+}

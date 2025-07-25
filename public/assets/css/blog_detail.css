@@ -209,3 +209,9 @@ body {
         height: 130px;
       }
     }
+
+    @media (max-height:500px) and (orientation:landscape){
+      .cover-image{
+        margin-top:-10%;
+      }
+    }
