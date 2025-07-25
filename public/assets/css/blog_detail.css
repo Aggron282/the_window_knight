@@ -212,9 +212,9 @@ body {
 
     @media (max-height:500px) and (orientation:landscape){
       .cover-image{
-        margin-top:-10%;
+        margin-top:-15%;
       }
       .q-btn{
-        right:-40px !important;
+        right:-20px !important;
       }
     }
