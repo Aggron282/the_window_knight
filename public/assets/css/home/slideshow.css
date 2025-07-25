@@ -319,7 +319,7 @@ opacity:.9 !important;
   }
 
   .slide-text a.btn {
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 8px 16px;
   }
 
@@ -328,6 +328,15 @@ opacity:.9 !important;
     height: auto;
     min-height: 100vh;
     background-size: cover;
+  }
+  .slide-text{
+    width:50%;
+  }
+  .slide-text h2{
+    font-size:2.5rem;
+  }
+  .slide-text p{
+    font-size: 1.7rem;
   }
 
   .swiper {

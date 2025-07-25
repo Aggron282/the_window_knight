@@ -360,15 +360,19 @@
 @media (max-height:500px) and (orientation:landscape){
 
   .q-btn{
-    bottom:20px;
+    right:-50px;
+    bottom:40px;
   }
 
   .nav_links{
-    padding-bottom: 80px;
+    padding-bottom: 120px;
     flex-direction: row !important;
   }
   .c2ontent{
     margin-top:-20%;
+  }
+  .contact-visible{
+    margin-right: 50px;
   }
   .landing-grid{
     padding-top:5%;
@@ -378,7 +382,7 @@
     margin-top:0%;
   }
   .showcase_container{
-    height:auto !important;
+    height:160% !important;
   }
   .landing_background{
     height:125%;

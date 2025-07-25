@@ -118,5 +118,8 @@
   .contact-float{
         top: 1% !important;
   }
+  .why_choose_us_container{
+    z-index: 99999999999999999999999999999999999999999 !important;
+  }
 
 }
