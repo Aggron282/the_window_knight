@@ -214,4 +214,7 @@ body {
       .cover-image{
         margin-top:-10%;
       }
+      .q-btn{
+        right:-40px !important;
+      }
     }
