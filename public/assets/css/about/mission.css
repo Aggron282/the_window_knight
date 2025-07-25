@@ -55,10 +55,10 @@
 }
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
-  .mission_text{
+  .mission_text--description{
     font-size:20px !important;
   }
-  .misstion_text--title{
+  .mission_text--title{
     font-size: 50px !important;
   }
   .what-we-do{
