@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Popup Modal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Cube Image Slider</title>
   <style>
-
+    body {
+      margin: 0;
+      background: #001f2f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      perspective: 1200px;
+    }
+    .slider {
+      width: 600px;
+      height: 400px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s ease-in-out;
+    }
+    
   </style>
 </head>
 <body>
-
-  <button class="open-modal-btn">Open Modal</button>
-
+  <div id="cube" class="slider">
+    <div class="face"><img src="image1.jpg" alt="Slide 1" /></div>
+    <div class="face"><img src="image2.jpg" alt="Slide 2" /></div>
+    <div class="face"><img src="image3.jpg" alt="Slide 3" /></div>
+    <div class="face"><img src="image4.jpg" alt="Slide 4" /></div>
+  </div>
 
   <script>
+    const cube = document.getElementById("cube");
+    let angle = 0;
+    const changeInterval = () => Math.floor(Math.random() * 4000) + 2000; // 2000–6000ms
 
+    function rotateCube() {
+      angle -= 90;
+      cube.style.transform = `rotateY(${angle}deg)`;
+      setTimeout(rotateCube, changeInterval());
+    }
+
+    setTimeout(rotateCube, changeInterval());
   </script>
 </body>
 </html>

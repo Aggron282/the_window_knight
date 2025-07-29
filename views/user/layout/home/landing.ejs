@@ -15,37 +15,158 @@
 
     <!-- Background Layers -->
     <div class="dirty_background" aria-hidden="true"></div>
-    <div class="landing_background">
 
-      <div class="landing-grid">
 
-        <!-- Left: Text -->
-        <div class="text-container">
-          <p class="title home-title">
-            <strong>Defend</strong><br>Your View Today!
-          </p>
-          <button class="glass-deal-btn" aria-label="Get 20% Off Recurring Window Cleaning Services in Phoenix">
-            Get 20% Off Recurring Services
-          </button>
+    <div class="slideshow-landing">
+
+      <div class="slide slide-showcase active">
+
+        <div class="landing_background">
+            <div class="landing-grid">
+                <!-- Left: Text -->
+                <div class="text-container">
+                  <p class="title home-title">
+                    <strong>Defend</strong><br>Your View Today!
+                  </p>
+                        <p class="slide-subtitle subtitle">
+                          From national chains to beloved local spots, they count on <strong>The Window Knight</strong> to keep their windows spotless.
+                      </p>
+                  <a href="mailto:thewindowknight@gmail.com?subject=20%25 Off Window Cleaning&body=Hi, I’m interested in getting 20% off recurring window cleaning services. Please contact me.">
+                <button class="glass-deal-btn" aria-label="Get 20% Off Recurring Window Cleaning Services in Phoenix">
+                          Get 20% Off Recurring Services
+                        </button> <a/>
+                </div>
+
+                <!-- Right: Knight -->
+                <div class="knight_container">
+                  <picture>
+                    <source srcset="./assets/images/the_knight.png" type="image/png">
+                    <img
+                      class="knight_main"
+                      id="parallax"
+                      src="./assets/images/the_knight.png"
+                      alt="The Window Knight in armor on horseback using a squeegee to clean windows – Phoenix AZ's top-rated window cleaning service"
+                      loading="lazy"
+                    />
+                  </picture>
+                  <div class="sparkle_container" aria-hidden="true"></div>
+                </div>
+
+              </div>
+
         </div>
 
-        <!-- Right: Knight -->
-        <div class="knight_container">
-          <picture>
-            <source srcset="./assets/images/the_knight.png" type="image/png">
-            <img
-              class="knight_main"
-              id="parallax"
-              src="./assets/images/the_knight.png"
-              alt="The Window Knight in armor on horseback using a squeegee to clean windows – Phoenix AZ's top-rated window cleaning service"
-              loading="lazy"
-            />
-          </picture>
-          <div class="sparkle_container" aria-hidden="true"></div>
-        </div>
+
 
       </div>
+
+      <div class="slide difference-slide">
+
+        <div class="difference-slide__content">
+
+
+          <div id="cube" class="difference-slide__image-frame">
+            <div class="face"><img src="/assets/images/ba.png"  alt="Before and after window cleaning in Phoenix"/></div>
+            <div class="face"><img src="/assets/images/ba2.png" alt="Before and after window cleaning in Tempe" /></div>
+            <div class="face"><img src="/assets/images/ba3.png" alt="Before and after window cleaning for Sims Business Systems" /></div>
+            <div class="face"><img src="/assets/images/ba2.png"  alt="Before and after window cleaning in Phoenix"/></div>
+
+          </div>
+
+          <script>
+            const cube = document.getElementById("cube");
+            let angle = 0;
+            const changeInterval = () => Math.floor(Math.random() * 4000) + 2000; // 2000–6000ms
+
+            function rotateCube() {
+              angle -= 90;
+              cube.style.transform = `rotateY(${angle}deg)`;
+              setTimeout(rotateCube, changeInterval());
+            }
+
+            setTimeout(rotateCube, changeInterval());
+          </script>
+
+          <div class="difference-slide__text">
+            <h2 class="difference-slide__title">See the Difference<br />We Make</h2>
+            <p class="difference-slide__subtitle">
+              One cleaning from <strong>The Window Knight</strong> can completely transform your storefront, home, or office.<br />Your view deserves it.
+            </p>
+            <a href="mailto:thewindowknight@gmail.com?subject=20%25 Off Window Cleaning&body=Hi, I’m interested in getting 20% off recurring window cleaning services. Please contact me.">
+          <button class="glass-deal-btn" aria-label="Get 20% Off Recurring Window Cleaning Services in Phoenix">
+                    Get 20% Off Recurring Services
+                  </button> <a/>
+          </div>
+
+      </div>
+
+      </div>
+
+      <div class="slide knight-guarantee-slide">
+        <div class="knight-guarantee__overlay">
+          <div class="knight-guarantee__text">
+            <h2 class="knight-guarantee__title">Your Satisfaction<br />Guaranteed</h2>
+            <p class="knight-guarantee__subtitle">
+              If you're not over the moon with your windows, we'll reclean them for free.<br />
+              Your total happiness is our #1 goal.
+            </p>
+            <ul class="slide-guarantee-bullets">
+              <li> Family-Owned & Operated</li>
+              <li> Fully Licensed & Insured</li>
+              <li> 5-Star Rated Across the Valley</li>
+            </ul>
+
+            <button class="glass-deal-btn" aria-label="Get 20% Off Recurring Window Cleaning Services in Phoenix">
+                Get 20% Off Recurring Services
+            </button> <a/>
+          </div>
+        </div>
+        <img src="/assets/images/knight-3.png" alt="The Window Knight on horse" class="knight-guarantee__bg" />
     </div>
+
+
+
+      <div class="client-marquee">
+        <div class="client-track">
+          <img src="./assets/images/reviews/sprouts.png" alt="Sprouts" />
+          <img src="./assets/images/reviews/pita.png" alt="Pita Jungle" />
+          <img src="./assets/images/reviews/chipotle.png" alt="Chipotle" />
+          <img src="./assets/images/reviews/feta.png" alt="Feta Cowboy" />
+          <img src="./assets/images/reviews/bkb.png" alt="BKB" />
+          <img src="./assets/images/reviews/sims.png" alt="Sims" />
+          <img src="./assets/images/reviews/Qdoba.png" alt="Qdoba" />
+          <img src="./assets/images/reviews/vs.png" alt="V's Barbershop" />
+          <img src="./assets/images/reviews/usegg.png" alt="U.S Egg" />
+          <img src="./assets/images/reviews/mt.jpg" alt="Mountainside Fitness" />
+          <img src="./assets/images/reviews/f45.png" alt="F45" />
+          <img src="./assets/images/reviews/chico.png" alt="Chico Malo" />
+          <img src="./assets/images/reviews/decent.png" alt="The Filthy Animal" />
+          <img src="./assets/images/reviews/rachel.png" alt="Rachel's Art Studio" />
+          <img src="./assets/images/reviews/refine.png" alt="Refine Men's Salon" />
+          <img src="./assets/images/reviews/sprouts.png" alt="Sprouts" />
+          <img src="./assets/images/reviews/pita.png" alt="Pita Jungle" />
+          <img src="./assets/images/reviews/chipotle.png" alt="Chipotle" />
+          <img src="./assets/images/reviews/feta.png" alt="Feta Cowboy" />
+          <img src="./assets/images/reviews/bkb.png" alt="BKB" />
+          <img src="./assets/images/reviews/sims.png" alt="Sims" />
+          <img src="./assets/images/reviews/Qdoba.png" alt="Qdoba" />
+          <img src="./assets/images/reviews/vs.png" alt="V's Barbershop" />
+          <img src="./assets/images/reviews/usegg.png" alt="U.S Egg" />
+          <img src="./assets/images/reviews/mt.jpg" alt="Mountainside Fitness" />
+          <img src="./assets/images/reviews/f45.png" alt="F45" />
+          <img src="./assets/images/reviews/chico.png" alt="Chico Malo" />
+          <img src="./assets/images/reviews/decent.png" alt="The Filthy Animal" />
+          <img src="./assets/images/reviews/rachel.png" alt="Rachel's Art Studio" />
+          <img src="./assets/images/reviews/refine.png" alt="Refine Men's Salon" />
+
+        </div>
+      </div>
+      <div class="landing-slideshow-togglers">
+      <button class="slide-btn prev" onclick="prevSlide()">‹</button>
+      <button class="slide-btn next" onclick="nextSlide()">›</button>
+      </div>
+    </div>
+
   </div>
 
   <!-- Mobile fallback -->
@@ -62,3 +183,33 @@
     </section>
   </div>
 </div>
+
+<script>
+  const slides = document.querySelectorAll('.slideshow-landing .slide');
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active', 'prev');
+      if (i === index) {
+        slide.classList.add('active');
+      } else if (i === currentSlide) {
+        slide.classList.add('prev');
+      }
+    });
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    let next = (currentSlide + 1) % slides.length;
+    showSlide(next);
+  }
+
+  function prevSlide() {
+    let prev = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(prev);
+  }
+
+  // Initial load
+  showSlide(currentSlide);
+</script>

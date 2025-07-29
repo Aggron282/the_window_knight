@@ -239,7 +239,8 @@
 }
 /* Normal state */
 .contact-float {
-  right: 0px;
+  right: -30px;
+  top:-30px;
   transition: right 0.4s ease;
 }
 
