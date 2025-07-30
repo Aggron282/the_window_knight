@@ -55,6 +55,13 @@ const GetAboutUsPage = (req,res,next) => {
 
 }
 
+const GetQuoterPage = (req,res,next) => {
+
+    var data = returnData("Window Cleaning Quoter","/quoter",1,"about.css",req);
+    res.render(path.join(rootDir,"views","/user/quoter.ejs"),data);
+
+}
+
 const GetBlogPage = (req,res,next) => {
 
     var data = returnData("Window Washing 101","/blog",1,"blogs.css",req);
@@ -126,3 +133,4 @@ exports.ExitOutOfModal = ExitOutOfModal;
 exports.GetScheduleData = GetScheduleData;
 exports.GetHomePage = GetHomePage;
 exports.GetContactUsPage = GetContactUsPage;
+exports.GetQuoterPage = GetQuoterPage;

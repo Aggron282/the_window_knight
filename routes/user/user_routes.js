@@ -11,6 +11,9 @@ var rootDir = require("./../../util/path.js")
 
 // Get Home Page
 router.get("/",userController.GetHomePage);
+
+router.get("/quoter",userController.GetQuoterPage);
+
 // Get About Page
 router.get("/about",userController.GetAboutUsPage);
 
