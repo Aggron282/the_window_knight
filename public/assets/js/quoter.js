@@ -1,5 +1,5 @@
 let currentStep = 1;
-const totalSteps = 3;
+const totalSteps = 4;
 
 function nextStep(step) {
   const current = document.querySelector(`.step[data-step='${step}']`);
@@ -21,19 +21,22 @@ document.getElementById("quoteForm").addEventListener("submit", function (e) {
   const loader = document.getElementById("loader");
   const successContainer = document.getElementById("success");
   const formData = {
-    screenCount: document.getElementById("screenCount").value,
-    largePanes: document.getElementById("largePanes").value,
-    regularPanes: document.getElementById("regularPanes").value,
-    smallPanes: document.getElementById("smallPanes").value,
-    secondStory: document.getElementById("secondStory").value,
-    interiorExterior: document.getElementById("interiorExterior").value,
-    deepTracks: document.getElementById("deepTracks").value,
-    address: document.getElementById("address").value
-  };
+  name: document.getElementById("userName").value,
+  email: document.getElementById("userEmail").value,
+  phone: document.getElementById("userPhone").value,
+  screenCount: document.getElementById("screenCount").value,
+  largePanes: document.getElementById("largePanes").value,
+  mediumPanes: document.getElementById("mediumPanes").value,
+  smallPanes: document.getElementById("smallPanes").value,
+  secondStory: document.getElementById("secondStory").value,
+  includeInterior: document.getElementById("interiorExterior").value,
+  deepTrackClean: document.getElementById("deepTracks").value,
+  address: document.getElementById("address").value
+};
 
   loader.style.display = "flex";
 
-  axios.post("/api/quote", formData)
+  axios.post("/api/quoter", formData)
     .then(res => {
       loader.style.display = "none";
       if (res.data.success) {

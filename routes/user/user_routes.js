@@ -5,6 +5,7 @@ const {check,body} = require("express-validator");
 
 var userController = require("./../../controllers/user/userController.js")
 var adminController = require("./../../controllers/admin/admin_controller.js")
+var prospectController = require("./../../controllers/admin/prospect_controller.js")
 
 var userToOwnerController = require("./../../controllers/admin/user_to_owner_controller.js")
 var rootDir = require("./../../util/path.js")
@@ -27,6 +28,7 @@ router.get("/contact_us",userController.GetContactUsPage);
 router.post("/admin/subscribe",check("email").isEmail().normalizeEmail(),userToOwnerController.Subscribe)
 router.get("/blogs",userController.GetBlogPage);
 router.get("/blog/:_id",userController.GetBlogDetailPage);
+router.post("/api/quoter",check("email").isEmail().normalizeEmail(),prospectController.HandleQuote)
 
 router.post("/api/subscribe",
 check("name").isLength({min:1}),

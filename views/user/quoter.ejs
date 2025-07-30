@@ -47,28 +47,46 @@
     <div class="progress-bar"><div class="progress" id="progress"></div></div>
     <form id="quoteForm">
       <div class="step active" data-step="1">
-        <div class="form-group">
-          <label for="screenCount">How many screens?</label>
-          <input type="number" id="screenCount" required />
-        </div>
-        <div class="form-group">
-          <label for="largePanes">Large panes:</label>
-          <input type="number" id="largePanes" required />
-        </div>
-        <div class="form-group">
-          <label for="regularPanes">Regular panes:</label>
-          <input type="number" id="regularPanes" required />
-        </div>
-        <div class="form-group">
-          <label for="smallPanes">Small panes:</label>
-          <input type="number" id="smallPanes" required />
-        </div>
-        <button type="button" onclick="nextStep(1)">Next</button>
-      </div>
-      <div class="step" data-step="2">
+    <div class="form-group">
+      <label for="userName">What is your name?</label>
+      <input placeholder="Enter name" name="name" id="userName" required />
+    </div>
+    <div class="form-group">
+      <label for="userEmail">Email</label>
+      <input placeholder="Enter email" type="email" name="email" id="userEmail" required />
+    </div>
+    <div class="form-group">
+      <label for="userPhone">Phone</label>
+      <input placeholder="Enter phone number" type="tel" name="phone" id="userPhone" required />
+    </div>
+    <button type="button" onclick="nextStep(1)">Next</button>
+  </div>
+
+  <div class="step" data-step="2">
+  <div class="form-group">
+    <label for="screenCount">How many screens?</label>
+    <input placeholder="Enter number" value = "0" type="number" name="screens" id="screenCount" required />
+  </div>
+  <div class="form-group">
+    <label for="largePanes">Large panes:</label>
+    <input placeholder="Enter number" value = "0" type="number" name="large_panes" id="largePanes" required />
+  </div>
+  <div class="form-group">
+    <label for="mediumPanes">Regular panes:</label>
+    <input placeholder="Enter number" value = "0" type="number" name="regular_panes" id="mediumPanes" required />
+  </div>
+  <div class="form-group">
+    <label for="smallPanes">Small panes:</label>
+    <input placeholder="Enter number" value = "0" type="number" name="small_panes" id="smallPanes" required />
+  </div>
+  <button type="button" onclick="nextStep(2)">Next</button>
+  </div>
+
+
+      <div class="step" data-step="3">
         <div class="form-group">
           <label for="secondStory">Second story panes?</label>
-          <select id="secondStory" required>
+          <select id="secondStory" name="second_story" required>
             <option value="">Select</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
@@ -76,7 +94,7 @@
         </div>
         <div class="form-group">
           <label for="interiorExterior">Interior & Exterior?</label>
-          <select id="interiorExterior" required>
+          <select id="interiorExterior" name="exterior_interior" required>
             <option value="">Select</option>
             <option value="both">Both</option>
             <option value="exterior">Exterior Only</option>
@@ -84,7 +102,7 @@
         </div>
         <div class="form-group">
           <label for="deepTracks">Deep clean tracks?</label>
-          <select id="deepTracks" required>
+          <select id="deepTracks" name="deep_clean" required>
             <option value="">Select</option>
             <option value="yes">Yes</option>
             <option value="no">No</option>
@@ -92,10 +110,10 @@
         </div>
         <button type="button" onclick="nextStep(2)">Next</button>
       </div>
-      <div class="step" data-step="3">
+      <div class="step" data-step="4">
         <div class="form-group">
           <label for="address">Address (to calculate mileage)</label>
-          <input type="text" id="address" required />
+          <input name="address" placeholder="Enter number of panes"type="text" id="address" required />
         </div>
         <button type="submit">Submit</button>
       </div>
