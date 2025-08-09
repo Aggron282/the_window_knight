@@ -104,7 +104,7 @@ const HandleQuote = async (req, res) => {
     secondStoryPanes = "No";
   }
   if(!includeInterior){
-    includeInterior = "Exterior Only";
+    includeInterior = "No";
   }
   if(!deepTrackClean){
     deepTrackClean = "No";
