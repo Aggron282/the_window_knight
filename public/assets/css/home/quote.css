@@ -331,7 +331,13 @@ filter:brightness(1000);
     cursor: pointer;
     transition: background 0.3s ease;
   }
-
+  .quote-section{
+    padding:10vh 10vw;
+  }
+  .quote-text{
+    padding:0px;
+    width:100%;
+  }
 }
 
 @media (max-height:500px) and (orientation:landscape){
