@@ -84,26 +84,33 @@
     padding-top: 20%;
   }
 
-  .text-container
-{
+  .text-container{
     width: 90%;
     top: 15%;
     left: 5%;
-}
+  }
 
-.rain-grid{
-  height:auto;
-}
+  .rain-grid{
+    overflow: visible !important;
+    height:auto;
+  }
+  .rain-grid .text-container .subtitle{
+    font-size:20px;
+  }
+  .rain-grid .text-container .subtitle a {
+    font-weight: 500;
+    font-size: 20px;
+  }
 
-.rain-grid .text-container {
-    position: relative;
-    color: white;
-    font-family: "Lato";
-    padding: 50px;
-    margin-left: 0%;
-    z-index: 9999;
-    bottom:50px;
-        transform: translateY(-20px);
-}
+  .rain-grid .text-container {
+      position: relative;
+      color: white;
+      font-family: "Lato";
+      padding: 10px;
+      margin-left: 0%;
+      z-index: 9999;
+      bottom:50px;
+      transform: translateY(-20px);
+  }
 
 }

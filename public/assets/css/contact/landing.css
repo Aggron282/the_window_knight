@@ -283,17 +283,17 @@
 
   .landing_background--about {
     width: 100%;
-    min-height: 120vh;
     overflow: hidden;
     position: relative;
     background: linear-gradient(to right bottom, rgba(0, 20, 30, .85), rgba(0, 35, 50, .75), rgba(0, 50, 70, .5)), url(./../../images/contact_background.png) no-repeat center center / cover;
     animation: squeegeeEffect 3s ease-out forwards;
     padding-bottom: 10%;
+  height:100% !important;
   }
 
   .landing_background--about .text-container {
     width: 90% !important;
-    top: 5% !important;
+    top: 10% !important;
     position: absolute;
     top: 5%;
     left: 5%;
@@ -306,11 +306,12 @@
   }
 
   .landing_background--about .text-container .title {
-    font-size: 17vw;
+    font-size: 11vw;
   }
 
   .landing_background--about .text-container .subtitle {
-    font-size: 7vw;
+    font-size: 5vw;
+    font-family: "Montserrat";
   }
 
   .landing_background--about .text-container .glass-deal-btn {

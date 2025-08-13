@@ -173,4 +173,10 @@
   .signal_container{
     height: 100%;
   }
+    .signal_container .text-container{
+      padding:40px;
+    }
+    .cityscape{
+      bottom:2.5%;
+    }
 }
