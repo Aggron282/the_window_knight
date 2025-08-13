@@ -324,12 +324,15 @@ filter:brightness(1000);
     border: 5px solid #00e6f6;
     align-items: center;
     justify-content: center;
-    margin-left: -30%;
+    margin-left: -100%;
     text-decoration: none;
     overflow: visible;
-    margin-top: 150%;
+    margin-top: 100%;
     cursor: pointer;
     transition: background 0.3s ease;
+  }
+  .quote-content {
+    padding:0%;
   }
   .quote-section{
     padding:10vh 10vw;
@@ -338,6 +341,17 @@ filter:brightness(1000);
     padding:0px;
     width:100%;
   }
+
+  .quote-text h1 {
+    width:90%;
+    font-size:5rem;
+  }
+
+  .quote-text p {
+    width:90%;
+    font-size:2rem;
+  }
+
 }
 
 @media (max-height:500px) and (orientation:landscape){
