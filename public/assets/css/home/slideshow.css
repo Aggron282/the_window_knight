@@ -284,9 +284,10 @@ opacity:.9 !important;
   .label--work::before {
         color: white;
         left: -5%;
-        font-size: 70px;
+        font-size: 110px;
         margin-top: 15%;
         opacity: .9 !important;
+
         content: "Our Work" !important;
     }
 
@@ -295,6 +296,11 @@ opacity:.9 !important;
   overflow: visible;
 }
 
+}
+
+.label--work::before{
+  font-weight: bold;
+  font-family: "Teko";
 }
 
 @media screen and (orientation: landscape) and (max-height: 500px) {
