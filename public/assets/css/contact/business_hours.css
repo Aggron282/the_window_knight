@@ -79,7 +79,7 @@
 
 @media (max-width:400px){
   .rain_check_container {
-    margin-top: 60%;
+    margin-top: -20%;
     height:auto;
     padding-top: 20%;
   }
@@ -96,7 +96,7 @@
   }
   .rain-grid .text-container .subtitle{
     font-size:20px;
-    
+
   }
   .rain-grid .text-container .subtitle a {
     font-weight: 500;
