@@ -618,8 +618,13 @@
     width:930%;
   }
   .glass-deal-btn{
+    width:50% !important;
     font-size:2rem !important;
   }
+    .landing-grid .text-container {
+      padding-left:10%;
+      width:90%;
+    }
     .landing-grid .text-container .subtitle{
       font-size:2rem;
     }
