@@ -357,12 +357,23 @@ filter:brightness(1000);
 @media (max-height:500px) and (orientation:landscape){
 
   .pulse-button{
-    margin-top:70%;
+    margin-top:30%;
     margin-left: 10%;
   }
 
   .quote-content{
     padding-bottom: 20%;
   }
+
+  .quote-text h1 {
+    width:90%;
+    font-size:5rem;
+  }
+
+  .quote-text p {
+    width:90%;
+    font-size:2rem;
+  }
+
 
 }

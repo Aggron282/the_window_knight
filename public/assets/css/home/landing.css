@@ -472,9 +472,9 @@
   }
   .nav_links{
     font-size: 222 !important;
-margin-top: 20px;
-/* transform: translateX(25px); */
-  }
+  margin-top: 20px;
+  /* transform: translateX(25px); */
+    }
 
   .knight_main {
     width: 100% !important;
@@ -495,23 +495,23 @@ margin-top: 20px;
   }
 
 
-.contact-float {
-            right: -110px !important;
-            top: 25% !important;
-            font-size: 1.8rem !important;
-        }
+  .contact-float {
+              right: -110px !important;
+              top: 25% !important;
+              font-size: 1.8rem !important;
+          }
 
-  .nav_links {
-    font-size: 1.1rem !important; /* Replace invalid 222 */
-    transform: none !important;
-    padding-left: 0 !important;
-    flex-wrap: wrap;
-    justify-content: center !important;
-  }
+    .nav_links {
+      font-size: 1.1rem !important; /* Replace invalid 222 */
+      transform: none !important;
+      padding-left: 0 !important;
+      flex-wrap: wrap;
+      justify-content: center !important;
+    }
 
-  .logo-title-container {
-    justify-content: center !important;
-  }
+    .logo-title-container {
+      justify-content: center !important;
+    }
 }
 
 @media (max-width:400px){
@@ -608,4 +608,39 @@ margin-top: 20px;
   .landing-slideshow-togglers button {
     background: linear-gradient(90deg, rgba(0, 20, 30, 1), rgba(0, 35, 50, 1), rgba(0, 50, 70, 1));
   }
+}
+
+
+
+@media (max-height:500px) and (orientation:landscape){
+  .knight_container{
+    margin-top:730%;
+    width:930%;
+  }
+  .glass-deal-btn{
+    font-size:2rem !important;
+  }
+    .landing-grid .text-container .subtitle{
+      font-size:2rem;
+    }
+    .landing-grid .text-container .title{
+      font-size:clamp(3rem,20vw,7rem);
+    }
+
+    .knight-guarantee__text{
+      transform: translateX(-100px) translateY(30px);
+    }
+    .difference-slide__image-frame{
+      width:500px;
+      height:130px;
+    }
+      .difference-slide__image-frame img {
+        height:100%;
+        width:100%;
+      }
+    .knight-guarantee__bg{
+      transform:scaleX(-1);
+      height:200%;
+      width:110%;
+    }
 }
